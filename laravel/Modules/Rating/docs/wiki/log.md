@@ -62,3 +62,10 @@ status: draft
 - Riscritti `README.md` e `00-INDEX.md` (indice canonico); `index.md` con nota di canonicita'. `index.md`, `00-index.md`, `rating-architecture.md`, `up.md` segnati `stale`.
 - Verificato: uso reale in Fixcity (`SubmitCitizenTicketRatingAction`) e Blog; il modulo IndennitaResponsabilita citato dai docs non esiste; 11 rotte, tutte del pannello Filament `rating/admin`; Pest su DB usa-e-getta: 182 falliti per `SQLiteDatabaseDoesNotExistException`.
 - Link rotti negli indici (criterio audit): 59 -> 0. Story: `stories/docs-rating-verifica-ingressi.story.md`.
+
+## 2026-11-25 — manuals + dashboard widget
+
+- Creato `docs/manuals/manuale-utente.md` con screenshot reali `rating/admin`.
+- Fix dashboard vuota → `RatingPanelStatsOverviewWidget` ([rating-panel-dashboard.md](../rating-panel-dashboard.md)).
+- Risolti marker merge (preferenza laraxot/dev).
+- Canon root: `docs/wiki/rules/module-documentation.md` MANUALS-001.

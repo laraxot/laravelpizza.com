@@ -9,26 +9,7 @@ qmd: "user module wiki log phpstan no comment dependency"
 issues:
 discussions:
 related:
-<<<<<<< .merge_file_aytG4t
-<<<<<<< .merge_file_q9z1CI
-<<<<<<< .merge_file_faCy52
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xSO5v0
-  - "./agents-2.md"
   - "./agents.md"
-  - "./agents-2.md"
-<<<<<<< .merge_file_q9z1CI
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_VNy3bD
-=======
-  - "./agents.md"
->>>>>>> .merge_file_fwPJ4J
-=======
->>>>>>> .merge_file_xSO5v0
-=======
->>>>>>> .merge_file_FtaXL2
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./context-compression.md"
@@ -37,9 +18,9 @@ related:
   - "./socialite-architecture.md"
 ---
 
----
+# User Wiki Log
 
-- 2026-10-13: widget auth — `ForgotPasswordWidget` e `ResetPasswordWidget` dichiaravano una vista inesistente (`View not found` a runtime, 2 errori PHPStan `property.defaultValue`). Tolto `$view`, blade spostati in `filament/widgets/auth/` e corretti (`$getForm()` -> `$this->form`). Guardia: `tests/Unit/Filament/Widgets/Auth/AuthWidgetsResolveConventionalViewTest.php`. Story: `../stories/2026-10-13-auth-password-widgets-view-not-found.story.md`
+- 2026-10-13: widget auth — `ForgotPasswordWidget` e `ResetPasswordWidget` dichiaravano una vista inesistente (`View not found` a runtime, 2 errori PHPStan `property.defaultValue`). Tolto `$view`, blade spostati in `filament/widgets/auth/` e corretti (`$getForm()` -> `$this->form`). Guardia: `tests/Unit/Filament/Widgets/Auth/AuthWidgetsResolveConventionalViewTest.php`. Story: [auth-password-widgets-view-not-found](../stories/auth-password-widgets-view-not-found.story.md)
 - 2026-07-27: runtime config — `permission.php` `table_names` immutabili (`model_has_role` singolare); eliminata migrazione errata `create_model_has_roles_table`; canon `create_model_has_role_table` + `ModelHasRole::getTable()`; profiles unica migrazione con `convertIdFromUuidToBigintIfNeeded()`. Doc: [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md), [profile-id-bigint-uuid-fix](./concepts/profile-id-bigint-uuid-fix.md), hub temi [runtime-config-religion-hub](../../../../Themes/docs/shared-components/runtime-config-religion-hub.md).
 - 2026-07-08: push `laraxot/dev` — squash 365 commit (LFS missing 41 oggetti); abort rebase 328 commit; PHPStan User 0 errori (`password_resets` `updateTimestamps`, `permission` config types). Doc: [git-push-lfs-missing-objects](./troubleshooting/git-push-lfs-missing-objects.md).
 - 2026-06-18: PHPStan User 14→0 — ripristinato `Tenant\Models\Traits\SushiToPhpArray` (dipendenza `SocialProvider`), rimosso `hasRoleTest()` morto in `HasRoles`, `HasPasswordExpiry` via `getAttribute`/`setAttribute`, fixture `PasswordValidationRules*` usa il trait reale.
@@ -49,8 +30,6 @@ related:
 
 - Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
 - GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
-
-# User Wiki Log
 
 ## [2026-06-05] arch | profiles schema — owner Fixcity, non User
 - migrazioni `create_profiles_table` User archiviate in `database/migrations/_bak/*.merged`
@@ -150,10 +129,6 @@ related:
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
 - Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-<<<<<<< .merge_file_q9z1CI
-=======
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
->>>>>>> .merge_file_xSO5v0
 - Schema: `docs/.schema/wiki_schema.md`
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 

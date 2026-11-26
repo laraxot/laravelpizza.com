@@ -1,34 +1,4 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-title: "Overflow history digest"
-type: digest
-status: active
-qmd: "overflow history digest ceiling 100"
----
-
-# Overflow history
-
-File assorbiti per rientrare a ≤100 (git resta la storia completa).
-
-- `notifications/index.md` (force)
-- `design-comuni/index.md` (force)
-- `modules/index.md` (force)
-- `project_docs/index.md` (force)
-- `superpowers/index.md` (force)
-- `spatie-email/index.md` (force)
-- `agents.md` (force)
-- `llm-wiki/agents.md` (force)
-- `llm-wiki/index.md` (force)
-- `mcp/index.md` (force)
-- digests/archive-parcheggio.md
-- digests/archive-root-md-files.md
-- digests/archive-raw.md
-- digests/aliases-removed.md
-- `stories/phpstan-test-wave-notify-b.story.md`
-=======
-=======
->>>>>>> laraxot/dev
 title: "Overflow history (ceiling 100)"
 type: digest
 status: active
@@ -37,134 +7,7 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-Overflow force-cap: 1345 file oltre target 100.
-
-### `_integration/firebase.md` — firebase
-
-
-# firebase
-
-<!-- Contenuto migrato da _docs/firebase.txt -->
-
-https://medium.com/@hala.s.salim/integrating-push-notifications-in-laravel-using-firebase-0bae5411d7f9
-
-
-### `_integration/links.md` — links
-
-
-# links
-
-<!-- Contenuto migrato da _docs/links.txt -->
-
-
-----------------------------------------------------------------------------------
-Laravel Mailator for Configuring Email Scheduler & Templates
---- molto simile a quello che facciamo noi con themenotification
-https://codebrisk.com/blog/laravel-mailator-for-configuring-email-scheduler-templates
-composer require binarcode/laravel-mailator
------------------------------------------------------------------------------------
-Check if you can Send Email via Given Mail Server in Laravel
-https://codebrisk.com/blog/check-if-you-can-send-email-via-given-mail-server-in-laravel
-composer require dietercoopman/mailspfchecker
--------------------------------------------------------------------------------------
-Catch All Sent Email & Show them on La
-
-### `_integration/login.md` — login
-
-
-# login
-
-<!-- Contenuto migrato da _docs/login.txt -->
-
------------------------------------------------------------------------------------------------
-A Blade Component to Quickly Login to Your Local Environment
-https://codebrisk.com/blog/a-blade-component-to-quickly-login-to-your-local-environment
-composer require spatie/laravel-login-link
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------
-
-### `_integration/notifications.md` — notifications
-
-
-# notifications
-
-<!-- Contenuto migrato da _docs/notifications.txt -->
-
-https://medium.com/@peterhrobar/push-notifications-with-laravel-61049ab9aec6
-
-### `_integration/repos-2.md` — _repos
-
-
-# _repos
-
-<!-- Contenuto migrato da _docs/_repos.txt -->
-
--------------------------------------------------------------
-Add Simple Facet Filtering in Your Laravel Applications
-https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
-composer require mgussekloo/laravel-facet-filter
--------------------------------------------------------------
-
-### `_integration/repos.md` — _repos
-
-
-# _repos
-
-<!-- Contenuto migrato da _docs/_repos.txt -->
-
--------------------------------------------------------------
-Add Simple Facet Filtering in Your Laravel Applications
-https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
-composer require mgussekloo/laravel-facet-filter
--------------------------------------------------------------
-# _repos
-
-<!-- Contenuto migrato da _docs/_repos.txt -->
-
--------------------------------------------------------------
-Add Simple Facet Filtering in Your Laravel Applications
-https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
-composer require mgussekloo/laravel-facet-filter
--------------------------------------------------------------
-# _repos
-
-### `_integration/telegram.md` — telegram
-
-
-# telegram
-
-<!-- Contenuto migrato da _docs/telegram.txt -->
-
-https://dev.to/millykhamroev/laravel-package-to-integrate-telegram-bot-api-3l6e
-
-https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
-
-
-Add telegram service into config/service.php file.
-
-# config/services.php
-
-'telegram-bot-api' => [
-    'token' => env('TELEGRAM_BOT_TOKEN', 'YOUR BOT TOKEN HERE')
-],
-
-
---- TUTORIAL ---
-
-### `_integration/whatsapp.md` — whatsapp
-
-
-# whatsapp
-
-<!-- Contenuto migrato da _docs/whatsapp.txt -->
-
-https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96
-
-tutorial
-https://medium.com/@snomanali1996/whatsapp-integration-with-laravel-using-twilio-api-9bd8ecd06dbf#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzYjc2MmY4NzFjZGIzYmFlMDA0NGM2NDk2MjJmYzEzOTZlZGEzZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTU5MDIwMjQzMjQ3MDkwMzIyMDkiLCJlbWFpbCI6Im1hcmNvLnNvdHRhbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcxNTg0MzUyMSwibmFtZSI6Ik1hcmNvIFNvdHRh
+Overflow force-cap: 1285 file oltre target 100.
 
 ### `actions/model/getallmodelsbymodulenameaction.md` — GetAllModelsByModuleNameAction
 
@@ -178,11 +21,10 @@ Per la documentazione completa, consulta il file originale in [Modules/Xot/docs/
 - [Documentazione completa](getallmodelsbymodulenameaction.md)
 - [Esempi di utilizzo](../../ai-agents/examples.md)
 - [Implementazione](../../../../Xot/app/Actions/Model/GetAllModelsByModuleNameAction.php)
+- [Documentazione completa](../../Modules/Xot/docs/actions/model/GetAllModelsByModuleNameAction.md)
+- [Esempi di utilizzo](../../Modules/Xot/docs/actions/model/examples.md)
 - [Documentazione completa](getallmodelsbymodulenameaction.md)
-- [Esempi di utilizzo](../../ai-agents/examples.md)
-
-## Note importanti
-Questa azione è parte del sistema di gestione dei modelli di Laraxot e segue le convenzioni di Spatie QueueableAction. 
+- [Esempi di utilizzo](../../ai-agents/examp
 
 ### `actions-calling-actions-pattern.md` — Pattern: Actions che chiamano altre Actions
 
@@ -285,28 +127,14 @@ Regola canonica: [../../Xot/docs/wiki/concepts/agent-confidence-discipline.md](.
 
 Sintesi: verificare prima di affermare; riprodurre prima di correggere; documentare prove, dubbi e rischio residuo; rispondere in italiano sintetico.
 
-### `ai-agents/01-gsd-workflow-2.md` — 🚀 GSD Workflow (Get Shit Done)
+### `agent-confidence-protocol.md` — Massima confidenza agente
 
 
-# 🚀 GSD Workflow (Get Shit Done)
+# Massima confidenza agente
 
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [02-bmad-workflow-2.md](02-bmad-workflow-2.md) — BMAD Method
+Stub DRY. Regola canonica: [../../../../docs/wiki/rules/agent-confidence-protocol.md](../../../../docs/wiki/rules/agent-confidence-protocol.md).
 
-## 📋 Overview
-
-## 🔧 Installation
-
-```bash
-# Interactive install
-npx get-shit-done-cc@latest
-
-# Non-interactive (specific runtime)
-npx get-shit-done-cc --claude --global
-npx get-shit-done-cc --opencode --global
-npx get-shit-done-cc --gemini --global
-```
-
+Checklist locale: issue GitHub, wiki owner, file letti a chunk, gate eseguiti, log aggiornato, limiti dichiarati.
 
 ### `ai-agents/01-gsd-workflow.md` — 🚀 GSD Workflow (Get Shit Done)
 
@@ -314,45 +142,22 @@ npx get-shit-done-cc --gemini --global
 # 🚀 GSD Workflow (Get Shit Done)
 
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [02-bmad-workflow-2.md](02-bmad-workflow.md) — BMAD Method
 
----
+## 📋 Overview
 
-title: "01 gsd workflow"
+**Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [02-bmad-workflow.md](02-bmad-workflow.md) — BMAD Method
 
 ---
-
-## 📋 Overview
 
 title: "01 GSD WORKFLOW"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+qmd: "01 GSD WORKFLOW"
 issues: []
-
-### `ai-agents/02-bmad-workflow-2.md` — 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
-
-
-# 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
-
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [01-gsd-workflow-2.md](01-gsd-workflow-2.md) — GSD Method
-
-## 📋 Overview
-
-## 🔧 Installation
-
-```bash
-# Interactive install
-npx bmad-method install
-
-# Non-interactive (CI/CD)
-npx bmad-method install \
-  --directory /path/to/project \
-  --modules bmm \
-  --tools claude-code \
-  --yes
 
 ### `ai-agents/02-bmad-workflow.md` — 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
 
@@ -360,45 +165,22 @@ npx bmad-method install \
 # 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
 
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [01-gsd-workflow-2.md](01-gsd-workflow.md) — GSD Method
 
----
+## 📋 Overview
 
-title: "02 bmad workflow"
+**Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [01-gsd-workflow.md](01-gsd-workflow.md) — GSD Method
 
 ---
-
-## 📋 Overview
 
 title: "02 BMAD WORKFLOW"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+qmd: "02 BMAD WORKFLOW"
 issues: []
-
-### `ai-agents/03-architecture-zen-2.md` — 🏛️ Architecture Zen Philosophy
-
-
-# 🏛️ Architecture Zen Philosophy
-
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [04-filament-philosophy-2.md](04-filament-philosophy-2.md) — Filament Widgets
-
-## 🔴 Fundamental Rules
-### 1. **NO Themes/*/Http/Livewire/**
-
-### 2. **NO laravel/docs/**
-
-**Philosophy**: Documentation distributed, close to code.
-
-```
-❌ WRONG
-laravel/docs/
-  ├── COMPOSER_RULE.md
-  └── FILAMENT_RULE.md
-
-✅ CORRECT
 
 ### `ai-agents/03-architecture-zen.md` — 🏛️ Architecture Zen Philosophy
 
@@ -406,50 +188,32 @@ laravel/docs/
 # 🏛️ Architecture Zen Philosophy
 
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-
----
-
-title: "03 architecture zen"
-**Related**: [04-filament-philosophy.md](04-filament-philosophy.md) — Filament Widgets
-
----
+**Related**: [04-filament-philosophy-2.md](04-filament-philosophy.md) — Filament Widgets
 
 ## 🔴 Fundamental Rules
 ### 1. **NO Themes/*/Http/Livewire/**
+
+**Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
+**Related**: [04-filament-philosophy.md](04-filament-philosophy.md) — Filament Widgets
+
+---
 
 title: "03 ARCHITECTURE ZEN"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-
-### `ai-agents/04-filament-philosophy-2.md` — 🎨 Filament Forms & Tables Philosophy
-
-
-# 🎨 Filament Forms & Tables Philosophy
-
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [03-architecture-zen-2.md](03-architecture-zen-2.md) — Architecture
-
-## 🔴 Fundamental Rule
-
-## 🧠 Philosophy (The WHY)
-
-### 1. **Don't Repeat Yourself (DRY)**
-
-**❌ WRONG**:
-```blade
-{{-- Custom form in blade --}}
-<form action="/submit" method="POST">
-    <input type="text" name="title">
-    <button>Submit</button>
-</form>
-
+qmd: "03 ARCHITECTURE ZEN"
 
 ### `ai-agents/04-filament-philosophy.md` — 🎨 Filament Forms & Tables Philosophy
 
 
 # 🎨 Filament Forms & Tables Philosophy
+
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [03-architecture-zen-2.md](03-architecture-zen.md) — Architecture
+
+## 🔴 Fundamental Rule
 
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
@@ -463,19 +227,14 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "04 FILAMENT PHILOSOPHY"
 issues: []
-discussions: []
-## 🔴 Fundamental Rule
 
-**NEVER create custom forms or tables in blade.**
-
-
-### `ai-agents/05-front-office-audit-2.md` — 📋 Front Office Pages Audit Checklist
+### `ai-agents/05-front-office-audit.md` — 📋 Front Office Pages Audit Checklist
 
 
 # 📋 Front Office Pages Audit Checklist
 
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [03-architecture-zen-2.md](03-architecture-zen-2.md) — Architecture
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [03-architecture-zen-2.md](03-architecture-zen.md) — Architecture
 
 ## 🔍 Mandatory Checklist (Before Commit)
 ### 1. Routing Multilingual
@@ -485,63 +244,23 @@ discussions: []
 ### 5. Real Data (NO Mock)
 ### 6. Web Design Checklist (31 sources)
 ### 7. Quality Gate
-
-## 📁 Pages to Audit
-
-### Theme Pages (38 total)
-
-| Category | Count | Status |
-
-### `ai-agents/05-front-office-audit.md` — 📋 Front Office Pages Audit Checklist
-
-
-# 📋 Front Office Pages Audit Checklist
-
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
 
 ---
 
 title: "05 FRONT OFFICE AUDIT"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "05 FRONT OFFICE AUDIT"
-issues: []
-discussions: []
-## 🔍 Mandatory Checklist (Before Commit)
-
-### 1. Routing Multilingual
-- [ ] ✅ URLs with language prefix (`/it/`, `/en/`)
-
-### `ai-agents/06-cinematic-effects-2.md` — 🎨 Cinematic Effects & Particles
-
-
-# 🎨 Cinematic Effects & Particles
-
-**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
-**Related**: [06-cinematic-effects-2.md](06-cinematic-effects-2.md) — Full guide
-
-## 📋 Quick Reference
-### CSS-only Particles (Recommended)
-
-## 🎯 Kinetic Web Design Principles
-
-Based on Berger+Team study (31 Italian sources):
-
-### 4 Core Principles
-
-| Principle | Description | Why It Matters |
-|-----------|-------------|----------------|
-| **Utility** | Animations must have function | Prevents distraction |
-| **Performance** | Site must not slow down | Optimization critical |
-| **Consistency** | Uniform timing and style | Coherent experience |
 
 ### `ai-agents/06-cinematic-effects.md` — 🎨 Cinematic Effects & Particles
 
 
 # 🎨 Cinematic Effects & Particles
+
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [06-cinematic-effects-2.md](06-cinematic-effects.md) — Full guide
+
+## 📋 Quick Reference
+### CSS-only Particles (Recommended)
 
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [06-cinematic-effects.md](06-cinematic-effects.md) — Full guide
@@ -554,35 +273,6 @@ tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "06 CINEMATIC EFFECTS"
-issues: []
-discussions: []
-## 📋 Quick Reference
-
-### CSS-only Particles (Recommended)
-
-
-### `ai-agents/07-mcp-tailwind-ui-2.md` — 🎨 MCP Servers per Tailwind CSS & UI Frameworks
-
-
-# 🎨 MCP Servers per Tailwind CSS & UI Frameworks
-
-**Data**: 2026-03-20  
-**Stato**: ✅ OBBLIGATORIO  
-**Priorità**: CRITICAL
-
-## 📋 Panoramica
-
-## 🔧 MCP Servers Installati
-
-### 1. Flowbite MCP ✅
-
-**Stato**: ✅ Installato  
-**Config**: `.mcp.json`
-
-**Installazione**:
-```bash
-npx flowbite-mcp
-```
 
 ### `ai-agents/07-mcp-tailwind-ui.md` — 🎨 MCP Servers per Tailwind CSS & UI Frameworks
 
@@ -630,29 +320,6 @@ Per i moduli o temi toccati bisogna avere:
 ## Anti-pattern da evitare
 
 
-### `ai-agents/09-notebooklm-skill-2.md` — NotebookLM Skill - Guida Installazione e Utilizzo
-
-
-# NotebookLM Skill - Guida Installazione e Utilizzo
-
-**Skill**: `notebooklm`
-**Path**: `~/.claude/skills/notebooklm/`
-**Versione**: 1.3.0
-**Stato**: ✅ Installato (auth richiesta)
-
-## Cosa fa
-
-## Setup (una tantum)
-
-### 1. Installazione (già completata)
-
-```bash
-# Già installato in:
-ls ~/.claude/skills/notebooklm/
-```
-
-Il venv Python + Chrome vengono creati automaticamente al primo uso.
-
 ### `ai-agents/09-notebooklm-skill.md` — NotebookLM Skill - Guida Installazione e Utilizzo
 
 
@@ -681,7 +348,7 @@ discussions: []
 
 # Agent teams (Experimental - Opus 4.6)
 
-> Source: [CLAUDE.md](../../CLAUDE.md)
+> Source: [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md)
 > Back: [index](index.md)
 
 Agent Teams coordinate multiple Claude Code instances working together. One session acts as the **team lead** (coordinates, assigns tasks, synthesizes results) while **teammates** work independently in their own context windows.
@@ -761,12 +428,12 @@ Guida alla migrazione da Filament v3/v4 a v5.
 | Livewire v4.0+ | ❌ v3 - DA AGGIORNARE | ✅ |
 | Tailwind CSS v4.0+ | ❌ v3 - DA AGGIORNARE | ✅ |
 
-## Migration Process
-# 1. Install upgrade tool
-# 2. Run automated upgrade script
-# 3. Follow script output commands
-# 4. Remove upgrade tool
+---
 
+title: "agents filament migration"
+type: note
+tags: [documentation]
+created: 2026-09-26
 
 ### `ai-agents/agents-first-rule.md` — Agents first rule: Read → Reason → Study → Update → Improve
 
@@ -775,21 +442,21 @@ Guida alla migrazione da Filament v3/v4 a v5.
 
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../agents.md)
+> Source: [agents.md](../../agents.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../agents.md)
+> Source: [agents.md](../../agents.md)
+> Source: [AGENTS.md](../../agents.md)
+> Source: [agents.md](../../agents.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../AGENTS.md)
 > Back: [index](index.md) | [workflow.md](workflow.md)
 
 ## The fundamental rule
-
-**Before modifying ANY file, always follow this sequence:**
-
-1. **Read** — read the file carefully with the Read tool (mandatory — Edit/Write fail without it)
-2. **Reason** — think about context and implications
-3. **Study** — study existing code, module patterns, and conventions
-4. **Update docs** — update `docs/` folders inside modules and themes
-5. **Improve** — only then make changes following project conventions
-
-## Post-edit cycle (mandatory)
-
-After every code edit:
 
 ### `ai-agents/agents-gsd-bmad.md` — AGENTS GSD BMAD Workflow
 
@@ -828,29 +495,6 @@ $gsd-verify-work [N]        # Verifica UAT
 - Follow module-per-module workflow: complete one module before moving to the next.
 - Use MCP tools when encountering file access limitations.
 - **New packages go in module `composer.json`**, never in `laravel/composer.json`. Run `composer go` from `la
-
-### `ai-agents/agents-guide/01-project-overview/links.md` — Key Documentation Links
-
-
-# Key Documentation Links
-
-- [Agent docs index](../index.md)
-- [Agent Teams](../../agent-teams.md)
-- [Critical rules](../../critical-rules.md)
-- [Laraxot model rules](../../laraxot-model-rules.md)
-- [Laraxot philosophy](../../laraxot-philosophy.md)
-- [Documentation standards](../../documentation-standards.md)
-- [Project setup](../../project-setup.md)
-- [Claude Setup Guide](../../context.md)
-- [Workflow](../workflow.md)
-- [PHPStan Guide](../../../phpstan.md)
-- [Filament Guide](../filament.md)
-- [MCP Guide](../../mcp.md)
-- [Agent docs index](../../../index.md)
-- [Agent Teams](../../agent-teams.md)
-- [Critical rules](../../critical-rules.md)
-- [Laraxot model rules](../../laraxot-model-rules.md)
-- [Laraxot philosophy](../../laraxot-philosophy.md)
 
 ### `ai-agents/agents-guide/02-tooling/build-lint-test-commands.md` — 2. Build / Lint / Test Commands
 
@@ -1006,6 +650,26 @@ title: "filament admin patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+
+### `ai-agents/agents-guide/07-assets/svg-icons.md` — 7. SVG Icons
+
+
+# 7. SVG Icons
+
+- Store SVGs in `Modules/Meetup/resources/svg/`
+- Reference via: `<x-filament::icon icon="meetup-{name}" />`
+- NO inline SVGs in Blade files
+
+---
+
+title: "svg icons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "svg icons"
+issues: []
+discussions: []
 
 ### `ai-agents/agents-guide/08-testing/coverage-gaps-analysis-guide.md` — Coverage Gaps Analysis & Test Implementation Guide
 
@@ -1371,14 +1035,14 @@ Best practices per l'ottimizzazione delle performance.
 - Implement **caching** for frequently accessed data
 - Use Laravel's query builder for complex operations
 
-## Frontend Optimization
+---
 
-## Core Web Vitals 2026
-
-| Metrica | Target | Importanza |
-|---------|--------|------------|
-| **LCP** | < 2.5s | Critica |
-| **INP** | < 200ms | Critica |
+title: "agents performance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents performance"
 
 ### `ai-agents/agents-project-rules.md` — AGENTS Project Rules
 
@@ -1461,35 +1125,35 @@ tests/
 └── Modules/*/tests/   # Module-specific tests
 ```
 
-## Pest Testing Format
+---
 
-## Filament Testing
-
-```php
-livewire(ListUsers::class)
+title: "agents testing standards"
+type: note
+tags: [documentation]
+created: 2026-09-26
 
 ### `ai-agents/architecture/agents-filament-widgets.md` — 🏛 Filament Widgets Architecture
 
 
 # 🏛 Filament Widgets Architecture
 
-**File**: `bashscripts/ai/.agents/docs/filament-charts.md#agents-filament-widgets`  
+**File**: `.agents/docs/architecture/agents-filament-widgets.md`  
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ CRITICAL RULE
 
-## ❌ SBAGLIATO (VIETATO!)
+---
 
-### Blade Custom con foreach
-```blade
-{{-- ❌ VIETATO - Themes/TwentyOne/resources/views/pages/forecasts/index.blade.php --}}
-<div class="grid grid-cols-3">
-    @foreach($forecasts as $forecast)
-        <div class="card">
-            <h3>{{ $forecast->title }}</h3>
-            <p>{{ $forecast->volume }} CR</p>
-        </div>
-    @endforeach
-</div>
+title: "agents filament widgets"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agents filament widgets"
+issues: []
+discussions: []
+## 🔴 REGOLA FONDAMENTALE
+
+> **SEMPRE usare Filament Table Widgets per le liste**  
 
 ### `ai-agents/architecture/filament-table-vs-blade-component.md` — 🎯 Filament Table vs Blade Component - Decision Guide
 
@@ -1519,7 +1183,7 @@ discussions: []
 
 # Ralph + GSD + BMAD Orchestration
 
-**Path**: `bashscripts/ai/.agents/docs/workflow-methods.md#ralph-gsd-bmad-orchestration`
+**Path**: `bashscripts/ai/.agents/docs/architecture/ralph-gsd-bmad-orchestration.md`
 **Last updated**: 2026-03-26
 **Status**: canonico
 
@@ -1533,7 +1197,7 @@ Definire in modo non ambiguo come comporre `BMAD`, `GSD` e `Ralph` nel repositor
 - `GSD` serve per discuss, plan, execute, verify e ship di fasi o task con stato esplicito e wave execution.
 - `Ralph` serve come loop autonomo story-by-story quando il lavoro e gia atomico, verificabile e con criterio di done chiaro.
 - `Ralph` non sostituisce `BMAD` o `GSD`.
-- `Ralph` va usato so
+- `Ralph` va usato sopra 
 
 ### `ai-agents/architecture-principles.md` — Architecture Principles
 
@@ -1803,7 +1467,7 @@ Quando chiedi a Claude di analizzare il codice:
 
 ## 🔗 Collegamento all'Originale
 
-- [CLAUDE.md originale](../../CLAUDE.md) - File completo (deprecated)
+- [CLAUDE.md originale](../../../Geo/docs/root-md-files/claude.md) - File completo (deprecated)
 - [Index principale](./index.md)
 
 
@@ -2056,7 +1720,7 @@ php artisan serve
 
 # Documentation standards
 
-> Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../CLAUDE.md)
+> Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md)
 > Back: [index](index.md)
 
 ## File naming conventions (CRITICAL)
@@ -2143,23 +1807,23 @@ Ogni modulo deve avere nel proprio `composer.json`, **subito dopo il nodo `autol
 
 # 🎨 Semantic CSS - AI Agents Documentation
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#semantic-css`  
+**Path**: `bashscripts/ai/.agents/docs/frontend/semantic-css.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CANONICAL  
 **Version**: 1.0
 
-## 📋 Quick Reference
+---
 
-### ✅ DO - Semantic Classes
+title: "semantic css"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic css"
+issues: []
+discussions: []
+## 🎯 Core Principle
 
-```html
-<!-- ✅ Semantic: describes purpose -->
-<div class="hero">
-  <h1 class="hero-title">Heading</h1>
-  <p class="hero-tagline">Tagline</p>
-</div>
-
-<div class="outcomes-grid">
 
 ### `ai-agents/gemini-action-patterns.md` — GEMINI Action Patterns
 
@@ -2253,14 +1917,14 @@ Quando chiedi a Gemini di analizzare il codice:
 ### Suggerimenti per la scrittura di richieste efficaci
 - "Analizza il modulo Mee
 
-### `ai-agents/gemini-split-index.md` — gemini.md Split Index
+### `ai-agents/gemini-split-index.md` — gemini-2.md Split Index
 
 
-# gemini.md Split Index
+# gemini-2.md Split Index
 
-> Documentazione gemini.md spezzata in file più piccoli.
+> Documentazione gemini-2.md spezzata in file più piccoli.
 
-## 📚 File da gemini.md
+## 📚 File da gemini-2.md
 
 | File | Contenuto |
 |------|-----------|
@@ -2272,9 +1936,9 @@ Quando chiedi a Gemini di analizzare il codice:
 
 ## 🔗 Collegamento
 
-- [GEMINI.md originale](../../gemini.md)
-- [GEMINI.md originale](../../gemini.md)
-- [Index principale](./index.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.m
 
 ### `ai-agents/gemini-super-mucca.md` — GEMINI Super Mucca
 
@@ -2418,17 +2082,17 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 > **Stato**: ✅ Attivo e verificato  
 > **Versione**: 2.0 (GSD v1.26.0 + BMAD v6)
 
-## Introduzione
+---
 
-### Perché GSD + BMAD?
-
-Questo progetto usa **due framework complementari** per massimizzare l'efficienza degli agenti AI:
-
-| Framework | Scopo Principale | Punto di Forza |
-|-----------|------------------|----------------|
-| **GSD** | Esecuzione spec-driven | Affidabilità, context engineering, atomic commits |
-| **BMAD** | Design e pianificazione | Visione olistica, agenti specializzati |
-
+title: "gsd bmad comprehensive guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd bmad comprehensive guide"
+issues: []
+discussions: []
+## 📖 Indice
 
 ### `ai-agents/guidelines/reusable-components-philosophy.md` — 🧩 Componenti Riutilizzabili - Filosofia Zen
 
@@ -2440,41 +2104,41 @@ Questo progetto usa **due framework complementari** per massimizzare l'efficienz
 **Status**: ✅ PHILOSOPHY DEFINED
 
 ---
+
+title: "reusable components philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "reusable components philosophy"
+issues: []
+discussions: []
 ## 🎯 The Zen of Reusable Components
 
 > "Un componente, infiniti usi. Scrivi una volta, usa ovunque."
-
-### Perché Componenti Riutilizzabili?
-
-**1. DRY (Don't Repeat Yourself)**
-- ❌ **PRIMA**: 10 blade diversi per outcomes (F1, Politics, Crypto, Sports)
-- ✅ **ADESSO**: 1 componente `outcomes-grid` per TUTTI i mercati
-
-**2. KISS (Keep It Simple, Stupid)**
-- ❌ **PRIMA**: Logica complessa in ogni blade
 
 ### `ai-agents/guidelines/semantic-html-css.md` — 🎨 Semantic HTML & CSS - Best Practices
 
 
 # 🎨 Semantic HTML & CSS - Best Practices
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#semantic-html-css`  
+**Path**: `.agents/docs/guidelines/semantic-html-css.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ PRODUCTION READY  
 **Priority**: HIGH
 
-## 📚 What are Semantic Elements?
+---
 
-### Definition
+title: "semantic html css"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "semantic html css"
+issues: []
+discussions: []
+## 🎯 Philosophy
 
-**Semantic elements** are HTML tags that convey **MEANING** about their content.
-
-**Examples**:
-```html
-<!-- ✅ SEMANTIC -->
-<article>, <section>, <nav>, <header>, <footer>,
-<main>, <aside>, <figure>, <figcaption>,
-<time>, <address>, <cite>, <blockquote>
 
 ### `ai-agents/iflow-contributing.md` — IFLOW Contributing
 
@@ -2489,15 +2153,15 @@ Questo progetto usa **due framework complementari** per massimizzare l'efficienz
 
 Come contribuire al progetto.
 
-## Se Am i l Frontend
-
-- Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)
-- Porta nuove idee di sezioni/animazioni
-- **IMPORTANTE**: Ogni modifica CSS/JS richiede `npm run build`
-
 ---
 
-## Se Am i l Backend/Architettura
+title: "iflow contributing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow contributing"
+issues: []
 
 ### `ai-agents/iflow-getting-started.md` — IFLOW Getting Started
 
@@ -2611,6 +2275,16 @@ discussions: []
 | Tecnologia | Descrizione |
 |-----------|-------------|
 | PHP 8.2+ | Strict types obbligatorio |
+
+### `ai-agents/jpgraph-notes.md` — JpGraph notes
+
+
+# JpGraph notes
+
+- JpGraph is dual-licensed.
+- Validate licensing constraints before expanding usage.
+
+For interactive dashboards prefer Filament ChartWidgets (Chart.js). For PDF/export, evaluate server-side rendering needs.
 
 ### `ai-agents/laraxot-model-rules.md` — Laraxot model rules
 
@@ -2744,11 +2418,11 @@ When direct access fails, use MCP equivalents:
 
 Vedi [index](index.md) per navigazione completa.
 
-Vedi [index](index.md) per navigazione completa.
-
 ## 2026-02-26
 
 ## 2026-03-15
+
+## 2026-04-14
 
 ### `ai-agents/migration-patterns.md` — Migration patterns
 
@@ -2939,7 +2613,7 @@ Dimensione del contesto (token di input).
 
 # OpenViking Setup
 
-**Path**: `bashscripts/ai/.agents/docs/other-agents.md#openviking-setup`  
+**Path**: `.agents/docs/openviking-setup.md`  
 **Last Updated**: 2026-03-28  
 **Status**: canonical
 
@@ -2962,7 +2636,7 @@ Use this split:
 
 # 🎯 AI Agents Overview
 
-**File**: `bashscripts/ai/.agents/docs/agents-guide.md#agents-overview`  
+**File**: `.agents/docs/overview/agents-overview.md`  
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ OPERATIONAL
 
@@ -2979,29 +2653,6 @@ Use this split:
 
 ### Development Tools
 - **Pest PHP** - Testing framework
-
-### `ai-agents/overview.md` — Overview
-
-
-# Overview
-
-## Project
-
-PTVX is a modular HR & Performance evaluation system built on Laravel + Filament + Laraxot.
-
-## Non-negotiables (Laraxot)
-
-- Do not extend Filament classes directly in application modules: use `XotBase*` wrappers.
-- Translations must not be hardcoded in Filament components.
-- Prefer Actions (e.g. Spatie Queueable Action) over Services.
-- Use PHPStan Level 10 approach: "Fix, Don't Ignore" - all errors must be resolved.
-- Follow module-per-module workflow: complete one module before moving to the next.
-- Use MCP tools when encountering file access limitations.
-
-## Where the authoritative docs live
-
-- Project docs: `docs/`
-- Module docs: `laravel/Modules/{Module}/docs/`
 
 ### `ai-agents/package-risk-matrix.md` — Package Risk Matrix (2026-03-02)
 
@@ -3215,9 +2866,9 @@ Questa mappa e una vista operativa "figlia" della documentazione ufficiale del p
 
 ## Fonti primarie (ufficiali)
 
-- `bashscripts/ai/.agents/docs/00-INDEX.md`
-- `bashscripts/ai/.agents/docs/filament-charts.md#filament-patterns`
-- `bashscripts/ai/.agents/docs/architecture-rules.md#critical-rules`
+- `.agents/docs/index.md`
+- `.agents/docs/filament-patterns.md`
+- `.agents/docs/critical-rules.md`
 - `laravel/Modules/<nome progetto>/docs/index.md`
 - `laravel/Modules/Xot/docs/README.md`
 
@@ -3226,7 +2877,8 @@ Questa mappa e una vista operativa "figlia" della documentazione ufficiale del p
 - `laravel/Modules/<nome progetto>/docs/question-chart-answers-chart-widget.md`
 - `laravel/Modules/<nome progetto>/docs/question-chart-answers-triple-chart-widget.md`
 - `laravel/Modules/<nome progetto>/docs/question-chart-aggregations-guide.md`
-- `laravel/Modules/<nome progetto>/docs/viewquestionchart-filter-implementati
+- `laravel/Modules/<nome progetto>/docs/viewquestionchart-filter-implementation.md`
+
 
 ### `ai-agents/project-docs-index.md` — Project docs index (curated)
 
@@ -3235,18 +2887,18 @@ Questa mappa e una vista operativa "figlia" della documentazione ufficiale del p
 
 Indice generato automaticamente da file markdown in cartelle docs (esclusi vendor/node_modules/archive).
 
-- `.devcontainer/README.md` — README
-- `AGENTS.md` — AGENTS.MD - Development Guidelines
-- `CLAUDE.md` — CLAUDE.md
-- `GEMINI.md` — Gemini Project Context: Quaeris Fila4 Mono - Laravel Survey Management System
-- `IFLOW.md` — Quaeris Fila4 Mono - 项目指南
-- `README.md` — Quaeris Fila4 Mono - Laravel Survey Management System
-- `GEMINI.md` — Gemini Project Context: App Fila4 Mono - Laravel Survey Management System
-- `IFLOW.md` — App Fila4 Mono - 项目指南
-- `README.md` — App Fila4 Mono - Laravel Survey Management System
-- `bashscripts/README.md` — Git Conflict Resolution Scripts
-- `bashscripts/ai/.ai/README.md` — AI Configuration (Generic)
-- `bashscripts/ai/.ai/guide
+- `.agents/docs/build-and-dev-commands.md` — Build & development commands
+- `.agents/docs/chart-widgets.md` — Chart widgets (Chart.js + Filament v5)
+- `.agents/docs/code-quality-commands.md` — Code quality commands
+- `.agents/docs/code-style.md` — Code Style Guidelines
+- `.agents/docs/commands.md` — Comandi Essenziali
+- `.agents/docs/critical-rules.md` — Regole Critiche
+- `.agents/docs/filament-patterns.md` — Filament Patterns
+- `.agents/docs/index.md` — .agents/docs — Index
+- `.agents/docs/jpgraph-notes.md` — JpGraph notes
+- `.agents/docs/memories.md` — Agent Memory Updates
+- `.agents/docs/module-rules.md` — Regole Specifiche del Progetto
+- `.agents/do
 
 ### `ai-agents/project-setup.md` — Project setup and running
 
@@ -3383,6 +3035,29 @@ config('it.<nome progetto>.manager.morph_map');
 1. verificare tenant risolto
 2. verificare chiavi config effettivamente caricate
 
+### `ai-agents/quick-reference.md` — Quick Reference & Super Mucca
+
+
+# Quick Reference & Super Mucca
+
+Guida per Claude: quick reference, workflow, risorse.
+
+## Quick Reference
+
+### Creating a New Model
+
+```php
+namespace Modules\YourModule\Models;
+class YourModel extends BaseModel
+{
+    protected $fillable = ['field1', 'field2'];
+    protected function casts(): array {
+        return array_merge(parent::casts(), ['custom_date' => 'datetime']);
+    }
+}
+```
+
+
 ### `ai-agents/qwen-competitors.md` — QWEN Competitor Analysis
 
 
@@ -3475,14 +3150,14 @@ Panoramica e stato attuale del progetto Base Forecast Fila5.
 | Routing Multilingua | 2026-03-19 | ✅ FIX |
 | Filament Widgets | 2026-03-20 | ✅ DOCUMENTATO |
 
-### `ai-agents/qwen-split-index.md` — qwen.md Split Index
+### `ai-agents/qwen-split-index.md` — qwen-2.md Split Index
 
 
-# qwen.md Split Index
+# qwen-2.md Split Index
 
-> Documentazione qwen.md spezzata in file più piccoli.
+> Documentazione qwen-2.md spezzata in file più piccoli.
 
-## 📚 File da qwen.md
+## 📚 File da qwen-2.md
 
 | File | Contenuto | Righe |
 |------|-----------|-------|
@@ -3494,9 +3169,9 @@ Panoramica e stato attuale del progetto Base Forecast Fila5.
 
 ## 🔗 Collegamento
 
-- [QWEN.md originale](../../qwen.md)
-- [QWEN.md originale](../../qwen.md)
-- [Index principale](./index.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
+- [qwen-2.md originale](../wiki/integrations/_da-rico
 
 ### `ai-agents/qwen-web-design.md` — QWEN Web Design Study
 
@@ -3547,53 +3222,53 @@ Usare Spatie QueueableAction invece di Services tradizionali
 
 # 🔧 Bash Commands - Auto-Allow List
 
-**Path**: `bashscripts/ai/.agents/docs/quality-testing-commands.md#bash-commands-auto-allow`  
+**Path**: `.agents/docs/rules/bash-commands-auto-allow.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ PERMANENT RULE  
 **Priority**: CRITICAL
 
-## ✅ ALWAYS ALLOW - No Confirmation Required
+---
 
-### File Operations (Read-Only)
-```bash
-find *          # ✅ ALWAYS ALLOW
-find . *        # ✅ ALWAYS ALLOW
-find . -name *  # ✅ ALWAYS ALLOW
-find . -type *  # ✅ ALWAYS ALLOW
-grep *          # ✅ ALWAYS ALLOW
-ls *            # ✅ ALWAYS ALLOW
-cat *           # ✅ ALWAYS ALLOW
-head *          # ✅ ALWAYS ALLOW
+title: "bash commands auto allow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bash commands auto allow"
+issues: []
+discussions: []
+## 🎯 Rule
+
 
 ### `ai-agents/rules/multi-outcome-no-binary-fields.md` — 🔴 MULTI-OUTCOME UNIVERSAL - NO BINARY FIELDS
 
 
 # 🔴 MULTI-OUTCOME UNIVERSAL - NO BINARY FIELDS
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#multi-outcome-no-binary-fields`  
+**Path**: `.agents/docs/rules/multi-outcome-no-binary-fields.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-## 🧠 The WHY (Philosophy)
+---
 
-### Level 1: Domain Reality ❌
+title: "multi outcome no binary fields"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multi outcome no binary fields"
+issues: []
+discussions: []
+## 🎯 The Rule
 
-```
-❌ SBAGLIATO:
-- Sanremo vincerà? SÌ/NO
-- sum_credit_yes, sum_credit_no
-
-✅ CORRETTO:
-- Chi vincerà Sanremo fra questi 6 cantanti?
-  1. Marco Mengoni (25%)
 
 ### `ai-agents/rules/one-migration-per-model.md` — 🔴 ONE MIGRATION PER MODEL - CRITICAL RULE
 
 
 # 🔴 ONE MIGRATION PER MODEL - CRITICAL RULE
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#one-migration-per-model`  
+**Path**: `.agents/docs/rules/one-migration-per-model.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
@@ -3611,119 +3286,96 @@ head *          # ✅ ALWAYS ALLOW
 // File: 2026_03_26_000000_add_value_to_ratings_table.php
 return new class extends XotBaseMigration {
 
-### `ai-agents/rules/phpmd-phar-installation.md` — 🔧 PHPMD Installation - .phar NOT Composer
-
-
-# 🔧 PHPMD Installation - .phar NOT Composer
-
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#phpmd-phar-installation`  
-**Last Updated**: 2026-03-26  
-**Status**: ✅ CRITICAL RULE  
-**Priority**: BLOCKER
-
----
-## 🎯 The Rule
-
-> **SEMPRE** installare PHPMD come **.phar** standalone.
-> **MAI** installare PHPMD con Composer (`composer require --dev phpmd/phpmd`).
-
-**Why**:
-- ✅ **.phar** è standalone (nessuna dipendenza)
-- ✅ **.phar** non modifica `composer.json`
-- ✅ **.phar** non aggiunge dipendenze al progetto
-- ✅ **.phar** è sempre aggiornato
-- ❌ **Composer** aggiunge dipendenze inutili
-
 ### `ai-agents/rules/translation-structure-5-levels-mandatory.md` — 🔴 TRANSLATION STRUCTURE - 5 LEVELS MANDATORY
 
 
 # 🔴 TRANSLATION STRUCTURE - 5 LEVELS MANDATORY
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#translation-structure-5-levels-mandatory`  
+**Path**: `.agents/docs/rules/translation-structure-5-levels-mandatory.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-## ❌ WRONG Examples (NEVER DO THIS)
+---
 
-```blade
-// ❌ SBAGLIATO: $tx() helper (VIETATO!)
-{{ $tx('forecast::labels.outcomes.title', 'Outcomes') }}
-{{ $tx('forecast::labels.volume', 'Volume') }}
-{{ $tx('forecast::messages.loading', 'Loading...') }}
+title: "translation structure 5 levels mandatory"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure 5 levels mandatory"
+issues: []
+discussions: []
+## 🎯 The Rule
 
-// ❌ SBAGLIATO: MENO di 5 livelli
-{{ __('forecast::labels.volume') }}              // ❌ SOLO 2 livelli!
-{{ __('forecast::messages.loading') }}           // ❌ SOLO 2 livelli!
-{{ __('forecast::titles.order.book') }}          // ❌ SOLO 3 livelli!
 
 ### `ai-agents/rules/translation-structure-5-levels.md` — 🔴 TRANSLATION STRUCTURE - 5 LEVELS REQUIRED
 
 
 # 🔴 TRANSLATION STRUCTURE - 5 LEVELS REQUIRED
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#translation-structure-5-levels`  
+**Path**: `.agents/docs/rules/translation-structure-5-levels.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-## 📚 Translation Structure
+---
 
-### Level 1: Namespace
-```
-forecast::
-```
-Il namespace del modulo (forecast, blog, user, etc.)
+title: "translation structure 5 levels"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation structure 5 levels"
+issues: []
+discussions: []
+## 🎯 The Rule
 
-### Level 2: Context
-```
-forecast::user.
-forecast::fields.
 
 ### `ai-agents/rules/use-models-not-db-table.md` — 🔴 USE MODELS, NOT DB::TABLE() - CRITICAL RULE
 
 
 # 🔴 USE MODELS, NOT DB::TABLE() - CRITICAL RULE
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#use-models-not-db-table`  
+**Path**: `.agents/docs/rules/use-models-not-db-table.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-## 🧠 The WHY (5 Levels)
+---
 
-### Level 1: Type Safety ❌
+title: "use models not db table"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "use models not db table"
+issues: []
+discussions: []
+## 🎯 The Rule
 
-```php
-// ❌ DB::table() restituisce stdClass
-$bet = DB::table('bet_histories')->first();
-// $bet->created_at è STRINGA!
-$bet->created_at->diffForHumans(); // ❌ ERROR!
-
-// ✅ MODELLO restituisce oggetto tipizzato
-$bet = BetHistory::query()->first();
 
 ### `ai-agents/rules/xotbase-extension-rule.md` — 🔴 XotBase Extension Rule - PHILOSOPHY
 
 
 # 🔴 XotBase Extension Rule - PHILOSOPHY
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#xotbase-extension-rule`  
+**Path**: `.agents/docs/rules/xotbase-extension-rule.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ PHILOSOPHY DEFINED  
 **Priority**: BLOCKER
 
-## 🧠 The WHY (5 Levels of Understanding)
+---
 
-### Level 1: Blind Obedience ❌
-
-```php
-// ❌ SBAGLIATO: Solo per obbedienza
-class OutcomesTableWidget extends XotBaseTableWidget
-// "Lo faccio perché è una regola"
-```
-
-**Problem**: Non capisci il perché, prima o poi violerai la regola.
+title: "xotbase extension rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xotbase extension rule"
+issues: []
+discussions: []
+## 🎯 The Rule
 
 
 ### `ai-agents/rules/xotbase-table-method.md` — 🔴 XotBaseTableWidget - NO table() Method Rule
@@ -3731,23 +3383,23 @@ class OutcomesTableWidget extends XotBaseTableWidget
 
 # 🔴 XotBaseTableWidget - NO table() Method Rule
 
-**Path**: `bashscripts/ai/.agents/docs/architecture-rules.md#xotbase-table-method`  
+**Path**: `.agents/docs/rules/xotbase-table-method.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-## 🧠 The WHY
+---
 
-### Level 1: DRY Principle
+title: "xotbase table method"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "xotbase table method"
+issues: []
+discussions: []
+## 🎯 The Rule
 
-**XotBaseTableWidget** (base class):
-```php
-abstract class XotBaseTableWidget extends FilamentTableWidget
-{
-    public function table(Table $table): Table
-    {
-        // ✅ GIÀ IMPLEMENTATO
-        return $table
 
 ### `ai-agents/script-automazione.md` — Script e Automazione
 
@@ -3769,6 +3421,7 @@ La cartella `bashscripts/` contiene script organizzati per categoria:
 ## Chaos readiness
 
 - Script operativo: `bashscripts/ai/chaos-readiness-check.sh`
+- Comando documentato: [chaos-readiness](../chaos-readiness.md)
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 
 ### `ai-agents/setup.md` — Setup Codex locale
@@ -4057,10 +3710,10 @@ REQUEST-RESOLUTION: Match user requests to your commands/dependencies flexibly (
 - Requires implementing `FilamentUser` contract for production access control.
 
 
-
 ---
 
 title: "filament v3 rules"
+type: note
 
 ### `ai-agents/split/claude/fluxui-rules.md` — Flux UI Free
 
@@ -4104,8 +3757,8 @@ title: "filament v3 rules"
 # claudeMd
 Codebase and user instructions are shown below. Be sure to adhere to these instructions. IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow them exactly as written.
 
-Contents of /var/www/html/_bases/base_fixcity_fila5/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
-Contents of /var/www/html/_bases/base_ptvx_fila5/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
+Contents of /../../../../../Geo/docs/root-md-files/claude.md (project instructions, checked into the codebase):
+Contents of /../../../../../Geo/docs/root-md-files/claude.md (project instructions, checked into the codebase):
 
 <laravel-boost-guidelines>
 === foundation rules ===
@@ -4115,7 +3768,7 @@ Contents of /var/www/html/_bases/base_ptvx_fila5/laravel/../../../../docs/CLAUDE
 The Laravel Boost guidelines are specifically curated by Laravel maintainers for this application. These guidelines should be followed closely to enhance the user's satisfaction building Laravel applications.
 
 ## Foundational Context
-This
+This application is a Laravel application and its mai
 
 ### `ai-agents/split/claude/laravel-core-rules.md` — Do Things the Laravel Way
 
@@ -4204,7 +3857,6 @@ This
 - Use the `search-docs` tool if available, in combination with existing codebase conventions, to assist the user effectively with feature flags.
 
 
-
 ---
 
 title: "pennant rules"
@@ -4215,6 +3867,7 @@ updated: 2026-09-26
 qmd: "pennant rules"
 issues: []
 discussions: []
+## Cross-References
 
 ### `ai-agents/split/claude/pest-rules.md` — Pest
 
@@ -4273,7 +3926,6 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - Do not run `vendor/bin/pint --test`, simply run `vendor/bin/pint` to fix any formatting issues.
 
 
-
 ---
 
 title: "pint rules"
@@ -4284,6 +3936,7 @@ updated: 2026-09-26
 qmd: "pint rules"
 issues: []
 discussions: []
+## Cross-References
 
 ### `ai-agents/split/claude/project-architecture.md` — FIXCITY PROJECT ARCHITECTURE
 
@@ -4336,7 +3989,6 @@ This is **FixCity**, a **citizen reporting platform** for urban issue management
 - Always use Tailwind CSS v3 - verify you're using only classes supported by this version.
 
 
-
 ---
 
 title: "tailwind v3 rules"
@@ -4348,6 +4000,7 @@ qmd: "tailwind v3 rules"
 issues: []
 discussions: []
 ## Cross-References
+
 
 ### `ai-agents/split/claude/tests-rules.md` — Test Enforcement
 
@@ -4786,7 +4439,7 @@ cd laravel && php artisan test --filter=testName
 
 # 🚀 GSD + BMAD Workflow
 
-**File**: `bashscripts/ai/.agents/docs/workflow-methods.md#agents-gsd-bmad`  
+**File**: `.agents/docs/workflow/agents-gsd-bmad.md`  
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ IMPLEMENTATO
 
@@ -4859,7 +4512,7 @@ This file is a DRY local index for AI workflows in this module or theme.
 ## Canonical Sources
 
 - [OpenViking Integration Guide](../../../../docs/openviking-integration.md)
-- [AI Methodologies Integration](../../../../bashscripts/ai/wiki/memories/agent-conduct-tooling.md#ai-methodologies-integration)
+- [AI Methodologies Integration](../../../../docs/project/ai-methodologies-integration.md)
 - [Root Docs Index](../../../../docs/index.md)
 
 ## Local Workflow
@@ -4871,6 +4524,52 @@ This file is a DRY local index for AI workflows in this module or theme.
 5. Use BMAD for requirements, GSD for execution, and Ralph Loop for longer autonomous iterations.
 
 ## OpenViking Rule
+
+### `analisi-dettagliata-1.md` — Analisi Dettagliata del Modulo Notify - Parte 1: Architettura e Struttura
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 1: Architettura e Struttura
+
+## 1. Architettura del Sistema
+
+### 1.1 Struttura del Modulo
+Il modulo Notify è organizzato seguendo i principi di Domain-Driven Design (DDD) e Clean Architecture. La struttura è stata progettata per garantire:
+- Separazione delle responsabilità
+- Facilità di manutenzione
+- Scalabilità
+- Testabilità
+- Riutilizzo del codice
+
+#### 1.1.1 Directory Structure
+```
+Modules/Notify/
+├── app/
+│   ├── Console/
+│   │   └── Commands/
+│   │       ├── BackupTemplates.php      # Gestione backup automatici
+
+### `analisi-dettagliata-4-1.md` — Analisi Dettagliata del Modulo Notify - Parte 4: Integrazione con Filament
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 4: Integrazione con Filament
+
+## 4. Integrazione con Filament
+
+### 4.1 TemplateResource
+
+#### 4.1.1 Struttura Base
+```php
+namespace Modules\Notify\Filament\Resources;
+
+use Filament\Resources\Resource;
+use Filament\Resources\Table;
+use Filament\Resources\Form;
+use Modules\Notify\Models\Template;
+
+class TemplateResource extends Resource
+{
+    protected static ?string $model = Template::class;
+
 
 ### `analisi-miglioramenti-modulo-notify.md` — Analisi e Miglioramenti Modulo Notify
 
@@ -4918,6 +4617,190 @@ class TemplateResource extends Resource
         return $form->schema([
             Builder::make('content')
 
+### `analisiettagliata-2.md` — Analisi Dettagliata del Modulo Notify - Parte 2: Modelli e Relazioni
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 2: Modelli e Relazioni
+
+## 2. Modelli e Relazioni
+
+### 2.1 Template Model
+
+#### 2.1.1 Struttura Base
+```php
+namespace Modules\Notify\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class Template extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    protected $table = 'templates';
+
+### `analisiettagliata-3.md` — Analisi Dettagliata del Modulo Notify - Parte 3: Servizi Core
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 3: Servizi Core
+
+## 3. Servizi Core
+
+### 3.1 TemplateService
+
+#### 3.1.1 Struttura Base
+```php
+namespace Modules\Notify\Services;
+
+use Modules\Notify\Models\Template;
+use Modules\Notify\Events\TemplateCreated;
+use Modules\Notify\Events\TemplateUpdated;
+use Modules\Notify\Events\TemplateDeleted;
+use Modules\Notify\Exceptions\TemplateException;
+
+class TemplateService
+{
+    protected $cache;
+
+### `analisiettagliata-4.md` — Analisi Dettagliata del Modulo Notify - Parte 4: Integrazione con Filament
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 4: Integrazione con Filament
+
+## 4. Integrazione con Filament
+
+### 4.1 TemplateResource
+
+#### 4.1.1 Struttura Base
+```php
+namespace Modules\Notify\Filament\Resources;
+
+use Filament\Resources\Resource;
+use Filament\Resources\Table;
+use Filament\Resources\Form;
+use Modules\Notify\Models\Template;
+
+class TemplateResource extends Resource
+{
+    protected static ?string $model = Template::class;
+
+
+### `analisiettagliata-5.md` — Analisi Dettagliata del Modulo Notify - Parte 5: Testing
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 5: Testing
+
+## 5. Testing
+
+### 5.1 Unit Tests
+
+#### 5.1.1 TemplateTest
+```php
+namespace Modules\Notify\Tests\Unit;
+
+use Tests\TestCase;
+use Modules\Notify\Models\Template;
+use Modules\Notify\Services\TemplateService;
+use Modules\Notify\Exceptions\TemplateException;
+
+class TemplateTest extends TestCase
+{
+    protected $templateService;
+
+
+### `analisiettagliata-6.md` — Analisi Dettagliata del Modulo Notify - Parte 6: Monitoraggio e Analytics
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 6: Monitoraggio e Analytics
+
+## 6. Monitoraggio e Analytics
+
+### 6.1 Logging
+
+#### 6.1.1 TemplateLogger
+```php
+namespace Modules\Notify\Services;
+
+use Illuminate\Support\Facades\Log;
+use Modules\Notify\Models\Template;
+
+class TemplateLogger
+{
+    protected $template;
+
+    public function __construct(Template $template)
+    {
+
+### `analisiettagliata-7.md` — Analisi Dettagliata del Modulo Notify - Parte 7: Manutenzione e Backup
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 7: Manutenzione e Backup
+
+## 7. Manutenzione e Backup
+
+### 7.1 Versioning
+
+#### 7.1.1 VersionManager
+```php
+namespace Modules\Notify\Services;
+
+use Modules\Notify\Models\Template;
+use Modules\Notify\Models\TemplateVersion;
+use Modules\Notify\Exceptions\TemplateException;
+
+class VersionManager
+{
+    protected $template;
+
+    public function __construct(Template $template)
+
+### `analisiettagliata-8.md` — Analisi Dettagliata del Modulo Notify - Parte 8: Note Finali
+
+
+# Analisi Dettagliata del Modulo Notify - Parte 8: Note Finali
+
+## 8. Note Finali
+
+### 8.1 Best Practices
+
+#### 8.1.1 Documentazione
+- Mantenere aggiornata la documentazione del codice
+- Utilizzare PHPDoc per documentare classi, metodi e proprietà
+- Includere esempi di utilizzo nella documentazione
+- Documentare le dipendenze e i requisiti
+- Mantenere un changelog aggiornato
+
+#### 8.1.2 Logging
+- Utilizzare livelli di log appropriati (info, warning, error)
+- Includere contesto rilevante nei messaggi di log
+- Implementare rotazione dei log
+- Monitorare i log per errori e warning
+- Configurare alert per errori critici
+
+### `analisiettagliata.md` — Analisi Dettagliata del Modulo Notify
+
+
+# Analisi Dettagliata del Modulo Notify
+
+## 1. Analisi delle Soluzioni di Template Email
+
+### 1.1 Laravel Email Templates (simplepleb)
+**Analisi Dettagliata:**
+- Architettura basata su database
+- Supporto per variabili dinamiche
+- Integrazione nativa con Laravel
+- Sistema di caching base
+
+**Vantaggi:**
+- Facile integrazione
+- Bassa curva di apprendimento
+- Manutenzione semplice
+- Performance decenti
+
+**Svantaggi:**
+- Funzionalità limitate
+
 ### `analysis-completa.md` — Analisi Completa del Modulo Notify
 
 
@@ -4940,6 +4823,14 @@ Il modulo Notify è progettato seguendo i principi di:
 - Domain-Driven Design (DDD)
 - Clean Architecture
 - SOLID Principles
+
+### `analysis-complete.md` — analysis-complete
+
+
+
+### `analysis-detailed.md` — analysis-detailed
+
+
 
 ### `analysis-improvements.md` — Analisi e Miglioramenti del Modulo Notify
 
@@ -5074,6 +4965,11 @@ Il sistema supporta i seguenti tipi di notifiche per gli appuntamenti:
 3. **Cancellazione** (`cancelled`): Inviata quando un appuntamento viene cancellato
 4. **Riprogrammazione** (`resched
 
+### `approfondimento-completo-tailwind.md` — approfondimento-completo-tailwind
+
+
+ 
+
 ### `approfondimento-completo.md` — Approfondimento Completo Modulo Notify
 
 
@@ -5120,51 +5016,6 @@ Modules/Notify/
 │   ├── css/
 │   │   ├── app.css
 
-### `architectural-patterns-1.md` — Pattern Architetturali per le Notifiche
-
-
-# Pattern Architetturali per le Notifiche
-
-Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di <nome progetto>, con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
-
-## Confronto tra Pattern Architetturali
-
-### Pattern Attuale: Selezione del Driver nel Canale
-
-```php
-// In SmsChannel.php
-$driver = Config::get('sms.default', 'smsfactor');
-
-$action = match ($driver) {
-    'smsfactor' => app(SendSmsFactorSMSAction::class),
-    'twilio' => app(SendTwilioSMSAction::class),
-    'nexmo' => app(SendNexmoSMSAction::class),
-    'plivo' => app(SendPlivoSMSAction::class),
-    'gammu' => app(SendGammuSMSAction::class),
-    'netfun' => app(SendNetfunSMSAction::class),
-
-### `architectural-patterns.md` — Pattern Architetturali per le Notifiche
-
-
-# Pattern Architetturali per le Notifiche
-
-Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di , con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
-Questo documento analizza i pattern architetturali utilizzati nel sistema di notifiche di <nome progetto>, con particolare attenzione alla selezione del driver e alla gestione delle dipendenze.
-
-## Confronto tra Pattern Architetturali
-
-### Pattern Attuale: Selezione del Driver nel Canale
-
-```php
-// In SmsChannel.php
-$driver = Config::get('sms.default', 'smsfactor');
-
-$action = match ($driver) {
-    'smsfactor' => app(SendSmsFactorSMSAction::class),
-    'twilio' => app(SendTwilioSMSAction::class),
-    'nexmo' => app(SendNexmoSMSAction::class),
-    'plivo' => app(SendPlivo
-
 ### `architecturals.md` — Pattern Architetturali per le Notifiche
 
 
@@ -5186,29 +5037,6 @@ $action = match ($driver) {
     'twilio' => app(SendTwilioSMSAction::class),
     'nexmo' => app(SendNexmoSMSAction::class),
     'plivo' => app(SendPlivo
-
-### `architecture/document-root-architecture.md` — Document Root Architecture
-
-
-# Document Root Architecture
-
-## Overview
-
-This project uses a **custom Laravel public path architecture** where the web-accessible document root is `public_html/` instead of the default `laravel/public/`.
-
-## Architecture
-
-```
-/var/www/_bases/base_fixcity_fila5/
-/var/www/_bases/base_ptvx_fila5/
-├── public_html/                    ← ACTUAL DocumentRoot (Apache serves from here)
-│   ├── index.php                   ← Entry point
-│   ├── .htaccess
-│   ├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── themes/
-│   └── modules/
 
 ### `architecture/queueable-action-pattern.md` — QueueableAction Pattern Guide
 
@@ -5232,29 +5060,6 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification as NotificationFacade;
-
-### `architecture/standardized-sms-config-structure.md` — Struttura Standardizzata della Configurazione SMS
-
-# Struttura Standardizzata della Configurazione SMS
-
-## Introduzione
-
-Questo documento definisce la struttura standardizzata del file di configurazione SMS (`config/sms.php`) nel modulo Notify, basata sul modello di configurazione `mail.php` di Laravel. Questa struttura garantisce coerenza, manutenibilità e chiarezza nella configurazione dei provider SMS.
-
-## Struttura Generale
-
-```php
-return [
-    // Driver predefinito
-    'default' => env('SMS_DRIVER', 'default_provider'),
-    
-    // Parametri a livello di root
-    'from' => env('SMS_FROM'),
-    'debug' => env('SMS_DEBUG', false),
-    'queue' => env('SMS_QUEUE', 'default'),
-    'retry' => [
-        'attempts' => env('SMS_RETRY_ATTEMPTS', 3),
-        'delay' => env('SMS_RETRY_DELAY', 60),
 
 ### `architecture/structure.md` — Modulo Notify
 
@@ -5302,6 +5107,36 @@ Il file `routes/web.php` di questo modulo è **intenzionalmente vuoto**, poiché
 
 | Modulo | BasePivot | BaseMorphPivot | Pivot Concreti | Priorità |
 
+### `architecture-diagrams.md` — Architecture Diagrams & Visual Reference
+
+
+# Architecture Diagrams & Visual Reference
+
+**📍 Cross-References:**
+- [← Back to Master Index](master-documentation-index-2.md)
+- [Code Quality Analysis](code-quality-analysis-3.md)
+- [Module Dependencies](#module-dependencies)
+- [Theme Architecture](#theme-architecture)
+- [Data Flow](#data-flow)
+
+---
+
+title: "architecture diagrams"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture diagrams"
+issues: []
+discussions: []
+
+### `architecture-rules.md` — Architecture rules (puntatore)
+
+
+# Architecture rules (puntatore)
+
+Regole globali: [../../../../docs/wiki/rules/00-TRIGGER_MAP.md](../../../../docs/wiki/rules/00-TRIGGER_MAP.md).
+
 ### `base-model.md` — BaseModel del Modulo Notify
 
 
@@ -5324,29 +5159,6 @@ abstract class BaseModel extends XotBaseModel
     {
         return array_merge(parent::casts(), [
             'created_at' => 'datetime',
-
-### `base-templates-2.md` — Template Email di Base
-
-
-# Template Email di Base
-
-## Introduzione
-
-Questo documento definisce i template email di base da utilizzare nel modulo Notify, basati sui template di [MailPace](https://github.com/mailpace/templates).
-
-## Template Disponibili
-
-### 1. Welcome Email
-**Percorso**: `resources/mail-layouts/templates/welcome.html`
-
-```html
-@extends('mail-layouts.base')
-
-@section('content')
-<div class="welcome-container">
-    <h1>Benvenuto su {{ app_name }}!</h1>
-    <p>Grazie per esserti registrato. Siamo entusiasti di averti con noi.</p>
-    
 
 ### `base-templates.md` — Template Email di Base
 
@@ -5486,25 +5298,6 @@ Il refactoring è stato completato con **successo totale**! 🎉
 | **Performance** | N+1 risk | Ottimizzato | **+20%** 🚀 |
 | **Bug sicurezza** | 1 (guard ignorato) | 0 | **Fixato** 🔒 |
 
-### `before-after-report.md` — Before/After Report — Notify Module Docs
-
-
-# Before/After Report — Notify Module Docs
-
-## Before
-- docs/ contained: bmad/, legacy/ (447 files), wiki/, rules/, stories/, -integration/, readme.md files, images
-- No single docs/README.md with BMAD frontmatter
-- legacy/ mixed with active docs (archive not separated)
-- BMAD frontmatter missing from most .md files
-- No docs-archive-2026/ directory
-
-## After
-- legacy/ moved to docs-archive-2026/legacy/ (447 files preserved)
-- docs/ reduced to active docs only (120 .md files)
-- docs/README.md created with BMAD YAML frontmatter (index type, active status)
-- BMAD YAML frontmatter applied to all remaining .md in docs/
-- Archive isolated; active docs single directory
-
 ### `best-practices/kdown-linking-conventions.md` — Convenzioni per i Collegamenti nei File Markdown
 
 # Convenzioni per i Collegamenti nei File Markdown
@@ -5524,6 +5317,29 @@ Il refactoring è stato completato con **successo totale**! 🎉
 [Convenzioni di Naming per le Interfacce](modules/notify/docs/interface-naming-convention-2.md)
 [Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface-structure-clarification-2.md)
 [Architettura dei Contratti](modules/notify/docs/contra
+
+### `best-practices/path-conventions.md` — Convenzioni sui Percorsi
+
+# Convenzioni sui Percorsi 
+
+## Regole Fondamentali
+
+1. **Directory vs Namespace**
+   - Le directory nel filesystem sono in lowercase: `app`, `config`, `resources`
+   - I namespace possono essere in PascalCase ma devono mappare correttamente alle directory lowercase
+
+2. **Struttura Directory Principale**
+   - `Modules/Notify/app/` (CORRETTO)
+   - `Modules/Notify/App/` (ERRATO)
+
+3. **Struttura Directory Actions**
+   - `Modules/Notify/app/Actions/` (CORRETTO)
+   - `Modules/Notify/App/Actions/` (ERRATO)
+
+4. **Struttura Directory Datas**
+   - `Modules/Notify/app/Datas/` (CORRETTO)
+   - `Modules/Notify/App/Datas/` (ERRATO)
+   - `Modules/Notify/app/` (CORRETTO)
 
 ### `best-practices/schema-conventions.md` — Schema Conventions in Notify Module
 
@@ -5560,24 +5376,6 @@ Regole:
 - non committare file pointer al posto del contenuto reale;
 - se un asset manca, recuperare il binario originale e committarlo direttamente;
 - prima del push verificare che immagini, font, archivi e PDF siano contenuti reali.
-
-### `bmad/antigravity-integration.md` — antigravity e bmad method: integrazione e contesto fixcity
-
-
-# antigravity e bmad method: integrazione e contesto fixcity
-
-## scopo
-
-Chiarire la relazione tra **Google Antigravity** (IDE/agent-first), il template community **[antigravity-bmad-config](https://github.com/salacoste/antigravity-bmad-config)** e il modo in cui **FixCity** usa già BMAD (`_bmad/`, skill Cursor, artefatti in `_bmad-output/`).
-
-Evita confusione: **non sono due installazioni obbligatorie**; sono **due ambienti** (Antigravity vs Cursor/Windsurf) che possono condividere la stessa filosofia BMAD.
-
-## cosa offre il template antigravity (salacoste)
-
-- workflow in `.agent/workflows/` con **slash command** (`/pm`, `/architect`, `/dev`, `/qa`, …)
-- `AGENTS.md` orientato a Codex/agent
-- script `.gemini/transpose_bmad.py` per rigenerare i workflow da `.bmad-core/`
-- prerequisito: cart
 
 ### `bmad/architecture/module-boundary.md` — Notify — architettura
 
@@ -5617,209 +5415,9 @@ Documentazione completa dell'analisi e correzione di tutti gli errori PHPStan ne
 ### 1. Modulo Cms
 - **File modificati**: 4
 - **Errori risolti**: 8
-- **Documentazione**: [Cms PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2025.md)
+- **Documentazione**: [Cms PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2.md)
 
 **Principali correzioni**:
-
-### `bmad/architecture/phpstan-complete-analysis.md` — Analisi Completa PHPStan - 10 Ottobre 2025
-
-
-# Analisi Completa PHPStan - 10 Ottobre 2025
-
-## Sommario Generale
-
-- **Totale errori**: 19,750
-- **File con errori**: 19,750
-- **Livello PHPStan**: max
-- **Moduli analizzati**: 18
-- **File di test**: 326
-
-## Distribuzione Errori per Modulo
-
-| Modulo | Errori | % Totale |
-|--------|--------|----------|
-| User | 4,810 | 24.4% |
-| Fixcity | 3,909 | 19.8% |
-| App | 3,909 | 19.8% |
-| Notify | 2,766 | 14.0% |
-| Cms | 1,704 | 8.6% |
-
-### `bmad/architecture/phpstan-final-status.md` — PHPStan Final Status Report
-
-
-# PHPStan Final Status Report
-
-**Data**: 2025-10-10T11:55:17+02:00  
-**Livello**: MAX (9)  
-**Durata Sessione**: ~2.5 ore (09:39 - 11:55)
-
-## 🎉 RISULTATO STRAORDINARIO
-
-### ✅ CODICE DI PRODUZIONE: **0 ERRORI**
-
-Tutti i moduli `app/` sono **PERFETTI** al livello MAX di PHPStan!
-
-| Modulo | Files | Errori |
-|--------|-------|--------|
-| ✅ User | 362 | **0** |
-| ✅ Fixcity | 86 | **0** |
-| ✅ App | 86 | **0** |
-| ✅ Blog | 139 | **0** |
-| ✅ Xot | ~200 | **0** |
-
-### `bmad/architecture/phpstan-ignore-audit.md` — Audit `@phpstan-ignore`: Notify
-
-
-# Audit `@phpstan-ignore`: Notify
-
-1 solo `@phpstan-ignore` nel modulo: `app/Traits/HasNotificationRateLimiting.php:13`,
-`trait.unused`.
-
-**Verdetto: legittimo, non è debito nascosto.** Il trait implementa `shouldSendNotification()`,
-`getNotificationRateLimitRetryAfter()`, `getNotificationRateLimitRemainingAttempts()`,
-`resetNotificationRateLimit()`: quattro metodi protetti pensati per essere consumati
-da classi che estendono il trait, non da chiamanti esterni. `trait.unused` di PHPStan
-misura solo l'uso *diretto* (`use HasNotificationRateLimiting;` in un'altra classe di
-questo repo): grep conferma zero `use` nel codice applicativo. È coerente col pattern
-già documentato altrove nel progetto ("trait pubblico della piattaforma senza consumer
-in questo repo, non un errore da correggere"): l
-
-### `bmad/architecture/phpstan-level10-fixes.md` — PHPStan Level 10 Fixes - Notify Module
-
-
-# PHPStan Level 10 Fixes - Notify Module
-
-## Overview
-This document tracks PHPStan Level 10 compliance fixes for the Notify module.
-
-## Fixed Syntax Errors
-
-### Language Files Syntax Fixes
-
-#### Modules/Notify/resources/lang/it/mail.php
-- **Issue**: Multiple duplicate key declarations and syntax errors
-- **Fix**: Removed duplicate `tooltip` declarations and fixed array structure
-- **Before**: Multiple duplicate keys causing syntax errors
-- **After**: Clean array structure with unique keys
-
-#### Modules/Notify/resources/lang/it/notification.php
-- **Issue**: Extra closing brackets and semicolons
-- **Fix**: Removed extra `];` and `]; ];` at end of file
-- **Before**: Multiple closing brackets causing syntax errors
-
-### `bmad/architecture/phpstan-max-level-analysis.md` — PHPStan MAX Level Analysis - 2025-10-10
-
-
-# PHPStan MAX Level Analysis - 2025-10-10
-
-## Executive Summary
-
-**Data Analisi**: 2025-10-10  
-**Livello PHPStan**: MAX (9)  
-**Totale Errori**: 19,337  
-**Moduli Analizzati**: 18
-
-## 🎉 SCOPERTA IMPORTANTE
-
-✅ **CODICE DI PRODUZIONE: 0 ERRORI!**  
-✅ **Tutti i moduli app/ sono PERFETTI al livello MAX!**  
-⚠️ **Errori presenti SOLO nei test:**
-- ~19,000 errori `method.internalClass` (Pest framework)
-- ~334 errori reali nei test da correggere
-
-## Distribuzione Errori per Modulo
-
-
-### `bmad/architecture/phpstan-max-level-final-report.md` — PHPStan MAX Level - Final Report
-
-
-# PHPStan MAX Level - Final Report
-
-**Data**: 2025-10-10  
-**Ora Inizio**: 08:51:27  
-**Ora Fine**: 09:16:26  
-**Durata**: ~25 minuti  
-**Livello PHPStan**: MAX (9)
-
-## 🎉 RISULTATI STRAORDINARI
-
-### Metriche Finali
-
-| Metrica | Valore |
-|---------|--------|
-| **Errori Iniziali** | 19,337 |
-| **Errori Finali** | 49 |
-| **Errori Risolti** | 19,288 |
-| **Percentuale Risoluzione** | **99.75%** |
-| **Tempo Impiegato** | 25 minuti |
-
-### `bmad/architecture/phpstan-progress-report.md` — PHPStan Progress Report - Sessione Correzioni
-
-
-# PHPStan Progress Report - Sessione Correzioni
-
-**Data**: 2025-10-10  
-**Ora Inizio**: 09:39:07  
-**Ora Fine**: 11:45:43  
-**Durata**: ~2 ore  
-**Livello**: MAX (9)
-
-## 🎯 RISULTATI STRAORDINARI
-
-### Metriche Finali
-
-| Metrica | Valore Iniziale | Valore Finale | Miglioramento |
-|---------|-----------------|---------------|---------------|
-| **Errori Totali** | 22,912 | 15,101 | **-7,811 (-34%)** |
-| **Tempo Impiegato** | - | 2 ore | - |
-| **Velocità** | - | ~3,905 errori/ora | - |
-| **File Modificati** | 0 | ~300+ | - |
-
-
-### `bmad/architecture/phpstan-strict-analysis.md` — PHPStan STRICT Analysis - Tutti gli Errori
-
-
-# PHPStan STRICT Analysis - Tutti gli Errori
-
-**Data**: 2025-10-10T09:34:25+02:00  
-**Configurazione**: phpstan-strict.neon (NO ignore, test inclusi)  
-**Livello**: MAX (9)  
-**Totale Errori**: **22,522**
-
-## 📊 Distribuzione Errori per Tipo
-
-| # | Tipo Errore | Quantità | % | Priorità | Tempo Stima |
-|---|-------------|----------|---|----------|-------------|
-| 1 | method.internalClass | 4,929 | 21.9% | 🟡 MEDIA | 10 min |
-| 2 | method.nonObject | 4,843 | 21.5% | 🔴 ALTA | 3 ore |
-| 3 | property.nonObject | 3,124 | 13.9% | 🔴 ALTA | 2 ore |
-| 4 | property.notFound | 2,397 | 10.6% | 🔴 ALTA | 2 ore |
-| 5 | missingType.iterableValue | 1,185 | 5.3% | 🟢 BASSA | 1 ora |
-| 6 | offsetAccess.nonOffsetAccessible | 1,005 | 4.5% | 🔴 ALTA | 1.5 ore |
-| 7 | missingType.generics | 755 | 3.4% | 🟢 BASSA | 30
-
-### `bmad/architecture/phpstan-usage.md` — Utilizzo di PHPStan nel Progetto <nome progetto>
-
-
-# Utilizzo di PHPStan nel Progetto <nome progetto>
-
-## Esecuzione di PHPStan
-
-PHPStan deve essere eseguito dalla directory principale di Laravel. Il comando corretto è:
-
-```bash
-cd /path/to/laravel
-./vendor/bin/phpstan analyse -l 9 [percorso/al/modulo]
-```
-
-### Esempi di utilizzo
-
-Analizzare un singolo modulo:
-```bash
-./vendor/bin/phpstan analyse -l 9 Modules/Notify
-```
-
-Analizzare più moduli contemporaneamente:
 
 ### `bmad/audit.md` — Audit BMAD — Notify
 
@@ -6041,29 +5639,6 @@ Gli stati finiti del ciclo di vita sono backed enum `string`; i valori preservan
 
 Label/colore/icona di `NotificationLogStatusEnum` vengono da `lang/<locale>
 
-### `bmad/phpstan-real-situation.md` — PHPStan - Situazione Reale e Piano Correzione
-
-
-# PHPStan - Situazione Reale e Piano Correzione
-
-**Data**: 2025-10-10T09:39:07+02:00  
-**Analisi**: COMPLETA  
-**Status**: 🔧 CORREZIONE IN CORSO
-
-## 📊 Situazione Reale
-
-### Errori Totali: 22,522
-
-**Breakdown**:
-- ❌ **Report precedente ERRATO**: Diceva 49 errori (ignorava test e usava ignoreErrors)
-- ✅ **Analisi corretta**: 22,522 errori reali con configurazione strict
-
-### Configurazione Usata
-
-**File**: `phpstan-strict.neon`
-- ✅ Test INCLUSI (non esclusi)
-- ✅ NO ignoreErrors (tutti gli errori visibili)
-
 ### `bmad/piano-miglioramento.md` — Piano di miglioramento — Notify
 
 
@@ -6115,6 +5690,15 @@ l'opzione "absolute/FQDN" del pannello):
   # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
   # DA CREARE — vedi sopra.
+updated: 2026-09-02
+issues:
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
+  # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
+  - "https://github.com/provtv/module_notify_fila5/issues/"
+discussions:
+  # DA CREARE — vedi sopra.
+  - "https://github.com/provtv/module_notify_fila5/discussions/"
+---
 
 # Notify — perche' esiste
 
@@ -6123,291 +5707,172 @@ l'opzione "absolute/FQDN" del pannello):
 **Notify e' il solo punto da cui la piattaforma parla con una persona: separa il
 *fatto* che qualcosa e' accaduto dal *come* glielo si dice.**
 
-## L'evidenza
 
-- 254 file PHP (misura 2026-11-16), **53 Action**, 0 Service, zero Widget: e' un modulo di servizio, non una
-  schermata.
-- `NotificationTemplate`, `MailTemplate`, `NotifyTheme`: il testo e l'aspetto sono
-  **dati**, non codice. Cambiare una comunicazione non deve richiedere un deploy.
-- `Contact`: a chi si scrive e' un'entita', non una stringa dentro un modello.
-
-## Perche' e' piu' importante di quanto sembri
-
-### `bmad/setup-guide.md` — bmad method: setup e configurazione (fixcity)
+### `bmad/readme-en.md` — 📬 Notify — English presentation
 
 
-# bmad method: setup e configurazione (fixcity)
+# 📬 Notify — English presentation
 
-## scopo
+[![Domain-Notify](https://img.shields.io/badge/Domain-Notifications-E65100.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img
 
-Rendere ripetibile e verificabile l’uso del **BMAD Method** nel progetto FixCity: installazione, struttura, configurazioni lingua/output, e punti di controllo minimi (“funziona / non funziona”).
+### `bmad/stories/cleanup-notify.story.md` — Story: Cleanup Notify Module
 
-## cosa è “bmad” qui (business logic)
-
-In questo repository **BMAD** serve a:
-
-- ridurre ambiguità su *cosa* costruire (brief → prd)
-- ridurre ambiguità su *come* costruirlo (architettura → epiche/storie)
-- ridurre rischio di regressioni (qa/testing/review)
-- produrre artefatti tracciabili in cartelle note (output e thread)
-
-Non è “documentazione del progetto”: è **un processo operativo** per creare decisioni e deliverable ripetibili.
-
-## struttura delle directory (canonica)
-
-
-### `bmad/stories/0003-cleanup-notify-2.story.md` — Story: Cleanup Notify Module
 
 # Story: Cleanup Notify Module
 
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0007-continuazione-domani.story.md` — Continuazione domani
-
-# Continuazione domani
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0008-docs-reorg-core.story.md` — Story — riorganizzazione docs core: Notify
-
-# Story — riorganizzazione docs core: Notify
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0010-email-deliverability-setup.story.md` — 📧 BMAD Story: Email Deliverability Setup
-
-# 📧 BMAD Story: Email Deliverability Setup
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0011-git-status-fleet-merge-markers-notify.story.md` — git-status-fleet-merge-markers-notify
-
-# git-status-fleet-merge-markers-notify
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0013-navigation-translations-audit.story.md` — Audit traduzioni `.navigation` — modulo Notify
-
-# Audit traduzioni `.navigation` — modulo Notify
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0016-phpstan-conflict-markers-bootstrap.story.md` — phpstan-conflict-markers-bootstrap (Notify)
-
-# phpstan-conflict-markers-bootstrap (Notify)
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0017-phpstan-fix-notify.story.md` — Story: PHPStan fix Notify: NotificationsTable columns/filters
-
-# Story: PHPStan fix Notify: NotificationsTable columns/filters
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bmad/stories/0019-phpstan-modules-zero.story.md` — Story: PHPStan modules zero — Notify
-
-# Story: PHPStan modules zero — Notify
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
+## BMAD Method Applied
+- **Scale**: Feature/module (Notify)
+- **Impact**: Notification system, Notify agents, Notification delivery
+- **Quality Gates**: PHPStan, Pint, Notification delivery logic
+
+## Tasks
+1. **Understand** — Review Notify module structure, Notify agents, notification delivery
+2. **Plan** — Identify notification delivery issues, optimize notification flow
+3. **Implement** — Fix notification delivery, remove duplicate notification agents
+4. **Verify** — Run `phpstan analyse Modules/Notify`, `pint`, `phpmd`
+5. **Document** — Update sprint-status.yaml, add to docs/bmad-stories
+
+## References
+- Notify/docs/architecture.md
+- Notify/docs/index-2.md
+- Notify/notification agents
 
 ### `bmad/stories/continuazione-domani.md` — Notify — Continuazione Domani
 
+
 # Notify — Continuazione Domani
 
-## Context and Problem Statement
+## Stato verificato ora (sessione 2026-09-22)
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+- Marker di conflitto in codice PHP/lang: **risolti**. Sequenza reale da
+  `git log --oneline -20`: `bd02a591` (marker residui, 6 file),
+  `bb6a7761` (`SendNetfunSMSAction.php` + 4 lang file, tenuto lato
+  `isSuccessfulResponse`/redazione token/`Safe\json_decode`),
+  `c0ff8ebe` (marker committati nei 4 `lang/it/send_*.php`, tenuto formato
+  multiriga una-chiave-per-riga). Verificato ora: `SendNetfunSMSAction.php`
+  in HEAD ha davvero `isSuccessfulResponse`, `Safe\json_decode`, token
+  gestito senza log in chiaro — coerente con quanto dichiarato nei commit e
+  in `netfun-conflict-markers.story.md` (che ha ancora `status: review` ma
+  il lavoro descritto è verificato applicato).
 
-## Decision Drivers
+## Bug reale trovato: marker di 
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `bugs/summary-2.md` — Bug Fixes Summary
+### `bmad/stories/continuazione-domani.story.md` — Continuazione domani
 
 
-# Bug Fixes Summary
+# Continuazione domani
 
-## 2025-01-14: User Creation Infinite Loop Fix
+TODO: story description
 
-### Problema
-Il comando `php artisan make:filament-user` crashava con un loop infinito durante la creazione di nuovi utenti.
+### `bmad/stories/email-deliverability-setup.story.md` — 📧 BMAD Story: Email Deliverability Setup
 
-### Root Cause
-Il trait `HasTeams` nel metodo `currentTeam()` tentava automaticamente di creare e assegnare un personal team durante un getter, violando il principio di side-effect-free getters e causando loop infiniti.
+# 📧 BMAD Story: Email Deliverability Setup
 
-### Soluzione
-1. ✅ Rimossa logica auto-switch dal metodo `currentTeam()`
-2. ✅ Aggiunto metodo `initializeCurrentTeam()` per inizializzazione esplicita
-3. ✅ Creato `UserObserver` per gestione automatica personal team (opzionale)
-4. ✅ Aggiunta configurazione per controllare il comportamento
-5. ✅ Documentazione completa del problema e soluzione
+> **Valori non verificati (2026-11-12).** Gli esempi qui sotto non sono misure: l'IP SPF `185.71.12.45`, i parametri `postconf dkim_*` e il DMARC `p=quarantine` immediato non vengono da DNS o dal server. Il dominio invia via Mailtrap con DMARC `p=none` in osservazione: valori e stato reali in [mail-deliverability.md](../../mail-deliverability.md) (e `php artisan notify:check-dns`). Lo «stato operativo» dichiarato sotto non regge: i 4 CNAME Mailtrap sono pubblicati senza punto finale.
 
-### File Modificati
-- `Modules/User/ap
+**Story ID**: BMAD-EMAIL-001  
+**Epic**: Email Infrastructure  
+**Module**: Notify (owner)  
+**Status**: ✅ READY FOR DEV  
+**Priority**: P0 (Critical)  
+**Date**: 2026-11-12
+
+---
+
+## 📋 Story Summary
+
+> As a **System Administrator**, I want to **configure email deliv
+
+### `bmad/stories/git-status-fleet-merge-markers-notify.story.md` — git-status-fleet-merge-markers-notify
+
+
+# git-status-fleet-merge-markers-notify
+
+## Contesto
+
+Il processo automatico "laraxot" ha committato marker di merge conflict non
+risolti in file docs. Strategia canonica (story Xot
+`merge-marker-fleet-residue`): HEAD pulito → `git checkout HEAD -- file`;
+HEAD sporco → restore blob ultimo commit pulito in history.
+Tool: `bashscripts/tools/resolve-merge-markers.sh`.
+
+## Git status iniziale
+
+- Branch: `dev`, up to date con `laraxot/dev`, working tree clean.
+- `.gitattributes`: nessun marker.
+
+## Risultati
+
+| Metrica | Valore |
+|---|---|
+
+### `bmad/stories/navigation-translations-audit.story.md` — Audit traduzioni `.navigation` — modulo Notify
+
+
+# Audit traduzioni `.navigation` — modulo Notify
+
+Task utente 2026-09-29: trovare tutti i file di traduzione con la sottostringa
+`.navigation` o una chiave `'navigation'`, completare/migliorare per ogni
+lingua, senza mai togliere contenuto esistente. Dettaglio completo, metodo e
+tabelle nel documento di sintesi cross-modulo:
+`docs/wiki/i18n/navigation-translations-audit.md` (inventario pre-intervento in `docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md`).
+
+## Esito
+
+2 file corretti e commitati (`lang/de/contact-column.php`,
+`lang/en/contact-column.php`: `navigation.label`/`plural_label` da
+`Missing Navigation *` a valori reali).
+
+## Vincoli rispettati
+
+- Nessuna chiave rimossa; solo sostituzioni di placeholder o aggiunte.
+- Lock check eseguito a inizio sessione (`bashscripts
+
+### `bmad/stories/phpstan-fix-notify.story.md` — Story: PHPStan fix Notify: NotificationsTable columns/filters
+
+# Story: PHPStan fix Notify: NotificationsTable columns/filters
+
+## Status
+done: 2026-09-30
+
+## Contesto
+`phpstan analyse Modules` segnalava 2 errori in `tests/Unit/Filament/Resources/NotifyFilamentResourcesCoverageTest.php`: chiamate a metodi statici inesistenti `ListNotifications::notificationTableColumns()/notificationTableFilters()`. Il commit `1328c19601 (.)` (rigenerazione automatica rotta delle List pages) aveva eliminato quei metodi e ridotto `ListNotifications` a subclass bare di `XotBaseListRecords`.
+
+## Fix
+- `NotifyFilamentResourcesCoverageTest.php`: rimosso `use ...\Pages\ListNotifications;`, aggiunto `use ...\Tables\NotificationsTable;`.
+- Chiamate sostituite col pattern instance-based gia' usato in riga 206:
+  `app(NotificationsTable::class)->getTableColumns()` e `->getTable
+
+### `bmad/stories/phpstan-modules-zero.story.md` — Story: PHPStan modules zero — Notify
+
+
+# Story: PHPStan modules zero — Notify
+
+## Scopo
+
+Portare `Modules/Notify` a **0 errori PHPStan**, senza ignore.
+
+## Inventario (prima)
+
+Sorgente: `/tmp/phpstan_ptvx_fila5/modules/Notify.json` → **2** errori sullo stesso file.
+
+| File | Errore |
+|------|--------|
+| `config/notify.php` L6 | `larastan.noEnvCallsOutsideOfConfig` (`env()`) |
+| `config/notify.php` L9 | `larastan.noEnvCallsOutsideOfConfig` (`env()`) |
+
+## Root cause / business logic
+
+Larastan whitelista solo `laravel/config`: i config sotto `Modules/*/config` sono “fuori” per la regola, anche se sono file di config reali. Lo scopo di `notify.php` è leggere token/DNS mail a bootstrap-time; non vanno letti con `env()` runtime dopo cache.
+
 
 ### `bugs/summary.md` — Bug Fixes Summary
 
@@ -6584,7 +6049,7 @@ Duplicati individuati nel modulo `Notify`:
 
 Pe
 
-### `channel-vs-dto-provider-selection.md` — Analisi Architetturale: Selezione Provider nei Canali vs Data Transfer Objects
+### `channel-vsto-provider-selection.md` — Analisi Architetturale: Selezione Provider nei Canali vs Data Transfer Objects
 
 
 # Analisi Architetturale: Selezione Provider nei Canali vs Data Transfer Objects
@@ -6647,6 +6112,52 @@ discussions: []
 ## 📋 Sommario Esecutivo
 
 Implementazione di 3 nuovi template email natalizi professionali e festivi per Sottana Service, con animazioni CSS avanzate, design premium e brand identity.
+
+### `class-inheritance-best-practices.md` — Best Practices per l'Ereditarietà delle Classi
+
+
+# Best Practices per l'Ereditarietà delle Classi
+
+Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema , con particolare attenzione alle classi che estendono `XotBasePage`.
+Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
+
+## Analisi dell'Ereditarietà di XotBasePage
+
+`XotBasePage` è una classe base che estende `Filament\Pages\Page` e implementa già diverse interfacce e traits:
+
+```php
+abstract class XotBasePage extends Page implements HasForms
+{
+    use TransTrait;
+    use InteractsWithForms;
+    
+    // ...
+}
+```
+
+
+### `class-inheritance-principles.md` — Principi di Ereditarietà nelle Classi
+
+
+# Principi di Ereditarietà nelle Classi
+# Principi di Ereditarietà nelle Classi <nome progetto>
+
+## Regola Fondamentale: No Duplicate Declarations
+
+Le classi che estendono altre classi  **NON devono ridichiarare** interfacce, trait o metodi già presenti nella classe genitore, a meno che non ne modifichino il comportamento.
+
+## Esempi Corretti vs Errati
+
+### ❌ Errato: Duplicazione di Interfacce/Trait
+
+```php
+// Classe base
+abstract class XotBasePage extends Page implements HasForms
+{
+    use InteractsWithForms;
+    // ...
+}
+
 
 ### `code-fixes-2.md` — Notify Module - Code Fixes & Improvements (2025)
 
@@ -6825,19 +6336,6 @@ Complete overhaul of the Notify module addressing **41 files with critical PHP s
 > In tutto <nome progetto>, non si usano Service class custom ma solo [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action).
 > Usa sempre i componenti Blade nativi di Filament (`<x-filament::...>`) – [Guida Filament](https://filamentphp.com/docs/3.x
 
-### `command-ownership.md` — Notify console command ownership
-
-
-# Notify console command ownership
-
-Email-delivery commands belong to `Modules/Notify/app/Console/Commands` and use the
-`Modules\Notify\Console\Commands` namespace. `XotBaseServiceProvider` discovers and
-registers commands from that directory automatically.
-
-Do not add Notify commands under `laravel/app/Console/Commands`: that namespace is for
-application-level commands and bypasses the module ownership boundary. The ownership
-contract is covered by `SendTestMailOwnershipTest`.
-
 ### `communication-systems-architecture.md` — Notify Module - Communication Systems Architecture
 
 
@@ -6860,6 +6358,29 @@ NotificationManager
 ├── SMS Channels
 │   ├── Twilio
 │   ├── Nexmo/Vonage
+
+### `completamento-progetto-01.md` — 🎉 PROGETTO FIXCITY - COMPLETAMENTO SESSIONE 1 OTTOBRE 2025
+
+
+# 🎉 PROGETTO FIXCITY - COMPLETAMENTO SESSIONE 1 OTTOBRE 2025
+
+**Data**: 1 Ottobre 2025 - Ore 22:00  
+**Status**: ✅ **100% PHPSTAN COMPLIANCE + OPTIMIZATION COMPLETE!**  
+**Achievement**: 🏆 STRAORDINARIO
+
+---
+
+title: "completamento progetto 2025 10 01"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "completamento progetto 2025 10 01"
+issues: []
+discussions: []
+## 🎊 RISULTATI FINALI
+
+### ✅ 100% PHPSTAN LEVEL 9 COMPLIANCE!
 
 ### `completamento-progetto.md` — 🎉 PROGETTO FIXCITY - COMPLETAMENTO SESSIONE 1 OTTOBRE 2025
 
@@ -6970,6 +6491,19 @@ mirror, va creato in Xot prima di usarlo qui, mai come scorciatoia nel modulo.
 
 Non pre-caricare questo file: leggi la fonte canonica solo quando il task lo richiede.
 
+### `confidence-guidelines.md` — Massimizzare il livello di confidenza
+
+
+# Massimizzare il livello di confidenza
+
+1. **Test automatizzati**: copertura >90%, includi test unitari, integrazione, e fine‑to‑end.
+2. **CI/CD**: esegui tutti i test su ogni commit, blocca merge se falliscono.
+3. **Analisi statica**: PHPStan, Psalm e Laravel Pint al livello massimo.
+4. **Revisione del codice**: code‑review obbligatoria con checklist di qualità.
+5. **Monitoraggio in produzione**: New Relic / Sentry per errori e performance.
+6. **Documentazione**: mantieni aggiornati doc e changelog.
+7. **Rollback rapido**: feature flags e versioni per tornare indietro.
+
 ### `configuration-architecture.md` — Architettura delle Configurazioni nei Moduli Laravel
 
 
@@ -6993,6 +6527,11 @@ return [
             // Altri parametri specifici di SMTP
         ],
 
+### `configuration.md` — Configuration
+
+
+# Configuration
+
 ### `configurations-usage-principles.md` — Principi di Utilizzo delle Configurazioni
 
 
@@ -7015,6 +6554,33 @@ Forms\Components\Select::make('driver')
         'twilio' => 'Twilio',
         'nexmo' => 'Nexmo',
         'plivo' => 'Plivo',
+
+### `conflicts-analysis.md` — Analisi Conflitti - README.md
+
+
+# Analisi Conflitti - README.md
+
+
+## Obiettivi Funzionali
+
+## Decisioni Architetturali
+
+## Impatto
+
+
+## Collegamenti correlati
+- [[conflicts_overview]]
+
+### `conflicts.md` — Risoluzione Conflitti - Notify
+
+
+# Risoluzione Conflitti - Notify
+
+
+## File modificati
+
+## Decisioni adottate
+
 
 ### `conflitti-git.md` — Risoluzione Conflitti Git - Modulo Notify
 
@@ -7240,1041 +6806,47 @@ Il ContactTypeEnum segue i principi fondamentali del progetto:
 
 ContactTypeEnum gestisce i seguenti campi:
 
-### `contracts/build-mail-message-action.md` — BuildMailMessageAction
-
-
-# BuildMailMessageAction
-
-Costruisce un `MailMessage` Laravel a partire dal tema di notifica risolto da `NotifyTheme\Get`. Non invia nulla.
-
-## Input
-
-- `string $name`: nome del tipo di post del tema (es. codice template).
-- `Model $model`: sorgente dei parametri (`toArray()` unito a `$view_params`, che vincono).
-- `array $view_params`: parametri extra per la vista.
-- `?array $attachments`: lista di oggetti con `path`, `as`, `mime` (vedi riga 60).
-
-## Output
-
-- `MailMessage` con `from`, `subject`, vista `notify::email` e `view_params` contenente `body_html` e `subject` gia' decodificati.
-
-## Invarianti
-
-- `NOTIFY-BUILDMAIL-INV-1`: mittente = `view_params['from_email']` oppure `theme->from_email`; nome = `view_params['from']` oppure `theme->from`. Test: `tests/Unit/Actions/BuildMailMessage
-
-### `contracts/check-mail-dns-action.md` — CheckMailDnsAction
-
-
-# CheckMailDnsAction
-
-Verifica i record DNS di un dominio di posta: CNAME attesi per etichetta e presenza del record DMARC.
-
-## Input
-
-- `string $domain`: dominio di zona.
-- `array $expectedCnames`: mappa `etichetta => target` atteso.
-- `?Closure $resolver`: risolutore `(name, type) => string[]`; default `dns_get_record`.
-
-## Output
-
-- `array` di risultati, uno per CNAME atteso piu' uno per DMARC. Ogni elemento: `record`, `expected`, `found`, `ok`, `hint`.
-
-## Invarianti
-
-- `NOTIFY-MAILDNS-INV-1`: un CNAME assente produce `hint = missing`; trovato senza il target produce `wrong-target`; trovato come `<target>.<zona>` (punto finale mancante: il DNS ha aggiunto la zona) produce `missing-trailing-dot`. Test: `tests/Unit/Actions/Mail/CheckMailDnsActionTest.php` (dedicato, asserti non verifica
-
-### `contracts/create-mailjet-transport-action.md` — CreateMailjetTransportAction
-
-
-# CreateMailjetTransportAction
-
-Crea un `TransportInterface` Symfony Mailer per Mailjet, via API o SMTP.
-
-## Input
-
-- `string $key`, `string $secret`: chiavi pubblica e privata Mailjet.
-- `bool $sandbox = false`: attivo solo con schema `api`.
-- `string $scheme = 'api'`: `api` oppure `smtp`.
-- `?HttpClientInterface $client`: client HTTP iniettabile.
-
-## Output
-
-- `TransportInterface` (Symfony Mailer) per il DSN `mailjet+<scheme>`.
-
-## Invarianti
-
-- `NOTIFY-MJTRANS-INV-1`: chiave o segreto vuoti (dopo trim) lanciano `InvalidArgumentException`. Test: `tests/Unit/Actions/Mail/MailjetTransportTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-MJTRANS-INV-2`: lo schema diverso da `api`/`smtp` lancia `InvalidArgumentException`. Stesso test.
-
-### `contracts/determine-seasonal-content-view-path-action.md` — DetermineSeasonalContentViewPathAction
-
-
-# DetermineSeasonalContentViewPathAction
-
-Sceglie la vista del contenuto email in base alla data corrente (Carbon::now) e restituisce il namespace di vista `sixteen::emails.<nome>`.
-
-## Input
-
-- `string $defaultViewName = 'base-content'`: vista usata fuori dai periodi stagionali.
-
-## Output
-
-- `string`: `sixteen::emails.<vista>`, con vista tra `christmas-content`, `easter-content`, `summer-content`, `halloween-content` o `$defaultViewName`.
-
-## Invarianti
-
-- `NOTIFY-SEASONAL-INV-1`: 1 dicembre - 10 gennaio restituisce `christmas-content`. Test: `tests/Unit/Actions/DetermineSeasonalContentViewPathActionTest.php` (file dedicato, asserti non verificati).
-- `NOTIFY-SEASONAL-INV-2`: da Pasqua - 2 giorni a Pasqua + 1 giorno restituisce `easter-content`; la Pasqua e' calcolata con l'algoritmo gr
-
-### `contracts/esendex-send-action.md` — EsendexSendAction
-
-
-# EsendexSendAction
-
-Invia un SMS tramite le REST API Esendex (login, poi POST su `sms`) usando cURL diretto.
-
-## Input
-
-- `SmsData $smsData`: `recipient` (array con un numero), `body`.
-- Config: `esendex.username`, `esendex.password`, `esendex.sender` (asserite stringhe in `login()`).
-
-## Output
-
-- `array`: il JSON decodificato della risposta quando HTTP 201; `[]` quando HTTP diverso da 201.
-
-## Invarianti
-
-- `NOTIFY-ESENDEX-INV-1`: senza login valido (HTTP diverso da 200) lancia `Exception`. Test: `tests/Unit/Actions/EsendexSendActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-ESENDEX-INV-2`: la risposta di invio e' accettata solo con HTTP 201; altrimenti ritorna `[]` senza eccezione. Stesso test.
-- `NOTIFY-ESENDEX-INV-3`: la risposta 201 non decodificabile come array lancia
-
-### `contracts/format-sms-message-action.md` — FormatSmsMessageAction
-
-
-# FormatSmsMessageAction
-
-Prepara il testo SMS sostituendo i caratteri accentati e stima il numero di caratteri e di SMS.
-
-## Input
-
-- `string $message`.
-
-## Output
-
-- `array{0: string, 1: int, 2: int}`: testo formattato, conteggio caratteri (con escape GSM), numero di SMS.
-
-## Invarianti
-
-- `NOTIFY-SMSFMT-INV-1`: le lettere accentate diventano apostrofate (`è` -> `e'`), `€` diventa `EUR`. Test: `tests/Unit/Actions/SMS/FormatSmsMessageActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-SMSFMT-INV-2`: i caratteri dell'estensione GSM (`^ { } [ ] ~ \ |`) contano doppio. Stesso test.
-- `NOTIFY-SMSFMT-INV-3`: fino a 160 caratteri = 1 SMS; oltre, `ceil(n / 153)`. Stesso test.
-
-## Effetti collaterali
-
-### `contracts/generic-notification-traits.md` — Notify notification traits — purpose and consumers
-
-
-# Notify notification traits — purpose and consumers
-
-Hub unico (DRY): perche' esistono i trait Notify e dove sono cablati in `app/`.
-I dummy sotto `tests/Unit/Traits/` **non** soddisfano PHPStan `trait.unused`
-(i test sono fuori dal neon). Aggiorna questa pagina invece di crearne gemelle.
-
-| Trait | Scopo (business why) | Consumer in `app/` | Dettaglio |
-|-------|----------------------|--------------------|-----------|
-| `HasNotificationRateLimiting` | Cap tentativi di invio per chiave (`notify.rate_limiting`) | `Notifications\GenericNotification` | [has-notification-rate-limiting.md](./has-notification-rate-limiting.md) |
-| `HasNotificationTracking` | Pixel open + rewrite link HTML senza controller HTTP legacy (`notify.tracking`) | `Notifications\GenericNotification` | [has-notification
-
-### `contracts/get-mail-layout-action.md` — GetMailLayoutAction
-
-
-# GetMailLayoutAction
-
-Legge dal tema attivo il file HTML di layout email piu' specifico disponibile per il contesto stagionale corrente.
-
-## Input
-
-- `string $baseName = 'base'`: nome base del layout richiesto.
-
-## Output
-
-- `string`: contenuto del file di layout, oppure `'{{{ body }}}'` se nessun file esiste.
-
-## Invarianti
-
-- `NOTIFY-MAILLAYOUT-INV-1`: l'ordine dei candidati e': `<base>_<contesto>.html`, `<base>.html` (solo se base diverso da `base`), `christmas-professional.html` (solo contesto natale), `<contesto>.html`, `base.html`. Il primo esistente vince. Test: `tests/Unit/Actions/Mail/GetMailLayoutActionTest.php` (dedicato, asserti non verificati); `tests/Feature/MailLayoutRenderTest.php`.
-- `NOTIFY-MAILLAYOUT-INV-2`: il percorso e' `base_path('Themes/<pub_theme>/resources/mail-
-
 ### `contracts/handle-mailjet-events-action.md` — HandleMailjetEventsAction
 
 
 # HandleMailjetEventsAction
 
-Webhook Mailjet: valida il token nel path, normalizza gli eventi e li rilancia come `MailDeliveryEventReceived`.
+Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
+Sorgente: `app/Actions/Mail/Mailjet/HandleMailjetEventsAction.php`. Studio e integrazione: `docs/email/mailjet.md`.
+Decisioni: [token nel percorso](../adr/webhooks-authenticate-with-a-token-in-the-path.md),
+[esiti come evento](../adr/mail-delivery-outcomes-are-events.md).
 
 ## Input
 
-- `Request $request`: JSON con uno o piu' eventi.
-- `string $token`: dal path, confrontato con `config('notify.notify.mailjet_webhook_token')`.
+- `POST /api/notify/mailjet/events/{token}` (rotta `notify.mailjet.events`, `routes/api.php`).
+- Corpo JSON: un evento Mailjet oppure una lista (raggruppamento attivo nel pannello Mailjet).
+- Config: `notify.notify.mailjet_webhook_token` (`MAILJET_WEBHOOK_TOKEN`).
 
 ## Output
 
-- `JsonResponse`: `401 {error: unauthorized}` oppure `200 {handled: n}`.
-
-## Invarianti
-
-- `NOTIFY-MJEVENTS-INV-1`: token mancante in config, vuoto o diverso risponde `401`. Test: nessuno dedicato verificato.
-- `NOTIFY-MJEVENTS-INV-2`: sono accettati solo i tipi `sent`, `delivered`, `open`, `click`, `bounce`, `blocked`, `spam`, `unsub`; gli altri e gli item senza `email` vengono saltati. Test: nessuno.
-- `NOTIFY-MJEVENTS-INV-3`: `permanent` vale `true` per `blocked`, `spam`, `unsub` e 
-
-### `contracts/has-notification-rate-limiting.md` — HasNotificationRateLimiting contract
-
-
-# HasNotificationRateLimiting contract
-
-Caps notification sends via Laravel `RateLimiter` using
-`notify.rate_limiting` (`enabled`, `max_attempts`, `decay_minutes`).
-
-## Consumer
-
-Wired on `Modules\Notify\Notifications\GenericNotification` so every generic
-(and subclass) send path can call `shouldSendNotification($key)` before dispatch.
-
-Full wiring rationale: [generic-notification-traits.md](./generic-notification-traits.md).
-
-### `contracts/has-notification-tracking.md` — HasNotificationTracking contract
-
-
-# HasNotificationTracking contract
-
-Adds open-pixel and outbound-link rewrite to HTML bodies when
-`notify.tracking` is enabled. Keeps tracking out of legacy HTTP controllers.
-
-## Consumer
-
-Wired on `Modules\Notify\Notifications\GenericNotification` so mail/HTML
-channels can call `addTracking($html, $trackingId)` before render.
-
-Full wiring rationale: [generic-notification-traits.md](./generic-notification-traits.md).
-
-See also: [../no-notification-tracking-controller.md](../no-notification-tracking-controller.md).
-
-### `contracts/has-tenant-notifications.md` — HasTenantNotifications contract
-
-
-# HasTenantNotifications contract
-
-`HasTenantNotifications` adds tenant-aware notification-log relationships and
-the `forTenant` query scope to an Eloquent model.
-
-Purpose: **NotificationLog** morph logs filtered by current Filament tenant —
-not Laravel database notifications (`Illuminate\Notifications\Notifiable`).
-
-## Generics
-
-PHPStan/Larastan type `morphMany()` as `MorphMany<Related, $this>`. Declaring
-`MorphMany<NotificationLog, TModel>` (even with `@use HasTenantNotifications<Notification>`)
-fails with covariance mismatch against `$this`. Use `$this` directly:
-
-```php
-use HasTenantNotifications;
-
-/** @return MorphMany<NotificationLog, $this> */
-public function notifications(): MorphMany
-
-### `contracts/log-simulated-push-delivery-action.md` — LogSimulatedPushDeliveryAction
-
-
-# LogSimulatedPushDeliveryAction
-
-Registra nel log la consegna push simulata per le piattaforme senza transport reale (APNs, Web Push).
-
-## Input
-
-- `string $platform`: `apns` o `webpush`.
-- `string $target`: token o topic (abbreviato a 12 caratteri).
-- `array $payload`: payload che sarebbe stato consegnato.
-
-## Output
-
-- `void`.
-
-## Invarianti
-
-- `NOTIFY-PUSHSIM-INV-1`: ogni chiamata produce un `Log::notice` con `platform`, `target` troncato a 12 caratteri (`Str::limit`) e il payload completo. Test: nessuno dedicato verificato (solo menzioni in test di copertura).
-- `NOTIFY-PUSHSIM-INV-2`: non c'e' nessuna chiamata di rete. Test: nessuno.
-
-
-### `contracts/modelwithstatuscontract.md` — ModelWithStatusContract
-
-
-# ModelWithStatusContract
-
-Per la documentazione completa, consulta il file originale in [Modules/Xot/docs/contracts/ModelWithStatusContract.md](modelwithstatuscontract.md)
-
-## Collegamenti rapidi
-- [Implementazione](../../Modules/Xot/app/Contracts/ModelWithStatusContract.php)
-- [Implementazione](../../../Xot/app/Contracts/ModelWithStatusContract.php)
-- [Documentazione completa](modelwithstatuscontract.md)
-- [Esempi di utilizzo](../ai-agents/examples.md)
-
-## Note importanti
-Questo contratto è parte del sistema di gestione degli stati di Laraxot e utilizza il pacchetto Spatie Model Status. 
-
-### `contracts/netfun-send-action.md` — NetfunSendAction
-
-
-# NetfunSendAction
-
-Variante legacy di invio SMS Netfun (endpoint `sms-batch.json`), sostituita da `SMS\SendNetfunSMSAction`.
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `from`, `body`. Il `recipient` viene modificato in place.
-- Config: `services.netfun.token` (obbligatorio, costruttore).
-
-## Output
-
-- `array`: `['status_code' => int, 'status_txt' => string]` (da `$this->vars`).
-
-## Invarianti
-
-- `NOTIFY-NETFUNLEGACY-INV-1`: il numero e' normalizzato: prefisso `00` diventa `+39`, numero senza `+` riceve `+39`. Test: `tests/Unit/Actions/NetfunSendActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-NETFUNLEGACY-INV-2`: il body inviato usa `api_token` dalla config e `sender = $smsData->from` (nessun fallback al mittente di default). Stesso test.
-- `NOTIFY-NETFUNLEGACY-INV-3`: lo
-
-### `contracts/normalize-phone-number-action.md` — NormalizePhoneNumberAction (root)
-
-
-# NormalizePhoneNumberAction (root)
-
-Normalizza un numero di telefono in forma `+<cifre>`. Versione generica, distinta da `SMS\NormalizePhoneNumberAction`.
-
-## Input
-
-- `?string $phoneNumber`: numero grezzo.
-
-## Output
-
-- `string`: numero con `+` iniziale, oppure `''` se l'input e' null o vuoto.
-
-## Invarianti
-
-- `NOTIFY-PHONENORM-INV-1`: input null o vuoto restituisce `''`. Test: `tests/Unit/Actions/NormalizePhoneNumberActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-PHONENORM-INV-2`: vengono mantenuti solo cifre e `+`; `00` iniziale diventa `+`. Stesso test.
-- `NOTIFY-PHONENORM-INV-3`: un numero che inizia con `0` (senza `+`) riceve prefisso `+39`. Stesso test.
-- `NOTIFY-PHONENORM-INV-4`: altri numeri senza `+` ricevono `+`. Stesso test.
-
-
-### `contracts/notification-manager.md` — NotificationManager
-
-
-# NotificationManager
-
-Facade di servizio sopra `SendNotificationAction`: invio singolo, invio multiplo e letture dei template. Classe senza suffisso `Action` nel nome, ma residente in `Actions/`.
-
-## Input
-
-- `send()` / `execute()`: `Model $recipient`, `string $templateCode`, `array $data`, `array $channels`, `array $options`.
-- `sendMultiple()`: `array $recipients` (filtrati su `Model`).
-- `getTemplate(string $code)`, `getTemplatesByCategory(string $category)`, `getTemplatesByChannel(string $channel)`.
-
-## Output
-
-- `send()` / `execute()`: `?Notification` (il primo record `database` restituito da `SendNotificationAction`), oppure `null`.
-- `sendMultiple()`: lista dei soli record non nulli.
-- Letture: `?NotificationTemplate` o `Collection` di template con `is_active = true`.
-
-## Invarian
-
-### `contracts/notify-theme-attachment-pdf.md` — NotifyTheme\Attachment\Pdf
-
-
-# NotifyTheme\Attachment\Pdf
-
-Genera il PDF di allegato da un tema notifica (canale `pdf`) e restituisce i dati dell'allegato. Classe senza suffisso `Action`: il nome del file, nella convenzione, usa il prefisso del sottopercorso.
-
-## Input
-
-- `string $post_type`: tipo di post per il tema.
-- `array $view_params`: parametri per `Get`.
-
-## Output
-
-- `AttachmentData`: `path` (file su disco cache), `as` (nome file), `mime` = `application/pdf`.
-
-## Invarianti
-
-- `NOTIFY-PDF-INV-1`: il nome file e' `Str::slug(subject).pdf`. Test: `tests/Unit/Actions/NotifyTheme/Attachment/PdfTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-PDF-INV-2`: se `$view_params` ha una chiave uguale al nome calcolato, il suo valore sostituisce il nome file. Stesso test.
-- `NOTIFY-PDF-INV-3`: il PDF viene scritto c
-
-### `contracts/notify-theme-get.md` — NotifyTheme\Get
-
-
-# NotifyTheme\Get
-
-Recupera o crea il tema di notifica (`NotifyTheme`) per tipo, lingua e tipo di post, popolandolo dalle traduzioni al primo accesso.
-
-## Input
-
-- `string $name`: tipo di post (`post_type`).
-- `string $type`: canale (`email`, `pdf`, ...).
-- `array $view_params`: `post_id` (default 0), `lang` (default locale), `body_html` opzionale.
-
-## Output
-
-- `NotifyThemeData`: `from_email`, `from`, `subject` e `body_html` con i placeholder `##chiave##` sostituiti, `view_params` con `logo`, `now`, `body_html`.
-
-## Invarianti
-
-- `NOTIFY-THEMEGET-INV-1`: la riga e' cercata con `firstOrCreate` su `(lang, type, post_type, post_id)`. Test: `tests/Unit/Actions/NotifyTheme/GetTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-THEMEGET-INV-2`: `subject`, `theme` (default `ark`) e `body_ht
+- `401 {"error":"unauthorized"}` se il token non coincide o non è configurato.
+- Altrimenti `200 {"handled": <n>}`, 
 
 ### `contracts/process-inbound-mail-action.md` — ProcessInboundMailAction
 
 
 # ProcessInboundMailAction
 
-Webhook invocabile (`__invoke`) che riceve email in ingresso da Postmark, Mailgun o MIME grezzo e le salva in `InboundEmail`.
+Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
+Sorgente: `app/Actions/Mail/ProcessInboundMailAction.php`. Decisione: [token nel percorso](../adr/webhooks-authenticate-with-a-token-in-the-path.md).
 
 ## Input
 
-- `Request $request`: payload del provider.
-- `string $provider`: provider dalla route.
-- Route `token`: confrontato con `config('notify.notify.inbound_token')`.
+- `POST /api/inbound/{provider}/{token}` (rotta `notify.inbound`, `routes/api.php`).
+- Payload riconosciuti, in quest'ordine: Postmark JSON (`MessageID`/`FromFull`), Mailgun form (`sender`/`body-mime`), MIME grezzo
+  (`Content-Type: message/rfc822` o corpo che inizia con `From:`).
+- Config: `notify.notify.inbound_token` (`MAIL_INBOUND_TOKEN`).
 
 ## Output
 
-- `JsonResponse`: `200 {ok: true}`; `401 {error: unauthorized}`; `422 {error: unparseable}`.
-
-## Invarianti
-
-- `NOTIFY-INBOUND-INV-1`: token assente, vuoto o diverso (`hash_equals`) risponde `401` senza altri effetti. Test: nessuno dedicato verificato (nessun riferimento nei test del modulo).
-- `NOTIFY-INBOUND-INV-2`: il riconoscimento del formato e' in ordine: `MessageID` o `FromFull` = Postmark; `sender` o `body-mime` = Mailgun; `Content-Type` `message/r
-
-### `contracts/render-notification-template-string-action.md` — RenderNotificationTemplateStringAction
-
-
-# RenderNotificationTemplateStringAction
-
-Sostituisce i segnaposto `{{ espressione }}` in una stringa di template con valori da un array.
-
-## Input
-
-- `string $template`: testo con segnaposto.
-- `array $data`: valori; le chiavi annidate si leggono con notazione a punti (`data_get`).
-
-## Output
-
-- `string`: template con i segnaposto sostituiti. Se la regex non matcha restituisce il template originale.
-
-## Invarianti
-
-- `NOTIFY-RENDER-INV-1`: un'espressione che non rispetta `^\$?[A-Za-z_][A-Za-z0-9_]*(\.[A-Za-z0-9_]+)*$` viene lasciata intatta e loggata come warning. Test: `tests/Unit/Actions/RenderNotificationTemplateStringActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-RENDER-INV-2`: variabile assente o `null` viene resa come stringa vuota (warning solo per l'assente).
-- `NO
-
-### `contracts/schedule-push-notification-action.md` — SchedulePushNotificationAction
-
-
-# SchedulePushNotificationAction
-
-Programma l'invio di una push a un orario futuro: salva i dati in cache e accoda il job di invio con ritardo.
-
-## Input
-
-- `list<string> $tokens`: token destinatari.
-- `PushNotificationData $notification`.
-- `array $data`: dati extra.
-- `DateTime $scheduleTime`: orario di invio.
-
-## Output
-
-- `string`: il `jobId` (`push_` + uniqid).
-
-## Invarianti
-
-- `NOTIFY-PUSHSCHED-INV-1`: la cache `scheduled_push:<jobId>` contiene token, notifica, dati e timestamp, con scadenza `$scheduleTime`. Test: `tests/Unit/NotifyRemainingCoverageTest.php` (menzione, asserti non verificati).
-- `NOTIFY-PUSHSCHED-INV-2`: viene accodato un `ActionJob` su `SendScheduledPushNotificationAction` con `[$jobId]`, ritardato a `$scheduleTime`. Test: nessuno dedicato verificato.
-
-### `contracts/send-360dialog-whatsapp-action.md` — Send360dialogWhatsAppAction
-
-
-# Send360dialogWhatsAppAction
-
-Invio WhatsApp via API 360dialog (`/v1/messages`), con header `D360-API-KEY`.
-
-## Input
-
-- `WhatsAppData $whatsAppData`: `recipient`, `type` (`text`, `template`, `media`), `body`, `template`, `media`.
-- Config: `services.360dialog.api_key` (obbligatorio), `whatsapp.timeout`, `whatsapp.debug`.
-
-## Output
-
-- `['success' => 2xx, 'message_id', 'response', 'vars']` in successo; `['success' => false, 'error', 'status_code', 'vars']` su 4xx.
-
-## Invarianti
-
-- `NOTIFY-360D-INV-1`: `text` invia `text.body`; `template` invia il DTO template; `media` determina il tipo dall'estensione (`image`, `video`, `audio`, altrimenti `document`). Test: `tests/Unit/Actions/WhatsApp/Send360dialogWhatsAppActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-360D-INV-2`: senza
-
-### `contracts/send-appointment-notification-action.md` — SendAppointmentNotificationAction
-
-
-# SendAppointmentNotificationAction
-
-Entry point per le notifiche di appuntamento. Oggi e' uno stub: non invia nulla.
-
-## Input
-
-- `Model $appointment`: non letto.
-- `string $type`: solo per il log.
-- `array $additionalData`: solo per il log.
-
-## Output
-
-- `bool`: sempre `false`.
-
-## Invarianti
-
-- `NOTIFY-APPT-INV-1`: nessuna notifica viene inviata; il ritorno e' sempre `false`. Test: `tests/Unit/Actions/SendAppointmentNotificationActionTest.php` (dedicato; verifica il ritorno `false`, non verificato nel dettaglio).
-- `NOTIFY-APPT-INV-2`: ogni chiamata scrive un `Log::debug` con `type` e `additional_data`. Test: nessuno dedicato verificato.
-
-
-### `contracts/send-botman-telegram-action.md` — SendBotmanTelegramAction
-
-
-# SendBotmanTelegramAction
-
-Invio messaggio Telegram via Bot API (HTTP diretto con Guzzle), variante con la gestione del corpo non JSON piu' tollerante.
-
-## Input
-
-- `TelegramData $telegramData`: `type` (`text`, `photo`, `video`, `document`, `audio`, `animation`; altro = `sendMessage`), `chatId`, `text`, `media`, `parseMode`, `disableWebPagePreview`, `disableNotification`, `replyToMessageId`, `replyMarkup`.
-- Config: `services.telegram.token` (obbligatorio nel costruttore), `services.telegram.api_url`, `telegram.parse_mode`, `telegram.timeout`.
-
-## Output
-
-- Successo HTTP: `['success' => ok === true, 'message_id', 'response', 'vars']`.
-- Errore 4xx: `['success' => false, 'error', 'error_code', 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-TGBOT-INV-1`: l'endpoint dipende dal tipo; `t
-
-### `contracts/send-duocircle-mail-action.md` — SendDuocircleMailAction
-
-
-# SendDuocircleMailAction
-
-Engine di invio del driver `duocircle`. Non implementato: copia le proprieta' e lancia sempre un errore WIP.
-
-## Input
-
-- `array $vars`: chiavi stringa diventano proprieta' dell'Action.
-
-## Output
-
-- `void` apparente: il metodo non ritorna, lancia sempre.
-
-## Invarianti
-
-- `NOTIFY-DUOSEND-INV-1`: ogni chiamata lancia `RuntimeException('WIP [<riga>][<classe>]')`. Test: nessuno (nessun riferimento nei test).
-- `NOTIFY-DUOSEND-INV-2`: nessuna email viene inviata. Test: nessuno.
-
-## Effetti collaterali
-
-
-### `contracts/send-facebook-whatsapp-action.md` — SendFacebookWhatsAppAction
-
-
-# SendFacebookWhatsAppAction
-
-Invio WhatsApp via Graph API di Meta (`/<phone_number_id>/messages`, versione v17.0).
-
-## Input
-
-- `WhatsAppData $whatsAppData`: `recipient`, `type`, `body`, `template`, `media`.
-- Config: `services.facebook.access_token` e `services.facebook.phone_number_id` (obbligatori), `whatsapp.timeout`, `whatsapp.debug`.
-
-## Output
-
-- `['success' => 2xx, 'message_id', 'response', 'vars']`; su 4xx `['success' => false, 'error', 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-FBWA-INV-1`: `text` invia testo senza anteprima link; `template` invia il DTO; `media` invia sempre tipo `image`. Test: `tests/Unit/Actions/WhatsApp/SendFacebookWhatsAppActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-FBWA-INV-2`: senza access token o phone number id stringa il costr
-
-### `contracts/send-gammu-sms-action.md` — SendGammuSMSAction
-
-
-# SendGammuSMSAction
-
-Invio SMS tramite un modem/gateway locale Gammu, lanciato come processo di sistema.
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `body`.
-- Config `sms` (via `GammuData`): path binario, file di configurazione, timeout.
-
-## Output
-
-- `array`: `status_code` (exit code) e `status_txt` (stdout), restituiti da `$this->vars`.
-
-## Invarianti
-
-- `NOTIFY-GAMMU-INV-1`: costruzione senza path o config lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendGammuSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-GAMMU-INV-2`: il numero viene portato a forma `+...`: `00` diventa `+`, senza `+` riceve `+39`. Stesso test.
-- `NOTIFY-GAMMU-INV-3`: il testo passa da un file temporaneo, che viene rimosso. Stesso test.
-
-
-### `contracts/send-mail-action.md` — SendMailAction
-
-
-# SendMailAction
-
-Dispatcher di invio email: risolve l'engine per driver (`Mail\Engines\{Driver}\Send{Driver}MailAction`) e lo esegue.
-
-## Input
-
-- `string $to`, `?string $body`, `array $vars`, `?string $from`, `string $driver = 'duocircle'`.
-
-## Output
-
-- `void`.
-
-## Invarianti
-
-- `NOTIFY-SENDMAIL-INV-1`: il driver e' normalizzato con `Str::studly`; se la classe engine non esiste lancia `Assert` (classe non trovata). Test: nessuno dedicato verificato.
-- `NOTIFY-SENDMAIL-INV-2`: le chiavi stringa di `$vars` diventano proprieta' dell'Action (`$this->{$key}`) prima dell'invio. Test: nessuno.
-- `NOTIFY-SENDMAIL-INV-3`: l'engine riceve `$this->vars` (non i parametri `to`/`body`). Test: nessuno.
-
-## Effetti collaterali
-
-### `contracts/send-mailtrap-mail-action.md` — SendMailtrapMailAction
-
-
-# SendMailtrapMailAction
-
-Invio di prova verso il trasporto Mail configurato (Mailtrap in ambienti di test). Il corpo e' testo grezzo.
-
-## Input
-
-- `string $to`, `string $body`, `array $vars`, `?string $from`.
-
-## Output
-
-- `void`.
-
-## Invarianti
-
-- `NOTIFY-MAILTRAP-INV-1`: il destinatario viene impostato con `$msg->to($this->to)`. Test: nessuno dedicato verificato.
-- `NOTIFY-MAILTRAP-INV-2`: il subject e' sempre la stringa fissa `Test Email`. Test: nessuno.
-- `NOTIFY-MAILTRAP-INV-3`: un destinatario vuoto lancia `InvalidArgumentException` dentro la closure di `Mail::raw`. Test: nessuno.
-
-## Effetti collaterali
-
-### `contracts/send-netfun-sms-action.md` — SendNetfunSMSAction
-
-
-# SendNetfunSMSAction
-
-Invio SMS via Netfun (`sms-batch.json`, modalita' asincrona), con controllo dell'esito nel corpo della risposta.
-
-## Input
-
-- `SmsData $smsData`: `recipient` (normalizzato), `from`, `body` (tag HTML rimossi).
-- Config `sms.drivers.netfun` (token, endpoint), `sms.from`, `sms.timeout`.
-
-## Output
-
-- `array`: `status_code`, `status_txt`.
-
-## Invarianti
-
-- `NOTIFY-NETFUNSMS-INV-1`: senza token stringa il costruttore lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendNetfunSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-NETFUNSMS-INV-2`: l'invio e' asincrono (`async = true`) e usa `utf8_enabled`. Stesso test.
-- `NOTIFY-NETFUNSMS-INV-3`: l'esito e' successo solo con HTTP 2xx, JSON array e campo `error` assente o zero. Altrimenti si logga un errore sul 
-
-### `contracts/send-nexmo-sms-action.md` — SendNexmoSMSAction
-
-
-# SendNexmoSMSAction
-
-Invio SMS con l'API Nexmo (`/sms/json`), chiavi in form.
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `from`, `body`.
-- Config `NexmoData`: `key`, `secret`, base URL, timeout.
-
-## Output
-
-- `array`: `status_code` e `status_txt` (corpo grezzo).
-
-## Invarianti
-
-- `NOTIFY-NEXMO-INV-1`: costruzione senza key o secret lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendNexmoSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-NEXMO-INV-2`: `00` diventa `+`; numero senza `+` riceve `+39`. Stesso test.
-- `NOTIFY-NEXMO-INV-3`: il tipo di messaggio e' sempre `unicode`. Stesso test.
-
-
-### `contracts/send-nutgram-telegram-action.md` — SendNutgramTelegramAction
-
-
-# SendNutgramTelegramAction
-
-Invio messaggio Telegram via Bot API (HTTP diretto con Guzzle). Stesso flusso di `SendBotmanTelegramAction`, con qualche differenza nella gestione dei tipi di risposta.
-
-## Input
-
-- `TelegramData $telegramData`: come [send-botman-telegram-action](send-botman-telegram-action.md).
-- Config: come [send-botman-telegram-action](send-botman-telegram-action.md).
-
-## Output
-
-- Successo HTTP: `['success' => ok === true, 'message_id', 'response', 'vars']`.
-- Errore 4xx: `['success' => false, 'error', 'error_code', 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-TGNUT-INV-1`: endpoint e payload come per Botman (`sendMessage` per testo, media con `media[0]` e `caption`). Test: `tests/Unit/Actions/Telegram/SendNutgramTelegramActionTest.php` (dedicato, asserti non verifi
-
-### `contracts/send-official-telegram-action.md` — SendOfficialTelegramAction
-
-
-# SendOfficialTelegramAction
-
-Invio messaggio Telegram via Bot API (HTTP diretto con Guzzle). Terza variante del flusso Telegram, con la stessa logica di `SendNutgramTelegramAction`.
-
-## Input
-
-- `TelegramData $telegramData`: come [send-botman-telegram-action](send-botman-telegram-action.md).
-- Config: come [send-botman-telegram-action](send-botman-telegram-action.md).
-
-## Output
-
-- Successo HTTP: `['success' => ok === true, 'message_id', 'response', 'vars']`.
-- Errore 4xx: `['success' => false, 'error', 'error_code', 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-TGOFF-INV-1`: endpoint e payload come per Botman. Test: `tests/Unit/Actions/Telegram/SendOfficialTelegramActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-TGOFF-INV-2`: senza token stringa il costruttore lancia `
-
-### `contracts/send-plivo-sms-action.md` — SendPlivoSMSAction
-
-
-# SendPlivoSMSAction
-
-Invio SMS con l'API Plivo (`/v1/Account/<auth_id>/Message/`).
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `from`, `body`.
-- Config `PlivoData`: `auth_id`, `auth_token`, base URL, timeout.
-
-## Output
-
-- `array`: `status_code` e `status_txt`.
-
-## Invarianti
-
-- `NOTIFY-PLIVO-INV-1`: senza `auth_id` o `auth_token` il costruttore lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendPlivoSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-PLIVO-INV-2`: `00` diventa `+`; numero senza `+` riceve `+39`. Stesso test.
-- `NOTIFY-PLIVO-INV-3`: mittente `from` oppure default `sms.from`. Stesso test.
-
-
-### `contracts/send-records-notification-action.md` — SendRecordsNotificationAction
-
-
-# SendRecordsNotificationAction
-
-Invio in bulk: applica `SendRecordNotificationAction` a ogni record di una collection e aggrega i conteggi.
-
-## Input
-
-- `Collection $records`: record da notificare.
-- `string $templateSlug`: passato invariato.
-- `array $channels`: lista di canali (in pratica stringhe `'mail'`, `'sms'`, `'whatsapp'`).
-
-## Output
-
-- `SendNotificationBulkResultData` con `successCount`, `errorCount`, `errors` (record, channel, error), `totalProcessed = records * channels`.
-
-## Invarianti
-
-- `NOTIFY-RECORDS-INV-1`: per ogni record, un'eccezione aggiunge `count(channels)` a `errorCount` e un errore per canale; il ciclo prosegue. Test: `tests/Unit/Actions/SendRecordsNotificationActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-RECORDS-INV-2`: per ogni record senza ec
-
-### `contracts/send-scheduled-push-notification-action.md` — SendScheduledPushNotificationAction
-
-
-# SendScheduledPushNotificationAction
-
-Esegue l'invio di una push programmata da `SchedulePushNotificationAction`, leggendone i dati dalla cache.
-
-## Input
-
-- `string $jobId`: chiave della cache `scheduled_push:<jobId>`.
-
-## Output
-
-- `void`.
-
-## Invarianti
-
-- `NOTIFY-PUSHSCHEDRUN-INV-1`: cache assente o vuota: `Log::warning` e ritorno senza eccezione. Test: `tests/Unit/NotifyCoverage100ExtendedTest.php` (menzione, asserti non verificati).
-- `NOTIFY-PUSHSCHEDRUN-INV-2`: token non stringa vengono scartati; `tokens`, `notification`, `data` devono essere array (altrimenti `Assert`). Test: nessuno dedicato verificato.
-- `NOTIFY-PUSHSCHEDRUN-INV-3`: a successo la cache viene svuotata. Test: nessuno.
-- `NOTIFY-PUSHSCHEDRUN-INV-4`: su eccezione la cache viene svuotata e l'eccezione viene rilanci
-
-### `contracts/send-sms-action.md` — SendSmsAction
-
-
-# SendSmsAction
-
-Dispatcher SMS generico: risolve un motore per nome di driver e lo invoca via reflection.
-
-## Input
-
-- `array $vars`: `to`, `from`, `body` e altri campi (le chiavi stringa vengono unite alle proprieta').
-- `string $driver = 'netfun'`.
-
-## Output
-
-- `array`: `$this->vars` unito ai valori restituiti da `getVars()` dell'engine.
-
-## Invarianti
-
-- `NOTIFY-SMSDISPATCH-INV-1`: il motore atteso e' `Modules\Notify\Actions\SMS\SmsEngines\{Driver}Engine`; se la classe non esiste lancia `RuntimeException`. Test: `tests/Unit/Actions/SMS/SendSmsActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-SMSDISPATCH-INV-2`: il motore deve avere `make()` e i metodi `setLocalVars`, `send`, `getVars`. Stesso test.
-
-## Effetti collaterali
-
-### `contracts/send-sms-factor-sms-action.md` — SendSmsFactorSMSAction
-
-
-# SendSmsFactorSMSAction
-
-Invio SMS con l'API SMSFactor (`/messages`), header di autenticazione dal DTO.
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `from`, `body`.
-- Config `SmsFactorData`: `token` (obbligatorio), header di autenticazione, base URL, timeout.
-
-## Output
-
-- `array`: `status_code` e `status_txt`.
-
-## Invarianti
-
-- `NOTIFY-SMSFACTOR-INV-1`: senza token il costruttore lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendSmsFactorSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-SMSFACTOR-INV-2`: `00` diventa `+`; numero senza `+` riceve `+39`; tipo `sms`. Stesso test.
-
-## Effetti collaterali
-
-### `contracts/send-twilio-sms-action.md` — SendTwilioSMSAction
-
-
-# SendTwilioSMSAction
-
-Invio SMS con l'API Twilio (`Messages.json`), form POST con basic auth.
-
-## Input
-
-- `SmsData $smsData`: `recipient`, `from`, `body`.
-- Config `TwilioData`: `account_sid`, `auth_token`, base URL, timeout.
-
-## Output
-
-- `array`: `status_code` e `status_txt`.
-
-## Invarianti
-
-- `NOTIFY-TWILIOSMS-INV-1`: senza `account_sid` o `auth_token` il costruttore lancia `Exception`. Test: `tests/Unit/Actions/SMS/SendTwilioSMSActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-TWILIOSMS-INV-2`: numero senza `+` riceve `+39`. Stesso test.
-
-## Effetti collaterali
-
-### `contracts/send-twilio-whatsapp-action.md` — SendTwilioWhatsAppAction
-
-
-# SendTwilioWhatsAppAction
-
-Invio WhatsApp via Twilio (`Messages.json`), form POST con basic auth; prefisso `whatsapp:` su mittente e destinatario.
-
-## Input
-
-- `WhatsAppData $whatsAppData`: `recipient`, `from` (opzionale), `body`, `media` (opzionale).
-- Config: `services.twilio.account_sid` e `auth_token` (obbligatori), `whatsapp.from` (mittente di default), `whatsapp.timeout`.
-
-## Output
-
-- `['success' => 2xx, 'message_id' => sid, 'response', 'vars']`; su 4xx `['success' => false, 'error' => message, 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-TWWA-INV-1`: `To` e `From` hanno prefisso `whatsapp:`; `From` usa `from` o il default. Test: `tests/Unit/Actions/WhatsApp/SendTwilioWhatsAppActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-TWWA-INV-2`: se c'e' un media, il prim
-
-### `contracts/send-vonage-whatsapp-action.md` — SendVonageWhatsAppAction
-
-
-# SendVonageWhatsAppAction
-
-Invio WhatsApp via Vonage Messages API (`/v1/messages`), JSON con basic auth key/secret.
-
-## Input
-
-- `WhatsAppData $whatsAppData`: `recipient`, `from` (opzionale), `body`, `type` (`text`, `template`, `media`), `template`, `media`.
-- Config: `services.vonage.api_key` e `api_secret` (obbligatori), `whatsapp.from`, `whatsapp.timeout`.
-
-## Output
-
-- `['success' => 2xx, 'message_id' => message_uuid, 'response', 'vars']`; su 4xx `['success' => false, 'error' => title, 'status_code', 'vars']`.
-
-## Invarianti
-
-- `NOTIFY-VONAGEWA-INV-1`: il contenuto e' testo per default; con `media` il tipo e' `image`, `video`, `audio` o `file` dall'estensione; con `template` il contenuto e' il template. Test: `tests/Unit/Actions/WhatsApp/SendVonageWhatsAppActionTest.php` (dedicato, a
-
-### `contracts/sms-normalize-phone-number-action.md` — SMS\NormalizePhoneNumberAction
-
-
-# SMS\NormalizePhoneNumberAction
-
-Normalizzazione del numero per gli invii SMS. Distinta dalla versione root (`normalize-phone-number-action`): questa lancia eccezioni per input inutilizzabili e assume l'Italia come default.
-
-## Input
-
-- `string $phoneNumber`.
-
-## Output
-
-- `string` in forma `+<cifre>`.
-
-## Invarianti
-
-- `NOTIFY-SMSPHONE-INV-1`: parentesi con cifre vengono rimosse, poi restano solo cifre; gli zeri iniziali vengono tolti. Test: `tests/Unit/Actions/SMS/NormalizePhoneNumberActionTest.php` (dedicato, asserti non verificati).
-- `NOTIFY-SMSPHONE-INV-2`: un input internazionale (`+` o `00` iniziale) diventa `+<cifre>`. Stesso test.
-- `NOTIFY-SMSPHONE-INV-3`: un numero nazionale riceve `39` se non inizia gia' con `39`. Stesso test.
-- `NOTIFY-SMSPHONE-INV-4`: nessuna cifra utile l
-
-### `contracts/smtp-mail-send-action.md` — SmtpMailSendAction
-
-
-# SmtpMailSendAction
-
-Placeholder per l'invio SMTP diretto. Oggi lancia sempre un'eccezione di debug.
-
-## Input
-
-- `string $_to`, `string $_subject`, `string $_body`: non usati.
-
-## Output
-
-- Nessuno: l'Action non ritorna mai, lancia sempre.
-
-## Invarianti
-
-- `NOTIFY-SMTP-INV-1`: ogni chiamata lancia `RuntimeException('Removed debug dddx')`. Test: nessuno (il sorgente e' un residuo di debug).
-- `NOTIFY-SMTP-INV-2`: il codice SMTP reale (Symfony Mailer) e' solo nel commento finale del metodo e non viene eseguito. Test: nessuno.
-
-## Effetti collaterali
-
-
-### `contracts/template.md` — <operazione> — contratto comportamentale
-
-
-# <operazione> — contratto comportamentale
-
-Classe o superficie: `<FQCN>`  
-Riferimento nel codice: `@contract docs/contracts/<file>.md`
-
-## Input
-
-- <input e validazione>
-
-## Output
-
-- <risultato osservabile>
-
-## Invarianti
-
-| ID | Regola | Verifica |
-|---|---|---|
-| `<MODULE>-INV-1` | <regola che deve restare vera> | <test o controllo ripetibile> |
-
-
-### `contracts/try-duocircle-mail-action.md` — TryDuocircleMailAction
-
-
-# TryDuocircleMailAction
-
-Engine di prova per il driver `duocircle`: si collega alla casella IMAP (Webklex), elenca tutte le cartelle e legge tutti i messaggi.
-
-## Input
-
-- `array $vars`: chiavi stringa diventano proprieta' dell'Action. Nessun altro parametro e' usato.
-- Richiede le classi `Webklex\PHPIMAP\Client` e `Webklex\IMAP\Facades\Client` installate.
-
-## Output
-
-- `array<int, array{subject: string, attachments: int, body: string, moved: bool}>`: un elemento per messaggio letto in ogni cartella.
-
-## Invarianti
-
-- `NOTIFY-TRYDUO-INV-1`: senza le classi Webklex lancia `Exception`. Test: `tests/Unit/NotifyHighestMissCoverageTest.php` (menzione, asserti non verificati).
-- `NOTIFY-TRYDUO-INV-2`: ogni messaggio di ogni cartella produce un elemento con subject, numero allegati e corpo HTML
-
-### `contracts/try-mail-action.md` — TryMailAction
-
-
-# TryMailAction
-
-Dispatcher di prova per i driver mail: risolve `Mail\Engines\{Driver}\Try{Driver}MailAction` ed esegue il suo `execute`.
-
-## Input
-
-- `string $to = ''`, `?string $body`, `array $vars`, `?string $from`, `string $driver = 'duocircle'`.
-
-## Output
-
-- `void`: il risultato dell'engine viene scartato.
-
-## Invarianti
-
-- `NOTIFY-TRYMAIL-INV-1`: l'engine e' `Try{Driver}MailAction` (non `Send`). Il nome risolto e' verificato con `Assert::classExists`. Test: nessuno dedicato verificato.
-- `NOTIFY-TRYMAIL-INV-2`: come `SendMailAction`, le chiavi stringa di `$vars` diventano proprieta'. Test: nessuno.
-
-## Effetti collaterali
-
-
-### `contracts-architecture-1.md` — Architettura delle Interfacce (Contracts) in Notify
-
-
-# Architettura delle Interfacce (Contracts) in Notify
-
-## Principi Architetturali Fondamentali
-
-### 1. Separazione delle Interfacce dall'Implementazione
-
-Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **MAI** all'interno delle directory di implementazione come `app/Actions/SMS/`.
-
-```
-✅ CORRETTO:
-Modules/Notify/app/Contracts/SmsProviderActionInterface.php
-
-❌ ERRATO:
-Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
-```
-
-### 2. Namespace Unificati per le Interfacce
-
+- `401 {"error":"unauthorized"}` con token errato o non configurato.
+- `422 {"error":"unparseable"}` se il payload non è riconosciuto.
+- `200 {"ok": true}` dop
 
 ### `contracts-architecture.md` — Architettura delle Interfacce (Contracts) in Notify
 
@@ -8344,29 +6916,6 @@ Questo documento contiene i collegamenti a tutte le interfacce principali del si
   - Estende [[HasTeamsContract]] e [[UserContract]]
 
 ## Collegamenti Correlati
-
-### `contributing-2.md` — Contributing to $MOD
-
-
-# Contributing to $MOD
-
-## Development
-
-```bash
-cd laravel
-composer dev
-./vendor/bin/pest Modules/$MOD/tests
-./vendor/bin/phpstan analyse Modules/$MOD --memory-limit=-1
-```
-
-## Before Submitting
-
-- [ ] Tests pass
-- [ ] PHPStan L10 passes
-- [ ] Code style (Pint) applied
-- [ ] Documentation updated
-
-See architecture.md for design decisions.
 
 ### `contributing.md` — Contributing to FixCity
 
@@ -8454,6 +7003,29 @@ discussions: []
 ```php
 Schema::create('email_templates', function (Blueprint $table) {
     $table->id();
+
+### `css-architecture.md` — 📚 Documentazione Finale - Sixteen Theme CSS Architecture
+
+
+# 📚 Documentazione Finale - Sixteen Theme CSS Architecture
+
+## Panoramica
+
+Il tema Sixteen utilizza un'architettura CSS ibrida:
+- **Bootstrap Italia** per i componenti PA (Pubblica Amministrazione)
+- **Tailwind CSS** per utility e customizzazioni
+- **Filament CSS** per i componenti admin
+
+## Architettura File
+
+```
+Themes/Sixteen/resources/css/
+├── app.css                    ← File principale
+├── bootstrap-italia.css       ← Definizioni componenti Bootstrap Italia
+├── agid-colors.css            ← Variabili colori AGID
+├── agid-override.css          ← Override specifici
+└── filament/
+    └── theme.css              ← Customizzazioni Filament
 
 ### `database/migrations.md` — Database Migrations Documentation
 
@@ -8673,33 +7245,16 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | Altre 35 pagine | ❌ 0% | ❌ 0% | ❌ 0% | ❌ Assenti | ❌ 0% |
 
 
-### `design-comuni/pages/argomenti.md` — Argomenti Page Analysis
-
-
-# Argomenti Page Analysis
-
-## Status: IN PROGRESS
-
-### Screenshot Comparison
-
-| Reference | Local |
-|-----------|-------|
-| ![Reference](/tmp/argomenti-ref.png) | ![Local](/tmp/argomenti-local.png) |
-
-## HTML Diff - Structural Differences
-
-1. **Hero Section**: Same structure ✓
-2. **Topics Grid**: Reference has cards with images, Local has text-only list
-3. **"In Evidenza" section**: Cards with images in grid (3 columns) - Local shows but layout differs
-
-## CSS Differences
-
-1. Grid layout for topics cards (3 columns)
-
 ### `design-conversion-roadmap.md` — Design Comuni Conversion Roadmap
 
 
 # Design Comuni Conversion Roadmap
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
 **Status**: 🟢 Phase 1 Complete - Visual Parity Assessment Done
 **Last Updated**: 2026-04-03
@@ -8707,17 +7262,20 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 
 ---
 
-## 📊 Executive Summary
+title: "DESIGN CONVERSION ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
 
-### Current State
-- ✅ All 54 pages assessed using visual height comparison
-- ✅ 7 pages ready for immediate CSS fixes (95%+ parity)
-- ✅ 8 more pages nearly ready (85-95% parity)
-- ⏳ 38 pages need structural investigation (<80% parity)
+### `development/roadmap-root-symlink.md` — Collegamenti tra versioni di roadmap_root_symlink.md
 
-### Key Metrics
-```
-🔴 100% Perfect:      1 page   (persona)
+
+roadmap.md
+## Collegamenti tra versioni di roadmap_root_symlink.md
+* [roadmap_root_symlink.md](../../../Notify/docs/roadmap_root_symlink.md)
+* [roadmap_root_symlink.md](../../../Media/docs/roadmap_root_symlink.md)
+
 
 ### `diamond-coverage-report.md` — 💎 FIXCITY - DIAMOND COVERAGE REPORT
 
@@ -8832,6 +7390,52 @@ MailTemplate::create([
 | **Theme Documentation** | 745 | 5.2% |
 | **Project Documentation** | 279 | 2.0% |
 | **Exact Duplicates** | 7,230 | **51%** |
+
+### `documentation-ecosystem.md` — FixCity Documentation Ecosystem - Visual Map
+
+
+# FixCity Documentation Ecosystem - Visual Map
+
+**📍 Complete Bidirectional Links & Cross-References**
+
+---
+
+## 🗺️ Documentation Ecosystem Overview
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│            FixCity Fila5 Documentation Ecosystem                 │
+│                   (7,137+ Connected Files)                       │
+└──────────────────────────────────────────────────────────────────┘
+
+                        MASTER HUB
+                            ▲
+          ┌─────────────────┼─────────────────┐
+          │                 │                 │
+          ▼                 ▼                 ▼
+
+### `documentation-governance.md` — Documentation Governance Framework
+
+
+# Documentation Governance Framework
+
+**Version**: 1.0  
+**Status**: Active  
+**Applies to**: All modules and themes
+
+---
+
+## 🎯 Purpose
+
+This document establishes the governance framework for all documentation in the FixCity platform, ensuring consistency, quality, and maintainability across all modules and themes.
+
+---
+
+## 📁 Standard Directory Structure
+
+### Module Documentation Structure
+
+```
 
 ### `dor-emails.md` — Email per i Dottori
 
@@ -8971,7 +7575,7 @@ discussions: []
 // ✅ CORRECT - Method in trait
 
 
-### `dto-vs-factory-analysis.md` — Analisi: Logica di Selezione del Driver nel DTO vs Factory vs Canale
+### `dto-vs-factory.md` — Analisi: Logica di Selezione del Driver nel DTO vs Factory vs Canale
 
 
 # Analisi: Logica di Selezione del Driver nel DTO vs Factory vs Canale
@@ -9063,28 +7667,6 @@ protected function getRecipientName($notifiable): string
     if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
         return $notifiable->getFullName();
 
-### `email/deliverability-index.md` — 📧 Email Deliverability – Complete Knowledge Index
-
-# 📧 Email Deliverability – Complete Knowledge Index
-
-**Project**: FixCity.eu  
-**Generated**: 2026-11-12  
-**Status**: ✅ COMPLETE  
-
----
-
-## 🗂️ Knowledge Map
-
-### 📚 Primary Documentation
-
-| Level | Location | Content | Status |
-|-------|----------|---------|--------|
-| **Architectural** | `docs/second-brain/knowledge/email/deliverability-architecture.md` | Full stack architecture | ✅ DONE |
-| **Module Owner** | `Modules/Notify/docs/email/best-practices.md` | Notify module best practices | ✅ DONE |
-| **Module Owner** | `Modules/Notify/docs/email/email-infrastructure.md` | Email infrastructure | ✅ DONE |
-| **Module Owner** | `Modules/Notify/docs/email/email-infrastructure-audit-and-runbook.md` | Audit & runbook | ✅ DONE |
-| **Module Owner** | `Modules/Notify/docs/stories/mail-server-send-rec
-
 ### `email/email-setup.md` — Email Infrastructure Setup — FixCity / Laraxot
 
 # Email Infrastructure Setup — FixCity / Laraxot
@@ -9092,7 +7674,7 @@ protected function getRecipientName($notifiable): string
 **Data**: 2026-11-12  
 **Modulo**: Notify (owner)  
 **Stato**: ⚠️ NON OPERATIVO al 2026-11-12 (verificato: Resend dominio non verificato, Gmail rifiuta Postfix con 550 5.7.26, nessun MX).
-Installazione e DNS: [story mail-server-send-receive](../stories/0026-mail-server-send-receive.story.md) e `bashscripts/docs/mail/mail-server.md`.
+Installazione e DNS: [story mail-server-send-receive](../stories/mail-server-send-receive.story.md) e `bashscripts/docs/mail/mail-server.md`.
 
 ---
 
@@ -9107,38 +7689,6 @@ Il server FixCity (`fixcity.eu`) è configurato per **inviare** e **ricevere** e
 
 ---
 
-
-### `email/firebase.md` — Firebase Push Notifications
-
-
-# Firebase Push Notifications
-
-## Resources
-
-- [Integrating Push Notifications in Laravel using Firebase](https://medium.com/@hala.s.salim/integrating-push-notifications-in-laravel-using-firebase-0bae5411d7f9)
-
-## Implementation Notes
-
-This document contains resources and guidelines for implementing Firebase push notifications in the Notify module.
-
-### `email/mailjet.md` — Mailjet
-
-
-# Mailjet
-
-## In una riga
-
-Mailjet (gruppo Sinch, azienda francese) manda email transazionali e newsletter da server **solo in UE**.
-Laravel non ha un driver Mailjet: il modulo Notify registra il mailer `mailjet` usando il bridge ufficiale
-Symfony `symfony/mailjet-mailer`, e riceve gli esiti (consegnata, rimbalzata, spam, …) con un webhook.
-
-## Perché interessa
-
-| Aspetto | Mailjet | Note |
-|---|---|---|
-| Dati | archiviati solo in UE (Google Cloud, regioni europee) | utile per il GDPR: niente trasferimenti extra-UE da giustificare per le email |
-| Piano gratuito | 6.000 email/mese, **max 200/giorno**, 1.000 contatti, logo Mailjet | basta per prove e per un locale piccolo; 200/giorno si superano con un portale di più ristoranti |
-| Piani (prezzi IVA esclusa) | Starter 8 €/mese (8.000), Es
 
 ### `email/smtp-testing.md` — SMTP Testing Guide
 
@@ -9212,7 +7762,7 @@ class MailTemplateBackup
 ### `email-backup.md` — Sistema Backup Email
 
 
-# Sistema Backup Email 
+# Sistema Backup Email
 
 ## Panoramica
 
@@ -9300,29 +7850,6 @@ class MailTemplateCache
 {
     protected const CACHE_TAG = 'mail-templates';
 
-### `email-html-best-practices-2.md` — Best Practices HTML per Email
-
-
-# Best Practices HTML per Email
-
-## Introduzione
-
-Questo documento definisce le best practices per la creazione di template HTML per email, basate sulle esperienze di [MailPace](https://github.com/mailpace/templates) e altre fonti autorevoli.
-
-## Struttura HTML
-
-### 1. Doctype e Meta Tags
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ subject }}</title>
-</head>
-```
-
 ### `email-html-best-practices.md` — Best Practices HTML per Email
 
 
@@ -9368,6 +7895,11 @@ Audit eseguito il 2026-11-13 sul server `zorin`:
 | `mail.fixcity.eu` | Assente | nessun record A/AAAA restituito |
 | Laravel Mailtrap SDK | Già installato | `railsware/mailtrap-php` 3.18 |
 
+
+### `email-integration.md` — Email Integration
+
+
+# Email Integration
 
 ### `email-logs-2.md` — Sistema Log Email
 
@@ -9576,7 +8108,7 @@ Analisi comparativa dei principali plugin per la gestione email in Filament, con
 - No template personalizzati
 
 
-### `email-plugins-analysis.md` — Analisi Plugin Email per Filament - il progetto
+### `email-plugins.md` — Analisi Plugin Email per Filament - il progetto
 
 
 # Analisi Plugin Email per Filament - il progetto
@@ -9976,15 +8508,15 @@ class UserRegistered implements TriggersDatabaseMail
 
 ---
 
+title: "excellence 2025"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "excellence 2025"
+issues: []
+discussions: []
 ## 🎯 VISIONE
-
----
-
-## ✅ LAVORO COMPLETATO (2025-10-01)
-
-### 📚 Documentazione Strategica (5 documenti)
-1. ✅ **DOCUMENTATION_STATUS.md** - Monitoraggio completo stato docs
-2. ✅ **documentation-index.md** - Indice navigabile 400+ pagine
 
 ### `excellence.md` — 🏆 FIXCITY - ECCELLENZA 2025
 
@@ -10031,6 +8563,75 @@ public function create(?string $driver = null): SmsActionInterface
         'twilio' => app(SendTwilioSMSAction::class),
         'nexmo' => app(SendNexmoSMSAction::class),
         'plivo' => app(SendPlivoSMSAction::class),
+
+### `factory-pattern-advantages-2.md` — Analisi del Pattern Factory per la Selezione dei Provider SMS
+
+
+# Analisi del Pattern Factory per la Selezione dei Provider SMS
+
+Questo documento analizza il pattern Factory attualmente implementato  per la selezione dei provider SMS, confrontandolo con l'alternativa di integrare la selezione nel DTO `SmsData`.
+
+## Soluzione Attuale: Pattern Factory
+
+SaluteOra implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+
+```php
+// SmsActionFactory.php
+public function create(?string $driver = null): SmsActionInterface
+{
+    $driver = $driver ?? Config::get('sms.default', 'smsfactor');
+    
+    return match ($driver) {
+        'smsfactor' => app(SendSmsFactorSMSAction::class),
+        'twilio' => app(SendTwilioSMSAction::class),
+        'nexmo' => app(SendNexmoSMSAction::class),
+        'plivo' => app(SendPlivoSMSAction::class),
+
+### `factory-pattern-advantages.md` — Analisi del Pattern Factory per la Selezione dei Provider SMS
+
+
+# Analisi del Pattern Factory per la Selezione dei Provider SMS
+
+Questo documento analizza il pattern Factory attualmente implementato  per la selezione dei provider SMS, confrontandolo con l'alternativa di integrare la selezione nel DTO `SmsData`.
+
+## Soluzione Attuale: Pattern Factory
+
+ implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+<nome progetto> implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+
+```php
+// SmsActionFactory.php
+public function create(?string $driver = null): SmsActionInterface
+{
+    $driver = $driver ?? Config::get('sms.default', 'smsfactor');
+    
+    return match ($driver) {
+        'smsfactor' => app(SendSmsFactorSMSAction::class),
+        'twilio' => app(SendTwilioSMSAction::class),
+        'nexmo' => app(SendNexmoSMSActio
+
+### `factory.md` — Analisi del Pattern Factory per le Notifiche
+
+
+# Analisi del Pattern Factory per le Notifiche
+
+Questo documento analizza l'implementazione del pattern Factory per la gestione delle notifiche , confrontando l'approccio originale con quello basato su Factory.
+
+## Confronto tra Pattern Architetturali
+
+### Pattern Originale: Selezione del Driver nel Canale
+
+```php
+// In SmsChannel.php
+$driver = Config::get('sms.default', 'smsfactor');
+
+$action = match ($driver) {
+    'smsfactor' => app(SendSmsFactorSMSAction::class),
+    'twilio' => app(SendTwilioSMSAction::class),
+    // altri driver...
+};
+```
+
 
 ### `filament-4x-compatibility-2.md` — Compatibilità Filament 4.x - Modulo Notify
 
@@ -10210,19 +8811,153 @@ Apri il file `config/filament-grapesjs.php` e aggiungi sotto la chiave `plugins`
             // eventali opzioni aggiuntive
         ],
 
+### `filament-naming-conventions-2.md` — Convenzioni di Naming per Filament
+
+
+# Convenzioni di Naming per Filament 
+
+Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema SaluteOra, con particolare attenzione alle pagine e alle risorse.
+
+## Convenzioni di Naming per Pagine Filament
+
+### Regola Fondamentale
+
+**Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` devono terminare con il suffisso "Page".**
+
+### Pattern di Naming Corretto
+
+```
+{Nome}Page
+```
+
+Esempi corretti:
+- `SendSmsPage`
+- `SendWhatsAppPage`
+
+### `filament-naming-conventions.md` — Convenzioni di Naming per Filament
+
+
+# Convenzioni di Naming per Filament 
+
+Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema , con particolare attenzione alle pagine e alle risorse.
+Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema <nome progetto>, con particolare attenzione alle pagine e alle risorse.
+
+## Convenzioni di Naming per Pagine Filament
+
+### Regola Fondamentale
+
+**Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` devono terminare con il suffisso "Page".**
+
+### Pattern di Naming Corretto
+
+```
+{Nome}Page
+```
+
+Esempi corretti:
+- `SendSmsPage`
+
+### `filament-page-naming-convention-2.md` — Convenzioni di Naming per Pagine Filament
+
+
+# Convenzioni di Naming per Pagine Filament
+
+## Regola Fondamentale
+
+**Tutte** le classi situate in una cartella `Pages` di Filament **DEVONO** terminare con il suffisso `Page`.
+
+## Struttura Corretta
+
+### Percorso File
+- ✅ CORRETTO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotificationPage.php`
+- ❌ ERRATO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotification.php`
+
+### Nome Classe
+- ✅ CORRETTO: `class SendFirebasePushNotificationPage extends Page`
+- ❌ ERRATO: `class SendFirebasePushNotification extends Page`
+
+## Motivazione
+
+1. **Coerenza**: Mantenere coerenza con le convenzioni di Filament.
+
+### `filament-page-naming-convention.md` — Convenzioni di Naming per Pagine Filament
+
+
+# Convenzioni di Naming per Pagine Filament
+
+## Regola Fondamentale
+
+**Tutte** le classi situate in una cartella `Pages` di Filament **DEVONO** terminare con il suffisso `Page`.
+
+## Struttura Corretta
+
+### Percorso File
+- ✅ CORRETTO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotificationPage.php`
+- ❌ ERRATO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotification.php`
+
+### Nome Classe
+- ✅ CORRETTO: `class SendFirebasePushNotificationPage extends Page`
+- ❌ ERRATO: `class SendFirebasePushNotification extends Page`
+
+## Motivazione
+
+1. **Coerenza**: Mantenere coerenza con le convenzioni di Filament.
+
+### `filament-resource-pages-architecture-2.md` — Architettura delle Pagine di Risorse Filament
+
+
+# Architettura delle Pagine di Risorse Filament 
+
+## Regola Fondamentale
+
+, **MAI** estendere direttamente le classi di Filament per le pagine di risorse. Utilizzare **SEMPRE** le classi wrapper corrispondenti con prefisso `XotBase` fornite dal modulo `Xot`.
+
+## Struttura Architetturale
+
+Il pattern XotBase si applica a tutte le classi di Filament, incluse le pagine di risorse:
+
+```
+Filament\Resources\Pages\CreateRecord
+    ↑
+    └── Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
+        ↑
+        └── Modules\Notify\Filament\Resources\YourResource\Pages\CreateYourModel
+
+Filament\Resources\Pages\EditRecord
+    ↑
+
+### `filament-resource-pages-architecture.md` — Architettura delle Pagine di Risorse Filament
+
+
+# Architettura delle Pagine di Risorse Filament
+
+## Regola Fondamentale
+
+, **MAI** estendere direttamente le classi di Filament per le pagine di risorse. Utilizzare **SEMPRE** le classi wrapper corrispondenti con prefisso `XotBase` fornite dal modulo `Xot`.
+
+## Struttura Architetturale
+
+Il pattern XotBase si applica a tutte le classi di Filament, incluse le pagine di risorse:
+
+```
+Filament\Resources\Pages\CreateRecord
+    ↑
+    └── Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
+        ↑
+        └── Modules\Notify\Filament\Resources\YourResource\Pages\CreateYourModel
+
+Filament\Resources\Pages\EditRecord
+    ↑
+
 ### `filament-resources-2.md` — Risorse Filament del Modulo Notify
 
 
 # Risorse Filament del Modulo Notify
 
-### Versione HEAD
-
 ## NotificationTemplateResource
 
 ### Panoramica
 NotificationTemplateResource gestisce i template delle notifiche nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
-
-### Versione Incoming
 
 ## MailTemplateResource
 
@@ -10231,21 +8966,17 @@ MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBa
 
 ---
 
-title: "filament resources"
+
 
 ### `filament-resources.md` — Risorse Filament del Modulo Notify
 
 
 # Risorse Filament del Modulo Notify
 
-### Versione HEAD
-
 ## NotificationTemplateResource
 
 ### Panoramica
 NotificationTemplateResource gestisce i template delle notifiche nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
-
-### Versione Incoming
 
 ## MailTemplateResource
 
@@ -10362,6 +9093,52 @@ This document outlines specific considerations and changes for the `Notify` modu
 
 *   **Issue:** The application was throwing `Bl
 
+### `filament-xot-architecture-2.md` — Architettura Filament : Pattern XotBase
+
+
+# Architettura Filament : Pattern XotBase
+
+## Introduzione
+
+SaluteOra utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
+
+Questo documento spiega in dettaglio i motivi architetturali, i vantaggi e l'implementazione di questo pattern.
+
+## Pattern Architetturale
+
+### Struttura delle Classi XotBase
+
+```
+Filament\Pages\Page
+    ↑
+    └── Modules\Xot\Filament\Pages\XotBasePage
+        ↑
+        └── Modules\Notify\Filament\Clusters\Test\Pages\YourCustomPage
+```
+
+### `filament-xot-architecture.md` — Architettura Filament : Pattern XotBase
+
+
+# Architettura Filament : Pattern XotBase
+
+## Introduzione
+
+ utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
+<nome progetto> utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
+
+Questo documento spiega in dettaglio i motivi architetturali, i vantaggi e l'implementazione di questo pattern.
+
+## Pattern Architetturale
+
+### Struttura delle Classi XotBase
+
+```
+Filament\Pages\Page
+    ↑
+    └── Modules\Xot\Filament\Pages\XotBasePage
+        ↑
+        └─
+
 ### `filament4-migration-complete.md` — Filament v4 Migration Complete - Notify Module
 
 
@@ -10474,8 +9251,8 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 3. quick-start.md
 4. project-completion-status.md
 5. excellence-year-note-snake.md
-6. final-summary.md
-7. work-completed-4.md
+5. excellence-2025.md
+5. excellence-year-note-snake.md
 
 ### `fixes/critical-bug-sync-script-deleted.md` — 🚨 CRITICAL BUG: sync_remote_repo.sh Deleted
 
@@ -10635,29 +9412,6 @@ title: "GEMINI"
 type: note
 tags: [documentation]
 created: 2026-09-26
-
-### `getting-started.md` — Getting Started with $MOD
-
-
-# Getting Started with $MOD
-
-## Installation
-
-$MOD is a Laravel module. Enable it:
-
-```bash
-php artisan module:enable $MOD
-php artisan migrate
-```
-
-## Configuration
-
-Configuration is in `config/$MOD.php`. Adjust as needed.
-
-## Basic Usage
-
-See README.md for features and examples.
-
 
 ### `git-commit-push-rule.md` — Git Commit & Push Workflow - AI Agent Rules
 
@@ -10925,7 +9679,6 @@ Verify that changes made in module repositories sync correctly to the main repos
 
 ### `glossary.md` — Glossario di dominio Notify
 
-
 # Glossario di dominio Notify
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -10945,6 +9698,7 @@ qmd: "notify glossario dominio notifica template canale mail sms push whatsapp c
 # Glossario di dominio Notify
 
 Termini verificati nel codice con `rg`. Se glossario e codice divergono vale il codice.
+Percorsi relativi a `laravel/Modules/Notify/`.
 
 ### `grapesjs-enhancement.md` — Integrazione GrapesJS Editor (Dotswan)
 
@@ -11148,29 +9902,6 @@ Stub **DRY**. Documentazione canonica nel modulo **Media** (issue [#124](https:/
 
 → [usage.md](../../../Media/docs/html2pdf/usage.md)
 
-### `implementation-guide.md` — Guida all'Implementazione dei Template Email
-
-
-# Guida all'Implementazione dei Template Email
-
-## Setup Iniziale
-
-### 1. Installazione Dipendenze
-```bash
-composer require spatie/laravel-database-mail-templates
-php artisan vendor:publish --provider="Spatie\MailTemplates\MailTemplatesServiceProvider"
-php artisan migrate
-```
-
-### 2. Configurazione Base
-```php
-// config/mail-templates.php
-return [
-    'table_name' => 'mail_templates',
-    'model' => \Modules\Notify\Models\MailTemplate::class,
-    'default_locale' => 'it',
-];
-
 ### `implementation-pratica.md` — Implementazione Pratica del Modulo Notify
 
 
@@ -11193,6 +9924,52 @@ return [
     'cache' => [
         'enabled' => true,
         'ttl' => 3600
+
+### `implementation.md` — Guida all'Implementazione dei Template Email
+
+
+# Guida all'Implementazione dei Template Email
+
+## Setup Iniziale
+
+### 1. Installazione Dipendenze
+```bash
+composer require spatie/laravel-database-mail-templates
+php artisan vendor:publish --provider="Spatie\MailTemplates\MailTemplatesServiceProvider"
+php artisan migrate
+```
+
+### 2. Configurazione Base
+```php
+// config/mail-templates.php
+return [
+    'table_name' => 'mail_templates',
+    'model' => \Modules\Notify\Models\MailTemplate::class,
+    'default_locale' => 'it',
+];
+
+### `implementations-completed.md` — ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
+
+
+# ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
+
+**Data**: 2025-10-01  
+**Sessione**: Gap Analysis & Core Implementation  
+**Status**: 🚀 CRITICAL FEATURES IMPLEMENTED  
+
+---
+
+## 🎯 OBIETTIVO RAGGIUNTO
+
+Analizzato lo scopo del progetto, identificate le features mancanti e implementate le funzionalità critiche per trasformare FixCity da MVP a piattaforma enterprise-ready.
+
+---
+
+## 📊 SCOPO DEL PROGETTO (Analizzato)
+
+### Business Goal
+**FixCity** è una piattaforma enterprise per la gestione delle segnalazioni urbane che permette:
+- 👥 **Cittadini**: Segnalare problemi urbani (buche, illuminazione, rifiuti, verde pubblico)
 
 ### `implementazione-builders-report.md` — 🎉 IMPLEMENTAZIONE BUILDERS & ANALISI PIVOT - REPORT FINALE
 
@@ -11355,23 +10132,6 @@ discussions: []
 Il sito target ha una base di inbound marketing decente con lead magnets e newsletter, ma manca un sistema automatizzato completo di lead nurturing. Il nostro sito Laravel deve implementare una strategia inbound marketing completa per convertire visitatori in clienti.
 
 
-### `index-1.md` — Notify Module Documentation
-
-
-# Notify Module Documentation
-
-## Overview
-This document serves as the central index for the Notify module, providing guidance on managing notifications within a Laravel application. The Notify module handles various notification channels like email, SMS, and push notifications in a modular and reusable way.
-
-## Key Principles
-1. **Modularity**: The Notify module is designed to be reusable across different projects, maintaining generic functionality.
-2. **Extensibility**: Allows for customization and addition of new notification channels without altering core code.
-3. **Reliability**: Ensures notifications are delivered through robust error handling and logging.
-
-## Core Features
-- **Multi-Channel Notifications**: Supports email, SMS, WhatsApp, Telegram, and more.
-- **Template Management*
-
 ### `index-conflict.md` — Notify Module Documentation
 
 
@@ -11452,6 +10212,17 @@ return [
 ];
 ```
 
+### `interface-naming-convention-1.md` — Deprecated
+
+
+# Deprecated
+
+This file is deprecated.
+
+Use:
+
+- [interface-naming-convention](./interface-naming-convention.md)
+
 ### `interface-naming-convention.md` — Convenzione di Naming per le Interfacce
 
 
@@ -11474,6 +10245,29 @@ interface SmsActionInterface
 interface WhatsAppProviderActionInterface
 interface TelegramProviderActionInterface
 ```
+
+### `interfaces-implementation.md` — Guida all'Implementazione delle Interfacce nel Modulo Notify
+
+
+# Guida all'Implementazione delle Interfacce nel Modulo Notify
+
+## Struttura delle Interfacce
+
+Nel modulo Notify, le interfacce seguono una struttura specifica che è importante rispettare per garantire il corretto funzionamento del sistema.
+
+### Posizionamento delle Interfacce
+
+Le interfacce sono organizzate in due livelli:
+
+1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
+   ```
+   Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
+   ```
+
+2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
+   ```
 
 ### `investigation/investigation.md` — Investigation: Email Deliverability
 
@@ -11621,6 +10415,18 @@ From https://skills.laravel.cloud/ (11 skills listed):
 5. ❌ **php-best-practices** (asyrafhussin/php-best-practices) - Repository not found (404)
 6
 
+### `launch-plan.md` — Product Launch Plan: Notify Module
+
+
+# Product Launch Plan: Notify Module
+
+## 🚀 Launch Overview
+- **Launch Date:** Q2 2026
+- **Launch Lead:** @CoreTeam
+
+## 🎯 Launch Goals
+- Deploy stable version of Notify Module.
+
 ### `launch.md` — Product Launch Plan - FixCity Platform
 
 
@@ -11643,29 +10449,6 @@ Ogni rilascio di modulo o feature core deve seguire questa checklist non negozia
 ### Documentation
 - [ ] `prd.md` aggiornato con le nuove funzionalità.
 - [ ] `CHANGELOG.md` aggiornato.
-
-### `llm-wiki/concepts/module-test-location-rule.md` — Regola: I Test Appartengono al Modulo
-
-
-# Regola: I Test Appartengono al Modulo
-
-## Principio Fondamentale
-
-In Laraxot, ogni modulo è un **bounded context autonomo**. I test di un modulo devono stare
-**dentro** il modulo, non nell'applicazione host.
-
-```
-✅ CORRETTO
-laravel/Modules/Notify/tests/Feature/ContactTest.php
-laravel/Modules/Notify/tests/Unit/Actions/SendEmailTest.php
-
-❌ SBAGLIATO
-tests/Feature/ContactTest.php          ← root del progetto (conductor)
-laravel/tests/Feature/ContactTest.php  ← Laravel app host
-```
-
-## Struttura Corretta
-
 
 ### `llm-wiki/raw/articles/module-test-location-rule.md` — Regola: Posizione dei Test nei Moduli Laraxot
 
@@ -11713,6 +10496,52 @@ Il 2026-04-21 i seguenti test sono stati creati nel percorso errato:
       <div class="it-header-slim-wrapper-content">
        <a aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda" class="d-lg-block navbar-brand" href="#" target="_blank" title="Vai al portale {Nome della Regione}">
 
+### `loc-struct.md` — loc-struct
+
+
+<body class="">
+ <div class="skiplink">
+  <a class="visually-hidden-focusable" href="#main-container">
+   Vai ai contenuti
+  </a>
+  <a class="visually-hidden-focusable" href="#footer">
+   Vai al footer
+  </a>
+ </div>
+ <!-- /skiplink -->
+ <header class="it-header-wrapper" data-bs-target="#header-nav-wrapper" style="">
+  <div class="it-header-slim-wrapper">
+   <div class="container">
+    <div class="row">
+     <div class="col-12">
+      <div class="it-header-slim-wrapper-content">
+       <a aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda" class="d-lg-block navbar-brand" href="#" target="_blank" title="Vai al portale {Nome della Regione}">
+        Nome della Regione
+       </a>
+
+### `locations-standards.md` — Standard di Posizionamento dei File in Notify
+
+
+# Standard di Posizionamento dei File in Notify
+
+## Organizzazione Directory Principali
+
+| Tipo di File | Percorso Standard | Errori da Evitare |
+|--------------|-------------------|-------------------|
+| **Interfacce/Contratti** | `/app/Contracts/` | ❌ `/app/Actions/*/InterfaceName.php` |
+| **Actions** | `/app/Actions/` | |
+| **Datas** | `/app/Datas/` | ❌ `/app/Data/` (singolare), ❌ `/app/DTOs/` |
+| **Models** | `/app/Models/` | |
+| **Channels** | `/app/Channels/` | |
+
+## Regole Specifiche per le Interfacce
+
+Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, **mai** nelle directory delle implementazioni.
+
+### Corretta Organizzazione delle Interfacce
+
+```
+
 ### `log-cleanup-report.md` — Log Cleanup Report - Performance Optimization
 
 
@@ -11759,6 +10588,20 @@ issues: []
 discussions: []
 ## The Problem
 
+### `login.md` — login
+
+
+-----------------------------------------------------------------------------------------------
+A Blade Component to Quickly Login to Your Local Environment
+https://codebrisk.com/blog/a-blade-component-to-quickly-login-to-your-local-environment
+composer require spatie/laravel-login-link
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-------------------------------
+
 ### `mail-deliverability.md` — Email: deliverability e ricezione — FixCity
 
 
@@ -11778,48 +10621,6 @@ Rilevato il 2026-11-12 via `dig`:
 | MX | **assente** | NECESSARIO per la casella reale (sezione 4) |
 | TXT SPF | **assente** | Aggiungere record forniti da Mailtrap (sezione 2) |
 | DKIM + CNAME Mailtrap (`mt78`, `rwmt1._domainkey`, `rwmt2._domainkey`, `mt-link`) | **presenti ma con target errato**: l'editor DNS ha completato il valore con `.fixcity.eu` perche' manca il punto finale (es. `smtp.mailtrap.live
-
-### `mail-provider-dependencies.md` — Dipendenze mail Notify — scopo e contratti
-
-
-# Dipendenze mail Notify — scopo e contratti
-
-> **Gate note**: non supersede `composer-dependencies.md` né `email/mailjet.md`;
-> li integra sul *perché* delle tre dipendenze mail e sui contratti Action.
-> Link da: `00-index.md`, story `phpstan-mail-deps-remediation`,
-> `composer-dependencies.md`.
-> Istruzione utente: «Docs: aggiorna laravel/Modules/Notify/docs/ (kebab, frontmatter)
-> spiegando perché le dipendenze mail esistono e il contratto Action.»
-
-## Perché queste dipendenze
-
-Notify è l'owner del canale email: outbound (trasporto + test deliverability) e inbound (webhook + parse MIME). Le librerie non sono “nice to have”: senza di esse le Action/command non possono tipizzare né eseguire il flusso reale.
-
-| Package | Dichiarato in | Scopo business |
-|---------|---------------|--------
-
-### `mail-templates/archive/implementation-notes.md` — Note di Implementazione Email
-
-
-# Note di Implementazione Email
-
-## Errori Comuni e Soluzioni
-
-### 1. Errore Destinatario Mancante
-L'errore `Symfony\Component\Mime\Exception\LogicException: An email must have a "To", "Cc", or "Bcc" header` si verifica quando:
-
-1. **Causa Principale**
-   - Il destinatario non è specificato correttamente
-   - Il valore del campo 'to' è null o vuoto
-   - Il formato dell'email non è valido
-
-2. **Verifica dei Dati**
-   - Controllare che `$data['to']` sia presente
-   - Verificare che non sia null
-   - Assicurarsi che sia un indirizzo email valido
-
-3. **Soluzione**
-   - Validare l'input prima dell'invio
 
 ### `mail-templates/attachments.md` — Gestione degli Allegati nelle Email
 
@@ -12253,6 +11054,27 @@ Questo documento analizza un approccio avanzato per la generazione di slug da ti
 
 La generazione automatica di slug a partire da un campo titolo è u
 
+### `mail-templates/spatie-database-mail-templates.md` — Spatie Laravel Database Mail Templates
+
+
+# Spatie Laravel Database Mail Templates
+
+## Introduzione
+
+Questo pacchetto permette di memorizzare i template delle email nel database anziché in file statici, consentendo maggiore flessibilità e la possibilità di modificarli senza necessità di deployment.
+
+- **Repository**: [spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates)
+- **Documentazione**: [GitHub README](https://github.com/spatie/laravel-database-mail-templates)
+- **Versione installata**: 3.7.1
+
+## Architettura del Package
+
+Il pacchetto funziona con i seguenti componenti principali:
+
+1. **`TemplateMailable` classe base**: I tuoi Mailable devono estendere questa classe
+2. **`MailTemplate` modello**: Memorizza i template nel database
+3. **Sistema di template Mustache**: Utilizzato pe
+
 ### `mail-templates/spatie-mail-templates-structure.md` — Spatie Mail Templates: Struttura Corretta
 
 
@@ -12289,6 +11111,48 @@ Questo documento analizza un approccio avanzato per la generazione di slug da ti
 ## Concetto Base
 
 La generazione automatica di slug a partire da un campo titolo 
+
+### `mail-templates/template-content-examples.md` — Esempi di Contenuto per Template Email
+
+
+# Esempi di Contenuto per Template Email
+
+Questo documento contiene esempi di contenuto HTML per i vari template email da memorizzare nel database, seguendo l'architettura corretta di `spatie/laravel-database-mail-templates`.
+
+## Indice
+
+- [Introduzione](#introduzione)
+- [Template di Benvenuto](#template-di-benvenuto)
+- [Template di Conferma](#template-di-conferma)
+- [Template di Reset Password](#template-di-reset-password)
+- [Template di Appuntamento](#template-di-appuntamento)
+- [Template di Notifica](#template-di-notifica)
+- [Integrazione nel Database](#integrazione-nel-database)
+
+## Introduzione
+
+Questi esempi mostrano il contenuto HTML che deve essere memorizzato nella colonna `html_template` della tabella `mail_templates`. Questi contenuti verranno inseriti nel placeholder `{{{ body
+
+### `mail-templates/template-content-more-examples.md` — Esempi Aggiuntivi di Contenuto per Template Email
+
+
+# Esempi Aggiuntivi di Contenuto per Template Email
+
+Questo documento contiene esempi aggiuntivi di contenuto HTML per template email da memorizzare nel database, seguendo l'architettura corretta di `spatie/laravel-database-mail-templates`.
+
+## Indice
+
+- [Template di Reset Password](#template-di-reset-password)
+- [Template di Appuntamento](#template-di-appuntamento)
+- [Template di Notifica](#template-di-notifica)
+- [Template di Newsletter](#template-di-newsletter)
+- [Integrazione nel Database](#integrazione-nel-database)
+
+## Template di Reset Password
+
+```html
+<div style="padding: 30px 20px; text-align: center; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; margin-bottom: 20px; border-radius: 8px 8px 0 0;">
+    <h1 style="margin: 0; font-size: 26px; font-weig
 
 ### `mail-templates/template-examples.md` — Esempi di Template Email
 
@@ -12449,52 +11313,6 @@ Prima dell'invio verificare destinatario, consenso, canale e idempotenza.
 
 Screenshot reale presente nella documentazione Notify.
 
-### `master-roadmap-historic.md` — 🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025
-
-
-# 🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025
-
-**Data Creazione**: 2025-01-27  
-**Versione**: 2.0.0  
-**Status**: 🚀 IMPLEMENTAZIONE ATTIVA  
-**PHPStan Status**: ✅ 0 ERRORI (Level 9)  
-**Filament Status**: ✅ 4.x COMPATIBILE  
-
----
-
-## 🎯 EXECUTIVE SUMMARY
-
-**FixCity** è una piattaforma **Civic Tech** per il civic engagement urbano che connette cittadini e amministrazioni per rendere le città più vivibili, efficienti e responsive. Il progetto è basato su un'architettura modulare Laravel con Filament 4.x e segue i principi AGID per l'accessibilità.
-
-### 🏆 ACHIEVEMENTS COMPLETATI
-- ✅ **PHPStan Level 9**: 0 errori (da 53 errori iniziali)
-- ✅ **Filament 4.x**: Compatibilità completa
-- ✅ **Architettura Modulare**: 18 moduli funzionanti
-- ✅ **Documentazione**: 60% completata
-
-### `master-roadmap.md` — 🗺️ FIXCITY - MASTER ROADMAP 2025-2026
-
-
-# 🗺️ FIXCITY - MASTER ROADMAP 2025-2026
-
-> **Roadmap strategica completa per il completamento e l'evoluzione della piattaforma**
-
----
-
-## 📊 Executive Summary
-
-**Obiettivo**: Trasformare FixCity da MVP funzionale a piattaforma enterprise-ready per gestione disservizi urbani scalabile a livello nazionale.
-
-**Timeline**: 18 mesi (Ottobre 2025 - Marzo 2027)
-**Budget stimato**: €250k (team di 3 dev full-time)
-**ROI atteso**: Gestione 500k+ ticket/anno, riduzione costi amministrativi 60%
-
----
-
-## 🎯 Strategic Phases
-
-### Phase 0: Foundation (COMPLETATO ✅)
-
 ### `mcp-configuration.md` — MCP Server Configuration - Notify Module
 
 
@@ -12541,28 +11359,14 @@ Gestione notifiche, alert e comunicazioni multicanale.
   }
 }
 
-### `messaging/telegram.md` — Telegram Bot Integration
+### `messaging/sms.md` — SMS Integration
 
 
-# Telegram Bot Integration
+# SMS Integration
 
-## Resources
-- [Laravel Package to Integrate Telegram Bot API](https://dev.to/millykhamroev/laravel-package-to-integrate-telegram-bot-api-3l6e)
-- [Send Telegram Notifications with Laravel 9](https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406)
+## Implementation Notes
 
-## Configuration
-
-Add telegram service into config/service.php file.
-
-```php
-// config/services.php
-'telegram-bot-api' => [
-    'token' => env('TELEGRAM_BOT_TOKEN', 'YOUR BOT TOKEN HERE')
-],
-```
-
-## Tutorial
-- [Laravel Notifications Telegram Bot](https://abstractentropy.com/laravel-notifications-telegram-bot/)
+This document contains resources and guidelines for implementing SMS notifications in the Notify module.
 
 ### `metodiuplicati-analisi.md` — 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
@@ -12610,28 +11414,9 @@ Analisi **REALE e APPROFONDITA** di **18 moduli** + **2 temi** del framework Lar
    - Motivo: I campi subject e html_template sono essenziali per il funzionamento del template
 
 
-### `migration-rules-2.md` — Regole per le Migrazioni nel Modulo Notify
+### `migration-filament.md` — migration-filament
 
 
-# Regole per le Migrazioni nel Modulo Notify
-
-## Principi Fondamentali
-
-1. **Estensione Base**
-   - SEMPRE estendere `XotBaseMigration`
-   - NON estendere mai direttamente `Migration` di Laravel
-
-2. **Struttura Migrazione**
-   ```php
-   <?php
-   declare(strict_types=1);
-   
-   use Illuminate\Database\Schema\Blueprint;
-   use Modules\Xot\Database\Migrations\XotBaseMigration;
-   
-   return new class extends XotBaseMigration {
-       public function up(): void
-       {
 
 ### `migration-rules.md` — Regole per le Migrazioni nel Modulo Notify
 
@@ -12886,29 +11671,6 @@ abstract class BaseModel extends XotBaseModel
 ## Template
 
 
-### `modern-email-design-patterns-1.md` — Pattern di Design per Email Moderne
-
-
-# Pattern di Design per Email Moderne
-
-## Introduzione
-
-Questo documento esplora i pattern di design più efficaci per le email moderne, basati sull'analisi di numerosi framework e risorse specializzate nel settore. L'obiettivo è fornire linee guida per creare email che massimizzino l'engagement mantenendo compatibilità cross-client e aderenza alle best practices di <nome progetto>.
-
-## Pattern Principali
-
-### 1. Modular Design System
-
-Il design modulare consente di costruire email complesse assemblando componenti riutilizzabili:
-
-```
-┌─────────────────────────┐
-│        HEADER           │
-├─────────────────────────┤
-│      HERO SECTION       │
-├─────────────────────────┤
-│    CONTENT SECTION 1    │
-
 ### `modern-email-design-patterns.md` — Pattern di Design per Email Moderne
 
 
@@ -13067,29 +11829,6 @@ This document provides an index of all module roadmaps in the Laraxot ecosystem.
 
 #### User (Authentication)
 - **Status**: 70% Complete
-
-### `module-structure-2.md` — Notify Module — Structure & Discipline
-
-
-# Notify Module — Structure & Discipline
-
-## Module Root (PascalCase)
-
-```
-Modules/Notify/
-├── app/              # Domain logic (notifications, jobs, channels)
-├── config/           # Laravel config (lowercase)
-├── database/         # Migrations, seeders (lowercase)
-├── resources/        # Templates, lang files (lowercase)
-├── routes/           # Routes (lowercase)
-├── tests/            # Test files (lowercase)
-├── docs/             # Module documentation (THIS FOLDER)
-└── composer.json     # Module metadata
-```
-
-## ✅ What Belongs Here
-
-- **Notification Classes** — Laravel Notifications
 
 ### `module-structure.md` — Notify Module — Structure & Discipline
 
@@ -13477,29 +12216,6 @@ Netfun richiede l'utilizzo di un token di autenticazione (API key) per accedere 
 ```
 
 
-### `netfun-channel-1.md` — Implementazione Canale Netfun
-
-
-# Implementazione Canale Netfun
-
-## 1. Struttura Base
-
-### 1.1 Data Transfer Objects
-```php
-<?php
-
-namespace Modules\Notify\Datas;
-
-use Spatie\LaravelData\Data;
-
-class NetfunSmsRequestData extends Data
-{
-    public function __construct(
-        public string $to,
-        public string $text,
-        public string $from
-    ) {}
-
 ### `netfun-channel.md` — Implementazione Canale Netfun
 
 
@@ -13563,11 +12279,57 @@ Aggiungi la seguente sezione nel file `config/sms.php`:
 
 ## Introduzione
 
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](./standardized-sms-config-structure.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](./standardized-sms-config-structure-2.md).
 
 ## Struttura di Configurazione
 
 La configurazione di Netfun segue la struttura standardizzata con parametri globali e specifici:
+
+### `netfun-examples-2.md` — Esempi Pratici Netfun
+
+
+# Esempi Pratici Netfun
+
+## 1. Invio SMS OTP
+
+### 1.1 Notification Class
+```php
+<?php
+
+namespace Modules\Notify\Notifications;
+
+use Illuminate\Support\Carbon;
+use Modules\Notify\App\Data\NetfunSmsRequestData;
+
+class OtpSmsNotification extends NetfunSmsNotification
+{
+    /**
+     * @var string
+     */
+    protected string $otp;
+
+### `netfun-examples.md` — Esempi Pratici Netfun
+
+
+# Esempi Pratici Netfun
+
+## 1. Invio SMS OTP
+
+### 1.1 Notification Class
+```php
+<?php
+
+namespace Modules\Notify\Notifications;
+
+use Illuminate\Support\Carbon;
+use Modules\Notify\App\Data\NetfunSmsRequestData;
+
+class OtpSmsNotification extends NetfunSmsNotification
+{
+    /**
+     * @var string
+     */
+    protected string $otp;
 
 ### `netfunchannel-conflict-resolution.md` — Risoluzione conflitto NetfunChannel.php
 
@@ -13900,6 +12662,56 @@ We are adding a bulk action to trigger notifications using `RecordNotification`.
 ### 3. Integration
 - Integrated into `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`.
 
+### `notification-providers-guide.md` — Guida Completa ai Provider di Notifiche
+
+
+# Guida Completa ai Provider di Notifiche 
+
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di .
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
+
+## Principi Architetturali per Tutti i Provider
+
+I seguenti principi si applicano a **tutti** i provider di notifiche (SMS, Email, WhatsApp):
+
+1. **Struttura Directory Standardizzata**:
+   - Interfacce: `/app/Contracts/`
+   - Implementazioni: `/app/Actions/{Type}/`
+   - Data Transfer Objects: `/app/Datas/`
+   - Configurazioni: `/config/{type}.php`
+
+2. **Nomenclatura Coerente**:
+   - Interfacce: `{Type}ProviderActionInterface`
+   - Az
+
+### `notification-providers.md` — Guida Completa ai Provider di Notifiche
+
+
+# Guida Completa ai Provider di Notifiche
+
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
+
+## Principi Architetturali per Tutti i Provider
+
+I seguenti principi si applicano a **tutti** i provider di notifiche (SMS, Email, WhatsApp):
+
+1. **Struttura Directory Standardizzata**:
+   - Interfacce: `/app/Contracts/`
+   - Implementazioni: `/app/Actions/{Type}/`
+   - Data Transfer Objects: `/app/Datas/`
+   - Configurazioni: `/config/{type}.php`
+
+2. **Nomenclatura Coerente**:
+   - Interfacce: `{Type}ProviderActionInterface`
+   - Azioni: `Send{Provider}{Type}Action`
+   - DTO: `{Type}Data`
+
+
+### `notification-system.md` — Notification System
+
+
+# Notification System
+
 ### `notification-templates-2.md` — Template delle Notifiche
 
 
@@ -13946,52 +12758,6 @@ Il sistema di template delle notifiche è progettato seguendo i principi di:
 ### Componenti Principali
 
 
-### `notifications/archive/errori-comuni-da-evitare.md` — Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra
-
-
-# Errori Comuni da Evitare nelle Implementazioni di Moduli SaluteOra
-
-## Errori di Struttura Directory e Namespace
-
-1. **Errore di Case nelle Directory**
-   - ❌ ERRATO: `/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/`
-   - ✅ CORRETTO: `/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/`
-   
-   > Le directory standard di Laravel sono sempre in lowercase (`app`, `config`, `resources`, ecc.)
-
-2. **Errore di Namespace nei File**
-   - ❌ ERRATO: `namespace Modules\Notify\App\Actions;`
-   - ✅ CORRETTO: `namespace Modules\Notify\Actions;`
-   
-   > Il namespace dipende dalla configurazione PSR-4 nel composer.json del modulo
-
-## Errori di Configurazione
-
-1. **Duplicazione di Configurazioni Generiche**
-
-### `notifications/archive/netfun-sms-implementation.md` — Implementazione Netfun SMS
-
-
-# Implementazione Netfun SMS 
-
-## Introduzione
-
-Netfun è un provider italiano di SMS che offre servizi per l'invio di messaggi SMS tramite API REST. 
-Questo documento descrive l'implementazione corretta dell'integrazione Netfun usando Spatie Queueable Actions.
-
-## Endpoint API
-
-L'endpoint corretto per le API Netfun è:
-```
-https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
-```
-
-## Configurazione
-
-### 1. Configurazione Specifica del Provider
-
-Netfun utilizza un API token configurato in `config/services.php`:
-
 ### `notifications/errori-comuni-da-evitare.md` — Errori Comuni da Evitare nelle Implementazioni di Moduli
 
 
@@ -14003,6 +12769,10 @@ Netfun utilizza un API token configurato in `config/services.php`:
 1. **Errore di Case nelle Directory**
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
+   - ❌ ERRATO: `Modules/Notify/App/Actions/`
+   - ✅ CORRETTO: `Modules/Notify/app/Actions/`
+   - ❌ ERRATO: `Modules/Notify/App/Actions/`
+   - ✅ CORRETTO: `Modules/Notify/app/Actions/`
 
    > Le directory standard di Laravel sono sempre in lowercase (`app`, `config`, `resources`, ecc.)
 
@@ -14010,33 +12780,6 @@ Netfun utilizza un API token configurato in `config/services.php`:
    - ❌ ERRATO: `namespace Modules\Notify\App\Actions;`
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`
 
-   > Il namespace dipende dalla configurazione PSR-4 nel composer.json del modulo
-
-## Errori di Configurazione
-
-
-### `notifications/multi-channel-notifications-1.md` — Implementazione di Notifiche Multi-Canale
-
-
-# Implementazione di Notifiche Multi-Canale
-
-Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di <nome progetto>.
-Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di <nome progetto>.
-
-## Indice
-
-- [Introduzione](#introduzione)
-- [Architettura delle Notifiche](#architettura-delle-notifiche)
-- [Implementazione Email](#implementazione-email)
-- [Implementazione SMS](#implementazione-sms)
-- [Implementazione Telegram](#implementazione-telegram)
-- [Notifiche Multi-Canale](#notifiche-multi-canale)
-- [Errori Comuni e Soluzioni](#errori-comuni-e-soluzioni)
-- [Best Practices](#best-practices)
-
-## Introduzione
-
-<nome progetto> utilizza il sistema 
 
 ### `notifications/multi-channel-notifications.md` — Implementazione di Notifiche Multi-Canale
 
@@ -14186,14 +12929,56 @@ Documento che descrive la sistemazione completa dei file di traduzione per la fu
 - [Best Practices Traduzioni](/docs/translation-system-rules.md)
 - [Convenzioni PHP](/docs/php-best-practices.md)
 - [Regole Qualità Codice](/docs/code-quality-rules.md)
-- [Documentazione Sistema Notifiche](/laravel/Modules/Notify/docs/index.md)
+- [Documentazione Sistema Notifiche](/laravel/Modules/Notify/docs/notification-system.md)
 
 ## Problemi Identificati e Risolti
 
 ### 🚨 Problemi Critici Risolti
 
 #### 1. Conflitto di Merge Git Non Risolto
-**File:** `/laravel/Modules/Notify/lang/en/send
+**File:** `/laravel/Modules/Notif
+
+### `notify-translation-guide.md` — Guida alle Traduzioni nel Modulo Notify
+
+
+# Guida alle Traduzioni nel Modulo Notify
+
+## Introduzione
+
+Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
+Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.
+
+## Struttura dei File di Traduzione
+
+### Tipi di File
+
+Nel modulo Notify, esistono due tipi principali di file di traduzione:
+
+1. **File Funzionali**: Descrivono funzionalità specifiche e utilizzano il prefisso `send_`
+   - Esempi: `send_
+
+### `notify-translation.md` — Guida alle Traduzioni nel Modulo Notify
+
+
+# Guida alle Traduzioni nel Modulo Notify
+
+## Introduzione
+
+Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
+Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.
+
+## Struttura dei File di Traduzione
+
+### Tipi di File
+
+Nel modulo Notify, esistono due tipi principali di file di traduzione:
+
+1. **File Funzionali**: Descrivono funzionalità specifiche e utilizzano il prefisso `send_`
+   - Esempi: `send_
+
+### `ollama/optimization.md` — optimization
+
+
 
 ### `ollama-optimization-guide.md` — Ollama Optimization Guide - Intel i5-8400 (32GB RAM)
 
@@ -14287,6 +13072,52 @@ OpenViking is an AI-powered context management and documentation system that hel
 ### 2. **Performance**
 - **Queue optimization** non configurata
 
+### `optimization-recommendations-2.md` — Raccomandazioni di Ottimizzazione - Modulo Notify
+
+
+# Raccomandazioni di Ottimizzazione - Modulo Notify
+
+## 🎯 Stato Attuale e Problemi Critici
+
+### ❌ PROBLEMI CRITICI IDENTIFICATI
+
+#### 1. Riusabilità Compromessa
+- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+- **336+ occorrenze hardcoded** di "saluteora" in test e documentazione
+- **Import diretti** da moduli project-specific
+- **Configurazioni database** hardcoded nei test
+- **Email domains** hardcoded nei test
+
+#### 2. Documentazione Frammentata
+- **150+ file** di documentazione non organizzati
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
+- **File obsoleti** non rimossi
+- **Naming inconsistente** (alcuni file con maiuscole)
+
+
+### `optimization-recommendations.md` — Raccomandazioni di Ottimizzazione - Modulo Notify
+
+
+# Raccomandazioni di Ottimizzazione - Modulo Notify
+
+## 🎯 Stato Attuale e Problemi Critici
+
+### ❌ PROBLEMI CRITICI IDENTIFICATI
+
+#### 1. Riusabilità Compromessa
+- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+- **Import diretti** da moduli project-specific
+- **Configurazioni database** hardcoded nei test
+- **Email domains** hardcoded nei test
+
+#### 2. Documentazione Frammentata
+- **150+ file** di documentazione non organizzati
+- **Duplicazioni** multiple (analysis-dettagliata-1.md fino a -8.md)
+- **File obsoleti** non rimossi
+- **Naming inconsistente** (alcuni file con maiuscole)
+
+#### 3. Testing Non Riutilizzabile
+
 ### `optimization.md` — Analisi di Ottimizzazione - Modulo Notify
 
 
@@ -14379,6 +13210,29 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 - [spatie/laravel-slack-alerts](https://github.com/spatie/laravel-slack-alerts) - Alert Slack
 - [spatie/laravel-google-ca
 
+### `path-conventions.md` — Convenzioni sui Percorsi
+
+
+# Convenzioni sui Percorsi
+
+## Regole Fondamentali
+
+1. **Directory vs Namespace**
+   - Le directory nel filesystem sono in lowercase: `app`, `config`, `resources`
+   - I namespace possono essere in PascalCase ma devono mappare correttamente alle directory lowercase
+
+2. **Struttura Directory Principale**
+   - `Modules/Notify/app/` (CORRETTO)
+   - `Modules/Notify/App/` (ERRATO)
+
+3. **Struttura Directory Actions**
+   - `Modules/Notify/app/Actions/` (CORRETTO)
+   - `Modules/Notify/App/Actions/` (ERRATO)
+
+4. **Struttura Directory Datas**
+   - `Modules/Notify/app/Datas/` (CORRETTO)
+   - `Modules/Notify/App/Datas/` (ERRATO)
+
 ### `patterns.md` — Notify Module — Patterns
 
 
@@ -14401,29 +13255,6 @@ public function toMail() {
     return (new Mailable())
         ->with('user', $this->notifiable)
         ->with('verification_link', $this->verificationLink);
-
-### `perfection-audit.md` — Perfection Audit — Notify Module
-
-
-# Perfection Audit — Notify Module
-
-**Data**: 2026-09-01
-**Scope**: `laravel/Modules/Notify/docs/`
-**Metodo**: BMAD document-project + fix_docs_naming_convention.sh
-
----
-
-title: "PERFECTION AUDIT"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "PERFECTION AUDIT"
-issues: []
-discussions: []
-## TL;DR
-
-Notify ha **1,516 file .md** (100% uppercase) con **44 stub vuoti**. Secondo modulo più bloat dopo Xot. Tutti i file violano la convenzione `kebab-case.md`. Ogni file è `SOMETHING.md` maiuscolo.
 
 ### `performance-optimization.md` — Performance Optimization — Module **Notify**
 
@@ -14488,235 +13319,28 @@ Procedura per costruire il file `phpinsights.phar` usato come strumento qualità
 
 ```bash
 
-### `phpstan/pattern-comuni.md` — Pattern Comuni PHPStan - Progetto Laraxot
+### `phpstan-fixes-early-cycle.md` — 🔧 PHPStan Fixes - Modulo Notify - Gennaio 2025
 
-# Pattern Comuni PHPStan - Progetto Laraxot
 
-**Aggiornato:** 10 Ottobre 2025  
-**Basato su:** Correzione Activity (230 errori) + Blog (13 errori)
+# 🔧 PHPStan Fixes - Modulo Notify - Gennaio 2025
 
-## 🎯 Scopo
+**Data**: 27 Gennaio 2025  
+**Status**: ✅ COMPLETATO CON SUCCESSO  
+**Errori Corretti**: 5 errori di sintassi method chaining
 
-Documentare pattern ricorrenti e soluzioni consolidate per mantenere PHPStan Level 10 su tutto il progetto.
+## 📋 Panoramica Correzioni
 
-## 📋 Pattern Universali
+### ✅ **Errori Risolti**
 
-### 1. HasXotFactory - NON Generic
+#### **1. BuildMailMessageAction.php - Method Chaining**
+- **File**: `app/Actions/BuildMailMessageAction.php`
+- **Linea**: 54
+- **Problema**: Sintassi method chaining non riconosciuta da PHPStan
+- **Soluzione**: Convertito a sintassi esplicita con assegnazioni separate
 
-**Applicabile a:** TUTTI i moduli che usano HasXotFactory
-
+**Prima (ERRATO):**
 ```php
-// ❌ SBAGLIATO (causa errore PHPStan)
-/** @use HasFactory<FactoryClass> */
-use HasXotFactory;
-
-
-### `phpstan/phpstan-cleanup-report.md` — PHPStan Cleanup Report
-
-# PHPStan Cleanup Report
-
-**Data**: 2025-10-04  
-**Progetto**: base_fixcity_fila5_mono  
-**Stato Finale**: ✅ **0 ERRORI** (100% Clean)
-
----
-
-## 📊 Executive Summary
-
-### Risultato Finale
-- **Errori Iniziali**: 692
-- **Errori Finali**: 0
-- **Riduzione**: -100%
-- **Moduli Analizzati**: 10
-- **Moduli Puliti**: 10 (100%)
-- **File Analizzati**: 4,173
-
-### Timeline
-- **Durata Sessione**: ~5 ore
-
-### `phpstan/phpstan-errors-summary.md` — PHPStan Errors Summary - Global Analysis
-
-# PHPStan Errors Summary - Global Analysis
-
-## 📊 Current Status
-- **Total Errors**: 138
-- **PHPStan Level**: 10 (Maximum)
-- **Progress**: 189 → 138 (-27%)
-
-## 🎯 Error Breakdown by Priority
-
-### HIGH Priority (89 errors)
-
-#### 1. SushiToJsons Trait - Missing Methods (36 errors)
-**Files Affected**:
-- `Tenant/app/Models/Traits/SushiToJsons.php`
-
-**Issues**:
-- `getJsonFile()` method not found in 6 models (Attachment, Menu, Page, PageContent, Section)
-- Called in boot callbacks: creating, updating, deleting
-
-**Root Cause**: PHPStan doesn't see the method because it's defined in the trait itself
-
-### `phpstan/phpstan-session-report.md` — PHPStan Massive Fix Session - Report Finale
-
-# PHPStan Massive Fix Session - Report Finale
-## 2025-01-04
-
----
-
-## 🎯 RISULTATI COMPLESSIVI
-
-### Metriche Principali
-- **Errori iniziali**: 798
-- **Errori finali**: 76
-- **Errori corretti**: **722**
-- **Riduzione percentuale**: **90.5%**
-
-### Tempo Sessione
-- **Durata totale**: ~3 ore
-- **Velocità media**: ~240 errori/ora
-- **Approccio**: Batch systematico, zero compromessi
-
----
-
-
-### `phpstan/phpstan-solutions-from-baselaraverpizza.md` — PHPStan Solutions from base_laravelpizza - 2026-03-02
-
-# PHPStan Solutions from base_laravelpizza - 2026-03-02
-
-## Overview
-Documentazione completa delle soluzioni PHPStan studiate da `base_laravelpizza` per risolvere i 138 errori rimanenti in `base_fixcity_fila5`.
-
-## Pattern Chiave Identificati
-
-### 1. Metodo getOptions() per Filament Select Fields
-
-**Problema**: 13 errori `staticMethod.notFound` in Geo module
-```
-Call to an undefined static method Modules\Geo\Models\Region::getOptions()
-Call to an undefined static method Modules\Geo\Models\Province::getOptions()
-Call to an undefined static method Modules\Geo\Models\Locality::getOptions()
-```
-
-**Soluzione da base_laravelpizza**:
-```php
-class Province extends BaseModel
-{
-
-### `phpstan/riepilogo-generale.md` — Riepilogo Generale - PHPStan Level 10 Compliance
-
-# Riepilogo Generale - PHPStan Level 10 Compliance
-
-**Progetto:** base_fixcity_fila5_mono  
-**Data Aggiornamento:** 10 Ottobre 2025  
-**PHPStan Level:** 10 (Massimo)
-
-## 📊 Status Moduli
-
-| Modulo | Stato | Errori Iniziali | Errori Finali | Data |
-|--------|-------|-----------------|---------------|------|
-| **Activity** | ✅ Compliant | 230 | 0 | 10/10/2025 |
-| **Blog** | ✅ Compliant | 13 | 0 | 10/10/2025 |
-| **Xot** | ✅ Compliant | 304 | 0 | 10/10/2025 |
-| **Dental** | ⏳ Pending | - | - | - |
-| **Patient** | ⏳ Pending | - | - | - |
-| **Reporting** | ⏳ Pending | - | - | - |
-| **User** | ⏳ Pending | - | - | - |
-
-## 🎯 Obiettivi Progetto
-
-
-### `phpstan/sessione-corrente-riepilogo.md` — Riepilogo Sessione Analisi PHPStan Test
-
-# Riepilogo Sessione Analisi PHPStan Test
-
-## 📋 Sommario Esecutivo
-
-**Obiettivo:** Analizzare errori PHPStan nei test di tutti i moduli e identificare violazioni naming convention
-**Completato:** ✅ Analisi completa, documentazione aggiornata, script di correzione generati
-
-## ✅ Attività Completate
-
-### 1. Analisi PHPStan su Test
-
-**Script Creato:** `analyze_phpstan_errors.php`
-
-**Risultati Analisi:**
-- **Totale errori nei test:** 3941
-- **Moduli analizzati:** 18
-- **Moduli puliti (0 errori):** 8 ✅
-- **Moduli da correggere:** 10 ❌
-
-#### Moduli con Test Puliti
-
-### `phpstan/tests-analysis-current.md` — Analisi PHPStan Test - Situazione Corrente
-
-# Analisi PHPStan Test - Situazione Corrente
-
-## 🎯 Executive Summary
-
-**Focus:** Analisi PHPStan Level Max su cartelle `Modules/*/tests`
-**Totale Errori Test:** 3941
-**Moduli Analizzati:** 18
-**Moduli Puliti:** 8 ✅
-**Moduli da Correggere:** 10 ❌
-
-## 🏆 Achievement: Moduli con Test Puliti
-
-Questi moduli hanno raggiunto **0 errori PHPStan nei test** (Level Max):
-
-| Modulo | Status | Note |
-|--------|--------|------|
-| **AI** | ✅ | Test type-safe |
-| **Activity** | ✅ | 230 errori corretti in sessione precedente |
-| **Blog** | ✅ | 13 errori corretti in sessione precedente |
-| **Comment** | ✅ | Test type-safe |
-
-### `phpstan/xot-module-achievement.md` — Achievement: Xot Module PHPStan Level 10
-
-# Achievement: Xot Module PHPStan Level 10
-
-**Data:** 10 Ottobre 2025  
-**Modulo:** Xot (Core Framework Laraxot)
-
-## 🏆 COMPLETATO!
-
-```
-./vendor/bin/phpstan analyse Modules/Xot
-
- [OK] No errors ✅
-```
-
-## 📊 Numeri Impressionanti
-
-| Metrica | Valore |
-|---------|--------|
-| **Errori Corretti** | **304** |
-| **Tempo Totale** | **~4 ore** |
-| **File Modificati** | **~120** |
-
-### `phpstan-l10.md` — PHPStan Level 10 Compliance — Notify Module
-
-
-# PHPStan Level 10 Compliance — Notify Module
-
-## Summary
-
-| Aspect | Value |
-|--------|-------|
-| **PHPStan L10** | ✅ 0 errors |
-| **Status** | Complete |
-| **Last verified** | 2026-08-02 |
-| **Module Structure** | ✅ Documented |
-
-## Patterns Applied
-
-### 1. Notification Channels
-```php
-/**
- * @return array<string, Channel>
- */
-public function getChannels(): array { }
+$email = new MailMessage()
 
 ### `plan.md` — Appointment Field Naming Correction Plan
 
@@ -14764,6 +13388,29 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 
+### `product-launch-plan.md` — Notify - Product Launch Plan
+
+
+# Notify - Product Launch Plan
+
+> Piano di lancio. Modulo.
+> Launch readiness stimata: 60%.
+
+## Obiettivo del lancio
+
+Rilasciare **Notify** in modo controllato, misurabile e coerente con il suo ruolo: notifiche applicative multi-canale.
+
+## Audience interna
+
+- owner di modulo o tema
+- admin/operatori
+- sviluppatori che dipendono dal componente
+
+## Criteri di readiness
+
+- PRD e roadmap aggiornati
+- test critici verdi
+
 ### `product-requirements.md` — Product Requirements Document (PRD)
 
 
@@ -14787,6 +13434,52 @@ created: 2026-09-26
 ### Descrizione Breve
 Il modulo Notify fornisce un sistema di notifiche **multi-canale** unificato per l'ecosistema Laraxot. Supporta email, SMS, WhatsApp, Telegram e Firebase Cloud Messaging (FCM) con un'interfaccia comune per la gestione e l'invio.
 
+### `product-roadmap.md` — Notify - Product Roadmap
+
+
+# Notify - Product Roadmap
+
+> Documento vivente. Modulo.
+> Maturita' stimata: 60% implementato, 40% gap residuo.
+
+## Visione di avanzamento
+
+Questo roadmap traduce il PRD in sequenza di rilascio per **Notify**, che nel progetto copre: notifiche applicative multi-canale.
+
+## Orizzonte 0-30 giorni
+
+- chiudere i gap P0 descritti in [PRD](prd.md)
+- riallineare codice, test e documentazione
+- rimuovere le ambiguita' tra stato reale e stato percepito
+
+## Orizzonte 30-90 giorni
+
+- consolidare test, osservabilita' e metriche
+- completare le superfici utente o admin critiche
+
+### `product-strategy.md` — Notify - Product Strategy
+
+
+# Notify - Product Strategy
+
+> Strategia prodotto. Modulo.
+> Allineamento strategico stimato: 60%.
+
+## Missione
+
+Portare **Notify** a uno stato in cui il progetto ottiene un vantaggio netto e misurabile su questa area: notifiche applicative multi-canale.
+
+## Problema da risolvere
+
+- chiarire il ruolo del componente nel sistema
+- evitare sovrapposizioni con altri moduli o temi
+- rendere il valore del componente esplicito e verificabile
+
+## Principi strategici
+
+- DRY: riuso prima di duplicare
+- KISS: superfici semplici e veritiere
+
 ### `progress-report.md` — 📊 FIXCITY PROJECT - PROGRESS REPORT
 
 
@@ -14803,9 +13496,7 @@ Il modulo Notify fornisce un sistema di notifiche **multi-canale** unificato per
 
 Il progetto **FixCity** ha comple
 
-## Contenuto fuso da `progress-report.md`
 
-=======
 
 ### `project/2-1-1-plan.md` — PHASE 2 - EPIC 2.1 - TASK 1: Create /my-tickets Folio Page
 
@@ -15268,7 +13959,7 @@ Transform FixCity from a functional MVP to a national-scale enterprise-ready pla
 
 # QMD — ricerca locale su documentazione e note
 
-**Riferimento upstream**: [github.com/tobi/qmd](https://github.com/tobi/qmd) (MIT). Documentazione dettagliata: [README](https://github.com/tobi/qmd/blob/main/README.md), [CHANGELOG](https://github.com/tobi/qmd/blob/main/CHANGELOG.md), sintassi query: [docs/SYNTAX.md](https://github.com/tobi/qmd/blob/main/docs/SYNTAX.md) (se presente nel tag che usi).
+**Riferimento upstream**: [github.com/tobi/qmd](https://github.com/tobi/qmd) (MIT). Documentazione dettagliata: [README](https://github.com/tobi/qmd/blob/main/README.md), [CHANGELOG](https://../../../UI/docs/changelog.md), sintassi query: [docs/SYNTAX.md](https://github.com/tobi/qmd/blob/main/docs/SYNTAX.md) (se presente nel tag che usi).
 
 ## Scopo (business logic)
 
@@ -15276,7 +13967,8 @@ Transform FixCity from a functional MVP to a national-scale enterprise-ready pla
 
 Pipeline tipica (da upstream):
 
-- **BM25** full-text (SQLit
+- **BM25** full-text (SQLite FTS5);
+- **
 
 ### `project/requirements-2.md` — REQUIREMENTS: FixCity Platform
 
@@ -15412,33 +14104,10 @@ Pipeline tipica (da upstream):
 |---|---|---|---|
 | `app_fila5_project` | 6 | 15 | 2026-04-09 |
 
-### `project/visual-comparison/homepage/action.md` — Homepage Visual Parity - Action Items
+### `project/theme-detection-system-2.md` — Theme Detection System - Notify Fila5
 
 
-# Homepage Visual Parity - Action Items
-
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
-
-## Current Status
-
-### Reference: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
-- Uses Bootstrap Italia CSS directly
-- Proper header structure with slim + center + nav sections
-- Full hero section with "Benvenuti" title
-- Services cards with specific styling
-
-### Local: http://127.0.0.1:8000/it/tests/homepage
-- Same HTML structure (verified via diff)
-- CSS styling differs signi
-
-### `project/visual-comparison/homepage/analysis.md` — Homepage Visual Comparison Analysis
-
-
-# Homepage Visual Comparison Analysis
+# Theme Detection System - Notify Fila5
 
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
@@ -15446,17 +14115,40 @@ Pipeline tipica (da upstream):
 > [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
 > Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
-## Goal
-Make the local homepage (`http://127.0.0.1:8000/it/tests/homepage`) visually identical to the reference (`https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html`).
+**Project:** Notify Fila5
+**Date:** 2026-04-01
+**Status:** ✅ **Documented**
+**Priority:** 🔴 **Critical Architecture**
 
-## HTML Structure Comparison (2026-04-07)
+---
 
-| Metric | Value |
-|--------|-------|
-| Reference elements | 835 |
-| Local elements | 777 |
-| Matching elements | 342 |
-| **Similarity** | **44.0%** |
+title: "THEME DETECTION SYSTEM"
+type: note
+tags: [documentation]
+created: 2026-09-26
+
+### `project/theme-detection-system.md` — Theme Detection System - Notify Fila5
+
+
+# Theme Detection System - Notify Fila5
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+**Project:** Notify Fila5
+**Date:** 2026-04-01
+**Status:** ✅ **Documented**
+**Priority:** 🔴 **Critical Architecture**
+
+---
+
+## 🎯 Scopo
+
+Questo documento spiega il sistema di rilevamento del tema basato su `APP_URL` e il percorso di configurazione dinamico.
+
 
 ### `project/vite-fix-and-execution-plan-2.md` — 🚀 Notify Improvement + Vite Fix - EXECUTION PLAN
 
@@ -15477,18 +14169,25 @@ Make the local homepage (`http://127.0.0.1:8000/it/tests/homepage`) visually ide
 ### `project/vite-fix-and-execution-plan.md` — 🚀 Notify Improvement + Vite Fix - EXECUTION PLAN
 
 
-> **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
-> `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
-> `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
-> [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
-
 # 🚀 Notify Improvement + Vite Fix - EXECUTION PLAN
 
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
 > procedimento valido vedi
 > [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasci
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+**Date**: 2026-03-30  
+**Status**: ✅ **READY TO EXECUTE**  
+**AI Tools**: OpenViking + BMAD + GSD + Ralph Loop + NotebookLM + NotebookLM MCP
+
+---
+
+title: "VITE FIX AND EXECUTION PLAN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
 
 ### `project-analysis-and-roadmap.md` — FixCity - Analisi Completa del Progetto e Roadmap
 
@@ -15600,29 +14299,6 @@ Creare una piattaforma digitale che connetta cittadini, amministrazioni pubblich
 
 ---
 
-
-### `project_docs/architecture-2.md` — FixCity - Architecture Documentation
-
-
-# FixCity - Architecture Documentation
-
-**Version:** 4.0  
-**Date:** 2025-10-01  
-**Status:** Production Ready
-
-## 📐 System Architecture
-### High-Level Overview
-
-## 🏗️ Modular Architecture
-
-### Module Structure
-
-```
-Modules/
-├── Xot/              # Core framework extensions
-├── Tenant/           # Multi-tenancy support
-├── User/             # User management & authentication
-├── Fixcity/          # Main application logic
 
 ### `project_docs/complete-refactoring-analysis.md` — Complete Cyclomatic Complexity Refactoring Analysis
 
@@ -15756,28 +14432,51 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 
 ### 🏗️ **Moduli Core** (90% completati)
 
-### `project_docs/excellence-achievement.md` — 🏆 2025 Excellence Achievement Report
+### `project_docs/final-implementation-report-02.md` — ✅ AGID Implementation - Final Report
 
 
-# 🏆 2025 Excellence Achievement Report
+# ✅ AGID Implementation - Final Report
 
-**Project:** FixCity - Base Fila4 Mono  
-**Project:** Notify - Base Fila4 Mono  
-**Achievement Date:** 2025-10-01  
-**Status:** ✅ **EXCELLENCE ACHIEVED**
-
----
-
-## 🎉 Executive Summary
-
-**FixCity has achieved EXCELLENCE status for 2025!**
-
-This comprehensive report documents the transformation of the FixCity codebase into a world-class, production-ready application that sets the standard for quality, maintainability, and professional development practices.
-**Notify has achieved EXCELLENCE status for 2025!**
-
-This comprehensive report documents the transformation of the Notify codebase into a world-class, production-ready application that sets the standard for quality, maintainability, and professional development practices.
+**Date**: 2025-10-02T20:48:00+02:00  
+**Status**: **COMPLETATO & TESTATO** ✅  
+**Server**: Running without errors
 
 ---
+
+title: "final implementation report 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "final implementation report 2025 10 02"
+issues: []
+discussions: []
+## 🎯 Obiettivo Raggiunto
+
+**Implementazione completa AGID compliance per FixCity**
+
+### `project_docs/final-implementation-report.md` — ✅ AGID Implementation - Final Report
+
+
+# ✅ AGID Implementation - Final Report
+
+**Date**: 2025-10-02T20:48:00+02:00  
+**Status**: **COMPLETATO & TESTATO** ✅  
+**Server**: Running without errors
+
+## 🎯 Obiettivo Raggiunto
+
+## 📦 File Implementati (28 file)
+
+### Models (2)
+- `Modules/Fixcity/app/Models/Faq.php`
+- `Modules/Fixcity/app/Models/FaqCategory.php`
+
+### Migrations (2)
+- `database/Migrations/2025_10_02_203600_create_faq_categories_table.php`
+- `database/Migrations/2025_10_02_203700_create_faqs_table.php`
+
+### Seeders (1)
 
 ### `project_docs/final-refactoring-report.md` — 🐮 Super Mucca - Final Refactoring Report
 
@@ -15986,7 +14685,53 @@ Rifattorizzazione radicale di tutte le cartelle docs seguendo i principi **DRY +
 ### Convenzioni Naming
 - **Tutto in minuscolo**: File e cartelle solo in minuscolo
 
-### `project_docs/roadmaps/changelog-docs-update.md` — 📚 Docs Update Changelog – 2025-10-01
+### `project_docs/roadmaps/agid-analysis-implementation-02.md` — 🏛️ AGID Analysis & Implementation Report
+
+
+# 🏛️ AGID Analysis & Implementation Report
+
+**Date**: 2025-10-02T20:19:00+02:00  
+**Task**: Study design-comuni-pagine-statiche and implement missing features  
+**Status**: ✅ **ANALYSIS COMPLETE + COMPONENTS IMPLEMENTED**  
+**User Request**: *"studia a fondo design-comuni-pagine-statiche, documenta tutto, implementa le cose mancanti"*
+
+---
+
+title: "agid analysis implementation 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "agid analysis implementation 2025 10 02"
+issues: []
+discussions: []
+## 📋 Executive Summary
+
+
+### `project_docs/roadmaps/agid-analysis-implementation.md` — 🏛️ AGID Analysis & Implementation Report
+
+
+# 🏛️ AGID Analysis & Implementation Report
+
+**Date**: 2025-10-02T20:19:00+02:00  
+**Task**: Study design-comuni-pagine-statiche and implement missing features  
+**Status**: ✅ **ANALYSIS COMPLETE + COMPONENTS IMPLEMENTED**  
+**User Request**: *"studia a fondo design-comuni-pagine-statiche, documenta tutto, implementa le cose mancanti"*
+
+## 📋 Executive Summary
+### Deliverables
+
+## 🔍 Analysis Performed
+
+### 1. design-comuni-pagine-statiche Repository Study
+
+**Repository**: https://github.com/italia/design-comuni-pagine-statiche  
+**Version Analyzed**: v2.4.0  
+**Documentation**: https://italia.github.io/design-comuni-pagine-statiche
+
+#### Key Findings
+
+### `project_docs/roadmaps/changelog-docs-update-01.md` — 📚 Docs Update Changelog – 2025-10-01
 
 
 # 📚 Docs Update Changelog – 2025-10-01
@@ -16008,6 +14753,256 @@ Rifattorizzazione radicale di tutte le cartelle docs seguendo i principi **DRY +
   - Added references to internal docs and roadmaps.
 
 ## Recomme
+
+### `project_docs/roadmaps/changelog-docs-update.md` — changelog-docs-update
+
+
+> Questo file è stato rinominato in [changelog-docs-update.md](changelog-docs-update.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+
+### `project_docs/roadmaps/completion-summary-01.md` — 🏆 FixCity Project Completion Summary – 2025-10-01
+
+
+# 🏆 FixCity Project Completion Summary – 2025-10-01
+
+## Executive Summary
+
+Piano strategico di completamento del progetto FixCity per posizionarlo come il migliore del 2025.
+Focus su API Development, Test Coverage, AGID Compliance, e Code Quality Excellence.
+
+## Obiettivi Completamento 2025
+
+### 🎯 Vision
+Diventare la piattaforma civic tech leader in Italia con:
+- **API RESTful complete** per integrazioni terze parti
+- **Mobile-first** con PWA e ottimizzazione completa
+- **AGID 100% compliant** per conformità PA
+- **PHPStan Level 9** con 0 errori
+- **Test coverage >80%** per affidabilità
+- **Filament 4.x** per admin panel moderno
+
+---
+
+### `project_docs/roadmaps/completion-summary.md` — 🏆 FixCity Project Completion Summary – 2025-10-01
+
+
+# 🏆 FixCity Project Completion Summary – 2025-10-01
+
+## Executive Summary
+
+Piano strategico di completamento del progetto FixCity per posizionarlo come il migliore del 2025.
+Focus su API Development, Test Coverage, AGID Compliance, e Code Quality Excellence.
+
+## Obiettivi Completamento 2025
+
+### 🎯 Vision
+Diventare la piattaforma civic tech leader in Italia con:
+- **API RESTful complete** per integrazioni terze parti
+- **Mobile-first** con PWA e ottimizzazione completa
+- **AGID 100% compliant** per conformità PA
+- **PHPStan Level 9** con 0 errori
+- **Test coverage >80%** per affidabilità
+- **Filament 4.x** per admin panel moderno
+
+## 📊 Stato Attuale (2025-10-01)
+
+### `project_docs/roadmaps/consolidated-report.md` — consolidated-report
+
+
+> Questo file è stato rinominato in [consolidated-report.md](consolidated-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+
+### `project_docs/roadmaps/final-completion-report-01.md` — 🏆 FINAL COMPLETION REPORT - FixCity 2025
+
+
+# 🏆 FINAL COMPLETION REPORT - FixCity 2025
+
+**Date**: 2025-10-01T21:48:00+02:00  
+**Mode**: 🐄⚡ SUPER MUCCA POWER  
+**Status**: ✅ **100% OBIETTIVI RAGGIUNTI**
+
+---
+
+title: "final completion report 2025 10 01"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "final completion report 2025 10 01"
+issues: []
+discussions: []
+## 🎉 MISSION ACCOMPLISHED
+
+Il progetto FixCity ha raggiunto **TUTTI GLI OBIETTIVI** per diventare la piattaforma civic tech migliore del 2025.
+
+### `project_docs/roadmaps/final-completion-report.md` — 🏆 FINAL COMPLETION REPORT - FixCity 2025
+
+
+# 🏆 FINAL COMPLETION REPORT - FixCity 2025
+
+**Date**: 2025-10-01T21:48:00+02:00  
+**Mode**: 🐄⚡ SUPER MUCCA POWER  
+**Status**: ✅ **100% OBIETTIVI RAGGIUNTI**
+
+## 🎉 MISSION ACCOMPLISHED
+
+## 📊 Executive Summary
+
+### Overall Completion: **95%** ✅
+
+```
+██████████████████████████████████████████████████ 95%
+```
+
+### Key Achievements
+- ✅ **22 nuovi file creati** in questa sessione
+- ✅ **~3,000 righe di codice** di qualità enterprise
+
+### `project_docs/roadmaps/immediate-actions.md` — immediate-actions
+
+
+> Questo file è stato rinominato in [immediate-actions.md](immediate-actions.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+
+### `project_docs/roadmaps/implementation-report-01.md` — 🚀 Implementation Report – 2025-10-01
+
+
+# 🚀 Implementation Report – 2025-10-01
+
+## Session Summary
+
+**Date**: 2025-10-01
+**Duration**: Full session
+**Focus**: Documentation update, code quality improvement, API implementation
+**Status**: ✅ COMPLETED
+
+---
+
+title: "implementation report 2025 10 01"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "implementation report 2025 10 01"
+issues: []
+discussions: []
+
+### `project_docs/roadmaps/implementation-report.md` — 🚀 Implementation Report – 2025-10-01
+
+
+# 🚀 Implementation Report – 2025-10-01
+
+## Session Summary
+
+**Date**: 2025-10-01
+**Duration**: Full session
+**Focus**: Documentation update, code quality improvement, API implementation
+**Status**: ✅ COMPLETED
+
+## 🎯 Objectives Achieved
+### 1. Documentation Update ✅
+#### Module Roadmaps Updated
+#### Theme Documentation Updated
+### 2. Code Quality Improvements ✅
+#### Fixcity Module - Ticket Model
+#### Configuration Fix
+### 3. API Implementation ✅
+#### API Controller
+#### API Resource
+
+### `project_docs/roadmaps/modules-validation-report-02.md` — 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
+
+
+# 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
+
+**Date**: 2025-10-02T20:14:00+02:00  
+**Scope**: Fixcity + Cms Modules  
+**Validation Level**: PHPStan Level 9 (Maximum)  
+**Status**: ✅ **ALL MODULES VALIDATED**
+
+---
+
+title: "modules validation report 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modules validation report 2025 10 02"
+issues: []
+discussions: []
+## 📊 Executive Summary
+
+
+### `project_docs/roadmaps/modules-validation-report.md` — 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
+
+
+# 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
+
+**Date**: 2025-10-02T20:14:00+02:00  
+**Scope**: Fixcity + Cms Modules  
+**Validation Level**: PHPStan Level 9 (Maximum)  
+**Status**: ✅ **ALL MODULES VALIDATED**
+
+## 📊 Executive Summary
+### Overall Results
+
+## 🎯 Module 1: Fixcity - Civic Reporting System
+
+### Validation Results ✅
+
+#### PHPStan Level 9
+```bash
+✅ 0 errors in all Fixcity files
+✅ Controllers validated
+✅ Services validated  
+
+### `project_docs/roadmaps/perfect-completion-report-02.md` — 🏆 PERFECT COMPLETION REPORT - FixCity 2025
+
+
+# 🏆 PERFECT COMPLETION REPORT - FixCity 2025
+
+**Date**: 2025-10-02T07:39:00+02:00  
+**Mode**: 🐄⚡ SUPER MUCCA CONTINUOUS POWER  
+**Status**: ✅ **100% VALIDATED & PERFECT**
+
+---
+
+title: "perfect completion report 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "perfect completion report 2025 10 02"
+issues: []
+discussions: []
+## 🎯 Mission: Perfezione Assoluta
+
+Completamento finale con validazione PHPStan Level 9 + PHPMD + Pest tests per ogni file.
+
+### `project_docs/roadmaps/perfect-completion-report.md` — 🏆 PERFECT COMPLETION REPORT - FixCity 2025
+
+
+# 🏆 PERFECT COMPLETION REPORT - FixCity 2025
+
+**Date**: 2025-10-02T07:39:00+02:00  
+**Mode**: 🐄⚡ SUPER MUCCA CONTINUOUS POWER  
+**Status**: ✅ **100% VALIDATED & PERFECT**
+
+## 🎯 Mission: Perfezione Assoluta
+
+## ✅ Validation Results
+
+### PHPStan Level 9 - PASS ✅
+```
+✅ 0 errors found in all Fixcity module files
+✅ Level 9 - Maximum type safety achieved
+✅ All services, controllers, models validated
+✅ All widgets and resources validated
+```
+
+### PHPMD - ACCEPTABLE ✅
+
+### `project_docs/roadmaps/progress-summary.md` — progress-summary
+
+
+> Questo file è stato rinominato in [progress-summary.md](progress-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ### `project_docs/roadmaps/roadmap-business.md` — 💼 ROADMAP BUSINESS - FIXCITY PLATFORM
 
@@ -16275,7 +15270,7 @@ with psr-4 autoloading standard (rule: Modules\Notify\ => ./Modules/Notify/app).
 # Fix Namespace PSR-4 - Modulo Notify
 
 > **Versione**: 1.0  
-> **Ultima modifica**: Vedi [CHANGELOG.md](./CHANGELOG.md)
+> **Ultima modifica**: Vedi [CHANGELOG.md](./CHANGELOG.MD)
 
 **Problema**: Namespace con `\App\` viola convenzione Laraxot  
 **Severità**: 🟡 Media (warning autoload, non blocca app)
@@ -16297,6 +15292,15 @@ does not comply with psr-4 autoloading standard
   # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
   # DA CREARE — vedi sopra.
+updated: 2026-09-02
+issues:
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
+  # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
+  - "https://github.com/provtv/module_notify_fila5/issues/"
+discussions:
+  # DA CREARE — vedi sopra.
+  - "https://github.com/provtv/module_notify_fila5/discussions/"
+---
 
 # Notify — perche' esiste
 
@@ -16305,15 +15309,11 @@ does not comply with psr-4 autoloading standard
 **Notify e' il solo punto da cui la piattaforma parla con una persona: separa il
 *fatto* che qualcosa e' accaduto dal *come* glielo si dice.**
 
-## L'evidenza
 
-- 232 file PHP, **46 Action**, zero Widget: e' un modulo di servizio, non una
-  schermata.
-- `NotificationTemplate`, `MailTemplate`, `NotifyTheme`: il testo e l'aspetto sono
-  **dati**, non codice. Cambiare una comunicazione non deve richiedere un deploy.
-- `Contact`: a chi si scrive e' un'entita', non una stringa dentro un modello.
+### `push-notifications.md` — Push Notifications
 
-## Perche' e' piu' importante di quanto sembri
+
+# Push Notifications
 
 ### `qmd-setup.md` — QMD Setup per Module **Notify**
 
@@ -16337,29 +15337,6 @@ qmd search "<topic>" -c notify
 **Ricerca globale** (tutto il progetto):
 \`\`\`bash
 qmd search "<topic>"
-
-### `quality/phpmd-analysis.md` — PHPMD Analysis - Modulo Notify
-
-
-# PHPMD Analysis - Modulo Notify
-
-## 📊 Analisi Filosofica Errori PHPMD
-
-### 🧘 Principio Zen: "Il nome giusto illumina il codice"
-
----
-## Errori Rilevati e Filosofia
-
-### 1. ShortVariable: $to, $as
-
-**PHPMD Warning:**
-```
-Avoid variables with short names like $to. Configured minimum length is 3.
-Avoid variables with short names like $as. Configured minimum length is 3.
-```
-
-**Analisi Filosofica:**
-
 
 ### `quality-audit.md` — Audit di qualita — modulo Notify
 
@@ -16509,9 +15486,34 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Progetto Design Comuni](./.agents/docs/main-rules/qwen-design-comuni.md)
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
-- [Regole Critiche](ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/Fixcity/d
+- [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md) — body plain, header parity, stepper responsive, multilingual
+- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md) — NO Blade step management, use Filament Wizard Schema
+- [Module Boundary Philosophy](./laravel
+
+### `readme-en.md` — 📬 Notify — English presentation
+
+
+# 📬 Notify — English presentation
+
+[![Domain-Notify](https://img.shields.io/badge/Domain-Notifications-E65100.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img
+
+### `real-time-messaging.md` — Real-time Messaging
+
+
+# Real-time Messaging
+
+### `redundancy-analysis.md` — redundancy-analysis
+
+
+Redundancy analysis available: bugs/summary-2.md
 
 ### `redundancy-audit.md` — Notify redundancy audit 2026-05-21
 
@@ -16576,6 +15578,29 @@ abstract class BaseModel extends Model implements HasMedia
     <div class="row">
      <div class="col-12">
       <div class="it-header-slim-wrapper-content">
+
+### `ref-struct.md` — ref-struct
+
+
+<body>
+ <div class="skiplink">
+  <a class="visually-hidden-focusable" href="#main-container">
+   Vai ai contenuti
+  </a>
+  <a class="visually-hidden-focusable" href="#footer">
+   Vai al
+        footer
+  </a>
+ </div>
+ <!-- /skiplink -->
+ <header class="it-header-wrapper" data-bs-target="#header-nav-wrapper" style="">
+  <div class="it-header-slim-wrapper">
+   <div class="container">
+    <div class="row">
+     <div class="col-12">
+      <div class="it-header-slim-wrapper-content">
+       <a aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda" class="d-lg-block navbar-brand" href="#" target="_blank" title="Vai al portale {Nome della Regione}">
+        Nome della Regione
 
 ### `refactor-plan-dry-kiss.md` — Piano di Refactor DRY/KISS - Documentazione Modulo Notify
 
@@ -16841,6 +15866,29 @@ La configurazione usa semantic-release con Conventional Commits, changelog, GitH
 
 - ❌ **Over-engineering**: Azione separata per logica semplice (determinazione periodo s
 
+### `replikate-phase-1-complete.md` — 🎉 REPLIKATE Phase 1 - COMPLETE
+
+
+# 🎉 REPLIKATE Phase 1 - COMPLETE
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+**Date**: 2026-04-07  
+**Status**: ✅ **PHASE 1 STRUCTURAL ANALYSIS COMPLETE**
+
+---
+
+title: "REPLIKATE PHASE 1 COMPLETE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "REPLIKATE PHASE 1 COMPLETE"
+
 ### `report.md` — Report
 
 
@@ -16854,29 +15902,6 @@ La configurazione usa semantic-release con Conventional Commits, changelog, GitH
          function Safe\error_log;' at the beginning of the file to use the variant provided by the                   
          'thecodingmachine/safe' library.                                                                            
          🪪  theCodingMachineSafe.class               
-
-### `reports/bugfix-report.md` — Bug Fix Report - 2025-01-14
-
-
-# Bug Fix Report - 2025-01-14
-
-## Executive Summary
-
-Analizzato e risolto il bug critico che causava il crash del comando `php artisan make:filament-user` con un loop infinito durante la creazione di nuovi utenti.
-
-## Analisi del Problema
-
-### Sintomo
-Il comando `php artisan make:filament-user` crashava con un loop infinito quando si tentava di creare un nuovo utente.
-
-### Root Cause Analysis
-
-**File Problematico**: `Modules/User/app/Models/Traits/HasTeams.php`  
-**Metodo**: `currentTeam()` (righe 240-255)
-
-Il metodo `currentTeam()` conteneva logica che:
-1. Tentava di creare automaticamente un personal team durante un getter
-2. Chiamava `switchTeam()` che a sua volta chiamava `save()`
 
 ### `reports/daily/daily-progress-report.md` — 📊 Daily Progress Report - 2026-03-13
 
@@ -16901,201 +15926,6 @@ Oggi ho completato un'ampia opera di miglioramento della documentazione, pulizia
 
 **Status**: ✅ Complete
 
-### `reports/document-root-update-summary.md` — Documentation Update Summary - public_html Document Root
-
-
-# Documentation Update Summary - public_html Document Root
-
-**Date**: March 30, 2026
-**Task**: Update all documentation to reflect `public_html/` as document root
-
-## Changes Made
-
-### 1. Module READMEs Updated (18 files)
-
-All module README.md files have been updated with:
-- ✅ Correct `public_html/` document root references
-- ✅ Consistent project structure diagrams
-- ✅ Removed merge conflicts
-- ✅ Standardized formatting
-- ✅ Master module index links
-
-**Modules Updated**:
-1. `laravel/Modules/Xot/docs/README.md`
-2. `laravel/Modules/User/docs/README.md`
-
-### `reports/documentation-update-complete.md` — ✅ FixCity Documentation Update - COMPLETE
-
-
-# ✅ FixCity Documentation Update - COMPLETE
-
-**Date**: 2026-03-30  
-**Status**: ✅ **COMPLETE**  
-**Document Root**: `public_html/` confirmed and documented
-
----
-## Executive Summary
-
-All documentation has been updated to correctly reflect `public_html/` as the document root for FixCity. Master indices created for modules and themes following DRY + KISS principles.
-
----
-
-## What Was Done
-
-### 1. Master Indices Created ✅
-
-#### Modules Master Index
-**File**: `laravel/Modules/docs/README.md` (6KB, 180 lines)
-
-### `reports/final-documentation-report.md` — ✅ FixCity Documentation Update - FINAL REPORT
-
-
-# ✅ FixCity Documentation Update - FINAL REPORT
-
-**Date**: 2026-03-30  
-**Status**: ✅ **COMPLETE**  
-**Document Root**: `public_html/` confirmed and documented  
-
----
-## 🎯 What Was Accomplished
-
-### 1. Document Root Clarified ✅
-
-**CRITICAL**: The document root for FixCity is **`public_html/`**
-
-```
-base_fixcity_fila5/
-├── public_html/          # ✅ DOCUMENT ROOT (web server points here)
-│   ├── index.php        # Entry point
-│   ├── assets/          # Public assets
-│   ├── css/             # Public CSS
-
-### `reports/final-success-report.md` — ✅ FINAL SUCCESS REPORT - All GitHub Actions Fixed
-
-
-# ✅ FINAL SUCCESS REPORT - All GitHub Actions Fixed
-
-> **Date**: 2026-03-13  
-> **Status**: ✅ **ALL FIXED**  
-> **Agent**: @marco76tv
-
----
-## 🎯 Mission Accomplished
-
-TUTTE le GitHub Actions critiche sono ora **FUNZIONANTI**:
-
-| Workflow | Status | Fixed By |
-|----------|--------|----------|
-| **Sync Remote Repo** | ✅ SUCCESS | Fixed paths, added functions |
-| **Sync Subtrees** | ✅ SUCCESS | Working |
-| **Semantic Versioning** | ✅ SUCCESS | Working |
-
----
-
-
-### `reports/task-complete-git-pushed.md` — ✅ Task Complete - Git Commit & Push Executed
-
-
-# ✅ Task Complete - Git Commit & Push Executed
-
-> **Date**: 2026-03-13  
-> **Status**: ✅ **COMPLETE AND PUSHED**  
-> **Commits**: 3 new commits on dev branch
-
----
-## 🎯 What Was Done
-
-### Commit #1: GitHub Action for Subtree Sync
-
-**Commit**: `64b05730` → `ae920e7c`  
-**Message**: "Add GitHub Action for subtree sync"
-
-**Files**:
-- ✅ `.github/workflows/sync-subtrees.yml`
-- ✅ `AGENTS.md` (updated)
-
----
-
-### `reports/theme-documentation-update-complete.md` — Theme Documentation Update - Complete
-
-
-# Theme Documentation Update - Complete
-
-**Date**: March 30, 2026  
-**Task**: Update all documentation with correct theme information  
-**Principles**: DRY + KISS
-
-## ✅ Completed Deliverables
-
-### 1. Theme Context Document
-- **File**: `.planning/THEME_CONTEXT.md`
-- **Purpose**: Single source of truth for theme configuration
-- **Contents**:
-  - Active theme: Sixteen
-  - Domain: fixcity.local
-  - Config path: `laravel/config/localhost/xra.php`
-  - Theme detection logic
-  - Configuration change instructions
-
-### 2. Master Module Index Updated
-
-### `reports/theme-update-final-report.md` — ✅ FixCity Theme & Documentation Update - COMPLETE
-
-
-# ✅ FixCity Theme & Documentation Update - COMPLETE
-
-**Date**: 2026-03-30  
-**Status**: ✅ **COMPLETE** (conflicts da risolvere)  
-**Theme**: Sixteen ✅  
-**Domain**: fixcity.local  
-
----
-## 🎯 Configuration Summary
-
-### Theme Detection Logic
-
-```
-APP_URL: http://fixcity.local
-    ↓ (remove protocol, www)
-Domain: fixcity.local
-    ↓ (explode by ".", reverse, join by "/")
-Config: local/fixcity/xra.php
-    ↓ (read pub_theme key)
-
-### `reports/translation-audit-summary.md` — FixCity Translation Audit - Execution Summary
-
-
-# FixCity Translation Audit - Execution Summary
-
-**Date:** 2026-03-30  
-**Status:** ✅ Complete  
-**Next Phase:** Migration & Quality Improvement
-
----
-## Mission Accomplished
-
-Comprehensive Italian translation audit completed for FixCity urban issue management platform.
-
----
-
-## Deliverables Created
-
-### 1. Translation Audit Report ✅
-**File:** `.planning/improvements/P0.3-translation-audit.md`  
-**Lines:** 350+  
-**Contents:**
-
-### `repos.md` — Repos
-
-
-# Repos
-
--------------------------------------------------------------
-Add Simple Facet Filtering in Your Laravel Applications
-https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
-composer require mgussekloo/laravel-facet-filter
--------------------------------------------------------------
-
 ### `repositories.md` — Versione HEAD
 
 
@@ -17105,19 +15935,14 @@ https://github.com/codedor/filament-mail-templates/
 
 
 https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-filament
-### Versione HEAD
-
 
 ## Collegamenti tra versioni di repositories.md
 * [repositories.md](repositories.md)
 * [repositories.md](../../../notify/docs/repositories.md)
 * [repositories.md](../../../user/docs/repositories.md)
+* [repositories.md](../../User/docs/repositories.md)
 
 
-### Versione Incoming
-
-
----
 
 ### `research.md` — User Research - FixCity Platform
 
@@ -17136,29 +15961,6 @@ https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-
 ## 2. Competitive Landscape
 - **Laravel Ecosystem**: Analisi di pacchetti come *Laravel Spark* (billing), *October CMS* (modularità) e *Filament* (UI). FixCity si differenzia per l'integrazione profonda di multi-tenancy e analisi statica Level 10 nativa.
 - **Enterprise Solutions**: Spesso troppo rigide o cost
-
-### `responsive-email-templates-1.md` — Responsive Email Templates - Guida Completa
-
-
-# Responsive Email Templates - Guida Completa
-
-## Introduzione
-
-Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di <nome progetto>, con focus su compatibilità, engagement e best practices di settore.
-
-## Principi Fondamentali
-
-### 1. Responsive Design
-
-Le email responsive si adattano automaticamente a diverse dimensioni di schermo, garantendo un'esperienza ottimale su qualsiasi dispositivo:
-
-- **Desktop**: Layout completo con larghezza 600-800px
-- **Mobile**: Layout semplificato a colonna singola
-- **Media Queries**: `@media (max-width: 600px)` per adattamenti specifici
-- **Viewport Meta Tag**: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-
-### 2. Struttura HTML
-
 
 ### `responsive-email-templates.md` — Responsive Email Templates - Guida Completa
 
@@ -17179,27 +15981,6 @@ Le email responsive si adattano automaticamente a diverse dimensioni di schermo,
 - **Desktop**: Layout completo con larghezza 600-800px
 - **Mobile**: Layout semplificato a colonna singola
 - **Media Queries**: `@media
-
-### `reusability-guidelines-1.md` — Linee Guida per la Riusabilità del Modulo Notify
-
-
-# Linee Guida per la Riusabilità del Modulo Notify
-
-## Principio Fondamentale
-Il modulo Notify è progettato per essere **completamente riutilizzabile** tra diversi progetti Laraxot. Questo significa che NON deve mai contenere riferimenti hardcoded a progetti specifici.
-
-## Regole Critiche per la Riusabilità
-
-### 1. NO Hardcoding di Nomi Progetti
-❌ **MAI usare stringhe hardcoded di progetti specifici:**
-```php
-// ERRORE: Hardcoding del nome progetto
-$user = \Modules\<nome progetto>\Models\User::factory()->create();
-'database' => '<nome progetto>_test',
-$this->app['config']->set('database.connections.<nome progetto>_test', [
-$user = \Modules\<nome progetto>\Models\User::factory()->create();
-'database' => '<nome progetto>_test',
-$this->app['config']->set('database.connections.<nome progetto>
 
 ### `reusability-guidelines.md` — Linee Guida per la Riusabilità del Modulo Notify
 
@@ -17268,7 +16049,71 @@ MailTemplateSelect::make('mail_template_slug')
 #### Features
 - Pre-configured with proper label from translation files
 
-### `roadmap/01-current-state.md` — Current State - Notify
+### `roadmap/00-overview.md` — Roadmap overview (Module Notify)
+
+
+# Roadmap overview (Module Notify)
+
+## Scope
+
+## Goals
+
+## Non-goals
+
+### `roadmap/01-now.md` — Now (Module Notify)
+
+
+# Now (Module Notify)
+
+## Stabilization
+
+## Bugfixes
+
+## Quality gates
+
+### `roadmap/02-next.md` — Next (Module Notify)
+
+
+# Next (Module Notify)
+
+## Features
+
+## Refactors
+
+### `roadmap/03-later.md` — Later (Module Notify)
+
+
+# Later (Module Notify)
+
+## Longer-term ideas
+
+### `roadmap/04-risks.md` — Risks and dependencies (Module Notify)
+
+
+# Risks and dependencies (Module Notify)
+
+## Risks
+
+## Dependencies
+
+### `roadmap/05-risks.md` — Risks - Notify
+
+
+# Risks - Notify
+
+## Top Risks
+
+1. Drift tra documentazione e comportamento runtime.
+2. Regressioni introdotte da fix rapidi non verificati.
+3. Dipendenze incrociate non documentate.
+
+## Mitigations
+
+1. Aggiornare docs insieme ai fix di codice.
+2. Usare checklist pre-merge e post-fix.
+3. Mantenere un set di file canonici per diagnosi rapida.
+
+### `roadmap/current-state.md` — Current State - Notify
 
 
 # Current State - Notify
@@ -17285,7 +16130,7 @@ MailTemplateSelect::make('mail_template_slug')
 2. Coerenza tra naming, namespace e percorsi view/traduzioni.
 3. Copertura test minima per i flussi critici.
 
-### `roadmap/02-goals.md` — Goals - Notify
+### `roadmap/goals.md` — Goals - Notify
 
 
 # Goals - Notify
@@ -17307,30 +16152,21 @@ MailTemplateSelect::make('mail_template_slug')
 1. Stabilita sotto fault randomizzati (chaos testing).
 2. Manutenibilita alta con onboarding rapido.
 
-### `roadmap/03-workstreams.md` — Workstreams - Notify
+### `roadmap/later.md` — Later (Module Notify)
 
 
-# Workstreams - Notify
+# Later (Module Notify)
 
-## WS1 Architecture
+## Longer-term ideas
 
-- Verifica confini e responsabilita dei componenti.
-- Aggiornamento pattern e guardrail.
-
-## WS2 Reliability
-
-- Hardening dei flussi principali.
-- Miglioramento fallback e recovery path.
-
-## WS3 Documentation
-
-- Consolidamento documenti canonici.
-- Eliminazione drift documentale.
-
-## WS4 Testing
+### `roadmap/legacy-roadmap.md` — Notify Module Roadmap
 
 
-### `roadmap/04-milestones.md` — Milestones - Notify
+# Notify Module Roadmap
+
+Vedi [roadmap/00-index](roadmap/00-index.md).
+
+### `roadmap/milestones.md` — Milestones - Notify
 
 
 # Milestones - Notify
@@ -17350,22 +16186,25 @@ MailTemplateSelect::make('mail_template_slug')
 - Test minimi sui flussi critici in esecuzione regolare.
 - Riduzione regressioni ricorrenti.
 
-### `roadmap/05-risks.md` — Risks - Notify
+### `roadmap/next.md` — Next (Module Notify)
 
 
-# Risks - Notify
+# Next (Module Notify)
 
-## Top Risks
+## Features
 
-1. Drift tra documentazione e comportamento runtime.
-2. Regressioni introdotte da fix rapidi non verificati.
-3. Dipendenze incrociate non documentate.
+## Refactors
 
-## Mitigations
+### `roadmap/now.md` — Now (Module Notify)
 
-1. Aggiornare docs insieme ai fix di codice.
-2. Usare checklist pre-merge e post-fix.
-3. Mantenere un set di file canonici per diagnosi rapida.
+
+# Now (Module Notify)
+
+## Stabilization
+
+## Bugfixes
+
+## Quality gates
 
 ### `roadmap/phases.md` — Fasi di sviluppo - Notify Module
 
@@ -17389,6 +16228,59 @@ MailTemplateSelect::make('mail_template_slug')
 ## Fase 3: Integrazione (Future)
 
 - [ ] SMS/Push (se richiesto)
+
+### `roadmap/quality.md` — Checklist qualità - Notify Module
+
+
+# Checklist qualità - Notify Module
+
+- [x] PHPStan Level 9
+- [ ] PHPStan Level 10
+- [ ] Test coverage
+- [ ] Documentazione in docs/
+
+### `roadmap/risks.md` — Risks and dependencies (Module Notify)
+
+
+# Risks and dependencies (Module Notify)
+
+## Risks
+
+## Dependencies
+
+### `roadmap/vision.md` — Visione - Notify Module
+
+
+# Visione - Notify Module
+
+Modulo per il sistema di notifiche:
+
+- Email, in-app, SMS, push
+- Template e scheduling
+- Integrazione con servizi esterni (SendAppointmentNotificationAction, MailTemplateVersion)
+
+### `roadmap/workstreams.md` — Workstreams - Notify
+
+
+# Workstreams - Notify
+
+## WS1 Architecture
+
+- Verifica confini e responsabilita dei componenti.
+- Aggiornamento pattern e guardrail.
+
+## WS2 Reliability
+
+- Hardening dei flussi principali.
+- Miglioramento fallback e recovery path.
+
+## WS3 Documentation
+
+- Consolidamento documenti canonici.
+- Eliminazione drift documentale.
+
+## WS4 Testing
+
 
 ### `roadmap-1.md` — 🔔 NOTIFY MODULE - ROADMAP 2025
 
@@ -17786,6 +16678,29 @@ TextEntry::make('name')
 ```
 
 
+### `schemas-unified-religion.md` — Filament Schemas Unificati — Regola Canonica
+
+
+# Filament Schemas Unificati — Regola Canonica
+
+**Status**: Active  
+**Created**: 2026-04-14  
+**Last Updated**: 2026-04-14  
+**Category**: Architecture / Filament 5.x / Canonical Rule  
+**Audience**: All developers + AI agents
+
+---
+
+title: "schemas unified religion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "schemas unified religion"
+issues: []
+discussions: []
+## Tesi
+
 ### `scopo.md` — Notify — scopo, confini e come servirlo meglio
 
 
@@ -17807,98 +16722,6 @@ Quei verbi sono organizzati per corriere, non per contenuto:
 | `app/Actions/SMS/` | 11 | Agiletelecom (v1/v2), Gammu, Netfun, Nexmo, Plivo, SmsFactor, Twilio |
 | `app/Actions/Push/` | 8 |
 
-### `screenshots/homepage/analisi-colori-header-footer.md` — 📸 Analisi Visiva Header & Footer - FixCity vs Bootstrap Italia
-
-
-# 📸 Analisi Visiva Header & Footer - FixCity vs Bootstrap Italia
-# 📸 Analisi Visiva Header & Footer - Notify vs Bootstrap Italia
-
-## Data: {{ date('Y-m-d H:i:s') }}
-
----
-
-## 🎯 Problema Identificato
-
-**URL Reference**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html  
-**FixCity**: http://fixcity.local/it/tests/homepage
-**Notify**: http://laraxot.local/it/tests/homepage
-
-**Differenze Principali**:
-1. ❌ Header: Colori non corretti
-2. ❌ Footer: Struttura e colori errati
-3. ❌ Hero: Layout non allineato
-4. ❌ Governance: Card non conformi
-5. ❌ Events: Calendar non Bootstrap Italia
-
-### `screenshots/homepage/analisi-visiva.md` — 📸 Analisi Visiva Homepage FixCity vs Bootstrap Italia
-
-
-# 📸 Analisi Visiva Homepage FixCity vs Bootstrap Italia
-# 📸 Analisi Visiva Homepage Notify vs Bootstrap Italia
-
-## Data: {{ date('Y-m-d H:i:s') }}
-
-## Reference
-- **Bootstrap Italia**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
-- **FixCity**: http://fixcity.local/it/tests/homepage
-- **Notify**: http://laraxot.local/it/tests/homepage
-
----
-
-## 1. Header Structure
-
-### Bootstrap Italia
-```
-┌─────────────────────────────────────────────────────────────┐
-│ [Regione]                              [ITA] [ENG] [Login] │  ← Slim Header
-├─────────────────────────────────────────────────────────────┤
-
-### `screenshots/homepage/fix-plan.md` — 🚀 Fix Homepage Bootstrap Italia - Piano Esecutivo
-
-
-# 🚀 Fix Homepage Bootstrap Italia - Piano Esecutivo
-
-## Panoramica
-Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia reference.
-
-**Reference**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html  
-**Target**: http://fixcity.local/it/tests/homepage
-
----
-
-## Fase 1: Header & Hero (Settimana 1)
-
-### Task 1.1: Header Slim Component
-**File**: `components/layout/header-slim.blade.php`
-
-```blade
-<div class="header-slim bg-primary text-white py-2">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-
-### `screenshots/homepage/screenshot-analysis.md` — 📸 Screenshot Analysis - Homepage FixCity
-
-
-# 📸 Screenshot Analysis - Homepage FixCity
-# 📸 Screenshot Analysis - Homepage Notify
-
-## Reference: Bootstrap Italia
-
-### 1. Header Structure
-```
-Screenshot: header_bootstrap_italia.png
-URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
-```
-
-**Elementi Chiave:**
-- Slim header con Regione a sinistra
-- Language switcher (ITA/ENG) a destra
-- Login button "Accedi all'area personale"
-- Logo Comune con subtitle
-- Social icons allineate
-- Search button
-- Navigation bar con 4 voci principali
-
 ### `second-brain.md` — Second brain (modulo)
 
 
@@ -17914,11 +16737,11 @@ Stub **puntatore**: disciplina e link esterni curati stanno nella wiki di proget
 
 ## Link operativi (relativi al repo)
 
-- Modello: [../../../../bashscripts/ai/wiki/concepts/second-brain-llm-wiki.md#second-brain-operating-model](../../../../bashscripts/ai/wiki/concepts/second-brain-llm-wiki.md#second-brain-operating-model)
-- Guida wiki modulo: [../../../../bashscripts/ai/wiki/how-to/wiki-qmd-search.md#module-wiki-documentation](../../../../bashscripts/ai/wiki/how-to/wiki-qmd-search.md#module-wiki-documentation)
-- Benchmark lettura
+- Modello: [../../../../docs/wiki/concepts/second-brain-operating-model.md](../../../../docs/wiki/concepts/second-brain-operating-model.md)
+- Guida wiki modulo: [../../../../docs/wiki/how-to/module-wiki-documentation.md](../../../../docs/wiki/how-to/module-wiki-documentation.md)
+- Benchmark lettura esterna (Karpathy, Obsidian, PARA, …): [../../../../docs/wiki/sources/second-brain-external-benchmarks.md](../../..
 
-### `security-analysis.md` — Analisi della Sicurezza
+### `security.md` — Analisi della Sicurezza
 
 
 # Analisi della Sicurezza
@@ -17940,6 +16763,38 @@ class TemplateSanitizer
     }
 
     public function validateAttributes($attributes)
+
+### `send-push-notification-conflict-resolution.md` — Risoluzione conflitto git su SendPushNotification.php
+
+
+# Risoluzione conflitto git su SendPushNotification.php
+
+## Intent
+- Garantire robustezza e validazione rigorosa dei dati in ingresso, adottando un approccio fail‑fast per prevenire malfunzionamenti in caso di dati mancanti o malformati.
+
+## Cosa
+- Consolidamento delle importazioni Firebase, mantenendo solo le classi essenziali per l’invio delle notifiche.
+- Validazioni esplicite sugli oggetti e sulle proprietà (profilo, token, device) per prevenire eccezioni a runtime.
+- Filtro semplificato e affidabile dei dispositivi attivi.
+
+## Collegamenti
+- Documentazione principale: [Ris. conflitti Git - Modulo Notify](../../../docs/risoluzione_conflitti_git.md#modulo-notify)
+
+### `send-push-notification-resolution.md` — Risoluzione conflitto git su SendPushNotification.php
+
+
+# Risoluzione conflitto git su SendPushNotification.php
+
+## Intent
+- Garantire robustezza e validazione rigorosa dei dati in ingresso, adottando un approccio fail‑fast per prevenire malfunzionamenti in caso di dati mancanti o malformati.
+
+## Cosa
+- Consolidamento delle importazioni Firebase, mantenendo solo le classi essenziali per l’invio delle notifiche.
+- Validazioni esplicite sugli oggetti e sulle proprietà (profilo, token, device) per prevenire eccezioni a runtime.
+- Filtro semplificato e affidabile dei dispositivi attivi.
+
+## Collegamenti
+- Documentazione principale: [Ris. conflitti Git - Modulo Notify](../../../../docs/risoluzione_conflitti_git.md#modulo-notify)
 
 ### `sendemail-troubleshooting.md` — Troubleshooting SendEmail
 
@@ -17977,7 +16832,7 @@ a Job/test legacy; la religione del repo è **Actions + QueueableAction**.
 **Next step:** caller → Actions (`Actions\NotificationManager`,
 `Actions\SMS\*`, `Actions\Push\*`); poi rimuovere Services e Job wrapper.
 Vedi [notify-services-support-to-actions](./wiki/concepts/notify-services-support-to-actions.md)
-e [0037-phpstan-merge-bootstrap.story.md](./stories/phpstan-merge-bootstrap.story.md).
+e [phpstan-merge-bootstrap.story.md](./stories/phpstan-merge-bootstrap.story.md).
 
 ---
 
@@ -17986,6 +16841,98 @@ e [0037-phpstan-merge-bootstrap.story.md](./stories/phpstan-merge-bootstrap.stor
 ## SendNotificationAction
 
 ### Responsabilità
+
+### `session-007-summary.md` — SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
+
+
+# SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
+## Researcher Agent Summary
+
+**Session Date**: 2026-04-08  
+**Agent Role**: Researcher (BMAD Mode C - Opzione C)  
+**Scope**: FixCity Sixteen Theme - Phase 1 HTML Parity (segnalazioni-elenco)  
+**Status**: 🟠 EXECUTION IN PROGRESS
+
+---
+
+title: "session 007 summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "session 007 summary"
+issues: []
+discussions: []
+## 📊 SESSION WORK COMPLETED
+
+### `sessione-100-percent.md` — 🎉 Sessione 100% Completata - Homepage Bootstrap Italia
+
+
+# 🎉 Sessione 100% Completata - Homepage Bootstrap Italia
+
+## Data: 2026-03-31
+## Status: ✅ 100% COMPLETATO
+
+---
+
+## 📊 Conformità Raggiunta
+
+**100%** - Tutti i task completati!
+
+| Sezione | Prima | Dopo | Status |
+|---------|-------|------|--------|
+| Header Slim | 0% | 100% | ✅ |
+| Hero | 70% | 100% | ✅ |
+| Governance | 75% | 100% | ✅ |
+| Events Calendar | 65% | 100% | ✅ |
+| Topics Grid | 80% | 100% | ✅ |
+| Footer Feedback | 0% | 100% | ✅ |
+
+### `sessione-analisi-homepage.md` — ✅ Sessione Completata - Homepage Analysis & Documentation
+
+
+# ✅ Sessione Completata - Homepage Analysis & Documentation
+
+## 📋 Riepilogo Lavoro
+
+### Strumenti Utilizzati
+- ✅ **BMAD**: Analisi requisiti e struttura documentazione
+- ✅ **GSD**: Pianificazione fasi e task
+- ✅ **Ralph Loop**: Iterazioni rapide su analisi
+- ✅ **OpenViking**: Context database globale
+- ✅ **NotebookLM MCP**: Organizzazione conoscenza
+
+### Documentazione Creata
+
+#### 1. Analisi Visiva
+**File**: `docs/screenshots/homepage/analisi-visiva.md`
+
+**Contenuto**:
+- Confronto dettagliato sezione per sezione
+- Specifiche CSS Bootstrap Italia
+
+### `sessione-completa.md` — ✅ Sessione Completata - Allineamento Bootstrap Italia
+
+
+# ✅ Sessione Completata - Allineamento Bootstrap Italia
+
+## 📋 Riepilogo Lavoro
+
+### Strumenti Utilizzati
+- ✅ **BMAD**: Analisi requisiti e struttura
+- ✅ **GSD**: Pianificazione fasi
+- ✅ **Ralph Loop**: Iterazioni rapide sui componenti
+- ✅ **OpenViking**: Context database
+- ✅ **NotebookLM MCP**: Documentazione
+
+### File Modificati
+
+#### 1. `[slug].blade.php` - Folio + Volt
+```php
+name('tests.view');
+middleware(PageSlugMiddleware::class);
+
+new class extends Component {
 
 ### `sessione-fix-completata.md` — ✅ Sessione Completata - Fix Homepage Bootstrap Italia
 
@@ -18079,7 +17026,7 @@ class BaseNotification extends Notification implements ShouldQueue
         $this->channels = ['mail', 'database'];
     }
 
-### `slug-solutions-analysis.md` — Analisi Soluzioni per Slug in Filament
+### `slug-solutions.md` — Analisi Soluzioni per Slug in Filament
 
 
 # Analisi Soluzioni per Slug in Filament
@@ -18125,29 +17072,6 @@ class SmsFactorData extends Data
     public string $auth_type = 'bearer';
     public int $timeout = 30;
 
-### `sms-action-factory-analysis.md` — Analisi: Sostituzione Match con Formula nel SmsActionFactory
-
-
-# Analisi: Sostituzione Match con Formula nel SmsActionFactory
-
-## Contesto Attuale
-```php
-$action = match ($driver) {
-    'netfun' => app(SendNetfunSMSAction::class),
-    'twilio' => app(SendTwilioSMSAction::class),
-    'vonage' => app(SendVonageSMSAction::class),
-    default => throw new \Exception("Driver SMS non supportato: {$driver}")
-};
-```
-
-## Proposta di Modifica
-```php
-$actionClass = "Modules\\Notify\\Actions\\SMS\\Send" . ucfirst($driver) . "SMSAction";
-$action = app($actionClass);
-```
-
-## Vantaggi (40%)
-
 ### `sms-action-factory-resolution.md` — Risoluzione dinamica vs match esplicito in SmsActionFactory
 
 
@@ -18170,6 +17094,29 @@ discussions: []
 ## 1. Esempio di match esplicito
 
 ```php
+
+### `sms-action-factory.md` — Analisi: Sostituzione Match con Formula nel SmsActionFactory
+
+
+# Analisi: Sostituzione Match con Formula nel SmsActionFactory
+
+## Contesto Attuale
+```php
+$action = match ($driver) {
+    'netfun' => app(SendNetfunSMSAction::class),
+    'twilio' => app(SendTwilioSMSAction::class),
+    'vonage' => app(SendVonageSMSAction::class),
+    default => throw new \Exception("Driver SMS non supportato: {$driver}")
+};
+```
+
+## Proposta di Modifica
+```php
+$actionClass = "Modules\\Notify\\Actions\\SMS\\Send" . ucfirst($driver) . "SMSAction";
+$action = app($actionClass);
+```
+
+## Vantaggi (40%)
 
 ### `sms-best-practices.md` — Best Practices per l'Invio SMS
 
@@ -18194,30 +17141,53 @@ discussions: []
 - Evitare caratteri speciali
 - Utilizzare variabili standardizzate
 
+### `sms-driver-enum-translations-1.md` — Traduzioni SmsDriverEnum - Modulo Notify
+
+
+# Traduzioni SmsDriverEnum - Modulo Notify
+
+## Panoramica
+
+Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
+
+## Struttura Enum
+
+```php
+enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
+{
+    use TransTrait;
+
+    case SMSFACTOR = 'smsfactor';
+    case TWILIO = 'twilio';
+    case NEXMO = 'nexmo';
+    case PLIVO = 'plivo';
+    case GAMMU = 'gammu';
+    case NETFUN = 'netfun';
+
+### `sms-driver-enum-translations.md` — Traduzioni SmsDriverEnum - Modulo Notify
+
+
+# Traduzioni SmsDriverEnum - Modulo Notify
+
+## Panoramica
+
+Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
+
+## Struttura Enum
+
+```php
+enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
+{
+    use TransTrait;
+    
+    case SMSFACTOR = 'smsfactor';
+    case TWILIO = 'twilio';
+    case NEXMO = 'nexmo';
+    case PLIVO = 'plivo';
+    case GAMMU = 'gammu';
+    case NETFUN = 'netfun';
+
 ### `sms-factor-data-implementation-2.md` — SmsFactorData Implementation Summary
-
-
-# SmsFactorData Implementation Summary
-
-## Overview
-
-This document summarizes the implementation of the `SmsFactorData` class and the refactoring of `SendSmsFactorSMSAction` to follow the same pattern as `AgiletelecomData`.
-
-## Changes Made
-
-### 1. Created SmsFactorData Class
-
-**File**: `/Modules/Notify/app/Datas/SMS/SmsFactorData.php`
-
-- **Purpose**: Centralized configuration management for SMSFactor SMS provider
-- **Pattern**: Follows the same structure as `AgiletelecomData`
-- **Features**:
-  - Singleton pattern implementation
-  - Configuration loading from `config('sms.drivers.smsfactor')`
-  - Authentication header generation
-  - Helper methods for common operations
-
-### `sms-factor-data-implementation.md` — SmsFactorData Implementation Summary
 
 
 # SmsFactorData Implementation Summary
@@ -18309,6 +17279,18 @@ return [
     'from' => env('SMS_FROM'),
    
 
+### `sms-integration.md` — SMS Integration
+
+
+# SMS Integration
+
+### `sms.md` — sms
+
+
+sms skebby
+
+
+
 ### `smsriver-enum-translations.md` — Traduzioni SmsDriverEnum - Modulo Notify
 
 
@@ -18332,7 +17314,53 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
     case GAMMU = 'gammu';
     case NETFUN = 'netfun';
 
-### `smtp-testing-analysis.md` — Analisi del Sistema di Test SMTP
+### `smsriver-selection-specific.md` — Analisi Specifica: Validazione e Selezione Driver in SmsData
+
+
+# Analisi Specifica: Validazione e Selezione Driver in SmsData
+
+## Contesto Specifico
+```php
+if (! $smsData instanceof SmsData) {
+    throw new Exception('toSms method must return an instance of SmsData');
+}
+
+$driver = Config::get('sms.default', 'smsfactor');
+
+$action = match ($driver) {
+    'smsfactor' => app(SendSmsFactorSMSAction::class),
+    'twilio' => app(SendTwilioSMSAction::class),
+    'nexmo' => app(SendNexmoSMSAction::class),
+    'plivo' => app(SendPlivoSMSAction::class),
+    'gammu' => app(SendGammuSMSAction::class),
+    'netfun' => app(SendNetfunSMSAction::class),
+    default => throw new Exception("Unsupported SMS driver: {$driver}"),
+};
+
+### `smsriver-selection.md` — Analisi: Spostamento Logica Selezione Driver in SmsData
+
+
+# Analisi: Spostamento Logica Selezione Driver in SmsData
+
+## Contesto Attuale
+Attualmente, la logica di selezione del driver SMS è implementata nel canale di notifica:
+
+```php
+$driver = Config::get('sms.default', 'smsfactor');
+
+$action = match ($driver) {
+    'smsfactor' => app(SendSmsFactorSMSAction::class),
+    'twilio' => app(SendTwilioSMSAction::class),
+    'nexmo' => app(SendNexmoSMSAction::class),
+    'plivo' => app(SendPlivoSMSAction::class),
+    'gammu' => app(SendGammuSMSAction::class),
+    'netfun' => app(SendNetfunSMSAction::class),
+    default => throw new Exception("Unsupported SMS driver: {$driver}"),
+};
+```
+
+
+### `smtp-testing.md` — Analisi del Sistema di Test SMTP
 
 
 # Analisi del Sistema di Test SMTP
@@ -18354,6 +17382,29 @@ Il modulo Notify include due pagine principali per il test dell'invio email:
    - Permette di sovrascrivere tutte le impostazioni SMTP
    - Supporta diverse opzioni di crittografia
    - Interfaccia utente organizzata in sezioni logiche
+
+### `spatie-database-mail-templates-deep-dive.md` — Spatie Laravel Database Mail Templates - Analisi Approfondita
+
+
+# Spatie Laravel Database Mail Templates - Analisi Approfondita
+
+## Overview
+
+Il pacchetto **spatie/laravel-database-mail-templates** permette di gestire template email nel database invece che in file Blade, offrendo:
+- ✅ Template modificabili via admin panel
+- ✅ Versioning automatico
+- ✅ Variabili Mustache `{{ variable }}`
+- ✅ Layout HTML customizzabili
+- ✅ Supporto multilingua (via spatie/translatable)
+
+**Versione Installata**: 3.7.1  
+**Repository**: https://github.com/spatie/laravel-database-mail-templates
+
+## Architettura nel Progetto PTVX
+
+### Componenti Chiave
+
+```
 
 ### `spatie-translatable-integration.md` — Integrazione Spatie Translatable nel Modulo Notify
 
@@ -18377,6 +17428,29 @@ Il modulo Notify usa il plugin **Lara Zeus Spatie Translatable** per supportare 
 Il plugin è registrato in `AdminPanelProvider`:
 
 ```php
+
+### `spatieatabase-mail-templates.md` — Integrazione con Spatie Laravel Database Mail Templates
+
+
+# Integrazione con Spatie Laravel Database Mail Templates
+
+Questa guida documenta l'uso del pacchetto [spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates) all'interno del modulo **Notify**.
+
+## Installazione
+```bash
+composer require spatie/laravel-database-mail-templates
+php artisan vendor:publish --provider="Spatie\MailTemplates\MailTemplatesServiceProvider"
+```
+
+## Configurazione
+Il pacchetto utilizza la tabella `mail_templates` per memorizzare i template. Il modello di base è `Spatie\MailTemplates\Models\MailTemplate`.
+
+## Uso di `SpatieEmail`
+La classe `SpatieEmail` estende `TemplateMailable` e carica i dati:
+```php
+public function __construct(Model $record)
+{
+    $this->setAdditionalData($record->toArray());
 
 ### `spatieatabase-mail-templateseepive.md` — Spatie Laravel Database Mail Templates - Analisi Approfondita
 
@@ -18424,34 +17498,39 @@ Un task è considerato 'Done' solo se:
 - [ ] Il file è presente nel percorso `docs/` del modulo/tema.
 - [ ] Segue il template Lean PRD (Sezioni: Vision, KPI, P0/
 
-### `standardized-sms-config-structure.md` — Struttura Standardizzata della Configurazione SMS
+### `start-here-replikate-phase2.md` — 🚀 START HERE - REPLIKATE Phase 2
 
 
-# Struttura Standardizzata della Configurazione SMS
+# 🚀 START HERE - REPLIKATE Phase 2
 
-## Introduzione
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
-Questo documento definisce la struttura standardizzata del file di configurazione SMS (`config/sms.php`) nel modulo Notify, basata sul modello di configurazione `mail.php` di Laravel. Questa struttura garantisce coerenza, manutenibilità e chiarezza nella configurazione dei provider SMS.
+**Status**: Phase 1 Analysis Complete ✅  
+**Your Job**: Execute Phase 2 - HTML Structure Fixes ⏳  
+**Time Estimate**: ~50 minutes
 
-## Struttura Generale
+---
 
-```php
-return [
-    // Driver predefinito
-    'default' => env('SMS_DRIVER', 'default_provider'),
-    
-    // Parametri a livello di root
-    'from' => env('SMS_FROM'),
-    'debug' => env('SMS_DEBUG', false),
-    'queue' => env('SMS_QUEUE', 'default'),
-    'retry' => [
-        'attempts' => env('SMS_RETRY_ATTEMPTS', 3),
+title: "START HERE REPLIKATE PHASE2"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
 
-### `stories/0001-consolidate-email-into-notify.story.md` — Consolidate Email Module into Notify as Channel Provider
+### `stories/01.consolidate-email-into-notify.story.md` — Consolidate Email Module into Notify as Channel Provider
+
 
 # Consolidate Email Module into Notify as Channel Provider
 
-## Context and Problem Statement
+## Objective
+
+Eliminate Email as standalone module. Migrate email sending capabilities into Notify as a channel provider (alongside SMS, WhatsApp). Make Notify the single source of truth for all notification delivery.
+
+## Context
 
 **Current State:**
 - Email module: sends emails, templates, retry logic
@@ -18462,672 +17541,545 @@ return [
 **Problem:**
 - Two parallel notification systems (Email direct, Notify orchestrated)
 - Template management scattered (Email templates, Notify templates)
-- New channel requires changes in Email + Notify
-- Tight coupling to email provider in domain modules
+- New channel requires changes 
 
-**Solution:**
-1. Move Email sending logic into Notify's `Channels/EmailChannel.php`
-2. Register email provider in Notify's cha
+### `stories/1.12.email-delivery-tracking.story.md` — 1.12: Email Delivery Tracking (Bounce Log, Retry Logic)
 
-### `stories/0002-notify-phpstan-fix.story.md` — Notify — PHPStan L10 verification + UserContract narrowing
-
-# Notify — PHPStan L10 verification + UserContract narrowing
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0006-email-delivery-tracking.story.md` — 1.12: Email Delivery Tracking (Bounce Log, Retry Logic)
 
 # 1.12: Email Delivery Tracking (Bounce Log, Retry Logic)
 
-## Context and Problem Statement
+**Story ID:** 1.12
+**Epic:** 1 — Scheda Management Workflows
+**Slug:** email-delivery-tracking
+**Status:** backlog
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Story
 
-## Decision Drivers
+As an HR admin,
+I want every Scheda email send attempt logged with automatic retries on failure,
+so that delivery problems are visible and self-heal without manual intervention, supporting the 99.5% deliverability target.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+## Acceptance Criteria
 
-## Considered Options
+<!-- LOCKED. External dev tools must not edit Acceptance Criteria. -->
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+1. Every send attempt made by Story 1.2's `SendSchedaEmailJob` is recorded as a delivery-log entry (`scheda_id`, `attempt_number`, `status`, `timestamp`).
+2. On a hard bounce or send failure, the system retries automatically up to 3 attempts spread over 24 hours before giving up.
 
-## Decision Outcome
+### `stories/1.2.send-scheda-email.story.md` — 1.2: Send Scheda Email
 
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0007-send-scheda-email.story.md` — 1.2: Send Scheda Email
 
 # 1.2: Send Scheda Email
 
-## Context and Problem Statement
+**Story ID:** 1.2
+**Epic:** 1 — Scheda Management Workflows
+**Slug:** send-scheda-email
+**Status:** backlog
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Story
 
-## Decision Drivers
+As an evaluator,
+I want to email a completed Scheda to the employee with a PDF attachment,
+so that they receive an official copy of their evaluation.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+## Acceptance Criteria
 
-## Considered Options
+<!-- LOCKED. External dev tools must not edit Acceptance Criteria. -->
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+1. Evaluator can trigger "Send Email" from a Scheda action, visible only when status is `draft` or `submitted`, `sent_at` is null, and all scores are filled in.
+2. System generates a PDF via Laravel Snappy (wkhtmltopdf) containing employee name, evaluation_type, year, per-criterion scores, evaluator name, evaluation date, and an evaluator signature placeholder field.
 
-## Decision Outcome
+### `stories/1.7.export-scheda-pdf.story.md` — 1.7: Export Scheda to PDF
 
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0008-export-scheda-pdf.story.md` — 1.7: Export Scheda to PDF
 
 # 1.7: Export Scheda to PDF
 
-## Context and Problem Statement
+**Story ID:** 1.7
+**Epic:** 1 — Scheda Management Workflows
+**Slug:** export-scheda-pdf
+**Status:** backlog
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Story
 
-## Decision Drivers
+As an evaluator or HR admin,
+I want to download a single Scheda as a PDF directly from the resource list,
+so that I can share or archive a copy without sending an email.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+## Acceptance Criteria
 
-## Considered Options
+<!-- LOCKED. External dev tools must not edit Acceptance Criteria. -->
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+1. From `SchedaResource`, an evaluator/hr_admin can trigger "Export PDF" on a single Scheda and download a PDF file directly (no email sent).
+2. The exported PDF uses the same content/layout as the PDF generated for email in Story 1.2 (employee name, evaluation_type, year, scores, evaluator name, date, signature placeholder).
 
-## Decision Outcome
+### `stories/12.1.notify-notifications-fqcn.story.md` — 12.1 FQCN notifications
 
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0009-notify-notifications-fqcn.story.md` — 12.1 FQCN notifications
 
 # 12.1 FQCN notifications
 
-## Context and Problem Statement
+**Non implementare ora. Unico file PHP futuro: AdminPanelProvider.**
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## GitHub (tracciamento)
 
-## Decision Drivers
+| Risorsa | Ruolo |
+|---------|-------|
+| [#73](https://github.com/laraxot/module_notify_fila5/issues/73) | issue |
+| [#74](https://github.com/laraxot/module_notify_fila5/discussions/74) | discussion |
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+```bash
+gh -R laraxot/module_notify_fila5 issue create --title "12.1 Hook database-notifications FQCN" --body "Canon: laravel/Modules/Notify/docs/stories/12.1.notify-notifications-fqcn.story.md"
+```
 
-## Considered Options
+## Acceptance Criteria
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+1. Stringa `'database-notifications'` assente dal provider.
+2. Nessun widget Notify nuovo.
 
-## Decision Outcome
+### `stories/4.23.phpstan-regression-remediation.story.md` — 4.23: PHPStan regression remediation — Notify
 
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0010-phpstan-regression-remediation.story.md` — 4.23: PHPStan regression remediation — Notify
 
 # 4.23: PHPStan regression remediation — Notify
 
-## Context and Problem Statement
+## Story
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+As a maintainer, I want Notify's Pest contracts and boundary values made explicit, so that notification tests are both type-safe and behavioural.
 
-## Decision Drivers
+## Acceptance Criteria
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+<!-- LOCKED -->
+1. All 121 test-owned findings are removed without suppressions, invented notification APIs, or cross-module edits.
+2. Notification payloads and channel values are narrowed at boundaries; tests call real signatures and validate meaningful outcomes.
+3. Tautological/coverage-only tests are deleted or rewritten, with disposition counts recorded.
+4. The canonical full PHPStan run attributes zero findings to Notify with clean bootstrap/stderr.
+5. Existing Notify testing/PHPStan docs are consolidated DRY with durable findings.
 
-## Considered Options
+## Tasks / Subtasks
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+- [ 
 
-## Decision Outcome
+### `stories/4.24.agnostic-md-filenames.story.md` — Story 4.24 — Nomi file .md agnostici
 
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0011-agnostic-md-filenames.story.md` — Story 4.24 — Nomi file .md agnostici
 
 # Story 4.24 — Nomi file .md agnostici
 
-## Context and Problem Statement
+## Fase BMAD
+Build + Measure (esecuzione + verifica). Nessun codice applicativo toccato: solo documentazione.
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Contesto
+I moduli (`laravel/Modules/*`) sono riusati in piu' progetti. Un nome file che cita un progetto
+specifico (`fixcity`) rende il modulo non agnostico: qui il progetto e' `base_ptvx_fila5` (ptvx).
 
-## Decision Drivers
+## Regola
+Nessun file `.md` del repository puo' contenere il nome di un progetto nel filename.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+Mappatura applicata (deterministica, in ordine):
 
-## Considered Options
+| Pattern | Sostituzione | Esempio |
+|---|---|---|
+| `^<progetto>-` | rimosso | `fixcity-competitor-census.md` → `competitor-census.md` |
+| `[-_]of[-_]<progetto>` | rimosso | `ZEN_OF_FIXCITY.md` → `ZEN.md` |
+| `<PROGETTO>_` | `APP_` | `fixcity-improvement-progress-1.md` → `APP_IMPROVEMENT_PROGR
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+### `stories/4.26.docs-index-audit.story.md` — Story 4.26 — Audit e riorganizzazione docs/index.md
 
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0013-docs-index-audit.story.md` — Story 4.26 — Audit e riorganizzazione docs/index.md
 
 # Story 4.26 — Audit e riorganizzazione docs/index.md
 
-## Context and Problem Statement
+## Fase BMAD
+Build + Measure (esecuzione + verifica). Task docs-only: nessun file `.php` toccato,
+nessun file fuori da `docs/`.
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Contesto
+Notify e' il modulo con piu' documentazione del monorepo: 5100+ file `.md` sotto
+`docs/` (1715 solo nella radice, oltre a 68 sottocartelle). Il vecchio `docs/index.md`
+era il risultato di risoluzioni di conflitti git fatte male: sezioni duplicate alla
+lettera ("Note sulla Manutenzione" ripetuta 6 volte), link a file non piu' esistenti.
 
-## Decision Drivers
+## Esecuzione
+- Audit completo di `docs/` (find/ls): 69 sottocartelle di primo livello + 1715 file
+  `.md` in radice, censiti e raggruppati.
+- Riscritto interamente `docs/index.md` come indice per argomento: 28 sottocartelle
+  con proprio README/index linkate dire
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+### `stories/4.27.jobs-to-queueable-actions.story.md` — Story 4.27: app/Jobs -> Spatie QueueableAction
 
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0014-jobs-to-queueable-actions.story.md` — Story 4.27: app/Jobs -> Spatie QueueableAction
 
 # Story 4.27: app/Jobs -> Spatie QueueableAction
 
-## Context and Problem Statement
+## Fase BMAD
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+Build + Measure. Innescata da `phpstan analyse Modules` di routine (0 errori
+sul modulo, invariato) + regola second-brain
+`bashscripts/ai/wiki/rules/no-module-jobs-queueable-action.md`: vietato
+`app/Jobs/*Job` per logica di dominio nei moduli, si usa
+`Spatie\QueueableAction\QueueableAction` con entrypoint `execute(...)`.
 
-## Decision Drivers
+## Contesto
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+`Modules/Notify/app/Jobs/` conteneva 2 file:
 
-## Considered Options
+- `SendNotificationJob.php`: wrapper `ShouldQueue` su
+  `SendNotificationAction::handle()`, gia' essa stessa una `QueueableAction`
+  (il pattern Spatie rende il wrapper Job superfluo: la stessa classe
+  gestisce sync via `execute()` e async via `onQueue()->execute()`). **Zero
+  call site reali** (grep su tutto il repo: solo l'import nella stessa
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+### `stories/4.30.module-remote-git-object-corruption.story.md` — 4.30: module_notify_fila5 remote git object corruption
 
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0017-module-remote-git-object-corruption.story.md` — 4.30: module_notify_fila5 remote git object corruption
 
 # 4.30: module_notify_fila5 remote git object corruption
 
-## Context and Problem Statement
+## Story
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+As a maintainer, I want the `module_notify_fila5` GitHub remote's missing commit object restored,
+so that local commits (already correct, already fixing today's PHPStan zero campaign work) can
+finally push to `laraxot/dev`.
 
-## Decision Drivers
+## Root Cause (verified on code, not docs, 2026-09-06/07)
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+- `git push laraxot dev` from `laravel/Modules/Notify` fails: `Could not read
+  2c641c73c5ab1282c044f3436ac2573cb73d28e0` / `remote unpack failed`.
+- `git fsck --full` shows it's a missing parent of commit `84e1d920` (2026-09-06 21:51) — that
+  commit's own message already notes "[graft: broken parent 2c641c73 missing upstream, treated as
+  root - local-only replace, not pushed]", meaning a prior session already found this and worked
+  around 
 
-## Considered Options
+### `stories/4.31.phpstan-swarm-already-clean.story.md` — 4.31: swarm phpstan 2026-09-15 — 2 errori riportati, 0 trovati
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0019-phpstan-swarm-already-clean.story.md` — 4.31: swarm phpstan 2026-09-15 — 2 errori riportati, 0 trovati
 
 # 4.31: swarm phpstan 2026-09-15 — 2 errori riportati, 0 trovati
 
-## Context and Problem Statement
+## Contesto
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+Sessione swarm multi-agente sul fix PHPStan fleet-wide (4 moduli assegnati:
+Performance, IndennitaResponsabilita, IndennitaCondizioniLavoro, Notify). A meta'
+task il coordinatore ha rilevato collisione con un'altra sessione gia' attiva su
+Performance/IndennitaResponsabilita e ha ristretto questo subagent a **solo
+IndennitaCondizioniLavoro e Notify**. Vedi la story gemella in
+`Modules/IndennitaCondizioniLavoro/docs/stories/7.2...` per il dettaglio del
+blocco fleet-wide incontrato durante l'indagine (fatal `Cannot override final
+method getTableColumns()` in un file Ptv, non nello scope di questo subagent,
+risolto da un altro agente durante la sessione).
 
-## Decision Drivers
+Report di partenza (`Notify.txt`, generato lo stesso giorno
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+### `stories/9.1.psr4-duplicate-dedup.story.md` — Story 9.1: Deduplicate PSR-4 Class Files — Notify Module
 
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0020-psr4-duplicate-dedup.story.md` — Story 9.1: Deduplicate PSR-4 Class Files — Notify Module
 
 # Story 9.1: Deduplicate PSR-4 Class Files — Notify Module
 
-## Context and Problem Statement
+**Status**: awaiting-analysis  
+**Module**: Notify  
+**Issue**: PSR-4 duplicate class files (from prior merge)  
+**Effort**: small  
+**Owned by**: TBD
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Problem
 
-## Decision Drivers
+Prior session found **PSR-4 duplicate**: One test file contains 3 classes that already exist as separate files. This creates ambiguity in autoloading and violates single-responsibility principle.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+**Reference**: Memory entry `notify-psr4-duplicate-2026-08-27`
 
-## Considered Options
+## Workflow
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+1. **Locate duplicate**:
+   ```bash
+   grep -rn "class.*Test\|class.*Action" Modules/Notify/tests --include="*.php" | grep -E "^\s*class "
 
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0023-continuation-2.story.md` — Notify Module — Continuation Task
+### `stories/continuation.story.md` — Notify Module — Continuation Task
 
 # Notify Module — Continuation Task
 
-## Context and Problem Statement
+## Stato
+Modulo con modifiche non ancora sincronizzate nel proprio .git.
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Task
+1. Aggiungere `protected static string $model =` a tutte le table class mancanti
+2. Audit `getTableColumns()` — verificare campi modello
+3. Migliorare UI/UX (badge, toggleable, sortable)
+4. `php -l` su tutti i file toccati
+5. `git commit -m "BMAD: table audit"`
 
-## Decision Drivers
+## Modelli attesi (da verificare)
+- Tabella: `Modules\$m\Filament\Resources\*`
+- Modello: `Modules\$m\Models\*`
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
+### `stories/docs-frontmatter-batch-enrichment.story.md` — Contesto
 
 
-### `stories/0024-docs-frontmatter-batch-enrichment.story.md` — Story
+## Contesto
 
-# Story
+Ricognizione di sessione (2026-09-15): modulo Notify ha 4692 file `.md` in `docs/`, di cui
+solo il 50.3% (2362/4692) con frontmatter YAML. Stesso pattern di degrado trovato in Xot
+(7207 file, 34.5% frontmatter), già affrontato con un batch enrichment parziale (1785/2877
+file committati, vedi `docs-frontmatter-batch-enrichment-pattern.story.md` in Xot).
 
-## Context and Problem Statement
+## Non ancora iniziato
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+Nessun lavoro eseguito su Notify in questa sessione — solo la ricognizione. Il pattern/script
+usato per Xot è documentato e riutilizzabile:
+`Modules/Xot/docs/stories/docs-frontmatter-batch-enrichment-pattern.story.md`
 
-## Decision Drivers
+## Note dal batch Xot (da tenere presente)
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+- Escludere cartelle archivio (`_archive/`, `legacy/`, `historical/`, `wiki-archive/`,
+  `old_tasks/`) — non curare quei file
+- Se ci sono altr
 
-## Considered Options
+### `stories/netfun-sms-error-log-false-positive.story.md` — Story: log Netfun SMS a error() anche sugli invii riusciti
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0025-inbound-mail-pipeline.story.md` — Story: pipeline inbound email
-
-# Story: pipeline inbound email
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0028-netfun-sms-error-log-false-positive.story.md` — Story: log Netfun SMS a error() anche sugli invii riusciti
 
 # Story: log Netfun SMS a error() anche sugli invii riusciti
 
-## Context and Problem Statement
+## Richiesta utente
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+L'utente ha trovato in produzione righe come:
 
-## Decision Drivers
+```
+[2026-09-21 08:48:06] local.ERROR: Netfun SMS response {"request":{"api_token":"62tS5DQipXdvfqm8kvaygxflCh....",...},"status_code":200,"status_txt":"{\"async\":true,\"error\":0,\"credit\":315848,\"sending_contacts_count\":1,\"sending_batch_id\":\"26263325060281687\"}"}
+```
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+Il payload indica chiaramente successo (`status_code` 200, `"error":0`,
+credito scalato, `sending_batch_id` presente), ma la riga è loggata a
+livello `ERROR`. Chiesto il perché e, una volta confermato che non era
+comportamento voluto, un fix minimo: log solo sui fallimenti reali,
+nessuna riga per gli invii andati a buon fine, e token non in chiaro nel
+log.
 
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
+## Diagnosi
 
 
-### `stories/0029-no-model-extends-eloquent-directly.story.md` — Story: no model may extend `Illuminate\Database\Eloquent\Model` directly
+### `stories/no-model-extends-eloquent-directly.story.md` — Story: no model may extend `Illuminate\Database\Eloquent\Model` directly
+
 
 # Story: no model may extend `Illuminate\Database\Eloquent\Model` directly
 
-## Context and Problem Statement
+## Richiesta utente
+
+"`laravel/Modules/Comment/app/Models/CommentNotificationSubscription.php`
+non deve estendere `Illuminate\Database\Eloquent\Model`, nessun modello
+deve estendere direttamente `Illuminate\Database\Eloquent\Model`" — con
+richiesta di applicare la regola a tutto il repo, non solo al file
+segnalato, e di capire il perche'.
+
+## Perche' la regola
 
 `Modules\Xot\Models\XotBaseModel` (via il `BaseModel` di ogni modulo)
 fornisce comportamento condiviso da ogni model del monorepo: cast
 comuni (`id`/`uuid` come stringa, `published_at`/`verified_at` datetime),
 il trait `Updater` (popolamento automatico `created_by`/`updated_by`/
 `deleted_by`), `HasXotFactory` (risoluzione factory via
-`GetFactoryAction`), `RelationX`, `getClassName()` per la risoluzione
-modulo-agnostica del namespace concreto. Un model che estende `Model`
-direttamente perde TUTTO questo silenziosamente — nessun errore, nessun
-warning, solo comportamento mancante (es. audit fields sempre `null`).
+`GetFactoryAction`), `R
 
-## Decision Drivers
+### `stories/notify-mail-layout-shared-with-theme.story.md` — Story: Layout mail condivisi tra modulo Notify e tema attivo
 
-- Richiesta utente / acceptance criteria della st
-
-### `stories/0031-notify-mail-layout-shared-with-theme.story.md` — Story: Layout mail condivisi tra modulo Notify e tema attivo
 
 # Story: Layout mail condivisi tra modulo Notify e tema attivo
 
-## Context and Problem Statement
+## Fase BMAD
+Plan (proposta di design, non ancora implementata: nessun file `.php` toccato).
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Contesto
 
-## Decision Drivers
+Il campo `html_layout_path` sul tab "Inviti" (`ManageMailTemplates`, es.
+`<nome progetto>/admin/ats/survey-pdfs/48/mail-templates`) è una select
+(`HtmlLayoutPathSelect`) che elenca i file `.html` trovati in una sola cartella:
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+```
+Themes/<tema attivo>/resources/mail-layouts/
+```
 
-## Considered Options
+risolta da `XotData::getMailHtmlLayoutPath()`
+(`laravel/Modules/Xot/app/Datas/XotData.php`). Oggi, per il tema `Zero`, contiene
+solo due layout **con header e footer** (`base.html`,
+`christmas-professional.html`).
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+### `stories/notify-pest-suite-database-resolver-broken.story.md` — Modules/Notify: la suite Pest non riesce a interrogare il database in modo affidabile
 
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0032-notify-pest-suite-database-resolver-broken.story.md` — Modules/Notify: la suite Pest non riesce a interrogare il database in modo affidabile
 
 # Modules/Notify: la suite Pest non riesce a interrogare il database in modo affidabile
 
-## Context and Problem Statement
+## Contesto
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+Scoperto il 2026-09-15 facendo il Task 8 (AC12) della story
+`<nome progetto>-send-invite-migrate-to-record-notification.md` (`module_<nome progetto>_fila5#38`):
+una passata Pest completa, file per file, per verificare che le modifiche di
+quella story non avessero introdotto regressioni in `Modules/Notify`.
 
-## Decision Drivers
+Non è un problema causato da quella story. Confermato riportando
+temporaneamente `SmsChannel.php`, `RecordNotification.php` e `SpatieEmail.php`
+al commit precedente (`git checkout f4418d9dc --`) e rieseguendo gli stessi
+test: **risultati identici, file per file**, prima e dopo le modifiche.
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+## Scala del problema
 
-## Considered Options
+Eseguendo ogni file di test di `Modules/Notify` singolarmente (137 file 
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+### `stories/notify-unit-tests-claude-audit.story.md` — Notify — Unit Tests for claude-audit 100/100
 
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0033-notify-unit-tests-claude-audit.story.md` — Notify — Unit Tests for claude-audit 100/100
 
 # Notify — Unit Tests for claude-audit 100/100
 
-## Context and Problem Statement
+## Fase BMAD
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+Build + Measure. Questa story fa parte del batch per portare i moduli Geo, Notify, Tenant a 100/100 claude-audit.
 
-## Decision Drivers
+## Problema
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+Il modulo Notify ha score claude-audit 78-79/100 (Grade B). Il finding principale è "No tests found" nella struttura `laravel/tests/Unit/Modules/Notify/` e `laravel/tests/Feature/Modules/Notify/`. I test esistono in `Modules/Notify/tests/` ma non sono rilevati da claude-audit.
 
-## Considered Options
+## Obiettivo
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+Creare unit test nella struttura standard del progetto (`laravel/tests/Unit/Modules/Notify/`) per la business logic critica del modulo Notify, raggiungendo 100/100 claude-audit.
 
-## Decision Outcome
+## Azioni
 
-Scelta: **implementare**, perché i driver sopra.
+### 1. Test per Actions critiche (Core Notification Flow)
 
-
-### `stories/0034-phpstan-cleanup-notify-2.story.md` — [STORY] PHPStan cleanup Notify
-
-# [STORY] PHPStan cleanup Notify
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0035-phpstan-notificationmanager-service-removed.story.md` — PHPStan: i 7 errori su `Services\NotificationManager`
-
-# PHPStan: i 7 errori su `Services\NotificationManager`
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0036-phpstan-notify-push-delivery-2.story.md` — [STORY] PHPStan Notify push delivery
-
-# [STORY] PHPStan Notify push delivery
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0038-phpstan-test-wave-notify-b.story.md` — PHPStan test wave Notify: lane notify-b
-
-# PHPStan test wave Notify: lane notify-b
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0041-placeholder-translations-cleanup.story.md` — Via le traduzioni segnaposto dai file di lingua
-
-# Via le traduzioni segnaposto dai file di lingua
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0042-send-test-mail-wrong-location.story.md` — SendTestMail in app/Console su produzione: causa e prevenzione
-
-# SendTestMail in app/Console su produzione: causa e prevenzione
-
-## Context and Problem Statement
-
-1. **Origine fuori dal modulo**: il comando era stato creato/portato sotto
-   `app/Console/Commands` (in produzione e poi nella modifica locale), invece di
-   essere assegnato fin dall'inizio a Notify.
-2. **`app/Console/Commands` e' una convenzione Laravel "silenziosa"**: se la
-   cartella esiste, i comandi vengono auto-scopati — funziona, quindi l'errore
-   non produce sintomi evidenti, ma bypassa git, i test e i confini modulari.
-3. **Nessun gate** che impedisse file PHP nuovi sotto `app/` fuori dai moduli.
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-
-### `stories/0043-services-to-actions-notify-2.story.md` — [STORY] Notify: niente Services
-
-# [STORY] Notify: niente Services
-
-## Context and Problem Statement
-
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
-
-## Considered Options
-
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
-
-## Decision Outcome
-
-Scelta: **implementare**, perché i driver sopra.
-
-
-### `stories/0044-xotbaseresourcetable-model-audit-notify-batch.story.md` — Story: XotBaseResourceTable $model audit: Notify batch
-
-# Story: XotBaseResourceTable $model audit: Notify batch
-
-## Context and Problem Statement
-
-Batch di audit meccanico trasversale a piu' moduli, assegnato direttamente (non tramite epic/PRD di
-prodotto in `docs/planning-artifacts/epics.md`, che copre solo Epic 1-3 <nome progetto>). Coerente con la stessa
-convenzione gia' adottata dal batch gemello `Gdpr`
-(`Modules/Gdpr/docs/stories/xotbaseresourcetable-model-audit-gdpr-batch.story.md`). Accesso GitHub MCP
-non disponibile in questa sessione (`gh`/MCP github: errore di autenticazione), quindi nessuna
-issue/discussion GitHub aperta o commentata per questo turno; da fare in un passaggio successivo se si
-decide di tracciare questo batch anche su GitHub.
-
-## Decision Drivers
-
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, se
+Creare test per le seguenti Actions in `laravel/tests/Unit/Modules/
 
 ### `stories/phpstan-cleanup-notify.dev.md` — [DEV] PHPStan cleanup Notify
 
+
 # [DEV] PHPStan cleanup Notify
 
-## Context and Problem Statement
+Story: [2026-10-06-phpstan-cleanup-notify.story.md](./2026-10-06-phpstan-cleanup-notify.story.md)
 
-Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+## Technical Plan
 
-## Decision Drivers
+1. Ricostruire `NotificationLog` da HEAD (docblock + generics), poi applicare l'enum: cast `status`,
+   `markAsOpened/Clicked` con l'enum, scope `withStatus(NotificationLogStatusEnum)`.
+2. Allineare i consumatori dello stato: Infolist (Filament deriva label/colore dall'enum cast), factory
+   (schema canonico `2026_09_01_150103_create_notification_logs_table`), test modello/enum, lang `processing`.
+3. Stub push: un'unica Action `LogSimulatedPushDeliveryAction` invece di 12 copie di `Log::notice`;
+   le firme restano (contratto), il payload Web Push non viene piu' scartato.
+4. Pagine di test Filament: implementare l'intento (Firebase invia, SM
 
-- Richiesta utente / acceptance criteria della story
-- Vincoli BMAD, second brain, Pest gate e dati sacri
+### `stories/phpstan-cleanup-notify.story.md` — [STORY] PHPStan cleanup Notify
 
-## Considered Options
 
-- Status quo (non fare)
-- Implementare come descritto nel Decision Outcome
+# [STORY] PHPStan cleanup Notify
 
-## Decision Outcome
+## User Request
 
-Scelta: **implementare**, perché i driver sopra.
+> «sistema tutte le segnalazioni di phpstan [...] concentrati sullo scopo/funzionalita', non sull'errore;
+> aumenta la qualita' del codice; usa enum al posto delle costanti».
 
+Gruppo Notify: 69 errori in 26 file (`phpstan analyse Modules/Notify`, config `phpstan.neon` invariata).
+
+## Analysis
+
+Gli errori non erano 69 problemi indipendenti: tre cause radice.
+
+1. **`NotificationLog` svuotato.** Il modello nel working tree aveva perso docblock `@property`/`@method`
+   e generics (`MorphTo<Model, $this>`, `Builder<static>`) rispetto a HEAD, e le costanti `STATUS_*`
+   erano state tolte senza cast verso l'enum. Da qui `property.notFound` (`$status`, `$data`) in
+   `NotificationTrackingController` e `NotifyModelsTest`, piu' 8 `missingType.gener
+
+### `stories/phpstan-notify-push-delivery.story.md` — [STORY] PHPStan Notify push delivery
+
+
+# [STORY] PHPStan Notify push delivery
+
+## Richiesta
+
+Ordine permanente: azzerare gli errori PHPStan, alzare la qualita', tenere ordinata la documentazione. Perimetro: 30 errori
+(`return.type`, `missingType.iterableValue`, `method.unusedParameter`, `argument.type`) in tre file che sembravano copie dello
+stesso recapito push:
+
+- `app/Actions/PushNotificationPlatformDelivery.php` (9)
+- `app/Support/PushNotificationPlatformDelivery.php` (11)
+- `app/Services/PushNotificationService.php` (10)
+
+## Analisi: i 30 errori erano il sintomo di una migrazione annullata
+
+Prima dell'errore, lo scopo. Mappa dei chiamanti (`rg -i` su `laravel/` e `bashscripts/`, config, provider, test, stringhe;
+nessuna classmap authoritative in `vendor/composer`):
+
+| Classe | Chiamanti vivi | Verdetto |
+|---|---|---|
+
+### `stories/placeholder-translations-cleanup.story.md` — Via le traduzioni segnaposto dai file di lingua
+
+
+# Via le traduzioni segnaposto dai file di lingua
+
+Rimosse le voci `helper_text`, `placeholder`, `description`, `tooltip`, `label`, `heading` e `hint` uguali al nome del
+campo. Le aveva scritte il salvataggio automatico delle chiavi mancanti (`AutoLabelAction`, solo in locale) e
+comparivano in produzione come testo sotto e dentro i campi. Eliminati anche i file `.php` senza nome.
+
+Strumento: `php artisan lang:clean-placeholders {Modulo} [--dry-run]` (modulo Lang). Tocca solo i file di soli
+dati: quelli che chiamano funzioni restano come sono.
+
+### `stories/send-test-mail-wrong-location.story.md` — SendTestMail in app/Console su produzione: causa e prevenzione
+
+
+# SendTestMail in app/Console su produzione: causa e prevenzione
+
+## Contesto
+
+Su produzione (`/home/ploi/fixcity.eu/laravel/app/Console/Commands/SendTestMail.php`)
+era stato trovato un comando artisan fuori dal modulo owner. Nel checkout
+analizzato il file originario sotto `laravel/app/Console/Commands/` non faceva
+parte del baseline del repository: risultava invece presente come modifica
+locale staged/untracked (`AD` nel worktree). È stato quindi trasferito,
+senza revert, nella posizione modulare canonica:
+`laravel/Modules/Notify/app/Console/Commands/SendTestMail.php`.
+
+Il dominio del comando (invio email di test) appartiene al modulo **Notify**, che
+gia' espone comandi propri auto-registrati:
+
+- `Modules/Notify/app/Console/Commands/SendMailCommand.php` (`notify:send-mail`)
+- `CleanupNo
+
+### `stories/services-to-actions-notify.story.md` — [STORY] Notify: niente Services
+
+
+# [STORY] Notify: niente Services
+
+## Richiesta
+
+Epic "niente Services, mixed ultima spiaggia, const in tipi adatti": eliminare del tutto `app/Services` del modulo Notify,
+riscrivere sulle Action i test che usano i Service, convertire le `const` di classe, chiudere gli aperti lasciati da
+`2026-10-08-phpstan-notify-push-delivery.story.md`. Fase BMAD: Build + Measure.
+
+## Analisi: era la migrazione 4.29, annullata da un merge
+
+La story 4.29 (2026-09) e la wiki `services-to-actions-migration.md` (2026-07-13) avevano gia' deciso e fatto tutto questo.
+Il working tree conteneva di nuovo i Service, i file non PHP e i test che li importano (la storia git del modulo riparte da
+5 commit del 2026-10-07: `git log --follow` non mostra le cancellazioni). Lo scopo di ogni Service, provato con `rg` su
+`l
+
+### `stories/xotbaseresourcetable-model-audit-notify-batch.story.md` — Story: XotBaseResourceTable $model audit: Notify batch
+
+
+# Story: XotBaseResourceTable $model audit: Notify batch
+
+**Fase BMAD**: Qualita del codice (contratto esplicito `$model` su `XotBaseResourceTable`) + verifica
+schema + micro-miglioria UX tabelle. Nessuna modifica di logica applicativa, nessuna migrazione DB
+eseguita.
+
+**Contesto**: audit trasversale al monorepo per aggiungere `protected static string $model = X::class;` a
+ogni classe `*Table extends XotBaseResourceTable` (oggi il contratto e' implicito), verificare le chiavi
+di `getTableColumns()` contro lo schema DB reale, e applicare migliorie UX additive a basso rischio.
+Batch assegnato: modulo `Notify`, 6 file.
+
+## File in scope
+
+- `app/Filament/Resources/ContactResource/Tables/ContactsTable.php`
+- `app/Filament/Resources/MailTemplateResource/Tables/MailTemplatesTable.php`
+- `app/Fil
+
+### `strategy.md` — Product Strategy: Notify Module
+
+
+# Product Strategy: Notify Module
+
+## 🌍 Market Context
+Specialized requirement for Notify within the Public Administration sector.
+
+## 💎 Unique Value Proposition
+Agnostic, modular, and type-safe implementation of Notify logic.
 
 ### `structure.md` — Modulo Notify
 
@@ -19197,6 +18149,52 @@ and "guard_name" = web limit 1)
 
 ## Causa Radice
 
+
+### `superpowers/installation-summary-2.md` — 🦸 Superpowers Installation Summary
+
+
+# 🦸 Superpowers Installation Summary
+
+> **Date**: 2026-03-31  
+> **Status**: ✅ Complete  
+> **Version**: v5.0.6  
+> **Platform**: Cursor
+
+---
+
+title: "INSTALLATION SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "INSTALLATION SUMMARY"
+issues: []
+discussions: []
+## 📋 Overview
+
+
+### `superpowers/installation-summary.md` — 🦸 Superpowers Installation Summary
+
+
+# 🦸 Superpowers Installation Summary
+
+> **Date**: 2026-03-31  
+> **Status**: ✅ Complete  
+> **Version**: v5.0.6  
+> **Platform**: Cursor
+
+---
+
+## 📋 Overview
+
+Successfully installed and configured the **Superpowers** agentic skills framework for the FixCity platform.
+Successfully installed and configured the **Superpowers** agentic skills framework for the Notify platform.
+
+---
+
+## ✅ Completed Tasks
+
+### 1. Framework Installation
 
 ### `superpowers/installation.md` — 🦸 Superpowers Installation Guide
 
@@ -19429,6 +18427,29 @@ issues: []
 discussions: []
 ## Cosa è
 
+### `support-to-actions-philosophy.md` — da Support a Actions — Filosofia
+
+
+# da Support a Actions — Filosofia
+
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](wiki/concepts/no-app-support-queueable-actions.md).
+
+## Principio (post-migrazione)
+
+Tutta la logica di dominio vive in **`app/Actions/`** (Spatie `QueueableAction` + `execute()`).
+
+| Tipo | Path canonico |
+|------|----------------|
+| Unità di business (sync/queue) | `app/Actions/*Action.php` |
+| Facade multi-metodo / coordinator | `app/Adapters/` |
+| DTO / config tipizzata | `app/Datas/` |
+
+**Vietato** ricreare `app/Support/` per helper, formatter, resolver o delivery push/mail.
+
+## Distinzione
+
+| Categoria | Esempi | Directory |
+
 ### `sync-test-results.md` — ✅ BIDIRECTIONAL SYNC TEST - SUCCESS!
 
 
@@ -19461,19 +18482,19 @@ discussions: []
 **Status**: ✅ All Tasks Complete  
 **Administrator**: AI Assistant
 
-### 2. ✅ Apache2 Service Fix
+---
 
-**Problem**: Apache2 failed to start with error
-```
-Job for apache2.service failed because the control process exited with error code.
-```
+title: "system admin summary 2026 03 13"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "system admin summary 2026 03 13"
+issues: []
+discussions: []
+## 📋 Tasks Completed
 
-**Root Cause**: Apache environment variables not properly loaded
-
-**Solution Applied**:
-```bash
-# Reload systemd configuration
-sudo systemctl daemon-reload
+### 1. ✅ Copy Files Cleanup
 
 ### `system-admin-summary.md` — System Administration Summary - 2026-03-13
 
@@ -19612,6 +18633,29 @@ Questo documento descrive i componenti UI utilizzati nel modulo Notify, basati s
 <x-filament::button
     type="button"
     color="primary"
+
+### `tailwind-conversion-complete.md` — 🎨 TAILWIND CONVERSION COMPLETE - Design Comuni
+
+
+# 🎨 TAILWIND CONVERSION COMPLETE - Design Comuni
+
+**Data**: 2025-10-02 21:12  
+**Obiettivo**: Replicare Design Comuni usando Tailwind CSS  
+**Status**: ✅ HOMEPAGE COMPLETA  
+
+---
+
+## 🎯 OBIETTIVO RAGGIUNTO
+
+Convertito il design Bootstrap Italia dei Comuni in **Tailwind CSS puro**!
+
+### ✅ COMPLETATO
+
+1. **Color Scheme Verde PA** - Tailwind config aggiornato
+2. **Homepage con Mappa** - Layout identico a Design Comuni
+3. **Sidebar Filtri** - 11 categorie con checkbox
+4. **Header Verde** - Stile PA ufficiale
+5. **Breadcrumb** - Navigazione
 
 ### `tailwind-email-system.md` — Sistema Email con Tailwind CSS nel Modulo Notify
 
@@ -19772,7 +18816,7 @@ discussions: []
 Un plugin Tailwind permette di aggiungere nuove utility, componenti o variant personalizzate, centralizzando la logica di stile e favorendo la coerenza tra moduli/temi.
 
 ---
-
+## 1. Cos'è un Plugin Tailwind
 
 ### `tailwind-plugin.md` — Guida: Creazione di Plugin Tailwind Custom per <nome progetto>
 
@@ -19795,7 +18839,7 @@ discussions: []
 Un plugin Tailwind permette di aggiungere nuove utility, componenti o variant personalizzate, centralizzando la logica di stile e favorendo la coerenza tra moduli/temi.
 
 ---
-
+## 1. Cos'è un Plugin Tailwind
 
 ### `task-consolidare-documentazione.md` — Task: Consolidare Documentazione - Notify
 
@@ -19891,7 +18935,6 @@ Testare tutti i canali di notifica con mock dei servizi esterni.
 
 ### `tasks/001-notification-system.md` — Task 001: Implement Multi-Channel Notification System
 
-
 # Task 001: Implement Multi-Channel Notification System
 
 ## Description
@@ -19911,9 +18954,9 @@ The Notify module needs a robust multi-channel notification system for sending m
 - User notification preferences
 - Notification groups and batching
 - Rich content support
+- Notification history
 
 ### `tasks/cleanup-notify-docs.md` — Task: Cleanup Notify Docs
-
 
 # Task: Cleanup Notify Docs
 
@@ -19937,7 +18980,6 @@ Ripulire la vasta documentazione del modulo Notify (560+ file), eliminando file 
 
 ### `tasks/filament-v5-notify.md` — Task: Notify Filament v5 Alignment (Clusters)
 
-
 # Task: Notify Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo
@@ -19955,10 +18997,9 @@ Riorganizzare le risorse del modulo Notify in Clusters per migliorare la navigaz
 - [ ] Verifica che le azioni bulk continuino a funzionare nella nuova struttura.
 
 ## 🔗 Riferimenti
--
+- 
 
 ### `tasks/notify-cleanup-docs.md` — Task: Notify Docs Cleanup
-
 
 # Task: Notify Docs Cleanup
 
@@ -19967,7 +19008,7 @@ Pulire l'immensa quantità di file spazzatura (560+ file) nella cartella docs de
 
 ## 🚨 Problemi Identificati
 - File di ridenominazione accumulati (`module_notify_root_symlink.md~...`).
-- Analisi dettagliate ripetute 8 volte (`analisi-dettagliata-8.md`).
+- Analisi dettagliate ripetute 8 volte (`analisi-dettagliata-8-2.md`).
 - Changelog duplicati (`CHANGELOG.MD` vs `CHANGELOG.md`).
 
 ## ✅ Checklist
@@ -19980,7 +19021,6 @@ Pulire l'immensa quantità di file spazzatura (560+ file) nella cartella docs de
 - [Index Documentazione](../00-index.md)
 
 ### `tasks/notify-filament-v5.md` — Task: Notify Filament v5 Alignment (Clusters)
-
 
 # Task: Notify Filament v5 Alignment (Clusters)
 
@@ -20004,7 +19044,6 @@ Centralizzare la gestione delle comunicazioni in un Cluster dedicato per miglior
 
 ### `tasks/notify-test-coverage.md` — Task: Rafforzamento Test Suite Notify (Pest)
 
-
 # Task: Rafforzamento Test Suite Notify (Pest)
 
 **Modulo**: Notify  
@@ -20024,9 +19063,9 @@ Portare i test attuali (PHPUnit) a Pest e aumentare la copertura sulle Actions d
 - [ ] Obiettivo copertura > 90%
 - [ ] Documentazione
 
+## Dipendenze
 
 ### `tasks/tasks-index.md` — Indice task - Modulo Notify
-
 
 # Indice task - Modulo Notify
 
@@ -20047,29 +19086,7 @@ Lista dei task del modulo con link ai file .md separati. Ogni task è un file ne
 ## Fase 3: QA e Test
 
 | Task | File | Priorità |
-
-### `telegram-channel-1.md` — Implementazione Canale Telegram
-
-
-# Implementazione Canale Telegram
-
-## 1. Struttura Base
-
-### 1.1 Data Transfer Objects
-```php
-<?php
-
-namespace Modules\Notify\Datas;
-
-use Spatie\LaravelData\Data;
-
-class TelegramMessageData extends Data
-{
-    public function __construct(
-        public string $chat_id,
-        public string $text,
-        public ?string $parse_mode = null,
-        public ?bool $disable_web_page_preview = null,
+|------|------|----------|
 
 ### `telegram-channel.md` — Implementazione Canale Telegram
 
@@ -20094,27 +19111,6 @@ class TelegramMessageData extends Data
         public ?string $parse_mode = null,
         public ?bool $disable_web_page_preview = null,
 
-### `telegram-integration-1.md` — Integrazione Telegram
-
-
-# Integrazione Telegram
-
-Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto <nome progetto>, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
-
-## Architettura
-
-L'integrazione Telegram segue un'architettura modulare e standardizzata:
-
-1. **Interfaccia comune**: Tutti i provider Telegram implementano la stessa interfaccia
-2. **DTO standardizzato**: I dati dei messaggi sono gestiti tramite un Data Transfer Object tipizzato
-3. **Configurazione centralizzata**: Impostazioni gestite tramite file di configurazione dedicato
-4. **Implementazioni specifiche per provider**: Ogni driver ha una propria implementazione
-5. **Canale di notifica Laravel**: Integrazione con il sistema di notifiche di Laravel
-
-## Interfaccia
-
-L'int
-
 ### `telegram-integration.md` — Integrazione Telegram
 
 
@@ -20131,6 +19127,38 @@ L'integrazione Telegram segue un'architettura modulare e standardizzata:
 2. **DTO standardizzato**: I dati dei messaggi sono gestiti tramite un Data Transfer Object tipizzato
 3. **Configurazione centralizzata**: Impostazioni gestite tramite file di configurazione dedicato
 4. **Implementazioni
+
+### `telegram-provider-architecture-2.md` — Architettura Telegram Provider per SaluteOra
+
+
+# Architettura Telegram Provider per SaluteOra
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di SaluteOra, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+
+## Principi Architetturali Fondamentali
+
+L'architettura dei provider Telegram segue gli stessi principi dei provider SMS, email e WhatsApp, rispettando i seguenti punti:
+
+1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implementazione
+2. **Implementazioni in Directory Dedicate**: Tutte le azioni di provider sono in `app/Actions/Telegram/`
+3. **Data Transfer Objects (DTO)**: Utilizzo di DTO specifici per i messaggi Telegram in `app/Datas/`
+4. **Configurazione Centralizzata**:
+
+### `telegram-provider-architecture.md` — Architettura Telegram Provider per
+
+
+# Architettura Telegram Provider per
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di , mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+# Architettura Telegram Provider per <nome progetto>
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di <nome progetto>, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+
+## Principi Architetturali Fondamentali
+
+L'architettura dei provider Telegram segue gli stessi principi dei provider SMS, email e WhatsApp, rispettando i seguenti punti:
+
+1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implement
 
 ### `telegram-sending-standard.md` — Standard per Invio Messaggi Telegram nel Modulo Notify
 
@@ -20223,6 +19251,11 @@ class Template extends XotBaseModel
     // Follow enum-driven fillable pattern
     public function getFillable(): array
 
+### `template-management.md` — Template Management
+
+
+# Template Management
+
 ### `template-system.md` — Sistema Template Email
 
 
@@ -20290,6 +19323,14 @@ Il sistema di template permette di:
 <x-mail::message>
 
 # {{ $title }}
+
+
+### `test.md` — test
+
+
+
+### `test01.md` — test01
+
 
 
 ### `testing-guidelines.md` — Notify Module - Testing Guidelines
@@ -20430,26 +19471,6 @@ Rendere le pagine locali (`http://127.0.0.1:8000/it/tests/<pagina>`) visivamente
 - **Stato**: 🔄 DA IMPLEMENTARE
 - **Pagina Reference**: `segnalazione-02-dati.html`
 
-### `theme/sixteen/analysis/body-structure-parity.md` — Body Structure Parity Bridge
-
-
-# Body Structure Parity Bridge
-
-This note links the agnostic comparison tooling in `bashscripts` with the Sixteen theme parity reports.
-
-## Agnostic tools
-- [`bashscripts/html/html-structure-compare.sh`](../../../../bashscripts/html/html-structure-compare.sh)
-- [`bashscripts/html/compare-html-body.py`](../../../../bashscripts/html/compare-html-body.py)
-- [`bashscripts/html/README.md`](../../../../bashscripts/html/README.md)
-
-## Theme outputs
-- [`laravel/Themes/Sixteen/docs/body-structure-comparison/`](../../../../laravel/Themes/Sixteen/docs/body-structure-comparison/)
-- [`laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/`](../../../../laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/)
-
-## Rule
-- `bashscripts` contains reusable tooling only.
-- The Sixteen theme docs
-
 ### `theme/sixteen/analysis/homepage-comparison.md` — Homepage Comparison Analysis
 
 
@@ -20473,10 +19494,10 @@ This document analyzes the HTML structure differences between:
 
 1. **Header/Navigation**
 
-### `theme/sixteen/analysis/status.md` — Homepage CSS/JS Fix - Status
+### `theme/sixteen/analysis/results.md` — Homepage Visual Comparison - RESULTS
 
 
-# Homepage CSS/JS Fix - Status
+# Homepage Visual Comparison - RESULTS
 
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
@@ -20484,40 +19505,40 @@ This document analyzes the HTML structure differences between:
 > [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
 > Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
-## Build Completo
+## Comparison Screenshots
 
-**Data**: 2026-04-07
+### Desktop Viewport (800px width)
 
-### Comandi Eseguiti
+| Reference | Local |
+|-----------|-------|
+| ![Reference](/tmp/ref-800.png) | ![Local](/tmp/local-800.png) |
 
-```bash
-cd laravel/Themes/Sixteen
-npm run build    # ✓ Completato
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+## Status: ✓ COMPLETED (~90% Match)
+
+### What Was Fixed:
+
+### `theme-architecture.md` — 🎨 Theme Architecture - "Il Tema è un Vestito"
+
+
+# 🎨 Theme Architecture - "Il Tema è un Vestito"
+
+**Data**: 2026-03-30  
+**Stato**: ✅ **ARCHITETTURA CORRETTA**
+
+## 🎯 Concetto Fondamentale
+
+**"Il tema è un vestito configurabile!"**
+
+Il tema **NON** deve essere registrato hardcoded in `AppServiceProvider.php`.
+
+### ❌ SBAGLIATO
+```php
+// AppServiceProvider.php
+public function boot(): void
+{
+    $this->app->register(\Themes\Sixteen\Providers\ThemeServiceProvider::class);
+}
 ```
-
-### `theme/sixteen/analysis/visual-comparison.md` — Homepage Visual Comparison - CSS Fixes Required
-
-
-# Homepage Visual Comparison - CSS Fixes Required
-
-## Screenshots Analysis
-
-### Reference (Bootstrap Italia)
-- Header with blue background (#0066CC)
-- Hero with news card + image + search
-- Argomenti section with blue background  
-- Servizi cards with orange background
-- Footer with yellow background
-
-### Local (Tailwind + Alpine)
-- Header without blue background
-- Same hero structure
-- Args section with white background
-- Servizi with white cards
-- Different footer
-
-## Required CSS Fixes
 
 ### `theme-verification-report-2.md` — ✅ Theme Architecture Verification - CORRECT!
 
@@ -20565,6 +19586,52 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+### `trans-choice-dry-religion.md` — TransChoice DRY — La Religione dell'Unica Fonte di Verita
+
+
+# TransChoice DRY — La Religione dell'Unica Fonte di Verita
+
+**Status**: Active  
+**Created**: 2026-04-14  
+**Last Updated**: 2026-04-14  
+**Category**: Architecture / Religion / i18n / DRY  
+**Audience**: All developers + AI agents
+
+---
+
+title: "trans choice dry religion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "trans choice dry religion"
+issues: []
+discussions: []
+## LA REGOLA AUREA
+
+### `transaction-removal-fix-15.md` — Fix Transaction Model - Migrate Fresh Error
+
+
+# Fix Transaction Model - Migrate Fresh Error
+
+**Data**: 15 Ottobre 2025  
+**Stato**: ✅ Completato  
+**Comando**: `php artisan migrate:fresh`  
+**Modulo**: Blog
+
+## Problema
+
+Durante l'esecuzione di `php artisan migrate:fresh`, il sistema tentava di caricare automaticamente il modello `Transaction` che non esisteva più, causando un errore fatale:
+
+```
+ErrorException 
+include(/var/www/_bases/base_fixcity_fila5_mono/laravel/vendor/composer/
+../../Modules/Blog/app/Models/Transaction.php): 
+Failed to open stream: No such file or directory
+
+at vendor/composer/ClassLoader.php:576
+```
+
 ### `transaction-removal-fix.md` — Fix Transaction Model - Migrate Fresh Error
 
 
@@ -20588,29 +19655,6 @@ Failed to open stream: No such file or directory
 at vendor/composer/ClassLoader.php:576
 ```
 
-### `translation-cleanup-plan-1.md` — Piano di Pulizia e Standardizzazione delle Traduzioni
-
-
-# Piano di Pulizia e Standardizzazione delle Traduzioni
-
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
-
-## Analisi della Situazione Attuale
-
-Dall'analisi dei file di traduzione nella cartella `Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
-
-### 1. File con Nomi Errati
-- `send_s_m_s.php` invece di `send_sms.php`
-- `send_a_w_s_email.php` invece di `send_aws_email.php`
-- `send_whats_app.php` invece di `send_whatsapp.php`
-- `send_netfun_s_m_s.php` invece di `send_netfun_sms.php`
-
-### 2. File Duplicati
-- Esistono sia `send_s_m_s.php` che `send_sms.php`
-- Esistono sia `send_a_w_s_email.php` che `send_aws_email.php`
-- Esistono sia `send_netfun_s_m_s.php` che `send_netfun_sms.php`
-
-
 ### `translation-cleanup-plan.md` — Piano di Pulizia e Standardizzazione delle Traduzioni
 
 
@@ -20633,6 +19677,17 @@ Dall'analisi dei file di traduzione nella cartella `Modules/Notify/lang/it`, son
 - Esistono sia `send_a_w_s_email.php` che `send_aws_email.php`
 - Esistono sia `send_netfun_s_m_s.php` che `send_netfun_sms.php`
 
+
+### `translation-implementation-plan-1.md` — Deprecated
+
+
+# Deprecated
+
+This file is deprecated.
+
+Use:
+
+- [translation-implementation-plan](./translation-implementation-plan.md)
 
 ### `translation-implementation-plan.md` — Piano di Implementazione per la Standardizzazione delle Traduzioni
 
@@ -20748,17 +19803,11 @@ This document provides guidance on diagnosing and resolving common issues encoun
 ### `tutorials.md` — Versione HEAD
 
 
-### Versione HEAD
-
 https://medium.com/@timothy.withers/customizing-mail-and-notification-templates-in-laravel-4f8c37ce51a
+
 ## Collegamenti tra versioni di tutorials.md
 * [tutorials.md](tutorials.md)
 * [tutorials.md](../../../notify/docs/tutorials.md)
-
-
-### Versione Incoming
-
-https://medium.com/@timothy.withers/customizing-mail-and-notification-templates-in-laravel-4f8c37ce51a
 
 ---
 
@@ -20832,6 +19881,14 @@ This document describes the complete integrated workflow for developing features
 bash bashscripts/ai/openviking-init.sh
 
 
+### `user-research.md` — User Research: Notify Module
+
+
+# User Research: Notify Module
+
+## 🔬 Research Goals
+Identify user needs for Notify functionality.
+
 ### `valori.md` — Politica, Filosofia, Religione, Etica, Zen – Modulo Notify
 
 
@@ -20894,6 +19951,29 @@ This report verifies the compliance of Bulk Actions with strict Filament extensi
 -   **Strict Typing**: Verified array return types and absence of `mixed`.
 -   **Documentation**: Created `filament-extension-rules-2.md` in 
 
+### `view-cache-components-fix-15.md` — Fix View Cache - Componenti Mancanti
+
+
+# Fix View Cache - Componenti Mancanti
+**Data**: 15 Ottobre 2025  
+**Stato**: ✅ Completato  
+**Comando**: `php artisan view:cache`
+
+## Problema
+L'esecuzione di `php artisan view:cache` falliva a causa di componenti Blade mancanti o non correttamente registrati nel sistema.
+
+## Componenti Implementati
+
+### 1. Badge Status e Priority (Tema Sixteen)
+**Percorso Base**: `Themes/Sixteen/resources/views/components/data-display/badge/`
+
+#### `status.blade.php`
+- Visualizzazione stato ticket con colori automatici
+- Integrato con `Modules\Fixcity\Enums\TicketStatusEnum`
+- 13 stati supportati (draft, pending, assigned, etc.)
+- Traduzioni automatiche
+
+
 ### `view-cache-components-fix.md` — Fix View Cache - Componenti Mancanti
 
 
@@ -20940,29 +20020,6 @@ return view($viewName, $viewParams);
 2. **Estensibilità**: Stessa struttura con 0 o N parametri — aggiungere dati = popolare $viewParams
 3. **Consistenza**: Sempre view($viewName, $viewParams) — nessun default implicito
 
-### `visual-analysis-report.md` — Documentation Visual Analysis Report
-
-
-# Documentation Visual Analysis Report
-
-**📊 Complete Visual Documentation Audit with Diagrams**
-
----
-
-## Executive Summary
-
-This project now has comprehensive visual documentation with:
-- ✅ ASCII architecture diagrams
-- ✅ Module dependency graphs
-- ✅ Theme architecture maps
-- ✅ Data flow visualizations
-- ✅ Bidirectional cross-references
-- ✅ 7,137+ indexed documentation files
-
----
-
-## Visual Documentation Screenshots
-
 ### `webcrunch-tailwind-collection.md` — Analisi collezione Tailwind CSS (Webcrunch)
 
 
@@ -20985,6 +20042,85 @@ title: "webcrunch tailwind collection"
 type: note
 tags: [documentation]
 created: 2026-09-26
+
+### `whatsapp-integration-1.md` — Integrazione WhatsApp
+
+
+# Integrazione WhatsApp
+
+## Panoramica
+
+Questo documento descrive l'architettura e l'implementazione dell'integrazione WhatsApp nel modulo Notify di <nome progetto>, seguendo gli stessi standard e pattern utilizzati per l'invio di email e SMS.
+
+## Architettura
+
+L'integrazione WhatsApp segue la stessa architettura modulare utilizzata per SMS ed email, basata su:
+
+1. **Interfaccia comune** (`WhatsAppProviderActionInterface`)
+2. **Implementazioni specifiche per provider** (`Send{Provider}WhatsAppAction`)
+3. **Data Transfer Objects** (DTO) per i dati dei messaggi
+4. **Configurazione standardizzata** nel file `config/whatsapp.php`
+
+## 1. Interfaccia Comune
+
+Tutte le azioni di invio WhatsApp devono implementare l'interfaccia `WhatsAppProviderActionInterface`:
+
+
+### `whatsapp-integration.md` — Integrazione WhatsApp
+
+
+# Integrazione WhatsApp
+
+## Panoramica
+
+Questo documento descrive l'architettura e l'implementazione dell'integrazione WhatsApp nel modulo Notify di <nome progetto>, seguendo gli stessi standard e pattern utilizzati per l'invio di email e SMS.
+
+## Architettura
+
+L'integrazione WhatsApp segue la stessa architettura modulare utilizzata per SMS ed email, basata su:
+
+1. **Interfaccia comune** (`WhatsAppProviderActionInterface`)
+2. **Implementazioni specifiche per provider** (`Send{Provider}WhatsAppAction`)
+3. **Data Transfer Objects** (DTO) per i dati dei messaggi
+4. **Configurazione standardizzata** nel file `config/whatsapp.php`
+
+## 1. Interfaccia Comune
+
+Tutte le azioni di invio WhatsApp devono implementare l'interfaccia `WhatsAppProviderActionInterface`:
+
+
+### `whatsapp-provider-architecture-2.md` — Architettura WhatsApp Provider per SaluteOra
+
+
+# Architettura WhatsApp Provider per SaluteOra
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di SaluteOra, mantenendo coerenza con le architetture esistenti per SMS ed email.
+
+## Principi Architetturali Fondamentali
+
+L'architettura dei provider WhatsApp segue gli stessi principi dei provider SMS ed email, rispettando i seguenti punti:
+
+1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implementazione
+2. **Implementazioni in Directory Dedicate**: Tutte le azioni di provider sono in `app/Actions/WhatsApp/`
+3. **Data Transfer Objects (DTO)**: Utilizzo di DTO specifici per i messaggi WhatsApp in `app/Datas/`
+4. **Configurazione Centralizzata**: Configurazione in
+
+### `whatsapp-provider-architecture.md` — Architettura WhatsApp Provider per
+
+
+# Architettura WhatsApp Provider per
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di , mantenendo coerenza con le architetture esistenti per SMS ed email.
+# Architettura WhatsApp Provider per <nome progetto>
+
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di <nome progetto>, mantenendo coerenza con le architetture esistenti per SMS ed email.
+
+## Principi Architetturali Fondamentali
+
+L'architettura dei provider WhatsApp segue gli stessi principi dei provider SMS ed email, rispettando i seguenti punti:
+
+1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implementazione
+2. **Implementazioni
 
 ### `whatsapp-sending-standard-2.md` — Standard per Invio Messaggi WhatsApp nel Modulo Notify
 
@@ -21031,6 +20167,59 @@ discussions: []
 
 - Ogni provider WhatsApp deve avere una propria action in `app/Actions/WhatsApp`.
 - Tutte le azioni devono implementare una interfaccia comune, ad 
+
+### `wiki/_integration/login.md` — login
+
+
+# login
+
+<!-- Contenuto migrato da _docs/login.txt -->
+
+-----------------------------------------------------------------------------------------------
+A Blade Component to Quickly Login to Your Local Environment
+https://codebrisk.com/blog/a-blade-component-to-quickly-login-to-your-local-environment
+composer require spatie/laravel-login-link
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+### `wiki/_integration/repos-2.md` — _repos
+
+
+# _repos
+
+<!-- Contenuto migrato da _docs/_repos.txt -->
+
+-------------------------------------------------------------
+Add Simple Facet Filtering in Your Laravel Applications
+https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
+composer require mgussekloo/laravel-facet-filter
+-------------------------------------------------------------
+
+### `wiki/_integration/repos.md` — _repos
+
+
+# _repos
+
+<!-- Contenuto migrato da _docs/_repos.txt -->
+
+-------------------------------------------------------------
+Add Simple Facet Filtering in Your Laravel Applications
+https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
+composer require mgussekloo/laravel-facet-filter
+-------------------------------------------------------------
+# _repos
+
+<!-- Contenuto migrato da _docs/_repos.txt -->
+
+-------------------------------------------------------------
+Add Simple Facet Filtering in Your Laravel Applications
+https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
+composer require mgussekloo/laravel-facet-filter
+-------------------------------------------------------------
+# _repos
 
 ### `wiki/_integration/todo-2.md` — _todo
 
@@ -21135,6 +20324,29 @@ _2-3 sentence summary of what this source covers._
 3. **Takeaway 3**: Brief explanation
 
 
+### `wiki/architecture/document-root-architecture.md` — Document Root Architecture
+
+
+# Document Root Architecture
+
+## Overview
+
+This project uses a **custom Laravel public path architecture** where the web-accessible document root is `public_html/` instead of the default `laravel/public/`.
+
+## Architecture
+
+```
+/var/www/_bases/base_fixcity_fila5/
+/var/www/_bases/base_ptvx_fila5/
+├── public_html/                    ← ACTUAL DocumentRoot (Apache serves from here)
+│   ├── index.php                   ← Entry point
+│   ├── .htaccess
+│   ├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── themes/
+│   └── modules/
+
 ### `wiki/bmad-method.md` — BMAD Method v6.3 operativo nel progetto
 
 
@@ -21211,15 +20423,22 @@ Dipendenze del dominio **Notify** in `Modules/Notify/composer.json`. Il root `la
 Dipendenze del dominio **Notify** in `Modules/Notify/composer.json`. Il root `laravel/composer.json` resta skeleton come [base_ptvx_fila5](https://github.com/laraxot/platform/blob/dev/laravel/composer.json).
 
 
-
-
 ## Merge root — solo moduli
 
 `laravel/composer.json` → merge **solo** `Modules/*/composer.json`. **Vietato** `Themes/*/composer.json` (nwidart owner = modulo; tema = vestito Blade/assets).
 
 Perché: [composer-merge-plugin-modules-only](../../../Xot/docs/wiki/concepts/composer-merge-plugin-modules-only.md).
 
-## Riferimen
+## Riferimento
+
+### `wiki/concepts/context-overflow-prevention.md` — context overflow prevention
+
+
+# context overflow prevention
+
+Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+
+→ [context-overflow-prevention.md](../../../../Xot/docs/wiki/concepts/context-overflow-prevention.md)
 
 ### `wiki/concepts/duplicate-method-bodies.md` — Corpi metodo duplicati — Notify
 
@@ -21417,6 +20636,15 @@ Un owner attivo per `mail_templates`, `notifications`, `notify_contacts`,
 > Debito residuo: 7 file `2018_10_10_00000X_create_mail_templates_table.php` ancora
 > presenti (pre-consolidamento). Vanno rimossi con `git rm` (non spostati 
 
+### `wiki/concepts/organizzativa-money.md` — organizzativa money
+
+
+# organizzativa money
+
+Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+
+→ [organizzativa-money.md](../../../../Xot/docs/wiki/concepts/organizzativa-money.md)
+
 ### `wiki/concepts/pest-bootstrap-helpers-not-loaded-single-file.md` — Pest — funzioni helper di `tests/Pest.php` non affidabili su run isolate
 
 
@@ -21480,7 +20708,7 @@ Il controllo conclusivo è `composer dump-autoload -o`, seguito da PHPStan e dal
 |---------|------|
 | **Canon** | [Xot second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md) |
 | **Harness moduli** | [ai-harness-module-discipline.md](../../../../docs/wiki/concepts/ai-harness-module-discipline.md) |
-| **Tips 001–022** | [hackernoon map](../../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map) |
+| **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) |
 | **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-laraxot-map.md) |
 | **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) |
 
@@ -21516,24 +20744,6 @@ Resources: Contact, MailTemplate, Notification, NotificationTemplate, NotifyThem
 
 Columns derived from Model `$fillable` and `$casts` properties. Includes standard `id`, `created_at`, `updated_at` columns plus notification-specific fields.
 
-### `wiki/decisions/notification-logs-migration-consolidation.md` — Consolidamento migrazioni `notification_logs`
-
-
-# Consolidamento migrazioni `notification_logs`
-
-## Problema
-
-Esistevano **due migrazioni distinte** che creavano la stessa tabella `notification_logs`,
-entrambe ancora su `Illuminate\Database\Migrations\Migration` (violazione dello standard
-`XotBaseMigration` del modulo) e con **schemi tra loro incompatibili**:
-
-1. `2025_03_31_000001_create_notification_logs_table.php` — schema "vecchio":
-   `title`, `content`, `channels` (json), `data` (json nullable), `sent_at`, `status`, `error`.
-2. `2025_07_01_000000_create_notification_logs_table.php` — schema "intermedio":
-   `type`, `channel`, `recipient`, `subject`, `message`, `status`, `sent_at`, `read_at`,
-   `error_message`, `metadata` (json). Guardava con `if (! Schema::hasTable(...))`, quindi se
-   la migrazione #1 girava per prima, le colon
-
 ### `wiki/how-to/gitmodules-sync-session.md` — Gitmodules sync session
 
 
@@ -21552,7 +20762,8 @@ Mai Shell `working_directory`. Git solo avanti: fetch + merge (no rebase, no res
 
 ## Canon
 
-- [git-sync-fleet-remotes.md#no-git-submodules-module-repos](../../../../../../bashscripts/ai/wiki/memories/git-sync-fleet-r
+- [no-git-submodules-module-repos.md](../../../../../../docs/wiki/memories/no-git-submodules-module-repos.md)
+- Prompt: [17-
 
 ### `wiki/how-to/mail-postfix-locale.md` — Posta in uscita: Postfix locale
 
@@ -21581,20 +20792,6 @@ Questo file veniva da `docs/wiki/integrations/modules/notify/absolute-completion
 
 - versione del modulo: `laravel/Modules/Notify/docs/absolute-completion.md`
 - versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/absolute-completion.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/agents-2.divergenza.md` — Divergenza: `agents-2.md`
-
-
-# Divergenza: `agents-2.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/agents-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/agents-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/agents-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
@@ -21636,25 +20833,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `agents.divergenza.md`
-
-# Divergenza: `AGENTS.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/AGENTS.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nom
-
-### `wiki/integrations/_da-riconciliare/architecture-2.divergenza.md` — Divergenza: `architecture-2.md`
-
-
-# Divergenza: `architecture-2.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/architecture-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/architecture-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/architecture.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
 ### `wiki/integrations/_da-riconciliare/architecture-analysis.divergenza.md` — Divergenza: `architecture-analysis-3.md`
 
 
@@ -21663,16 +20841,11 @@ Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 Questo file veniva da `docs/wiki/integrations/modules/notify/architecture-analysis-3.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
 - versione del modulo: `laravel/Modules/Notify/docs/architecture-analysis-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/architecture-analysis-4.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/architecture-analysis-3.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `architecture-analysis.divergenza.md`
-
-# Divergenza: `ARCHITECTURE_ANALYSIS.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/ARCHITECTUR
 
 ### `wiki/integrations/_da-riconciliare/architecture-diagrams.divergenza.md` — Divergenza: `architecture-diagrams.md`
 
@@ -21687,6 +20860,29 @@ Questo file veniva da `docs/wiki/integrations/modules/notify/architecture-diagra
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+
+### `wiki/integrations/_da-riconciliare/architecture-diagrams.md` — Architecture Diagrams & Visual Reference
+
+
+# Architecture Diagrams & Visual Reference
+
+**📍 Cross-References:**
+- [← Back to Master Index](master-documentation-index-3.md)
+- [Code Quality Analysis](code-quality-analysis-3.md)
+- [Module Dependencies](#module-dependencies)
+- [Theme Architecture](#theme-architecture)
+- [Data Flow](#data-flow)
+
+---
+
+## System Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        Notify Platform v2                          │
+│                        <nome progetto> Platform v2                          │
+│                    Laravel 12 + Filament 5 + Livewire 3             │
+└─────────────────────────────────────────────────────────────────────┘
 
 ### `wiki/integrations/_da-riconciliare/architecture.divergenza.md` — Divergenza: `architecture.md`
 
@@ -21730,11 +20926,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `composer-strategy.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/COMPOSER_STRATEGY.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/COMPOSER_ST
-
 ### `wiki/integrations/_da-riconciliare/config-structure.divergenza.md` — Divergenza: `config-structure-2.md`
 
 
@@ -21744,25 +20935,6 @@ Questo file veniva da `../../../config-structure-2.md`, cancellato dal working t
 
 - versione del modulo: `laravel/Modules/Notify/docs/config-structure-2.md`
 - versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/config-structure-2.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `config-structure.divergenza.md`
-
-# Divergenza: `config_structure.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/config_structure.md`, cancellato dal working tree senza migrazione. Il
-
-### `wiki/integrations/_da-riconciliare/contributing-2.divergenza.md` — Divergenza: `contributing-2.md`
-
-
-# Divergenza: `contributing-2.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/contributing-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/contributing-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/contributing-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
@@ -21805,34 +20977,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `contributing.divergenza.md`
-
-# Divergenza: `CONTRIBUTING.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/CONTRIBUTING.md`, cancellato dal working tree senza migrazione. I
-
-### `wiki/integrations/_da-riconciliare/contributing.md` — Contributing to Notify
-
-
-# Contributing to Notify
-
-First off, thank you for considering contributing to Notify! 🎉
-# Contributing to <nome progetto>
-
-First off, thank you for considering contributing to <nome progetto>! 🎉
-
-## 📋 Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [Development Workflow](#development-workflow)
-- [Code Quality Standards](#code-quality-standards)
-- [Testing Requirements](#testing-requirements)
-- [Commit Guidelines](#commit-guidelines)
-- [Pull Request Process](#pull-request-process)
-
----
-
-
 ### `wiki/integrations/_da-riconciliare/css-architecture.divergenza.md` — Divergenza: `CSS_ARCHITECTURE.md`
 
 
@@ -21847,10 +20991,28 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `css-architecture.divergenza.md`
+### `wiki/integrations/_da-riconciliare/css-architecture.md` — 📚 Documentazione Finale - Sixteen Theme CSS Architecture
 
-- versione del modulo: `laravel/Modules/Notify/docs/CSS_ARCHITECTURE.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/CSS_ARCHITECTURE.
+
+# 📚 Documentazione Finale - Sixteen Theme CSS Architecture
+
+## Panoramica
+
+Il tema Sixteen utilizza un'architettura CSS ibrida:
+- **Bootstrap Italia** per i componenti PA (Pubblica Amministrazione)
+- **Tailwind CSS** per utility e customizzazioni
+- **Filament CSS** per i componenti admin
+
+## Architettura File
+
+```
+Themes/Sixteen/resources/css/
+├── app.css                    ← File principale
+├── bootstrap-italia.css       ← Definizioni componenti Bootstrap Italia
+├── agid-colors.css            ← Variabili colori AGID
+├── agid-override.css          ← Override specifici
+└── filament/
+    └── theme.css              ← Customizzazioni Filament
 
 ### `wiki/integrations/_da-riconciliare/documentation-ecosystem.divergenza.md` — Divergenza: `DOCUMENTATION_ECOSYSTEM.md`
 
@@ -21866,10 +21028,28 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `documentation-ecosystem.divergenza.md`
+### `wiki/integrations/_da-riconciliare/documentation-ecosystem.md` — Notify Documentation Ecosystem - Visual Map
 
-- versione del modulo: `laravel/Modules/Notify/docs/DOCUMENTATION_ECOSYSTEM.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integ
+
+# Notify Documentation Ecosystem - Visual Map
+# <nome progetto> Documentation Ecosystem - Visual Map
+
+**📍 Complete Bidirectional Links & Cross-References**
+
+---
+
+## 🗺️ Documentation Ecosystem Overview
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│            Notify Fila5 Documentation Ecosystem                 │
+│            <nome progetto> Fila5 Documentation Ecosystem                 │
+│                   (7,137+ Connected Files)                       │
+└──────────────────────────────────────────────────────────────────┘
+
+                        MASTER HUB
+                            ▲
+          ┌─────────────────┼─────────────────┐
 
 ### `wiki/integrations/_da-riconciliare/documentation-governance.divergenza.md` — Divergenza: `DOCUMENTATION_GOVERNANCE.md`
 
@@ -21885,10 +21065,28 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `documentation-governance.divergenza.md`
+### `wiki/integrations/_da-riconciliare/documentation-governance.md` — Documentation Governance Framework
 
-- versione del modulo: `laravel/Modules/Notify/docs/DOCUMENTATION_GOVERNANCE.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki
+
+# Documentation Governance Framework
+
+**Version**: 1.0  
+**Status**: Active  
+**Applies to**: All modules and themes
+
+---
+
+## 🎯 Purpose
+
+This document establishes the governance framework for all documentation in the Notify platform, ensuring consistency, quality, and maintainability across all modules and themes.
+This document establishes the governance framework for all documentation in the <nome progetto> platform, ensuring consistency, quality, and maintainability across all modules and themes.
+
+---
+
+## 📁 Standard Directory Structure
+
+### Module Documentation Structure
+
 
 ### `wiki/integrations/_da-riconciliare/documentation-index.divergenza.md` — Divergenza: `documentation-index.md`
 
@@ -21992,43 +21190,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-### `wiki/integrations/_da-riconciliare/gemini-2.divergenza.md` — Divergenza: `gemini-2.md`
-
-
-# Divergenza: `gemini-2.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/gemini-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/gemini-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/gemini-2.md` — Gemini Rules (Modular)
-
-
-# Gemini Rules (Modular)
-
-Questa documentazione è stata divisa in moduli per una gestione più efficiente del contesto.
-
-## Moduli Regole
-
-- [Boost & MCP Tools](./.agents/docs/main-rules/gemini-boost-mcp.md)
-- [Fondamenta & Contesto](./.agents/docs/main-rules/gemini-foundation.md)
-- [Convenzioni](./.agents/docs/main-rules/gemini-conventions.md)
-- [Best Practices Laravel](./.agents/docs/main-rules/gemini-laravel-best-practices.md)
-- [Specifiche Laravel 12](./.agents/docs/main-rules/gemini-v12.md)
-- [Regole Filament](./.agents/docs/main-rules/gemini-filament.md)
-- [Folio & Volt](./.agents/docs/main-rules/gemini-folio-volt.md)
-
----
-**See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [agents.md](./agents.md)
-- [qwen-2.md](qwen.md)
-
 ### `wiki/integrations/_da-riconciliare/gemini.divergenza.md` — Divergenza: `gemini.md`
 
 
@@ -22063,7 +21224,7 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 ---
 **See also:**
 - [CLAUDE.md](./CLAUDE.md)
-- [AGENTS.md](./AGENTS.md)
+- [agents-2.md](./agents-2.md)
 - [qwen.md](./qwen.md)
 
 ### `wiki/integrations/_da-riconciliare/implementation-summary.divergenza.md` — Divergenza: `IMPLEMENTATION_SUMMARY.md`
@@ -22080,11 +21241,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `implementation-summary.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/IMPLEMENTATION_SUMMARY.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integration
-
 ### `wiki/integrations/_da-riconciliare/implementations-completed.divergenza.md` — Divergenza: `IMPLEMENTATIONS_COMPLETED.md`
 
 
@@ -22099,24 +21255,51 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `implementations-completed.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/IMPLEMENTATIONS_COMPLETED.md`
-- versione recuperata: `laravel/Modules/Notify/doc
-
-### `wiki/integrations/_da-riconciliare/index-2.divergenza.md` — Divergenza: `index-2.md`
+### `wiki/integrations/_da-riconciliare/implementations-completed.md` — ✅ NOTIFY - IMPLEMENTAZIONI COMPLETATE
 
 
-# Divergenza: `index-2.md`
+# ✅ NOTIFY - IMPLEMENTAZIONI COMPLETATE
+# ✅ <nome progetto> - IMPLEMENTAZIONI COMPLETATE
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/index-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+**Data**: 2025-10-01  
+**Sessione**: Gap Analysis & Core Implementation  
+**Status**: 🚀 CRITICAL FEATURES IMPLEMENTED  
 
-- versione del modulo: `laravel/Modules/Notify/docs/index-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/index-2.md`
+---
 
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+## 🎯 OBIETTIVO RAGGIUNTO
 
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+Analizzato lo scopo del progetto, identificate le features mancanti e implementate le funzionalità critiche per trasformare Notify da MVP a piattaforma enterprise-ready.
+Analizzato lo scopo del progetto, identificate le features mancanti e implementate le funzionalità critiche per trasformare <nome progetto> da MVP a piattaforma enterprise-ready.
+
+---
+
+## 📊 SCOPO DEL PROGETTO (Analizzato)
+
+### Business Goal
+
+### `wiki/integrations/_da-riconciliare/index-2.md` — notify — integrations
+
+
+# notify — integrations
+
+Documentation for `notify` module categorized as **integrations**.
+
+## Files
+
+- [`-repos.md`](./-repos.md)
+- [`-todo.md`](./-todo.md)
+- [`.md`](../../../../../Activity/docs/untitled-2.md)
+- [`00-INDEX.md`](./00-index.md)
+- [`00-index.md`](./00-index.md)
+- [`00-INDEX.md`](./00-index.md)
+- [`00-index-1.md`](./00-index-1.md)
+- [`00-index-2.md`](./00-index-2.md)
+- [`00-index.md`](./00-index.md)
+- [`absolute-completion-100.md`](absolute-completion-100.md)
+- [`agents-2.md`](./agents.md)
+- [`agents-2.md`](./agents-2.md)
+- [`agents-2.md`](./agents.md)
 
 ### `wiki/integrations/_da-riconciliare/index-conflict.divergenza.md` — Divergenza: `index-conflict.md`
 
@@ -22228,10 +21411,28 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `locations-standards.divergenza.md`
+### `wiki/integrations/_da-riconciliare/locations-standards.md` — Standard di Posizionamento dei File in Notify
 
-# Divergenza: `locations_standards.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/locations_standards.md`, cancellato dal working tree
+
+# Standard di Posizionamento dei File in Notify
+
+## Organizzazione Directory Principali
+
+| Tipo di File | Percorso Standard | Errori da Evitare |
+|--------------|-------------------|-------------------|
+| **Interfacce/Contratti** | `/app/Contracts/` | ❌ `/app/Actions/*/InterfaceName.php` |
+| **Actions** | `/app/Actions/` | |
+| **Datas** | `/app/Datas/` | ❌ `/app/Data/` (singolare), ❌ `/app/DTOs/` |
+| **Models** | `/app/Models/` | |
+| **Channels** | `/app/Channels/` | |
+
+## Regole Specifiche per le Interfacce
+
+Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, **mai** nelle directory delle implementazioni.
+
+### Corretta Organizzazione delle Interfacce
+
+```
 
 ### `wiki/integrations/_da-riconciliare/master-plan.divergenza.md` — Divergenza: `master-plan.md`
 
@@ -22340,11 +21541,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-## Contenuto fuso da `naming-conventions.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/naming-conventions.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/
-
 ### `wiki/integrations/_da-riconciliare/nested-resources.divergenza.md` — Divergenza: `nested-resources.md`
 
 
@@ -22392,11 +21588,6 @@ Questo file veniva da `docs/wiki/integrations/modules/notify/NOTEBOOKLM_INTEGRAT
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `notebooklm-integration.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/NOTEBOOKLM_INTEGRATION.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integration
 
 ### `wiki/integrations/_da-riconciliare/openviking-integration.divergenza.md` — Divergenza: `openviking-integration.md`
 
@@ -22476,6 +21667,43 @@ Questo file veniva da `docs/wiki/integrations/modules/notify/perfection-plan.md`
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+
+### `wiki/integrations/_da-riconciliare/phpstan-fix-coordination.divergenza.md` — Divergenza: `phpstan-fix-coordination.md`
+
+
+# Divergenza: `phpstan-fix-coordination.md`
+
+Questo file veniva da `phpstan-fix-coordination.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+
+- versione del modulo: `laravel/Modules/Notify/docs/phpstan-fix-coordination.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/phpstan-fix-coordination.md`
+
+Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+
+Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+
+### `wiki/integrations/_da-riconciliare/phpstan-fix-coordination.md` — PHPStan Fix Coordination Plan
+
+
+# PHPStan Fix Coordination Plan
+
+**Project:** Base Notify Fila5  
+**Project:** Base FixCity Fila5  
+**Date:** April 1, 2026  
+**Method:** BMAD-METHOD with Multi-Agent Collaboration
+
+## Overview
+
+This document coordinates the PHPStan Level Max fix effort across all Laravel modules using parallel AI agents.
+
+## Current Status
+
+### Analysis Complete (Batch 1)
+- ✅ **Modules Analyzed:** Activity, AI, Blog, Cms, Comment, App, Gdpr
+- ✅ **Total Errors:** 13 errors
+- ✅ **Modules Affected:** Blog (4), Cms (9)
+- ✅ **Clean Modules:** Activity, AI, Comment, App, Gdpr
+- ✅ **Modules Analyzed:** Activity, AI, Blog, Cms, Comment, Fixcity, Gdpr
 
 ### `wiki/integrations/_da-riconciliare/prd.divergenza.md` — Divergenza: `prd.md`
 
@@ -22601,34 +21829,6 @@ Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la no
 
 Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
-### `wiki/integrations/_da-riconciliare/qwen-2.divergenza.md` — Divergenza: `qwen-2.md`
-
-
-# Divergenza: `qwen-2.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/qwen-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/qwen-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/qwen.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/qwen.divergenza.md` — Divergenza: `qwen.md`
-
-
-# Divergenza: `qwen.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/qwen.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/qwen.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/qwen.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
 ### `wiki/integrations/_da-riconciliare/qwen.md` — Qwen Added Memories (Modular)
 
 
@@ -22644,50 +21844,31 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
 - [Regole Critiche](../../../ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/App/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/App/
+- [Filament Wizard Rule](./laravel/Modules/<nome progetto>/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
+- [Module Boundary Philosophy](./laravel/
 
-### `wiki/integrations/_da-riconciliare/readme-en.divergenza.md` — Divergenza: `readme-en.md`
-
-
-# Divergenza: `readme-en.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/readme-en.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/readme-en.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/readme-en.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/refactoring-completato.divergenza.md` — Divergenza: `refactoring-completato.md`
+### `wiki/integrations/_da-riconciliare/replikate-phase-1-complete.md` — 🎉 REPLIKATE Phase 1 - COMPLETE
 
 
-# Divergenza: `refactoring-completato.md`
+# 🎉 REPLIKATE Phase 1 - COMPLETE
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/refactoring-completato.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
-- versione del modulo: `laravel/Modules/Notify/docs/refactoring-completato.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/refactoring-completato.md`
+**Date**: 2026-04-07  
+**Status**: ✅ **PHASE 1 STRUCTURAL ANALYSIS COMPLETE**
 
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+---
 
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+## 📊 What Was Accomplished
 
-### `wiki/integrations/_da-riconciliare/research.divergenza.md` — Divergenza: `research.md`
-
-
-# Divergenza: `research.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/research.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/research.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/research.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
+### 1. Autonomous HTML Analysis
+- ✅ Extracted body HTML from reference (72,845 bytes)
+- ✅ Extracted body HTML from local (102,030 bytes)
+- ✅ Analyzed structure without formatting focus
 
 ### `wiki/integrations/_da-riconciliare/research.md` — User Research - Notify Platform
 
@@ -22708,219 +21889,91 @@ Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 - **Laravel Ecosystem**: Analisi di pacchetti come *Laravel Spark* (billing), *October CMS* (modularità) e *Filament* (UI). Notify si differenzia per l'integrazione profonda di multi-tenancy e analisi statica Level 10 nativa.
 - **Enterprise
 
-### `wiki/integrations/_da-riconciliare/reusabilitylines.divergenza.md` — Divergenza: `reusabilitylines.md`
+### `wiki/integrations/_da-riconciliare/session-007-summary.md` — SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
 
 
-# Divergenza: `reusabilitylines.md`
+# SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
+## Researcher Agent Summary
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/reusabilitylines.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/reusabilitylines.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/reusabilitylines.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/reusabilitylines.md` — Linee Guida per la Riusabilità del Modulo Notify
-
-
-# Linee Guida per la Riusabilità del Modulo Notify
-
-## Principio Fondamentale
-Il modulo Notify è progettato per essere **completamente riutilizzabile** tra diversi progetti Laraxot. Questo significa che NON deve mai contenere riferimenti hardcoded a progetti specifici.
-
-## Regole Critiche per la Riusabilità
-
-### 1. NO Hardcoding di Nomi Progetti
-❌ **MAI usare stringhe hardcoded di progetti specifici:**
-```php
-// ERRORE: Hardcoding del nome progetto
-$user = \Modules\<nome progetto>\Models\User::factory()->create();
-'database' => '<nome progetto>_test',
-$this->app['config']->set('database.connections.<nome progetto>_test', [
-$user = \Modules\App\Models\User::factory()->create();
-'database' => 'app_test',
-$this->app['config']->set('database.connections.app_test', [
-$user = \Modules\<nome pro
-
-### `wiki/integrations/_da-riconciliare/sessione-completa.divergenza.md` — Divergenza: `SESSIONE_COMPLETA.md`
-
-
-# Divergenza: `SESSIONE_COMPLETA.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/SESSIONE_COMPLETA.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/sessione-completa-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/sessione-completa-2.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `sessione-completa.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/SESSIONE_COMPLETA.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/SESSIONE_CO
-
-### `wiki/integrations/_da-riconciliare/sprint.divergenza.md` — Divergenza: `sprint.md`
-
-
-# Divergenza: `sprint.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/sprint.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/sprint.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/sprint.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/sprint.md` — Sprint Planning Meeting - Notify Platform
-
-
-# Sprint Planning Meeting - Notify Platform
-# Sprint Planning Meeting - <nome progetto> Platform
-
-> **Version**: 1.0.0
-> **Last Updated**: 2026-03-13
-> **Status**: Active
-
-## 1. Sprint Goal
-L'obiettivo attuale è il consolidamento della documentazione di prodotto su tutti i moduli e temi, applicando lo standard Lean PRD 2025-2026 per migliorare la manutenibilità e la chiarezza del progetto.
-
-## 2. Active Tasks
-- [ ] Creazione/Aggiornamento `prd.md` per ogni modulo.
-- [ ] Creazione/Aggiornamento `roadmap.md` per ogni modulo.
-- [ ] Implementazione `strategy.md`, `research.md`, `launch.md`, `sprint.md`.
-- [ ] Eliminazione file ridondanti con nomi estesi.
-
-## 3. Definition of Done (DoD)
-Un task è considerato 'Done' solo se:
-- [ ] Il file è presente nel percorso `docs/` del modulo/tema.
-
-### `wiki/integrations/_da-riconciliare/structure-standards.divergenza.md` — Divergenza: `structure-standards-2.md`
-
-
-# Divergenza: `structure-standards-2.md`
-
-Questo file veniva da `../../../structure-standards-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/structure-standards-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/structure-standards-2.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `structure-standards.divergenza.md`
-
-# Divergenza: `structure_standards.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/structure_standards.md`, cancellato dal working tree
-
-### `wiki/integrations/_da-riconciliare/supermemory-quickstart.divergenza.md` — Divergenza: `supermemory-quickstart-3.md`
-
-
-# Divergenza: `supermemory-quickstart-3.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/supermemory-quickstart-3.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/supermemory-quickstart-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/supermemory-quickstart.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `supermemory-quickstart.divergenza.md`
-
-# Divergenza: `SUPERMEMORY_QUICKSTART.md`
-Questo file veniva da `docs/wiki/integrations/modules/notify/SUPERME
-
-### `wiki/integrations/_da-riconciliare/theme-architecture.divergenza.md` — Divergenza: `THEME_ARCHITECTURE.md`
-
-
-# Divergenza: `THEME_ARCHITECTURE.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/THEME_ARCHITECTURE.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/theme-architecture-2.md`
-- versione recuperata: `laravel/Modules/Notify/docs/theme-architecture-2.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-## Contenuto fuso da `theme-architecture.divergenza.md`
-
-- versione del modulo: `laravel/Modules/Notify/docs/THEME_ARCHITECTURE.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/THEME
-
-### `wiki/integrations/_da-riconciliare/token-optimization.divergenza.md` — Divergenza: `token-optimization.md`
-
-
-# Divergenza: `token-optimization.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/token-optimization.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/token-optimization.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/token-optimization.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/verifica-homepage.divergenza.md` — Divergenza: `verifica-homepage.md`
-
-
-# Divergenza: `verifica-homepage.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/verifica-homepage.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/verifica-homepage.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/verifica-homepage.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/vhost-configuration.divergenza.md` — Divergenza: `vhost-configuration.md`
-
-
-# Divergenza: `vhost-configuration.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/vhost-configuration.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/vhost-configuration.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/vhost-configuration.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
-### `wiki/integrations/_da-riconciliare/zen.divergenza.md` — Divergenza: `ZEN.md`
-
-
-# Divergenza: `ZEN.md`
-
-Questo file veniva da `docs/wiki/integrations/modules/notify/ZEN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
-
-- versione del modulo: `laravel/Modules/Notify/docs/ZEN.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/ZEN.md`
-
-Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
-
-Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
-
+**Session Date**: 2026-04-08  
+**Agent Role**: Researcher (BMAD Mode C - Opzione C)  
+**Scope**: <nome progetto> Sixteen Theme - Phase 1 HTML Parity (segnalazioni-elenco)  
+**Status**: 🟠 EXECUTION IN PROGRESS
 
 ---
 
-## Contenuto assorbito da `zen-2.divergenza.md`
+## 📊 SESSION WORK COMPLETED
 
-# Divergenza: `zen-of-ptv.md`
+### 1. EXECUTION ORCHESTRATION
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/zen-of-ptv.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome
+✅ **Launched Executor #1 - Subtask 1**
+- Command: `./bashscripts/body/html-structure-compare.sh segnalazioni-elenco`
+- Status: Running (started 07:41 UTC, ~5.5 min elapsed, ~15-20 min expected)
+- Agent ID: executor-phase1-subtask1
+- Expected Output: comparison-report.json, parity-summary.txt, HTML extracts
+
+### `wiki/integrations/_da-riconciliare/start-here-replikate-phase2.md` — 🚀 START HERE - REPLIKATE Phase 2
+
+
+# 🚀 START HERE - REPLIKATE Phase 2
+
+> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
+> arrivano nella document root con un symlink, non con una copia. Per il
+> procedimento valido vedi
+> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
+> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+
+**Status**: Phase 1 Analysis Complete ✅  
+**Your Job**: Execute Phase 2 - HTML Structure Fixes ⏳  
+**Time Estimate**: ~50 minutes
+
+---
+
+## 📍 You Are Here
+
+```
+REPLIKATE Project Lifecycle
+├── Phase 1: Analysis ✅ COMPLETE
+
+### `wiki/integrations/_da-riconciliare/support-to-actions-philosophy.md` — da Support a Actions: Filosofia
+
+
+# da Support a Actions: Filosofia
+
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](wiki/concepts/no-app-support-queueable-actions.md).
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
+
+## Principio (post-migrazione)
+
+Tutta la logica di dominio vive in **`app/Actions/`** (Spatie `QueueableAction` + `execute()`).
+
+| Tipo | Path canonico |
+|------|----------------|
+| 
+
+### `wiki/integrations/_da-riconciliare/trans-choice-dry-religion.md` — TransChoice DRY: La Religione dell'Unica Fonte di Verita
+
+
+# TransChoice DRY: La Religione dell'Unica Fonte di Verita
+
+**Status**: Active  
+**Created**: 2026-04-14  
+**Last Updated**: 2026-04-14  
+**Category**: Architecture / Religion / i18n / DRY  
+**Audience**: All developers + AI agents
+
+---
+
+## LA REGOLA AUREA
+
+**UNA chiave `trans_choice` gestisce TUTTI i casi (0, 1, molti).**
+
+**MAI** creare chiavi separate per ogni caso.  
+**MAI** duplicare traduzioni.  
+**SEMPRE** usare `{0}`, `{1}`, `[2,*]` in UNA chiave.
+
+---
 
 ### `wiki/integrations/_da-riconciliare/zen.md` — 🧘 Zen of <nome progetto> - Complete Philosophy
 
@@ -23057,29 +22110,6 @@ Consolidated from **15** individual files.
 - [Conflict Resolution — Module Notify](#conflict-resolution)
 - [Risoluzione Conflitti RecordNotification.php](#conflict_resolution_recordnotification)
 - [Risoluzione Conflitti SendSmsPage.php
-
-### `wiki/integrations/contact-consolidated.md` — contact — Consolidated Documentation
-
-
-# contact — Consolidated Documentation
-
-Consolidated from **7** individual files.
-
-## Table of Contents
-
-- [Correzione Errori ContactColumn - Modulo Notify](#contact-column-error-fix)
-- [ContactColumn Icon Issue - Analisi e Risoluzione](#contact-column-icon)
-- [ContactColumn - Implementazione DRY/KISS Centralizzata](#contact-column-implementation)
-- [Correzione Errori ContactColumn - Modulo Notify](#contact-column)
-- [ContactTypeEnum Integration Guide](#contact-enum-integration)
-- [Pattern DRY: Estrazione Attributi Contatti da Modelli](#contact-extraction)
-- [ERRORI CRITICI ContactColumn.php - Anti-Pattern da NON Ripetere MAI](#contactcolumn-antis-ands)
-
----
-
-## contact-column-error-fix
-
-*Consolidated from: `contact-column-error-fix.md`*
 
 ### `wiki/integrations/database-consolidated.md` — database — Consolidated Documentation
 
@@ -23256,10 +22286,10 @@ Consolidated from **13** individual files.
 - [---](#interface-structure-clarification-2)
 - [Chiarimento sulla Struttura delle Interfacce](#interface-structure-clarification)
 - [interface naming convention](#interface_naming_convention)
+- [<<<<<<< HEAD](#interface_naming_convention)
 - [Chiarimento sulla Struttura delle Interfacce ](#interface_structure_clarification)
 - [Guida all'Implementazione delle Interfacce nel Modulo Notify](#interfaces-implementation-guide-1)
-- [---](#interfaces-implementation-guide-2)
-- [Guida all'Impleme
+- [---](#interfac
 
 ### `wiki/integrations/logging-consolidated.md` — logging — Consolidated Documentation
 
@@ -23617,7 +22647,8 @@ Consolidated from **12** individual files.
 - [https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96](#whatsapp)
 - [Implementazione Canale WhatsApp](#whatsapp_channel)
 - [whatsapp integration](#whatsapp_integration)
-- [Standard per Invio Messaggi WhatsApp nel Modulo Notify](#whatsapp_sending_standard)
+- [<<<<<<< HEAD](#whatsapp_integration)
+- [Standard per Invio Messaggi WhatsApp nel Mo
 
 ### `wiki/integrations/xot-consolidated.md` — xot: Consolidated Documentation
 
@@ -23642,51 +22673,34 @@ Consolidated from **11** individual files.
 
 ---
 
-### `wiki/memories/merge-collision-notify-lessons.md` — Lezioni merge — modulo Notify
+### `wiki/llm-wiki/concepts/module-test-location-rule.md` — Regola: I Test Appartengono al Modulo
 
 
-# Lezioni merge — modulo Notify
+# Regola: I Test Appartengono al Modulo
 
-## SVG (`resources/svg/`)
+## Principio Fondamentale
 
-| Lato conflitto | Contenuto | Scelta |
-|----------------|-----------|--------|
-| HEAD | XML SVG | **Tenere** |
-| Incoming | Riga `git-lfs.github.com/spec/v1` | Scartare nel working tree mono (asset inline) |
+In Laraxot, ogni modulo è un **bounded context autonomo**. I test di un modulo devono stare
+**dentro** il modulo, non nell'applicazione host.
 
-## Filament `*Table.php`
+```
+✅ CORRETTO
+laravel/Modules/Notify/tests/Feature/ContactTest.php
+laravel/Modules/Notify/tests/Unit/Actions/SendEmailTest.php
 
-**Canon (sempre):** `public function getTableColumns(): array` — filosofia Filament + `XotBaseResourceTable`.
+❌ SBAGLIATO
+tests/Feature/ContactTest.php          ← root del progetto (conductor)
+laravel/tests/Feature/ContactTest.php  ← Laravel app host
+```
 
-| Lato merge | Firma | Azione |
-|------------|-------|--------|
-| HEAD | `static` | Rimuovere `static` |
-| Incoming / canon | `public function` | **Obbligatorio** |
-
-Corpo colonne (chiavi stringa): di solito da HEAD.
-
-### `wiki/migrations/notifications-table-2.md` — notifications — migrazione
+## Struttura Corretta
 
 
-# notifications — migrazione
-
-**File:** `2026_06_10_133000_create_notifications_table.php`  
-**Base:** `XotBaseMigration` (mai `Migration`)  
-**model_class:** `Modules\User\Models\Notification` → DB `fixcity_user`
-
-Contratto: [notifications-database-contract.md](../concepts/notifications-database-contract.md)
-
-### `wiki/migrations/notifications-table.md` — notifications — migrazione
+### `wiki/module-purpose.md` — Notify — Scopo modulo
 
 
-# notifications — migrazione
-
-**File:** `2026_06_10_133000_create_notifications_table.php`  
-**Base:** `XotBaseMigration` (mai `Migration`)  
-**model_class:** `Modules\User\Models\Notification` → DB `fixcity_user`
-**model_class:** `Modules\User\Models\Notification` → DB `app_user`
-
-Contratto: [notifications-database-contract.md](../concepts/notifications-database-contract.md)
+# Notify — Scopo modulo
+Notifiche multicanale: email (MailTemplate), SMS, push, WhatsApp, Telegram. Job `SendNotificationJob`, Actions `SendNotificationAction` / `SendPushToDevicesAction`. Panel Filament con plugin SpatieTranslatable.
 
 ### `wiki/modules/ai-module.md` — AI Module
 
@@ -23695,9 +22709,8 @@ Contratto: [notifications-database-contract.md](../concepts/notifications-databa
 
 > Updated: 2026-04-15
 > Sources: [../../../laravel/Modules/AI/docs/README.md](../../../laravel/Modules/AI/docs/README.md), [../../../laravel/Modules/AI/docs/structure.md](../../../laravel/Modules/AI/docs/structure.md)
-> Raw: [../../../laravel/Modules/AI/docs/mcp.md](../../ai-agents/mcp.md), [../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md](../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md), [../../../laravel/Modules/AI/docs/ollama-strategy.md](../../../laravel/Modules/AI/docs/ollama-strategy.md)
-> Sources: [../../../laravel/Modules/AI/docs/README.md](../../../../AI/docs/README.md), [../../../laravel/Modules/AI/docs/structure.md](../../../../AI/docs/structure.md)
-> Raw: [../../../laravel/Modules/AI/docs/mcp.md](../../../../AI/docs/mcp.md), [../.
+> Raw: [../../../laravel/Modules/AI/docs/mcp.md](../../../laravel/Modules/AI/docs/mcp.md), [../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md](../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md), [../../../laravel/Modules/AI/docs/ollama-strategy.md](../../../laravel/Modules/AI/docs/ollama-strategy.md)
+> Raw: [../../../laravel/Modules/AI/docs/mcp.md](../../ai-agents/mcp.md), [../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md](../../../laravel/Modules/AI/docs/mcp/mcp-integration-overview.md), [../../../laravel/Modules/AI
 
 ### `wiki/notification-preview-fix.md` — Notifica — Fix Blade preview (scopo: anteprima mail notifica)
 
@@ -23708,142 +22721,47 @@ Contratto: [notifications-database-contract.md](../concepts/notifications-databa
 - Correzione: rimosso residuo, ripristinato `{!! $this->record->body_html !!}`.
 - Lezione (BMAD): mai mescolare generazione shell (cat <<) con Blade.
 
-### `wiki/overview.md` — Wiki Overview
+### `wiki/quick-reference.md` — LLM Wiki Quick Reference
 
 
-# Wiki Overview
+# LLM Wiki Quick Reference
 
-> **Purpose**: High-level synthesis of the entire wiki's knowledge
-> **Scope**: Project-wide concepts, entities, and decisions
-> **Updated**: 2026-04-15
+> **Based on**: Karpathy's LLM Wiki pattern
+> **Purpose**: Quick reference for daily wiki operations
 
-## What is This Wiki?
-## Architecture
-### Three-Layer Model
-### Directory Structure
-## Progetto: FixCity (base_fixcity_fila5)
-### Mapping Karpathy → FixCity
-### Mapping Karpathy → FixCity
-## Current State
-## Next Steps
-### Priorità 1: Moduli rimanenti
-### Priorità 2: Moduli secondari
-### Priorità 3: Active Usage
-### Priorità 3: Active Usage
-
-### `wiki/phpstan-analysis-gennaio.md` — Analisi PHPStan Completa - Gennaio 2025
-
-
-# Analisi PHPStan Completa - Gennaio 2025
-
-## Panoramica
-Documentazione completa dell'analisi e correzione di tutti gli errori PHPStan nel progetto base_fixcity_fila5_mono, raggiungendo il livello massimo di analisi statica.
-
-## Risultati Finali
-- **Errori iniziali**: 30
-- **Errori finali**: 0
-- **Livello PHPStan**: max
-- **Status**: ✅ Completato con successo
-
-## Moduli Analizzati e Corretti
-
-### 1. Modulo Cms
-- **File modificati**: 4
-- **Errori risolti**: 8
-- **Documentazione**: [Cms PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2.md)
-
-**Principali correzioni**:
-
-### `wiki/product/_da-riconciliare/inbound-keting-strategy.md` — Strategia Inbound Marketing - App
-
-
-# Strategia Inbound Marketing - App
-# Strategia Inbound Marketing - TechPlanner
-**Module**: Notify
-**Scope**: Strategia inbound marketing per lead generation
-
----
-
-## 📋 Sommario Esecutivo
-
-Il sito target ha una base di inbound marketing decente con lead magnets e newsletter, ma manca un sistema automatizzato completo di lead nurturing. Il nostro sito Laravel deve implementare una strategia inbound marketing completa per convertire visitatori in clienti.
-
----
-
-## 🎯 Funnel di Conversione Inbound
-
-### Stage 1: Attract (Attrazione)
-
-**Contenuti di Attraction**:
-1. **Blog Posts** - 2-4 articoli/mese
-
-### `wiki/product/_da-riconciliare/inbound-marketing-strategy.md` — Strategia Inbound Marketing - App
-
-
-# Strategia Inbound Marketing - App
-# Strategia Inbound Marketing - TechPlanner
-**Data**: 7 Febbraio 2026
-**Module**: Notify
-**Scope**: Strategia inbound marketing per lead generation
-
----
-
-## 📋 Sommario Esecutivo
-
-Il sito target ha una base di inbound marketing decente con lead magnets e newsletter, ma manca un sistema automatizzato completo di lead nurturing. Il nostro sito Laravel deve implementare una strategia inbound marketing completa per convertire visitatori in clienti.
-
----
-
-## 🎯 Funnel di Conversione Inbound
-
-### Stage 1: Attract (Attrazione)
-
-**Contenuti di Attraction**:
-
-### `wiki/resource-table-columns.md` — Resource table columns
-
-
-# Resource table columns
-
-## BMAD story and evidence
-
-As an administrator I need identifiable records and operational state without oversized technical columns. Acceptance: string-keyed `array<string, Column>`, fields backed by models and migrations (or Sushi schemas), sortable dates, optional technical details.
-
-NotificationLog uses channel/status/notifiable identifiers rather than name. Notification migrations guarantee type, notifiable pair, read_at/data; status and sent_at only in PHPDoc are insufficient evidence. Contact uses contact_type/value and first_name/last_name, not generic name/email/phone.
-
-Sources: `app/Models`, `database/migrations`, existing resource `Pages/List*.php` and `Tables/*Table.php`. QMD query attempted before editing: unavailable because better-sqlite3 ABI 127 
-
-### `wiki/rules/frontend-stack-canonical.md` — Stack frontend — modulo Notify
-
-
-# Stack frontend — modulo Notify
-
-## Mantra progetto
+## Directory Structure
 
 ```
-Tailwind CSS v4 + Alpine.js v3 + Lit v3 + DaisyUI v5 + Flowbite + Filament v5 + Vite
-```
+docs/
+├── raw/              # IMMUTABLE sources (never modify)
+│   ├── articles/     # Web articles
+│   ├── papers/       # Academic papers
+│   └── data/         # Structured data
+│
+└── wiki/             # LLM-generated knowledge
+    ├── concepts/     # Topic pages
+    ├── entities/     # People/orgs/modules
+    ├── sources/      # Source summaries
+    ├── comparisons/  # Analysis pages
 
-Notifiche e UI Filament Notify: stack admin **Filament v5**. FO email/template segue tema. **NO** Bootstrap.
+### `wiki/repos.md` — repos
 
-## SSoT
 
-- [Themes/Sixteen/docs/wiki/rules/frontend-stack-canonical.md](../../../../../Themes/Sixteen/docs/wiki/rules/frontend-stack-canonical.md)
-- [docs/wiki/rules/frontend-stack-canonical.md](../../../../../docs/wiki/rules/frontend-stack-canonical.md)
-
-## Story
-
-[STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md)
+-------------------------------------------------------------
+Add Simple Facet Filtering in Your Laravel Applications
+https://codebrisk.com/blog/add-simple-facet-filtering-in-your-laravel-applications
+composer require mgussekloo/laravel-facet-filter
+-------------------------------------------------------------
 
 ### `wiki/schema.md` — LLM Wiki Schema — FixCity
 
 
 # LLM Wiki Schema — FixCity
 
-Questo file è il "agents.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
 # LLM Wiki Schema — Notify
 
-Questo file è il "agents.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
 
 ---
 
@@ -23858,28 +22776,25 @@ discussions: []
 ## Regole Fondamentali
 
 
-### `wiki/session-summary.md` — LLM Wiki Integration - Session Summary
+### `wiki/theme/sixteen/analysis/body-structure-parity.md` — Body Structure Parity Bridge
 
 
-# LLM Wiki Integration - Session Summary
+# Body Structure Parity Bridge
 
-> **Date**: 2026-04-15
-> **Based on**: Karpathy's LLM Wiki pattern
-> **Source**: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
-> **Status**: ✅ Complete and Committed
+This note links the agnostic comparison tooling in `bashscripts` with the Sixteen theme parity reports.
 
-## What Was Done
+## Agnostic tools
+- [`bashscripts/html/html-structure-compare.sh`](../../../../bashscripts/html/html-structure-compare.sh)
+- [`bashscripts/html/compare-html-body.py`](../../../../bashscripts/html/compare-html-body.py)
+- [`bashscripts/html/README.md`](../../../../bashscripts/html/README.md)
 
-### 1. ✅ Research and Analysis
+## Theme outputs
+- [`laravel/Themes/Sixteen/docs/body-structure-comparison/`](../../../../laravel/Themes/Sixteen/docs/body-structure-comparison/)
+- [`laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/`](../../../../laravel/Themes/Sixteen/docs/prompts/segnalazione_disservizio/)
 
-- Studied Karpathy's LLM Wiki concept from multiple sources
-- Analyzed the three-layer architecture (raw/wiki/schema)
-- Understood ingest/query/lint workflows
-- Mapped Karpathy's structure to our Laraxot project conventions
-
-### 2. ✅ Project-Wide Wiki Structure
-
-Created complete wiki structure in `./docs/wiki/`:
+## Rule
+- `bashscripts` contains reusable tooling only.
+- The Sixteen theme docs
 
 ### `wiki/theme/sixteen/analysis/homepage-comparison.md` — Homepage Comparison Analysis
 
@@ -23904,10 +22819,10 @@ This document analyzes the HTML structure differences between:
 
 1. **Header/Navigation**
 
-### `wiki/theme/sixteen/analysis/status.md` — Homepage CSS/JS Fix - Status
+### `wiki/theme/sixteen/analysis/results.md` — Homepage Visual Comparison - RESULTS
 
 
-# Homepage CSS/JS Fix - Status
+# Homepage Visual Comparison - RESULTS
 
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
@@ -23915,17 +22830,40 @@ This document analyzes the HTML structure differences between:
 > [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
 > Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
-## Build Completo
+## Comparison Screenshots
 
-**Data**: 2026-04-07
+### Desktop Viewport (800px width)
 
-### Comandi Eseguiti
+| Reference | Local |
+|-----------|-------|
+| ![Reference](/tmp/ref-800.png) | ![Local](/tmp/local-800.png) |
 
-```bash
-cd laravel/Themes/Sixteen
-npm run build    # ✓ Completato
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-```
+## Status: ✓ COMPLETED (~90% Match)
+
+### What Was Fixed:
+
+### `wiki/theme/sixteen/analysis/visual-comparison.md` — Homepage Visual Comparison - CSS Fixes Required
+
+
+# Homepage Visual Comparison - CSS Fixes Required
+
+## Screenshots Analysis
+
+### Reference (Bootstrap Italia)
+- Header with blue background (#0066CC)
+- Hero with news card + image + search
+- Argomenti section with blue background  
+- Servizi cards with orange background
+- Footer with yellow background
+
+### Local (Tailwind + Alpine)
+- Header without blue background
+- Same hero structure
+- Args section with white background
+- Servizi with white cards
+- Different footer
+
+## Required CSS Fixes
 
 ### `wiki/topics/00-index.md` — Topic 00-index
 
@@ -23955,7 +22893,7 @@ _Fonte: `00-index.md`_
 
 # Topic absolute-completion
 
-Sintesi automatica di 7 documenti (chiave `absolute-completion`).
+Sintesi automatica di 6 documenti (chiave `absolute-completion`).
 
 ## 🏆 FIXCITY - COMPLETAMENTO ASSOLUTO 100%
 
@@ -23978,11 +22916,11 @@ tags: [documentation]
 
 # Topic acronym-naming
 
-Sintesi automatica di 6 documenti (chiave `acronym-naming`).
+Sintesi automatica di 4 documenti (chiave `acronym-naming`).
 
 ## Convenzioni di Naming per Acronimi
 
-_Fonte: `acronym-naming-conventions-1.md`_
+_Fonte: `acronym-naming-conventions.md`_
 
 # Convenzioni di Naming per Acronimi
 
@@ -24037,38 +22975,15 @@ Stub **DRY**: policy nella wiki di progetto; discussione e ragionamenti in GitHu
 ## Link operativi (relativi al repo)
 
 - Regola canonica: [../../../../docs/wiki/rules/validation-post-edit-rule.md](../../../../docs/wiki/rules/validation-post-edit-rule.md)
-- How-to issue ↔ wiki: [../../../../bashscripts/ai/wiki/how-to/git-github.md#github-issue-agent-discipline](../../../../bashscripts/ai/wiki/how-to/git-github.md#github-issue-agent-discipline)
-- Prompt LLM: [../../../../bashscripts/tools/prompts/llm-wiki.txt](../../../../bashsc
-
-### `wiki/topics/agid-analysis.md` — Topic agid-analysis
-
-
-# Topic agid-analysis
-
-Sintesi automatica di 3 documenti (chiave `agid-analysis`).
-
-## 🏛️ AGID Analysis & Implementation Report
-
-_Fonte: `project_docs/roadmaps/agid-analysis-implementation-02.md`_
-
-# 🏛️ AGID Analysis & Implementation Report
-
-**Date**: 2025-10-02T20:19:00+02:00  
-**Task**: Study design-comuni-pagine-statiche and implement missing features  
-**Status**: ✅ **ANALYSIS COMPLETE + COMPONENTS IMPLEMENTED**  
-**User Request**: *"studia a fondo design-comuni-pagine-statiche, documenta tutto, implementa le cose mancanti"*
-
----
-
-title: "agid analysis implementation 2025 10 02"
-type: note
+- How-to issue ↔ wiki: [../../../../docs/wiki/how-to/github-issue-agent-discipline.md](../../../../docs/wiki/how-to/github-issue-agent-discipline.md)
+- Prompt LLM: [../../../../bashscripts/tools/prompts/llm-wiki.txt](../../../../bashscripts/tools/prompts/llm-wiki.txt) §3 (FLVP
 
 ### `wiki/topics/agnostic-documentation.md` — Topic agnostic-documentation
 
 
 # Topic agnostic-documentation
 
-Sintesi automatica di 4 documenti (chiave `agnostic-documentation`).
+Sintesi automatica di 3 documenti (chiave `agnostic-documentation`).
 
 ## Agnostic Documentation Rule
 
@@ -24201,35 +23116,12 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "analisi completa 2025 10 01"
 
-### `wiki/topics/analisi-dettagliata.md` — Topic analisi-dettagliata
-
-
-# Topic analisi-dettagliata
-
-Sintesi automatica di 10 documenti (chiave `analisi-dettagliata`).
-
-## Analisi Dettagliata del Modulo Notify - Parte 1: Architettura e Struttura
-
-_Fonte: `analisi-dettagliata-1.md`_
-
-# Analisi Dettagliata del Modulo Notify - Parte 1: Architettura e Struttura
-
-## 1. Architettura del Sistema
-
-### 1.1 Struttura del Modulo
-Il modulo Notify è organizzato seguendo i principi di Domain-Driven Design (DDD) e Clean Architecture. La struttura è stata progettata per garantire:
-- Separazione delle responsabilità
-- Facilità di manutenzione
-- Scalabilità
-- Testabilità
-- Riutilizzo del codice
-
 ### `wiki/topics/analisi-metodi.md` — Topic analisi-metodi
 
 
 # Topic analisi-metodi
 
-Sintesi automatica di 7 documenti (chiave `analisi-metodi`).
+Sintesi automatica di 4 documenti (chiave `analisi-metodi`).
 
 ## 📚 INDICE COMPLETO - Analisi Metodi Duplicati
 
@@ -24243,7 +23135,7 @@ _Fonte: `analisi-metodi-duplicati-index.md`_
 ## 🎯 Documenti Principali (START HERE!)
 
 ### 1. 🏆 MASTER EDITION - Il Documento Definitivo
-📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-master.md)
+📄 **File:** [analisi-metodi-duplicati-master-2.md](./analisi-metodi-duplicati-master.md)
 
 **Contenuto:**
 
@@ -24252,34 +23144,33 @@ _Fonte: `analisi-metodi-duplicati-index.md`_
 
 # Topic appointment-field
 
-Sintesi automatica di 5 documenti (chiave `appointment-field`).
+Sintesi automatica di 4 documenti (chiave `appointment-field`).
 
 ## Appointment Field Naming Issues
 
-_Fonte: `appointment-field-naming-issues-1.md`_
+_Fonte: `appointment-field-naming-issues.md`_
 
 # Appointment Field Naming Issues
 
 ## Overview
 
+The Appointment model in  module defines both legacy field names (`start_time`, `end_time`) and canonical field names (`starts_at`, `ends_at`). The canonical field names `starts_at` and `ends_at` should be used consistently throughout the codebase.
 The Appointment model in <nome progetto> module defines both legacy field names (`start_time`, `end_time`) and canonical field names (`starts_at`, `ends_at`). The canonical field names `starts_at` and `ends_at` should be used consistently throughout the codebase.
 
 ## Issues Detected
 
-### SendAppointmentNotificationAction.php.old
-
-**File Path**: `Modules/Notify/app/Actions/SendAppointmentNotificationAction.php.old`
+### SendAppointmentNotificationAction.php.
 
 ### `wiki/topics/architecture-analysis.md` — Topic architecture-analysis
 
 
 # Topic architecture-analysis
 
-Sintesi automatica di 5 documenti (chiave `architecture-analysis`).
+Sintesi automatica di 4 documenti (chiave `architecture-analysis`).
 
 ## FIXCITY ARCHITECTURE DEEP DIVE ANALYSIS
 
-_Fonte: `architecture-analysis-2.md`_
+_Fonte: `architecture-analysis.md`_
 
 # FIXCITY ARCHITECTURE DEEP DIVE ANALYSIS
 
@@ -24292,29 +23183,6 @@ _Fonte: `architecture-analysis-2.md`_
 **Generated**: 2025-10-01
 **Project**: FixCity Civic Engagement Platform
 **Architecture**: Nwidart + Laraxot Modular Monolith
-
-### `wiki/topics/architecture-diagrams.md` — Topic architecture-diagrams
-
-
-# Topic architecture-diagrams
-
-Sintesi automatica di 4 documenti (chiave `architecture-diagrams`).
-
-## Architecture Diagrams & Visual Reference
-
-_Fonte: `architecture-diagrams.md`_
-
-# Architecture Diagrams & Visual Reference
-
-**📍 Cross-References:**
-- [← Back to Master Index](master-documentation-index.md)
-- [Code Quality Analysis](CODE_QUALITY_ANALYSIS.md)
-- [Module Dependencies](#module-dependencies)
-- [Theme Architecture](#theme-architecture)
-- [Data Flow](#data-flow)
-
----
-
 
 ### `wiki/topics/architecture.md` — Topic architecture
 
@@ -24344,11 +23212,11 @@ For strict coding standards, Filament extension rules, and PHPStan guidelines, p
 
 # Topic attachments-usage
 
-Sintesi automatica di 4 documenti (chiave `attachments-usage`).
+Sintesi automatica di 3 documenti (chiave `attachments-usage`).
 
 ## Utilizzo Corretto degli Allegati nelle Email Spatie
 
-_Fonte: `email-sending/attachments-usage-1.md`_
+_Fonte: `email-sending/attachments-usage-2.md`_
 
 # Utilizzo Corretto degli Allegati nelle Email Spatie
 
@@ -24477,35 +23345,12 @@ This document describes the `ChannelEnum`, an enumeration (Enum) defining the va
 
 To centralize the definition of notification channels, improving maintainability, readability, and type safety compared to using raw string constants. It integrates with Filament by implementing the `HasLabel` contract for user-friendly 
 
-### `wiki/topics/class-inheritance.md` — Topic class-inheritance
-
-
-# Topic class-inheritance
-
-Sintesi automatica di 4 documenti (chiave `class-inheritance`).
-
-## Best Practices per l'Ereditarietà delle Classi
-
-_Fonte: `class-inheritance-best-practices-1.md`_
-
-# Best Practices per l'Ereditarietà delle Classi
-
-Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
-
-## Analisi dell'Ereditarietà di XotBasePage
-
-`XotBasePage` è una classe base che estende `Filament\Pages\Page` e implementa già diverse interfacce e traits:
-
-```php
-abstract class XotBasePage extends Page implements HasForms
-{
-
 ### `wiki/topics/code-quality.md` — Topic code-quality
 
 
 # Topic code-quality
 
-Sintesi automatica di 7 documenti (chiave `code-quality`).
+Sintesi automatica di 6 documenti (chiave `code-quality`).
 
 ## Code quality commands
 
@@ -24546,35 +23391,12 @@ _Fonte: `complete-success.md`_
 ## 🎯 MISSIONE COMPLETATA
 
 
-### `wiki/topics/completion-summary.md` — Topic completion-summary
-
-
-# Topic completion-summary
-
-Sintesi automatica di 3 documenti (chiave `completion-summary`).
-
-## 🏆 FixCity Project Completion Summary – 2025-10-01
-
-_Fonte: `project_docs/roadmaps/completion-summary-01.md`_
-
-# 🏆 FixCity Project Completion Summary – 2025-10-01
-
-## Executive Summary
-
-Piano strategico di completamento del progetto FixCity per posizionarlo come il migliore del 2025.
-Focus su API Development, Test Coverage, AGID Compliance, e Code Quality Excellence.
-
-## Obiettivi Completamento 2025
-
-### 🎯 Vision
-Diventare la piattaforma civic tech leader in Italia con:
-
 ### `wiki/topics/composer-strategy.md` — Topic composer-strategy
 
 
 # Topic composer-strategy
 
-Sintesi automatica di 6 documenti (chiave `composer-strategy`).
+Sintesi automatica di 3 documenti (chiave `composer-strategy`).
 
 ## 🎯 Laravel-Modules Composer Strategy
 
@@ -24643,7 +23465,7 @@ _Fonte: `conferma-classi-bootstrap.md`_
 
 # Topic config-structure
 
-Sintesi automatica di 4 documenti (chiave `config-structure`).
+Sintesi automatica di 3 documenti (chiave `config-structure`).
 
 ## Struttura di Configurazione nei Moduli
 
@@ -24712,16 +23534,15 @@ _Fonte: `contact-column-error-fix.md`_
 
 # Topic correzioni-phpstan
 
-Sintesi automatica di 5 documenti (chiave `correzioni-phpstan`).
+Sintesi automatica di 4 documenti (chiave `correzioni-phpstan`).
 
 ## Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify
 
-_Fonte: `correzioni-phpstan-completate-2.md`_
+_Fonte: `correzioni-phpstan-completate-3.md`_
 
 # Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify
 
 ## Data
-2025-11-24
 2025-11-24
 
 ## Riepilogo Esecutivo
@@ -24729,40 +23550,18 @@ _Fonte: `correzioni-phpstan-completate-2.md`_
 
 - **Errori Iniziali**: 147 syntax errors in 9 file
 - **Root Cause**: Conflitti git non risolti (merge markers lasciati nel codice)
-
-### `wiki/topics/css-architecture.md` — Topic css-architecture
-
-
-# Topic css-architecture
-
-Sintesi automatica di 3 documenti (chiave `css-architecture`).
-
-## 📚 Documentazione Finale - Sixteen Theme CSS Architecture
-
-_Fonte: `css-architecture.md`_
-
-# 📚 Documentazione Finale - Sixteen Theme CSS Architecture
-
-## Panoramica
-
-Il tema Sixteen utilizza un'architettura CSS ibrida:
-- **Bootstrap Italia** per i componenti PA (Pubblica Amministrazione)
-- **Tailwind CSS** per utility e customizzazioni
-- **Filament CSS** per i componenti admin
-
-## Architettura File
-
+- **Azione**: Rimossi tutti i marker di conflitto e unificato il codice
 
 ### `wiki/topics/current-work.md` — Topic current-work
 
 
 # Topic current-work
 
-Sintesi automatica di 7 documenti (chiave `current-work`).
+Sintesi automatica di 4 documenti (chiave `current-work`).
 
 ## Stato Attuale del Lavoro - 12 Maggio 2025
 
-_Fonte: `current-work-status-1.md`_
+_Fonte: `current-work-status-2.md`_
 
 # Stato Attuale del Lavoro - 12 Maggio 2025
 
@@ -24827,23 +23626,23 @@ created: 2026-09-26
 
 # Topic database-mail
 
-Sintesi automatica di 10 documenti (chiave `database-mail`).
+Sintesi automatica di 12 documenti (chiave `database-mail`).
+
+## Deprecated
+
+_Fonte: `database-mail-1.md`_
+
+# Deprecated
+
+This file is deprecated.
+
+Use:
+
+- [database-mail](./database-mail.md)
 
 ## Database Mail Enhancement (Open Source)
 
 _Fonte: `database-mail-enhancement.md`_
-
-# Database Mail Enhancement (Open Source)
-
-Questo documento descrive un approccio in-house per la gestione e l'invio di email da database, ispirato al plugin a pagamento `martin-petricko-database-mail` per Filament e alle soluzioni open source di Spatie.
-
-## Analisi del plugin commerciale
-
-- **martin-petricko-database-mail** fornisce UI Filament per definire template email nel DB
-- Supporto per variabili dinamiche, anteprima, versioning
-- Integrazione con invio mail, ma è un pacchetto a pagamento
-
-## Obiettivi della nostra versione
 
 ### `wiki/topics/database-naming.md` — Topic database-naming
 
@@ -24919,7 +23718,7 @@ _Fonte: `decisione-basemodel-refactoring.md`_
 
 # Topic design-comuni
 
-Sintesi automatica di 10 documenti (chiave `design-comuni`).
+Sintesi automatica di 9 documenti (chiave `design-comuni`).
 
 ## 🏛️ DESIGN COMUNI ITALIANI - INTEGRATION COMPLETE
 
@@ -24942,7 +23741,7 @@ type: note
 
 # Topic docs-monitoring
 
-Sintesi automatica di 5 documenti (chiave `docs-monitoring`).
+Sintesi automatica di 4 documenti (chiave `docs-monitoring`).
 
 ## 📚 DOCS MONITORING SYSTEM - Sistema di Monitoraggio Documentazione
 
@@ -24965,7 +23764,7 @@ _Fonte: `docs-monitoring-system.md`_
 
 # Topic documentation-analysis
 
-Sintesi automatica di 6 documenti (chiave `documentation-analysis`).
+Sintesi automatica di 3 documenti (chiave `documentation-analysis`).
 
 ## Documentation Analysis and Improvement Plan
 
@@ -24982,52 +23781,6 @@ _Fonte: `documentation-analysis-and-improvement-plan.md`_
 ## 📊 Executive Summary
 
 ### Current State
-
-### `wiki/topics/documentation-ecosystem.md` — Topic documentation-ecosystem
-
-
-# Topic documentation-ecosystem
-
-Sintesi automatica di 5 documenti (chiave `documentation-ecosystem`).
-
-## FixCity Documentation Ecosystem - Visual Map
-
-_Fonte: `documentation-ecosystem.md`_
-
-# FixCity Documentation Ecosystem - Visual Map
-
-**📍 Complete Bidirectional Links & Cross-References**
-
----
-
-## 🗺️ Documentation Ecosystem Overview
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│            FixCity Fila5 Documentation Ecosystem                 │
-
-### `wiki/topics/documentation-governance.md` — Topic documentation-governance
-
-
-# Topic documentation-governance
-
-Sintesi automatica di 5 documenti (chiave `documentation-governance`).
-
-## Documentation Governance Framework
-
-_Fonte: `documentation-governance.md`_
-
-# Documentation Governance Framework
-
-**Version**: 1.0  
-**Status**: Active  
-**Applies to**: All modules and themes
-
----
-
-## 🎯 Purpose
-
-This document establishes the governance framework for all documentation in the FixCity platform, ensuring consistency, quality, and maintainability across all modules and themes.
 
 ### `wiki/topics/documentation-improvement.md` — Topic documentation-improvement
 
@@ -25080,7 +23833,7 @@ _Fonte: `documentation-index.md`_
 
 # Topic documentation-system
 
-Sintesi automatica di 5 documenti (chiave `documentation-system`).
+Sintesi automatica di 4 documenti (chiave `documentation-system`).
 
 ## Documentation System Update - Complete
 
@@ -25103,7 +23856,7 @@ _Fonte: `documentation-system-update-complete.md`_
 
 # Topic dry-kiss
 
-Sintesi automatica di 10 documenti (chiave `dry-kiss`).
+Sintesi automatica di 8 documenti (chiave `dry-kiss`).
 
 ## DRY & KISS Analysis - Modulo Notify
 
@@ -25130,7 +23883,7 @@ Sintesi automatica di 3 documenti (chiave `dto-structure`).
 
 ## Convenzioni per la Struttura dei DTO nel Modulo Notify
 
-_Fonte: `architecture/dto-structure-conventions.md`_
+_Fonte: `dto-structure-conventions.md`_
 
 # Convenzioni per la Struttura dei DTO nel Modulo Notify
 
@@ -25149,7 +23902,7 @@ I DTO nel modulo Notify devono essere collocati nella directory:
 
 # Topic duplicate-methods
 
-Sintesi automatica di 3 documenti (chiave `duplicate-methods`).
+Sintesi automatica di 5 documenti (chiave `duplicate-methods`).
 
 ## Analisi Metodi Duplicati - Modulo Notify
 
@@ -25172,30 +23925,30 @@ Questo documento identifica i metodi duplicati nel modulo **Notify** che potrebb
 
 # Topic dynamic-class
 
-Sintesi automatica di 7 documenti (chiave `dynamic-class`).
+Sintesi automatica di 5 documenti (chiave `dynamic-class`).
 
-## Risoluzione Dinamica delle Classi nei Factory Pattern
+## Pattern di Risoluzione Dinamica delle Classi vs Pattern Match
 
-_Fonte: `dynamic-class-resolution-1.md`_
+_Fonte: `dynamic-class-resolution-pattern-2.md`_
 
-# Risoluzione Dinamica delle Classi nei Factory Pattern
+# Pattern di Risoluzione Dinamica delle Classi vs Pattern Match
 
-Questo documento analizza l'approccio di risoluzione dinamica delle classi nei factory pattern, confrontandolo con l'approccio basato su match esplicito.
+Questo documento analizza i vantaggi e gli svantaggi dell'utilizzo di una formula di calcolo dinamico per la risoluzione delle classi rispetto all'approccio attuale con match nel factory pattern di SaluteOra.
 
-## Confronto tra Approcci
+## Implementazione Attuale con Match
 
-### Approccio 1: Match Esplicito (Originale)
+Attualmente, nel `SmsActionFactory`, viene utilizzato un pattern match per mappare il driver al corrispondente action:
 
 ```php
+// SmsActionFactory.php - Implementazione attuale
 public function create(?string $driver = null): SmsActionInterface
-{
 
 ### `wiki/topics/email-template.md` — Topic email-template
 
 
 # Topic email-template
 
-Sintesi automatica di 4 documenti (chiave `email-template`).
+Sintesi automatica di 3 documenti (chiave `email-template`).
 
 ## Panoramica e Analisi dei Template Email in Laravel
 
@@ -25220,21 +23973,21 @@ qmd: "email template landscape"
 
 Sintesi automatica di 17 documenti (chiave `email-templates`).
 
+## Deprecated
+
+_Fonte: `email-templates-1.md`_
+
+# Deprecated
+
+This file is deprecated.
+
+Use:
+
+- [email-templates](./email-templates.md)
+
 ## Sistema di Email Template
 
 _Fonte: `email-templates-2.md`_
-
-# Sistema di Email Template
-
-## Introduzione
-
-Il modulo Notify implementa un sistema avanzato di gestione delle email template basato su [spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates). Questo sistema permette di gestire e personalizzare facilmente i template delle email direttamente dal database.
-
-## 🚨 Errore Critico Identificato
-
-**Data**: 26 Giugno 2025  
-**Errore**: `MissingMailTemplate` durante registrazione pazienti  
-**Status**: CRITICO - Sistema registrazione bloccato  
 
 ### `wiki/topics/email-testing.md` — Topic email-testing
 
@@ -25264,13 +24017,13 @@ Il modulo Notify contiene due pagine per il test delle email:
 
 # Topic email-troubleshooting
 
-Sintesi automatica di 4 documenti (chiave `email-troubleshooting`).
+Sintesi automatica di 3 documenti (chiave `email-troubleshooting`).
 
 ## Risoluzione dei Problemi nelle Email
 
-_Fonte: `email-sending/email-troubleshooting-1.md`_
+_Fonte: `email-sending/email-troubleshooting-2.md`_
 
-# Risoluzione dei Problemi nelle Email
+# Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.
 
@@ -25310,14 +24063,15 @@ use Modules\Notify\Filament\Forms\Components\EmailEditor;
 
 # Topic enum-config
 
-Sintesi automatica di 4 documenti (chiave `enum-config`).
+Sintesi automatica di 3 documenti (chiave `enum-config`).
 
 ## Utilizzo di Enum e Config
 
-_Fonte: `enum-config-usage-1.md`_
+_Fonte: `enum-config-usage.md`_
 
 # Utilizzo di Enum e Config
 
+Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema , con particolare attenzione alla gestione delle opzioni nei componenti Filament.
 Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema <nome progetto>, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
 
 ## Problema: Hardcoding delle Opzioni
@@ -25326,30 +24080,29 @@ L'hardcoding delle opzioni direttamente nei componenti Filament presenta diversi
 
 ```php
 // ❌ APPROCCIO ERRATO: Hardcoding delle opzioni
-Forms\Components\Select::make('driver')
 
-### `wiki/topics/factory-pattern.md` — Topic factory-pattern
+### `wiki/topics/excellence-achievement.md` — Topic excellence-achievement
 
 
-# Topic factory-pattern
+# Topic excellence-achievement
 
-Sintesi automatica di 3 documenti (chiave `factory-pattern`).
+Sintesi automatica di 3 documenti (chiave `excellence-achievement`).
 
-## Analisi del Pattern Factory per la Selezione dei Provider SMS
+## 🏆 2025 Excellence Achievement Report
 
-_Fonte: `factory-pattern-advantages-2.md`_
+_Fonte: `project_docs/excellence-achievement-caps.md`_
 
-# Analisi del Pattern Factory per la Selezione dei Provider SMS
+# 🏆 2025 Excellence Achievement Report
 
-Questo documento analizza il pattern Factory attualmente implementato  per la selezione dei provider SMS, confrontandolo con l'alternativa di integrare la selezione nel DTO `SmsData`.
+**Project:** Notify - Base Fila4 Mono  
+**Achievement Date:** 2025-10-01  
+**Status:** ✅ **EXCELLENCE ACHIEVED**
 
-## Soluzione Attuale: Pattern Factory
+---
 
-SaluteOra implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
-
-```php
-// SmsActionFactory.php
-public function create(?string $driver = null): SmsActionInterface
+title: "2025 EXCELLENCE ACHIEVEMENT"
+type: note
+tags: [documentation]
 
 ### `wiki/topics/farmshops-integration.md` — Topic farmshops-integration
 
@@ -25402,7 +24155,7 @@ _Fonte: `filament-4-login-widget-implementation-summary.md`_
 
 # Topic filament-5
 
-Sintesi automatica di 8 documenti (chiave `filament-5`).
+Sintesi automatica di 6 documenti (chiave `filament-5`).
 
 ## 🚨 FILAMENT 5 - OFFICIAL POLICY
 
@@ -25425,15 +24178,15 @@ _Fonte: `filament-5-official-policy-2.md`_
 
 # Topic filament-extension
 
-Sintesi automatica di 10 documenti (chiave `filament-extension`).
+Sintesi automatica di 6 documenti (chiave `filament-extension`).
 
 ## Pattern di Estensione per Componenti Filament
 
-_Fonte: `filament-extension-pattern-1.md`_
+_Fonte: `filament-extension-pattern-2.md`_
 
-# Pattern di Estensione per Componenti Filament
+# Pattern di Estensione per Componenti Filament 
 
-Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema <nome progetto>, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
+Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema SaluteOra, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
 
 ## Regola Fondamentale
 
@@ -25442,52 +24195,6 @@ Questo documento definisce il pattern di estensione standardizzato per i compone
 ## Mappatura delle Classi
 
 | Classe Filament | Classe Base da Utilizzare |
-
-### `wiki/topics/filament-naming.md` — Topic filament-naming
-
-
-# Topic filament-naming
-
-Sintesi automatica di 4 documenti (chiave `filament-naming`).
-
-## Convenzioni di Naming per Filament
-
-_Fonte: `best-practices/filament-naming-conventions.md`_
-
-# Convenzioni di Naming per Filament 
-
-Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema , con particolare attenzione alle pagine e alle risorse.
-Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema <nome progetto>, con particolare attenzione alle pagine e alle risorse.
-
-## Convenzioni di Naming per Pagine Filament
-
-### Regola Fondamentale
-
-**Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` devono terminare con il suffisso "Page".**
-
-
-### `wiki/topics/filament-page.md` — Topic filament-page
-
-
-# Topic filament-page
-
-Sintesi automatica di 3 documenti (chiave `filament-page`).
-
-## Convenzioni di Naming per Pagine Filament
-
-_Fonte: `filament-page-naming-convention-1.md`_
-
-# Convenzioni di Naming per Pagine Filament
-
-## Regola Fondamentale
-
-**Tutte** le classi situate in una cartella `Pages` di Filament **DEVONO** terminare con il suffisso `Page`.
-
-## Struttura Corretta
-
-### Percorso File
-- ✅ CORRETTO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotificationPage.php`
-- ❌ ERRATO: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotification.php`
 
 ### `wiki/topics/filament-pages.md` — Topic filament-pages
 
@@ -25512,35 +24219,12 @@ Le pagine Filament del modulo Notify estendono le classi base del modulo Xot e i
 
 ```php
 
-### `wiki/topics/filament-resource.md` — Topic filament-resource
-
-
-# Topic filament-resource
-
-Sintesi automatica di 3 documenti (chiave `filament-resource`).
-
-## Architettura delle Pagine di Risorse Filament
-
-_Fonte: `filament-resource-pages-architecture-1.md`_
-
-# Architettura delle Pagine di Risorse Filament
-
-## Regola Fondamentale
-
-, **MAI** estendere direttamente le classi di Filament per le pagine di risorse. Utilizzare **SEMPRE** le classi wrapper corrispondenti con prefisso `XotBase` fornite dal modulo `Xot`.
-
-## Struttura Architetturale
-
-Il pattern XotBase si applica a tutte le classi di Filament, incluse le pagine di risorse:
-
-```
-
 ### `wiki/topics/filament-template.md` — Topic filament-template
 
 
 # Topic filament-template
 
-Sintesi automatica di 4 documenti (chiave `filament-template`).
+Sintesi automatica di 3 documenti (chiave `filament-template`).
 
 ## Convenzioni per Template Blade di Filament
 
@@ -25563,7 +24247,7 @@ Ogni template di pagina Filament deve includere:
 
 # Topic filament-version
 
-Sintesi automatica di 8 documenti (chiave `filament-version`).
+Sintesi automatica di 7 documenti (chiave `filament-version`).
 
 ## 🎯 Filament Version Policy - ALWAYS LATEST
 
@@ -25580,29 +24264,6 @@ _Fonte: `filament-version-policy-2.md`_
 
 **Attuale**: **Filament 5.x** (Marzo 2026)
 
-
-### `wiki/topics/filament-xot.md` — Topic filament-xot
-
-
-# Topic filament-xot
-
-Sintesi automatica di 3 documenti (chiave `filament-xot`).
-
-## Architettura Filament : Pattern XotBase
-
-_Fonte: `filament-xot-architecture-1.md`_
-
-# Architettura Filament : Pattern XotBase
-
-## Introduzione
-
-<nome progetto> utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
-
-Questo documento spiega in dettaglio i motivi architetturali, i vantaggi e l'implementazione di questo pattern.
-
-## Pattern Architetturale
-
-### Struttura delle Classi XotBase
 
 ### `wiki/topics/filament.md` — Topic filament
 
@@ -25650,52 +24311,6 @@ title: "files created session 007"
 type: note
 tags: [documentation]
 
-### `wiki/topics/final-completion.md` — Topic final-completion
-
-
-# Topic final-completion
-
-Sintesi automatica di 3 documenti (chiave `final-completion`).
-
-## 🏆 FINAL COMPLETION REPORT - FixCity 2025
-
-_Fonte: `project_docs/roadmaps/final-completion-report-01.md`_
-
-# 🏆 FINAL COMPLETION REPORT - FixCity 2025
-
-**Date**: 2025-10-01T21:48:00+02:00  
-**Mode**: 🐄⚡ SUPER MUCCA POWER  
-**Status**: ✅ **100% OBIETTIVI RAGGIUNTI**
-
----
-
-title: "final completion report 2025 10 01"
-type: note
-tags: [documentation]
-
-### `wiki/topics/final-implementation.md` — Topic final-implementation
-
-
-# Topic final-implementation
-
-Sintesi automatica di 3 documenti (chiave `final-implementation`).
-
-## ✅ AGID Implementation - Final Report
-
-_Fonte: `project_docs/final-implementation-report-02.md`_
-
-# ✅ AGID Implementation - Final Report
-
-**Date**: 2025-10-02T20:48:00+02:00  
-**Status**: **COMPLETATO & TESTATO** ✅  
-**Server**: Running without errors
-
----
-
-title: "final implementation report 2025 10 02"
-type: note
-tags: [documentation]
-
 ### `wiki/topics/final-summary.md` — Topic final-summary
 
 
@@ -25718,6 +24333,29 @@ _Fonte: `final-summary.md`_
 ## 🎯 OBIETTIVO RAGGIUNTO
 
 Completamento sistematico della documentazione e delle roadmap del progetto FixCity per renderlo la piattaforma
+
+### `wiki/topics/firebase.md` — Topic firebase
+
+
+# Topic firebase
+
+Sintesi automatica di 3 documenti (chiave `firebase`).
+
+## Firebase Push Notifications
+
+_Fonte: `email/firebase.md`_
+
+# Firebase Push Notifications
+
+## Resources
+
+- [Integrating Push Notifications in Laravel using Firebase](https://medium.com/@hala.s.salim/integrating-push-notifications-in-laravel-using-firebase-0bae5411d7f9)
+
+## Implementation Notes
+
+This document contains resources and guidelines for implementing Firebase push notifications in the Notify module.
+
+## firebase
 
 ### `wiki/topics/fix-colori.md` — Topic fix-colori
 
@@ -25747,7 +24385,7 @@ _Fonte: `fix-colori-header-footer.md`_
 
 # Topic fix-tests
 
-Sintesi automatica di 4 documenti (chiave `fix-tests`).
+Sintesi automatica di 3 documenti (chiave `fix-tests`).
 
 ## ✅ Fix Applicati - Tests Homepage
 
@@ -25770,7 +24408,7 @@ pages/tests/homepage.blade.php  ← File statico (ERRATO)
 
 # Topic fixcity-improvement
 
-Sintesi automatica di 5 documenti (chiave `fixcity-improvement`).
+Sintesi automatica di 4 documenti (chiave `fixcity-improvement`).
 
 ## FixCity Improvement Plan - OpenViking + BMAD + GSD + Ralph Loop
 
@@ -25793,7 +24431,7 @@ tags: [documentation]
 
 # Topic form-schema
 
-Sintesi automatica di 7 documenti (chiave `form-schema`).
+Sintesi automatica di 5 documenti (chiave `form-schema`).
 
 ## Convenzioni per i Form Schema
 
@@ -25862,7 +24500,7 @@ _Fonte: `git-conflicts-inventory.md`_
 
 # Topic github-actions
 
-Sintesi automatica di 5 documenti (chiave `github-actions`).
+Sintesi automatica di 4 documenti (chiave `github-actions`).
 
 ## 🤖 GitHub Actions & Discussions - Final Report
 
@@ -25885,7 +24523,7 @@ _Fonte: `github/github-actions-fix-report.md`_
 
 # Topic github-issues
 
-Sintesi automatica di 4 documenti (chiave `github-issues`).
+Sintesi automatica di 3 documenti (chiave `github-issues`).
 
 ## GitHub Issues - CORRECT WORKFLOW
 
@@ -25908,7 +24546,7 @@ _Fonte: `ai-agents/github-issues-workflow.md`_
 
 # Topic github-sync
 
-Sintesi automatica di 7 documenti (chiave `github-sync`).
+Sintesi automatica di 4 documenti (chiave `github-sync`).
 
 ## 🔄 Sync .github with bashscripts/ai/.github
 
@@ -26018,29 +24656,6 @@ _Fonte: `immediate-action-plan-30-days.md`_
 ## 🎯 EXECUTIVE SUMMARY
 
 
-### `wiki/topics/implementation-report.md` — Topic implementation-report
-
-
-# Topic implementation-report
-
-Sintesi automatica di 3 documenti (chiave `implementation-report`).
-
-## 🚀 Implementation Report – 2025-10-01
-
-_Fonte: `project_docs/roadmaps/implementation-report-01.md`_
-
-# 🚀 Implementation Report – 2025-10-01
-
-## Session Summary
-
-**Date**: 2025-10-01
-**Duration**: Full session
-**Focus**: Documentation update, code quality improvement, API implementation
-**Status**: ✅ COMPLETED
-
----
-
-
 ### `wiki/topics/implementation-status.md` — Topic implementation-status
 
 
@@ -26050,10 +24665,7 @@ Sintesi automatica di 3 documenti (chiave `implementation-status`).
 
 ## ✅ AGID Implementation Status - 02/10/2025
 
-_Fonte: `project_docs/implementation-status-5.md`_
-
-> Date (from original filename): 2025-10
-
+_Fonte: `project_docs/implementation-status-02.md`_
 
 # ✅ AGID Implementation Status - 02/10/2025
 
@@ -26063,13 +24675,16 @@ _Fonte: `project_docs/implementation-status-5.md`_
 - Widget CreateTicketWidget aggiornato a 4 step
 - Step 3: Riepilogo dati con preview
 - Step 4: Conferma successo
+- Traduzioni IT complete
+
+### 2. Sistema FAQ Completo ✅
 
 ### `wiki/topics/implementation-summary.md` — Topic implementation-summary
 
 
 # Topic implementation-summary
 
-Sintesi automatica di 9 documenti (chiave `implementation-summary`).
+Sintesi automatica di 4 documenti (chiave `implementation-summary`).
 
 ## 🚀 IMPLEMENTATION SUMMARY - 27 Gennaio 2025
 
@@ -26086,29 +24701,6 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-
-### `wiki/topics/implementations-completed.md` — Topic implementations-completed
-
-
-# Topic implementations-completed
-
-Sintesi automatica di 5 documenti (chiave `implementations-completed`).
-
-## ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
-
-_Fonte: `implementations-completed.md`_
-
-# ✅ FIXCITY - IMPLEMENTAZIONI COMPLETATE
-
-**Data**: 2025-10-01  
-**Sessione**: Gap Analysis & Core Implementation  
-**Status**: 🚀 CRITICAL FEATURES IMPLEMENTED  
-
----
-
-## 🎯 OBIETTIVO RAGGIUNTO
-
-Analizzato lo scopo del progetto, identificate le features mancanti e implementate le funzionalità critiche per trasformare FixCity da MVP a piattaforma enterprise-ready.
 
 ### `wiki/topics/implementazione-completa.md` — Topic implementazione-completa
 
@@ -26156,52 +24748,6 @@ title: "implementazione refactoring basemodel"
 type: note
 tags: [documentation]
 
-### `wiki/topics/index-2.md` — Topic index-2
-
-
-# Topic index-2
-
-Sintesi automatica di 4 documenti (chiave `index-2`).
-
-## Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index
-
-_Fonte: `ai-agents/split/gemini/index-2.md`_
-
-# Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index
-
-**Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-**Split Into**: 13 focused files  
-**Last Updated**: 2026-04-11  
-
----
-
-## Core Guidelines
-
-| Section | File | Lines | Purpose |
-
-### `wiki/topics/installation-summary.md` — Topic installation-summary
-
-
-# Topic installation-summary
-
-Sintesi automatica di 3 documenti (chiave `installation-summary`).
-
-## 🦸 Superpowers Installation Summary
-
-_Fonte: `superpowers/installation-summary-2.md`_
-
-# 🦸 Superpowers Installation Summary
-
-> **Date**: 2026-03-31  
-> **Status**: ✅ Complete  
-> **Version**: v5.0.6  
-> **Platform**: Cursor
-
----
-
-title: "INSTALLATION SUMMARY"
-type: note
-
 ### `wiki/topics/installazione-strumenti.md` — Topic installazione-strumenti
 
 
@@ -26230,7 +24776,7 @@ https://github.com/bmad-code-org/BMAD-METHOD
 
 # Topic interface-structure
 
-Sintesi automatica di 4 documenti (chiave `interface-structure`).
+Sintesi automatica di 3 documenti (chiave `interface-structure`).
 
 ## Chiarimento sulla Struttura delle Interfacce
 
@@ -26248,35 +24794,12 @@ Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 ```
 
-### `wiki/topics/interfaces-implementation.md` — Topic interfaces-implementation
-
-
-# Topic interfaces-implementation
-
-Sintesi automatica di 3 documenti (chiave `interfaces-implementation`).
-
-## Guida all'Implementazione delle Interfacce nel Modulo Notify
-
-_Fonte: `interfaces-implementation-guide-1.md`_
-
-# Guida all'Implementazione delle Interfacce nel Modulo Notify
-
-## Struttura delle Interfacce
-
-Nel modulo Notify, le interfacce seguono una struttura specifica che è importante rispettare per garantire il corretto funzionamento del sistema.
-
-### Posizionamento delle Interfacce
-
-Le interfacce sono organizzate in due livelli:
-
-1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
-
 ### `wiki/topics/json-migration.md` — Topic json-migration
 
 
 # Topic json-migration
 
-Sintesi automatica di 5 documenti (chiave `json-migration`).
+Sintesi automatica di 4 documenti (chiave `json-migration`).
 
 ## Errore di Migrazione JSON e Soluzione
 
@@ -26322,7 +24845,7 @@ type: note
 
 # Topic laravel-path
 
-Sintesi automatica di 6 documenti (chiave `laravel-path`).
+Sintesi automatica di 4 documenti (chiave `laravel-path`).
 
 ## Convenzioni dei Path in Laravel e
 
@@ -26363,12 +24886,35 @@ Buongiorno! Ecco tutto quello che abbiamo fatto ieri e cosa fare oggi.
 1. **PHPStan Analysis Completa**
    - ✅ 15/18 moduli a ZERO errori
 
+### `wiki/topics/links.md` — Topic links
+
+
+# Topic links
+
+Sintesi automatica di 3 documenti (chiave `links`).
+
+## Key Documentation Links
+
+_Fonte: `ai-agents/agents-guide/01-project-overview/links.md`_
+
+# Key Documentation Links
+
+- [Agent docs index](../index.md)
+- [Agent Teams](../../agent-teams.md)
+- [Critical rules](../../critical-rules.md)
+- [Laraxot model rules](../../laraxot-model-rules.md)
+- [Laraxot philosophy](../../laraxot-philosophy.md)
+- [Documentation standards](../../documentation-standards.md)
+- [Project setup](../../project-setup.md)
+- [Claude Setup Guide](../../context.md)
+- [Workflow](../workflow.md)
+
 ### `wiki/topics/livewire-widget.md` — Topic livewire-widget
 
 
 # Topic livewire-widget
 
-Sintesi automatica di 6 documenti (chiave `livewire-widget`).
+Sintesi automatica di 9 documenti (chiave `livewire-widget`).
 
 ## Architecture Notify
 
@@ -26391,7 +24937,7 @@ ADR: vendor resta vendor. Il riferimento è **già** tipizzato — nessun PHP da
 
 # Topic llm-wiki
 
-Sintesi automatica di 4 documenti (chiave `llm-wiki`).
+Sintesi automatica di 6 documenti (chiave `llm-wiki`).
 
 ## LLM‑Wiki Rule
 
@@ -26405,29 +24951,6 @@ _Fonte: `ai-agents/rules/llm-wiki-rule.md`_
 **Why:** The LLM‑wiki is the unified documentation source; missing folders break the wiki build and QMD indexing.
 
 **How to apply:** When creating a new module or theme, add the `docs/wiki/` folder (including `index-3.md`, `log.md`, and any overview files) and the `docs/llm-wiki/` support files be
-
-### `wiki/topics/locations-standards.md` — Topic locations-standards
-
-
-# Topic locations-standards
-
-Sintesi automatica di 4 documenti (chiave `locations-standards`).
-
-## Standard di Posizionamento dei File in Notify
-
-_Fonte: `locations-standards-1.md`_
-
-# Standard di Posizionamento dei File in Notify
-
-## Organizzazione Directory Principali
-
-| Tipo di File | Percorso Standard | Errori da Evitare |
-|--------------|-------------------|-------------------|
-| **Interfacce/Contratti** | `/app/Contracts/` | ❌ `/app/Actions/*/InterfaceName.php` |
-| **Actions** | `/app/Actions/` | |
-| **Datas** | `/app/Datas/` | ❌ `/app/Data/` (singolare), ❌ `/app/DTOs/` |
-| **Models** | `/app/Models/` | |
-| **Channels** | `/app/Channels/` | |
 
 ### `wiki/topics/log.md` — Topic log
 
@@ -26482,28 +25005,28 @@ The following files contain unnecessary `Log::info()` calls that should be remov
 
 Sintesi automatica di 8 documenti (chiave `login-page`).
 
-## 📊 Status Pagina Login - Verifica Tecnica
+## Status pagina login: documento estraneo (deprecato)
 
 _Fonte: `login-page-status-2.md`_
 
-# 📊 Status Pagina Login - Verifica Tecnica
+# Status pagina login: documento estraneo (deprecato)
 
-**Data Verifica**: 14 Ottobre 2025  
-**URL**: http://127.0.0.1:8000/it/auth/login
+Questo documento descriveva una pagina di login basata su
+`Modules\User\Filament\Widgets\Auth\LoginWidget` con template
+`Themes/Sixteen/resources/views/pages/auth/login.blade.php` e URL
+`http://127.0.0.1:8000/it/auth/login`.
 
-qmd: "login page status"
-issues: []
-discussions: []
-status: draft
 ---
 
+title: "LOGIN PAGE STATUS"
+type: note
 
 ### `wiki/topics/login-timeout.md` — Topic login-timeout
 
 
 # Topic login-timeout
 
-Sintesi automatica di 4 documenti (chiave `login-timeout`).
+Sintesi automatica di 3 documenti (chiave `login-timeout`).
 
 ## 🚨 Problema Timeout Pagina Login - Diagnosi e Soluzione
 
@@ -26526,34 +25049,29 @@ _Fonte: `login-timeout-issue.md`_
 
 # Topic mail-layouts
 
-Sintesi automatica di 4 documenti (chiave `mail-layouts`).
+Sintesi automatica di 3 documenti (chiave `mail-layouts`).
 
 ## Guida ai Layout Email nel Modulo Notify
 
-_Fonte: `mail-layouts-guide-1.md`_
+_Fonte: `mail-layouts-guide.md`_
 
 # Guida ai Layout Email nel Modulo Notify
 
 ## Introduzione
 
-Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di <nome progetto>. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
-
-## Struttura dei Layout
-
-Il modulo Notify contiene quattro layout email principali:
-
-```
+Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di . Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
+Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di <nome progetto>. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali
 
 ### `wiki/topics/mail-template.md` — Topic mail-template
 
 
 # Topic mail-template
 
-Sintesi automatica di 11 documenti (chiave `mail-template`).
+Sintesi automatica di 10 documenti (chiave `mail-template`).
 
 ## Guida alla Migrazione di MailTemplate
 
-_Fonte: `mail-template-migration-guide-1.md`_
+_Fonte: `mail-template-migration-guide.md`_
 
 # Guida alla Migrazione di MailTemplate
 
@@ -26595,7 +25113,7 @@ mail-layouts/
 
 # Topic markdown-linking
 
-Sintesi automatica di 6 documenti (chiave `markdown-linking`).
+Sintesi automatica di 4 documenti (chiave `markdown-linking`).
 
 ## Convenzioni per i Collegamenti nei File Markdown
 
@@ -26681,6 +25199,29 @@ _Fonte: `master-plan.md`_
 ## 🎯 EXECUTIVE SUMMARY
 
 **FixCity** è una **piattaforma SaaS di civic engagement** che rivoluziona il modo in cui cittadini e amministrazioni locali collaborano per migliorare la qualità della vita urbana. Il sistema trasforma i cittadini in "sensori urbani attivi", permettendo segnalazioni georeferenziate, gestione intelligente dei workflow e analytics avanzate.
+
+### `wiki/topics/master-roadmap.md` — Topic master-roadmap
+
+
+# Topic master-roadmap
+
+Sintesi automatica di 3 documenti (chiave `master-roadmap`).
+
+## 🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025
+
+_Fonte: `master-roadmap-historic-snake.md`_
+
+# 🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025
+
+**Data Creazione**: 2025-01-27  
+**Versione**: 2.0.0  
+**Status**: 🚀 IMPLEMENTAZIONE ATTIVA  
+**PHPStan Status**: ✅ 0 ERRORI (Level 9)  
+**Filament Status**: ✅ 4.x COMPATIBILE  
+
+---
+
+title: "MASTER ROADMAP 2025"
 
 ### `wiki/topics/mcp-servers.md` — Topic mcp-servers
 
@@ -26827,32 +25368,32 @@ _Fonte: `missione-super-mucca-completata.md`_
 
 Sintesi automatica di 3 documenti (chiave `mixed-type`).
 
-## Mixed — solo come ultima spiaggia (puntatore Notify)
+## Mixed (tipo di dato) - Solo come Ultima Spiaggia
 
 _Fonte: `mixed-type-ultima-spiaggia.md`_
 
-# Mixed — solo come ultima spiaggia (puntatore Notify)
+# Mixed (tipo di dato) - Solo come Ultima Spiaggia
 
-**SSoT della decisione:** [Xot ADR 0014 — mixed solo come ultima spiaggia](../../Xot/docs/adr/0014-mixed-last-resort.md).
+**Regola**: `mixed` solo quando non esiste un tipo più stretto. Non è un shortcut per PHPStan.
 
-Questa nota non ridichiara la policy: tiene esempi e contesto **Notify** (template,
-rate-limit, Filament config). Se contraddice l'ADR, vince l'ADR.
+## Perché
 
-## Preferenze (in ordine, allineate all'ADR)
+PHPStan a livello max non ragiona su `mixed`: ogni `(int)` / `->email` a valle è errore o bug silenzioso. In questo host i numeri (job, voti, importi) sono il Job dell'operatore. Dichiarare `mixed` sposta l'incertezza sull'utente.
 
-1. Proprietà già tipizzate
-2. Union types (`string|int|null`)
+## Preferenze (in ordine)
+
+1. **Proprietà già tipizzate** — `$this->total_jobs`, non `$this->attributes['total_jobs']`
 
 ### `wiki/topics/modelli-factory.md` — Topic modelli-factory
 
 
 # Topic modelli-factory
 
-Sintesi automatica di 5 documenti (chiave `modelli-factory`).
+Sintesi automatica di 4 documenti (chiave `modelli-factory`).
 
 ## Analisi Modelli, Factory e Seeder - Modulo Notify
 
-_Fonte: `modelli-factory-seeder-analisi-1.md`_
+_Fonte: `modelli-factory-seeder-analisi-modulo-notify.md`_
 
 # Analisi Modelli, Factory e Seeder - Modulo Notify
 
@@ -26871,7 +25412,7 @@ Questo documento analizza tutti i modelli del modulo Notify verificando la prese
 
 # Topic module-docs
 
-Sintesi automatica di 6 documenti (chiave `module-docs`).
+Sintesi automatica di 3 documenti (chiave `module-docs`).
 
 ## Master Documentation Index - FixCity Fila5
 
@@ -26889,35 +25430,12 @@ _Fonte: `module-docs-index.md`_
 ## 🎯 Purpose
 
 
-### `wiki/topics/modules-validation.md` — Topic modules-validation
-
-
-# Topic modules-validation
-
-Sintesi automatica di 3 documenti (chiave `modules-validation`).
-
-## 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
-
-_Fonte: `project_docs/roadmaps/modules-validation-report-02.md`_
-
-# 🏆 MODULES VALIDATION REPORT - Multi-Module PHPStan Level 9
-
-**Date**: 2025-10-02T20:14:00+02:00  
-**Scope**: Fixcity + Cms Modules  
-**Validation Level**: PHPStan Level 9 (Maximum)  
-**Status**: ✅ **ALL MODULES VALIDATED**
-
----
-
-title: "modules validation report 2025 10 02"
-type: note
-
 ### `wiki/topics/multi-agent.md` — Topic multi-agent
 
 
 # Topic multi-agent
 
-Sintesi automatica di 5 documenti (chiave `multi-agent`).
+Sintesi automatica di 3 documenti (chiave `multi-agent`).
 
 ## Multi-Agent Collaboration Rules & Guidelines
 
@@ -26963,11 +25481,11 @@ fetch di tutti i remote, quality gates (PHPStan L10, PHPMD), risincronizzazione 
 
 # Topic naming-conventions
 
-Sintesi automatica di 6 documenti (chiave `naming-conventions`).
+Sintesi automatica di 4 documenti (chiave `naming-conventions`).
 
 ## Convenzioni di Naming
 
-_Fonte: `best-practices/naming-conventions.md`_
+_Fonte: `naming-conventions.md`_
 
 # Convenzioni di Naming
 
@@ -27004,35 +25522,12 @@ Nella classe `SendNetfunSMSAction` sono stati identificati diversi errori che no
 
 **Errore**:
 
-### `wiki/topics/netfun-examples.md` — Topic netfun-examples
-
-
-# Topic netfun-examples
-
-Sintesi automatica di 3 documenti (chiave `netfun-examples`).
-
-## Esempi Pratici Netfun
-
-_Fonte: `netfun-examples-1.md`_
-
-# Esempi Pratici Netfun
-
-## 1. Invio SMS OTP
-
-### 1.1 Notification Class
-```php
-<?php
-
-namespace Modules\Notify\Notifications;
-
-use Illuminate\Support\Carbon;
-
 ### `wiki/topics/notebooklm-installation.md` — Topic notebooklm-installation
 
 
 # Topic notebooklm-installation
 
-Sintesi automatica di 6 documenti (chiave `notebooklm-installation`).
+Sintesi automatica di 5 documenti (chiave `notebooklm-installation`).
 
 ## NotebookLM Skill - Installation & Integration Summary
 
@@ -27055,7 +25550,7 @@ _Fonte: `notebooklm-installation-summary.md`_
 
 # Topic notebooklm-integration
 
-Sintesi automatica di 6 documenti (chiave `notebooklm-integration`).
+Sintesi automatica di 3 documenti (chiave `notebooklm-integration`).
 
 ## NotebookLM Integration
 
@@ -27073,51 +25568,28 @@ NotebookLM is Google's AI-powered research assistant that lets you:
 - Upload documents (PDF, Markdown, Google Docs, URLs, YouTube)
 - Chat with your sources using Gemini 2.5
 
-### `wiki/topics/notification-providers.md` — Topic notification-providers
+### `wiki/topics/notifications.md` — Topic notifications
 
 
-# Topic notification-providers
+# Topic notifications
 
-Sintesi automatica di 3 documenti (chiave `notification-providers`).
+Sintesi automatica di 3 documenti (chiave `notifications`).
 
-## Guida Completa ai Provider di Notifiche
+## Email Notifications
 
-_Fonte: `notification-providers-guide-1.md`_
+_Fonte: `email/notifications.md`_
 
-# Guida Completa ai Provider di Notifiche
+# Email Notifications
 
-Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
+## Implementation Notes
 
-## Principi Architetturali per Tutti i Provider
+This document contains resources and guidelines for implementing email notifications in the Notify module.
 
-I seguenti principi si applicano a **tutti** i provider di notifiche (SMS, Email, WhatsApp):
+## notifications
 
-1. **Struttura Directory Standardizzata**:
-   - Interfacce: `/app/Contracts/`
-   - Implementazioni: `/app/Actions/{Type}/`
+_Fonte: `notifications.md`_
 
-### `wiki/topics/notify-translation.md` — Topic notify-translation
-
-
-# Topic notify-translation
-
-Sintesi automatica di 3 documenti (chiave `notify-translation`).
-
-## Guida alle Traduzioni nel Modulo Notify
-
-_Fonte: `notify-translation-guide-1.md`_
-
-# Guida alle Traduzioni nel Modulo Notify
-
-## Introduzione
-
-Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.
-
-## Struttura dei File di Traduzione
-
-### Tipi di File
-
-Nel modulo Notify, esistono due tipi principali di file di traduzione:
+https://medium.com/@peterhrobar/push-notifications-with-laravel-61049ab9aec6
 
 ### `wiki/topics/openviking-bmad.md` — Topic openviking-bmad
 
@@ -27142,35 +25614,35 @@ All documentation, scripts, and configuration files have been created successful
 
 ### 1. Documentation (3 comprehensive guides)
 
-### `wiki/topics/optimization-recommendations.md` — Topic optimization-recommendations
+### `wiki/topics/overview.md` — Topic overview
 
 
-# Topic optimization-recommendations
+# Topic overview
 
-Sintesi automatica di 3 documenti (chiave `optimization-recommendations`).
+Sintesi automatica di 3 documenti (chiave `overview`).
 
-## Raccomandazioni di Ottimizzazione - Modulo Notify
+## Overview
 
-_Fonte: `optimization-recommendations-1.md`_
+_Fonte: `ai-agents/overview.md`_
 
-# Raccomandazioni di Ottimizzazione - Modulo Notify
+# Overview
 
-## 🎯 Stato Attuale e Problemi Critici
+## Project
 
-### ❌ PROBLEMI CRITICI IDENTIFICATI
+PTVX is a modular HR & Performance evaluation system built on Laravel + Filament + Laraxot.
 
-#### 1. Riusabilità Compromessa
-- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+## Non-negotiables (Laraxot)
+
+- Do not extend Filament classes directly in application modules: use `XotBase*` wrappers.
+- Translations must not be hardcoded in Filament components.
+- Prefer Actions (e.g. Spatie Queueable Action) over Services.
 
 ### `wiki/topics/pagine-create.md` — Topic pagine-create
 
 
 # Topic pagine-create
 
-Sintesi automatica di 4 documenti (chiave `pagine-create`).
+Sintesi automatica di 3 documenti (chiave `pagine-create`).
 
 ## Pagine Create - FixCity Sixteen Theme
 
@@ -27193,11 +25665,11 @@ _Fonte: `pagine-create.md`_
 
 # Topic path-and
 
-Sintesi automatica di 7 documenti (chiave `path-and`).
+Sintesi automatica di 5 documenti (chiave `path-and`).
 
 ## Regole di Percorso e Interfacce nel Modulo Notify
 
-_Fonte: `path-and-interface-rules-1.md`_
+_Fonte: `path-and-interface-rules-2.md`_
 
 # Regole di Percorso e Interfacce nel Modulo Notify
 
@@ -27210,52 +25682,6 @@ _Fonte: `path-and-interface-rules-1.md`_
 
 2. **Regola Principale per i Namespace**
    - Namespace corretto: `Modules\Notify\Contracts`
-
-### `wiki/topics/path-conventions.md` — Topic path-conventions
-
-
-# Topic path-conventions
-
-Sintesi automatica di 3 documenti (chiave `path-conventions`).
-
-## Convenzioni sui Percorsi
-
-_Fonte: `best-practices/path-conventions.md`_
-
-# Convenzioni sui Percorsi 
-
-## Regole Fondamentali
-
-1. **Directory vs Namespace**
-   - Le directory nel filesystem sono in lowercase: `app`, `config`, `resources`
-   - I namespace possono essere in PascalCase ma devono mappare correttamente alle directory lowercase
-
-2. **Struttura Directory Principale**
-   - `Modules/Notify/app/` (CORRETTO)
-   - `Modules/Notify/App/` (ERRATO)
-
-### `wiki/topics/perfect-completion.md` — Topic perfect-completion
-
-
-# Topic perfect-completion
-
-Sintesi automatica di 3 documenti (chiave `perfect-completion`).
-
-## 🏆 PERFECT COMPLETION REPORT - FixCity 2025
-
-_Fonte: `project_docs/roadmaps/perfect-completion-report-02.md`_
-
-# 🏆 PERFECT COMPLETION REPORT - FixCity 2025
-
-**Date**: 2025-10-02T07:39:00+02:00  
-**Mode**: 🐄⚡ SUPER MUCCA CONTINUOUS POWER  
-**Status**: ✅ **100% VALIDATED & PERFECT**
-
----
-
-title: "perfect completion report 2025 10 02"
-type: note
-tags: [documentation]
 
 ### `wiki/topics/perfection-achieved.md` — Topic perfection-achieved
 
@@ -27285,7 +25711,7 @@ Implementare OGNI feature mancante con:
 
 # Topic perfection-plan
 
-Sintesi automatica di 4 documenti (chiave `perfection-plan`).
+Sintesi automatica di 3 documenti (chiave `perfection-plan`).
 
 ## 🎯 FIXCITY - PERFECTION PLAN
 
@@ -27326,74 +25752,24 @@ _Fonte: `phase-1-execution-dashboard.md`_
 
 title: "phase 1 execution dashboard"
 
-### `wiki/topics/phpstan-fix.md` — Topic phpstan-fix
-
-
-# Topic phpstan-fix
-
-Sintesi automatica di 3 documenti (chiave `phpstan-fix`).
-
-## PHPStan Fix Coordination Plan
-
-_Fonte: `bmad/architecture/phpstan-fix-coordination.md`_
-
-# PHPStan Fix Coordination Plan
-
-**Project:** Base FixCity Fila5  
-**Date:** April 1, 2026  
-**Method:** BMAD-METHOD with Multi-Agent Collaboration
-
-## Overview
-
-This document coordinates the PHPStan Level Max fix effort across all Laravel modules using parallel AI agents.
-
-## Current Status
-
-### `wiki/topics/phpstan-fixes.md` — Topic phpstan-fixes
-
-
-# Topic phpstan-fixes
-
-Sintesi automatica di 6 documenti (chiave `phpstan-fixes`).
-
-## Correzioni PHPStan Critiche - Modulo Notify
-
-_Fonte: `bmad/architecture/phpstan-fixes-critical.md`_
-
-# Correzioni PHPStan Critiche - Modulo Notify
-
-## 🚨 Problemi Identificati
-
-### 1. ConfigHelper.php - Errori di Tipizzazione
-**File**: `Modules/Notify/app/Helpers/ConfigHelper.php`  
-**Errori**: 11 errori di type mismatch per array
-
-### 2. NotifyThemeableFactory.php - Metodo Mancante
-**File**: `Modules/Notify/database/factories/NotifyThemeableFactory.php`  
-**Errore**: `XotData::getProjectNamespace()` non esiste
-
 ### `wiki/topics/ponytail-audit.md` — Topic ponytail-audit
 
 
 # Topic ponytail-audit
 
-Sintesi automatica di 3 documenti (chiave `ponytail-audit`).
+Sintesi automatica di 4 documenti (chiave `ponytail-audit`).
 
-## Ponytail audit: Notify (over-engineering)
+## Ponytail-audit 2026-07-02: Notify module findings
 
-_Fonte: `ponytail-audit-over-engineering.md`_
+_Fonte: `ponytail-audit-02.md`_
 
-> Nota 2026-10-14 (docs-audit): Dichiara 8 Action SMS e 3 varianti Agiletelecom spostate in .php.bak; il 2026-10-14 app/ non ha alcun .bak tracciato e app/Actions/SMS/ contiene ancora quelle Action. Contenuto non riscritto, verificare prima di usarlo.
+# Ponytail-audit 2026-07-02: Notify module findings
 
-# Ponytail audit: Notify (over-engineering)
+Source: repo-wide ponytail-audit, published as GitHub issues [#103](https://github.com/laraxot/base_quaeris_fila5/issues/103) and [#112](https://github.com/laraxot/base_quaeris_fila5/issues/112), summarized in discussion [#114](https://github.com/laraxot/base_quaeris_fila5/discussions/114).
 
-**Ultimo run:** 2026-07-02
-**Remediation run #5:** rimozione file inattivi e PHPStan pulito
+## Finding
 
-| # | Azione | Stato |
-|---|--------|-------|
-| N5 | action SMS inattive, Data class, test, pagina Netfun rimossi | ✅ 2026-07-02 |
-| N9 | `storage/app/ai/generate-notify-sms-tests.php` rimosso | ✅ 2026-07-02 |
+`Modules/Notify/app/Services/NotificationManager.php` is a thin wrapper that delegates almost every call to `SendNotificationAction`, and its `send()` method throws a generic `Exception` with a string message instead of using Laravel conventions (`firstOrFail`) or a t
 
 ### `wiki/topics/progetto-completato.md` — Topic progetto-completato
 
@@ -27446,7 +25822,7 @@ Il progetto Fixcity è stato completato con successo, implementando un sistema c
 
 # Topic project-overview
 
-Sintesi automatica di 7 documenti (chiave `project-overview`).
+Sintesi automatica di 6 documenti (chiave `project-overview`).
 
 ## Project Overview
 
@@ -27515,46 +25891,23 @@ Transform Notify from a functional MVP to a national-scale enterprise-ready plat
 
 # Topic provider-contracts
 
-Sintesi automatica di 4 documenti (chiave `provider-contracts`).
+Sintesi automatica di 3 documenti (chiave `provider-contracts`).
 
 ## Convenzioni di Naming per i Contracts
 
-_Fonte: `provider-contracts-naming-1.md`_
+_Fonte: `provider-contracts-naming.md`_
 
-# Convenzioni di Naming per i Contracts
+# Convenzioni di Naming per i Contracts 
 
 ## Regola Fondamentale
 
+Nel sistema , tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
 Nel sistema <nome progetto>, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
 
 1. **Suffisso `Contract` e non `Interface`**:
    - ✅ CORRETTO: `SmsProviderContract`
    - ❌ ERRATO: `SmsProviderInterface` o `SmsActionInterface`
 
-2. **Naming Semantico**:
-
-### `wiki/topics/quick-reference.md` — Topic quick-reference
-
-
-# Topic quick-reference
-
-Sintesi automatica di 3 documenti (chiave `quick-reference`).
-
-## Quick Reference & Super Mucca
-
-_Fonte: `ai-agents/quick-reference.md`_
-
-# Quick Reference & Super Mucca
-
-Guida per Claude: quick reference, workflow, risorse.
-
-## Quick Reference
-
-### Creating a New Model
-
-```php
-namespace Modules\YourModule\Models;
-class YourModel extends BaseModel
 
 ### `wiki/topics/quick-start.md` — Topic quick-start
 
@@ -27584,7 +25937,7 @@ _Fonte: `quick-start.md`_
 
 # Topic ralph-loop
 
-Sintesi automatica di 4 documenti (chiave `ralph-loop`).
+Sintesi automatica di 3 documenti (chiave `ralph-loop`).
 
 ## 🚀 Ralph Loop Execution Log - Homepage Bootstrap Italia Fix
 
@@ -27607,11 +25960,11 @@ Creare componente `header-slim.blade.php` conforme a Bootstrap Italia
 
 # Topic readme-analisi
 
-Sintesi automatica di 8 documenti (chiave `readme-analisi`).
+Sintesi automatica di 4 documenti (chiave `readme-analisi`).
 
 ## 🐄 Analisi Metodi Duplicati - Guida Rapida
 
-_Fonte: `bmad/architecture/readme-analisi-duplicati.md`_
+_Fonte: `readme-analisi-duplicati.md`_
 
 # 🐄 Analisi Metodi Duplicati - Guida Rapida
 
@@ -27625,33 +25978,12 @@ Questo è il documento PRINCIPALE con:
 - ✅ Esempi concreti dai file effettivi
 - ✅ Statistiche verificate (578 LOC BaseModel, 64 List files, etc.)
 
-### `wiki/topics/readme-en.md` — Topic readme-en
-
-
-# Topic readme-en
-
-Sintesi automatica di 3 documenti (chiave `readme-en`).
-
-## 📬 Notify — English presentation
-
-_Fonte: `bmad/readme-en.md`_
-
-# 📬 Notify — English presentation
-
-[![Domain-Notify](https://img.shields.io/badge/Domain-Notifications-E65100.svg)](#)
-[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
-[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
-[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
-[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
-[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1
-
 ### `wiki/topics/readme-phase.md` — Topic readme-phase
 
 
 # Topic readme-phase
 
-Sintesi automatica di 4 documenti (chiave `readme-phase`).
+Sintesi automatica di 3 documenti (chiave `readme-phase`).
 
 ## 📖 README - PHASE 1 EXECUTION
 
@@ -27697,7 +26029,7 @@ To provide a thin wrapper that connects Laravel's Notification system to `Spatie
 
 # Topic refactoring-basemodel
 
-Sintesi automatica di 5 documenti (chiave `refactoring-basemodel`).
+Sintesi automatica di 4 documenti (chiave `refactoring-basemodel`).
 
 ## 📋 ANALISI REFACTORING BASEMODEL - Eliminazione Duplicazioni
 
@@ -27738,29 +26070,6 @@ title: "refactoring completato"
 type: note
 tags: [documentation]
 
-### `wiki/topics/replikate-phase.md` — Topic replikate-phase
-
-
-# Topic replikate-phase
-
-Sintesi automatica di 3 documenti (chiave `replikate-phase`).
-
-## 🎉 REPLIKATE Phase 1 - COMPLETE
-
-_Fonte: `replikate-phase-1-complete.md`_
-
-# 🎉 REPLIKATE Phase 1 - COMPLETE
-
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
-
-**Date**: 2026-04-07  
-**Status**: ✅ **PHASE 1 STRUCTURAL ANALYSIS COMPLETE**
-
-
 ### `wiki/topics/report-finale.md` — Topic report-finale
 
 
@@ -27784,35 +26093,12 @@ title: "report finale super mucca"
 type: note
 tags: [documentation]
 
-### `wiki/topics/results.md` — Topic results
-
-
-# Topic results
-
-Sintesi automatica di 3 documenti (chiave `results`).
-
-## All Pages Visual Comparison Results
-
-_Fonte: `project/visual-comparison/all-pages/results.md`_
-
-# All Pages Visual Comparison Results
-
-## Summary
-
-| Metric | Value |
-|--------|-------|
-| **Total Pages Compared** | 29 |
-| **Passed (>=90%)** | 27 ✅ |
-| **Failed (<90%)** | 2 ❌ |
-| **Pass Rate** | 93.1% |
-
-
 ### `wiki/topics/riepilogo-risoluzione.md` — Topic riepilogo-risoluzione
 
 
 # Topic riepilogo-risoluzione
 
-Sintesi automatica di 3 documenti (chiave `riepilogo-risoluzione`).
+Sintesi automatica di 4 documenti (chiave `riepilogo-risoluzione`).
 
 ## Riepilogo Risoluzione Conflitti File Backup
 
@@ -27853,35 +26139,12 @@ Overall Module Completion: 60%
 
 ## Technical Metrics Overview
 
-### `wiki/topics/schemas-unified.md` — Topic schemas-unified
-
-
-# Topic schemas-unified
-
-Sintesi automatica di 3 documenti (chiave `schemas-unified`).
-
-## Filament Schemas Unificati — Regola Canonica
-
-_Fonte: `schemas-unified-religion.md`_
-
-# Filament Schemas Unificati — Regola Canonica
-
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Filament 5.x / Canonical Rule  
-**Audience**: All developers + AI agents
-
----
-
-title: "schemas unified religion"
-
 ### `wiki/topics/seasonal-email.md` — Topic seasonal-email
 
 
 # Topic seasonal-email
 
-Sintesi automatica di 10 documenti (chiave `seasonal-email`).
+Sintesi automatica di 6 documenti (chiave `seasonal-email`).
 
 ## Report di Revisione Sistema Email Stagionali - Dicembre 2025
 
@@ -27898,58 +26161,36 @@ _Fonte: `seasonal-email-system-implementation-report.md`_
 
 Questo documento riassume la revisione del sistema di email stagionali con particolare enfasi sulla logica, filosofia, religione, politica e zen del codice, seguendo i principi DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid). Dopo ulteriore analisi, è stata riconosciuta l'eccessiva complessità dell'approccio precedente.
 
-### `wiki/topics/send-agiletelecom.md` — Topic send-agiletelecom
-
-
-# Topic send-agiletelecom
-
-Sintesi automatica di 3 documenti (chiave `send-agiletelecom`).
-
-## SendAgiletelecomSMSAction
-
-_Fonte: `contracts/send-agiletelecom-sms-action.md`_
-
-# SendAgiletelecomSMSAction
-
-Punto di ingresso per Agiletelecom: delega interamente a `SendAgiletelecomSMSv2Action`.
-
-## Input
-
-- `SmsData $data`.
-
-## Output
-
-- `array`: quello di `SendAgiletelecomSMSv2Action` (oggi sempre `[]`).
 
 ### `wiki/topics/send-email.md` — Topic send-email
 
 
 # Topic send-email
 
-Sintesi automatica di 8 documenti (chiave `send-email`).
+Sintesi automatica di 6 documenti (chiave `send-email`).
 
-## Guida alla Correzione di SendEmail.php
+## Fix Traduzioni File send_email.php - Modulo Notify
 
-_Fonte: `send-email-fix.md`_
+_Fonte: `send-email-translation-fix-2.md`_
 
-# Guida alla Correzione di SendEmail.php
+# Fix Traduzioni File send_email.php - Modulo Notify
 
-## 🔍 Analisi del Problema
+## Problemi Identificati
 
-Il file `SendEmail.php` non funziona correttamente per i seguenti motivi:
+### 1. Conflitti di Merge Non Risolti
+- Presenza di marcatori git  nel file
+- Codice duplicato e inconsistente
 
-1. **Configurazione SMTP Mancante**
-   - Non utilizza la configurazione SMTP corretta
-   - Manca la gestione delle credenziali
-
-2. **Problemi di Implementazione**
+### 2. Sintassi Obsoleta
+- Uso di `array()` invece di sintassi breve `[]`
+- Mancanza di `declare(strict_types=1);`
 
 ### `wiki/topics/send-notification.md` — Topic send-notification
 
 
 # Topic send-notification
 
-Sintesi automatica di 4 documenti (chiave `send-notification`).
+Sintesi automatica di 3 documenti (chiave `send-notification`).
 
 ## SendNotificationAction
 
@@ -27957,60 +26198,38 @@ _Fonte: `contracts/send-notification-action.md`_
 
 # SendNotificationAction
 
-Invia una notifica a un destinatario partendo da un `NotificationTemplate` attivo, su uno o piu' canali (`mail`, `database`, `sms`).
-Raggiunta da `app/Actions/NotificationManager.php`. Decisione di fondo sul ruolo di Notify: [ADR notify-owns-delivery-contract](../adr/0003-notify-owns-delivery-contract.md) (stato `proposed`).
-
-> Il metodo pubblico si chiama `handle()`, non `execute()`: differisce dalla convenzione delle Queueable Action del progetto (dichiarato qui, non corretto).
+Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
+Sorgente: `app/Actions/SendNotificationAction.php`. Descrive il codice **com'è**, difetti compresi.
 
 ## Input
 
-- `Model $recipient`: destinatario (usa `routeNotificationForMail()` / `routeNotificationForSms()` se presen
-
-### `wiki/topics/send-push.md` — Topic send-push
-
-
-# Topic send-push
-
-Sintesi automatica di 9 documenti (chiave `send-push`).
-
-## SendPushToAllUsersAction
-
-_Fonte: `contracts/send-push-to-all-users-action.md`_
-
-# SendPushToAllUsersAction
-
-Invio push a tutti i token attivi. Oggi il recupero dei token e' uno stub che restituisce sempre `[]`: l'Action non invia mai.
-
-## Input
-
-- `PushNotificationData $notification`.
-- `array $data`.
+- `handle(Model $recipient, string $templateCode, array $data = [], array $channels = [], array $options = [])`.
+- Il template `NotificationTemplate` attivo con quel `code`; `channels` vuoto = canali del template.
 
 ## Output
-
 
 ### `wiki/topics/send-record.md` — Topic send-record
 
 
 # Topic send-record
 
-Sintesi automatica di 4 documenti (chiave `send-record`).
+Sintesi automatica di 3 documenti (chiave `send-record`).
 
-## SendRecordNotificationAction
+## Refactoring Report: SendRecordNotificationAction
 
-_Fonte: `contracts/send-record-notification-action.md`_
+_Fonte: `refactoring/send-record-notification-action-refactoring.md`_
 
-# SendRecordNotificationAction
+# Refactoring Report: SendRecordNotificationAction
 
-Invia una `RecordNotification` a un singolo record (es. Client) su una lista di canali `ChannelEnum`.
+**Date**: 2025-12-18  
+**Module**: Notify  
+**Status**: ✅ Refactoring Completed  
+**Compliance**: DRY + KISS + Clean Code
 
-## Input
+## Overview
 
-- `Model $record`: il record da notificare.
-- `string $mailTemplateSlug`: slug del template usato da `RecordNotification`.
-- `array $channels`: elementi `ChannelEnum`; gli altri tipi vengono ignorati.
+This document details the refactoring of `SendRecordNotificationAction.php` to eliminate code duplication and improve maintainability while following DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles.
 
-## Output
 
 ### `wiki/topics/service-provider.md` — Topic service-provider
 
@@ -28035,98 +26254,6 @@ _Fonte: `service-provider-xotbase-2.md`_
 
 ```php
 
-### `wiki/topics/session-007.md` — Topic session-007
-
-
-# Topic session-007
-
-Sintesi automatica di 3 documenti (chiave `session-007`).
-
-## SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
-
-_Fonte: `session-007-summary.md`_
-
-# SESSION 007 - PHASE 1 EXECUTION ORCHESTRATION
-## Researcher Agent Summary
-
-**Session Date**: 2026-04-08  
-**Agent Role**: Researcher (BMAD Mode C - Opzione C)  
-**Scope**: FixCity Sixteen Theme - Phase 1 HTML Parity (segnalazioni-elenco)  
-**Status**: 🟠 EXECUTION IN PROGRESS
-
----
-
-title: "session 007 summary"
-
-### `wiki/topics/sessione-100.md` — Topic sessione-100
-
-
-# Topic sessione-100
-
-Sintesi automatica di 6 documenti (chiave `sessione-100`).
-
-## 🎉 Sessione 100% Completata - Homepage Bootstrap Italia
-
-_Fonte: `sessione-100-percent.md`_
-
-# 🎉 Sessione 100% Completata - Homepage Bootstrap Italia
-
-## Data: 2026-03-31
-## Status: ✅ 100% COMPLETATO
-
----
-
-## 📊 Conformità Raggiunta
-
-**100%** - Tutti i task completati!
-
-
-### `wiki/topics/sessione-analisi.md` — Topic sessione-analisi
-
-
-# Topic sessione-analisi
-
-Sintesi automatica di 6 documenti (chiave `sessione-analisi`).
-
-## ✅ Sessione Completata - Homepage Analysis & Documentation
-
-_Fonte: `sessione-analisi-homepage.md`_
-
-# ✅ Sessione Completata - Homepage Analysis & Documentation
-
-## 📋 Riepilogo Lavoro
-
-### Strumenti Utilizzati
-- ✅ **BMAD**: Analisi requisiti e struttura documentazione
-- ✅ **GSD**: Pianificazione fasi e task
-- ✅ **Ralph Loop**: Iterazioni rapide su analisi
-- ✅ **OpenViking**: Context database globale
-- ✅ **NotebookLM MCP**: Organizzazione conoscenza
-
-
-### `wiki/topics/sessione-completa.md` — Topic sessione-completa
-
-
-# Topic sessione-completa
-
-Sintesi automatica di 4 documenti (chiave `sessione-completa`).
-
-## ✅ Sessione Completata - Allineamento Bootstrap Italia
-
-_Fonte: `sessione-completa.md`_
-
-# ✅ Sessione Completata - Allineamento Bootstrap Italia
-
-## 📋 Riepilogo Lavoro
-
-### Strumenti Utilizzati
-- ✅ **BMAD**: Analisi requisiti e struttura
-- ✅ **GSD**: Pianificazione fasi
-- ✅ **Ralph Loop**: Iterazioni rapide sui componenti
-- ✅ **OpenViking**: Context database
-- ✅ **NotebookLM MCP**: Documentazione
-
-
 ### `wiki/topics/sms-actions.md` — Topic sms-actions
 
 
@@ -28134,21 +26261,21 @@ _Fonte: `sessione-completa.md`_
 
 Sintesi automatica di 4 documenti (chiave `sms-actions`).
 
-## Azioni SMS
+## Pattern per le Azioni SMS
 
-_Fonte: `sms-actions-1.md`_
+_Fonte: `sms-actions-pattern-2.md`_
 
-# Azioni SMS
+# Pattern per le Azioni SMS 
 
-## Interfaccia
+## Struttura e Convenzioni
 
-Tutte le azioni di invio SMS devono implementare l'interfaccia `SmsActionInterface`:
+, le azioni di invio SMS seguono un pattern ben definito per garantire coerenza, manutenibilità e estensibilità. Questo documento descrive il pattern corretto da seguire per tutte le azioni SMS.
 
-```php
-namespace Modules\Notify\Contracts\SMS;
+## Regola Fondamentale: Corrispondenza Driver-Azione
 
-interface SmsActionInterface
-{
+**Per ogni driver configurato in `config/sms.php` deve esistere una corrispondente azione in `app/Actions/SMS/`.**
+
+Esempio:
 
 ### `wiki/topics/sms-channel.md` — Topic sms-channel
 
@@ -28201,11 +26328,11 @@ Il file `config/sms.php` è organizzato in sezioni distinte:
 
 # Topic sms-configuration
 
-Sintesi automatica di 4 documenti (chiave `sms-configuration`).
+Sintesi automatica di 3 documenti (chiave `sms-configuration`).
 
 ## Pattern di Accesso alla Configurazione SMS
 
-_Fonte: `sms-configuration-access-pattern-1.md`_
+_Fonte: `sms-configuration-access-pattern-2.md`_
 
 # Pattern di Accesso alla Configurazione SMS
 
@@ -28213,45 +26340,22 @@ _Fonte: `sms-configuration-access-pattern-1.md`_
 
 È stato identificato un errore comune nell'implementazione delle azioni SMS: l'utilizzo di `config('services.*.token')` invece di `config('sms.drivers.*.token')`.
 
-Questo errore viola i principi di modularità e coerenza dell'architettura di <nome progetto>, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
+Questo errore viola i principi di modularità e coerenza dell'architettura di SaluteOra, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
 
 ## Pattern Corretto
 
 ### ❌ Pattern ERRATO
-
-### `wiki/topics/sms-driver.md` — Topic sms-driver
-
-
-# Topic sms-driver
-
-Sintesi automatica di 4 documenti (chiave `sms-driver`).
-
-## Traduzioni SmsDriverEnum - Modulo Notify
-
-_Fonte: `sms-driver-enum-translations-1.md`_
-
-# Traduzioni SmsDriverEnum - Modulo Notify
-
-## Panoramica
-
-Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
-
-## Struttura Enum
-
-```php
-enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
-{
 
 ### `wiki/topics/sms-implementation.md` — Topic sms-implementation
 
 
 # Topic sms-implementation
 
-Sintesi automatica di 4 documenti (chiave `sms-implementation`).
+Sintesi automatica di 3 documenti (chiave `sms-implementation`).
 
 ## Implementazione SMS : Guida Dettagliata
 
-_Fonte: `notifications/sms-implementation-details-1.md`_
+_Fonte: `notifications/sms-implementation-details.md`_
 
 # Implementazione SMS : Guida Dettagliata
 
@@ -28281,7 +26385,7 @@ _Fonte: `sms-netfun-channel-1.md`_
 ## Introduzione
 Questa guida spiega come integrare il provider Netfun come canale custom per l'invio di SMS in Laravel, seguendo le best practice del framework e sfruttando il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione asincrona.
 
-> **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./netfun-config-requirements.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
+> **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./netfun-config-requirements-2.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
 
 ---
 
@@ -28293,23 +26397,18 @@ type: note
 
 # Topic sms-provider
 
-Sintesi automatica di 8 documenti (chiave `sms-provider`).
+Sintesi automatica di 7 documenti (chiave `sms-provider`).
 
 ## Configurazione Provider SMS per le Notifiche
 
-_Fonte: `notifications/sms-provider-configuration-1.md`_
+_Fonte: `notifications/sms-provider-configuration.md`_
 
 # Configurazione Provider SMS per le Notifiche
 
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di <nome progetto>, con focus sui diversi provider e sulla loro configurazione.
 Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di <nome progetto>, con focus sui diversi provider e sulla loro configurazione.
+Questa documentazione descrive le opzioni disponibili per l'integrazione di servizi SMS nei sistemi di notifica di App, con focus sui diversi provider e sulla loro configurazione.
 
-## Indice
-
-- [Panoramica Provider SMS](#panoramica-provider-sms)
-- [Twilio](#twilio)
-- [Vonage (ex Nexmo)](#vonage-ex-nexmo)
-- [Plivo](#plivo)
 
 ### `wiki/topics/sms-troubleshooting.md` — Topic sms-troubleshooting
 
@@ -28334,35 +26433,12 @@ _Fonte: `sms-troubleshooting-1.md`_
 - Credenziali non configurate correttamente
 - Problemi di rete
 
-### `wiki/topics/spatie-database.md` — Topic spatie-database
-
-
-# Topic spatie-database
-
-Sintesi automatica di 3 documenti (chiave `spatie-database`).
-
-## Spatie Laravel Database Mail Templates
-
-_Fonte: `mail-templates/spatie-database-mail-templates.md`_
-
-# Spatie Laravel Database Mail Templates
-
-## Introduzione
-
-Questo pacchetto permette di memorizzare i template delle email nel database anziché in file statici, consentendo maggiore flessibilità e la possibilità di modificarli senza necessità di deployment.
-
-- **Repository**: [spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates)
-- **Documentazione**: [GitHub README](https://github.com/spatie/laravel-database-mail-templates)
-- **Versione installata**: 3.7.1
-
-## Architettura del Package
-
 ### `wiki/topics/spatie-email.md` — Topic spatie-email
 
 
 # Topic spatie-email
 
-Sintesi automatica di 6 documenti (chiave `spatie-email`).
+Sintesi automatica di 5 documenti (chiave `spatie-email`).
 
 ## SpatieEmail Documentation
 
@@ -28380,39 +26456,108 @@ The `SpatieEmail` class extends Spatie's `TemplateMailable` to provide enhanced 
 
 ### Namespace
 
-### `wiki/topics/start-here.md` — Topic start-here
+### `wiki/topics/sprint-planning.md` — Topic sprint-planning
 
 
-# Topic start-here
+# Topic sprint-planning
 
-Sintesi automatica di 3 documenti (chiave `start-here`).
+Sintesi automatica di 3 documenti (chiave `sprint-planning`).
 
-## 🚀 START HERE - REPLIKATE Phase 2
+## Notify Module - Sprint Planning
 
-_Fonte: `start-here-replikate-phase2.md`_
+_Fonte: `sprint-planning-2.md`_
 
-# 🚀 START HERE - REPLIKATE Phase 2
+# Notify Module - Sprint Planning
 
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
+**Module:** Notify  
+**Sprint:** Sprint 1 (March 12-25, 2026)  
+**Version:** 1.0.0
 
-**Status**: Phase 1 Analysis Complete ✅  
-**Your Job**: Execute Phase 2 - HTML Structure Fixes ⏳  
-**Time Estimate**: ~50 minutes
+---
+
+## Sprint Goal
+
+Implement core notification system with email and in-app notifications.
+
+### `wiki/topics/standardized-sms.md` — Topic standardized-sms
+
+
+# Topic standardized-sms
+
+Sintesi automatica di 3 documenti (chiave `standardized-sms`).
+
+## Struttura Standardizzata della Configurazione SMS
+
+_Fonte: `architecture/standardized-sms-config-structure.md`_
+
+# Struttura Standardizzata della Configurazione SMS
+
+## Introduzione
+
+Questo documento definisce la struttura standardizzata del file di configurazione SMS (`config/sms.php`) nel modulo Notify, basata sul modello di configurazione `mail.php` di Laravel. Questa struttura garantisce coerenza, manutenibilità e chiarezza nella configurazione dei provider SMS.
+
+## Struttura Generale
+
+```php
+return [
+    // Driver predefinito
+
+### `wiki/topics/status.md` — Topic status
+
+
+# Topic status
+
+Sintesi automatica di 3 documenti (chiave `status`).
+
+## Notify — BMAD Status
+
+_Fonte: `bmad/status.md`_
+
+# Notify — BMAD Status
+- PHPStan: 0 errori
+- Inventario docs/: disordinato (duplicati maiuscole in wiki/, .gitkeep ridondanti, bmad/ molto esteso)
+- Wiki aggiornata: docs/wiki/module-purpose.md aggiunto
+- Non corretto codice; solo organizzazione docs
+
+## Homepage CSS/JS Fix - Status
+
+_Fonte: `theme/sixteen/analysis/status.md`_
+
+# Homepage CSS/JS Fix - Status
+
+### `wiki/topics/stories:consolidation-orphan-doc.md` — Topic stories:consolidation-orphan-doc
+
+
+# Topic stories:consolidation-orphan-doc
+
+Sintesi automatica di 4 documenti (chiave `stories:consolidation-orphan-doc`).
+
+## BMAD Story: Consolidate Orphan .md Files in Notify Docs
+
+_Fonte: `bmad/stories/0004-consolidation-orphan-docs.story.md`_
+
+# BMAD Story: Consolidate Orphan .md Files in Notify Docs
+
+## Context and Problem Statement
+
+Audit showed 443+ orphan .md files in `/laravel/Modules/Notify/docs/` (root level), mostly analysis, design, brainstorming, and implementation documentation. Directory structure was chaotic with multiple index files, readme files, versioned duplicates, and empty stub files.
+
+## Decision Drivers
+
+- Richiesta utente / acceptance criteria della story
+- Vincoli BMAD, second brain, Pest gate e dati sacri
+
 
 ### `wiki/topics/structure-standards.md` — Topic structure-standards
 
 
 # Topic structure-standards
 
-Sintesi automatica di 6 documenti (chiave `structure-standards`).
+Sintesi automatica di 4 documenti (chiave `structure-standards`).
 
 ## Standard di Struttura nel Modulo Notify
 
-_Fonte: `architecture/structure-standards.md`_
+_Fonte: `structure-standards-1.md`_
 
 # Standard di Struttura nel Modulo Notify
 
@@ -28431,7 +26576,7 @@ _Fonte: `architecture/structure-standards.md`_
 
 # Topic super-mucca
 
-Sintesi automatica di 19 documenti (chiave `super-mucca`).
+Sintesi automatica di 10 documenti (chiave `super-mucca`).
 
 ## 🐄⚡ SUPER MUCCA MODE - Completion Report
 
@@ -28454,11 +26599,11 @@ tags: [documentation]
 
 # Topic supermemory-quickstart
 
-Sintesi automatica di 5 documenti (chiave `supermemory-quickstart`).
+Sintesi automatica di 3 documenti (chiave `supermemory-quickstart`).
 
 ## SuperMemory - AI Memory Infrastructure
 
-_Fonte: `supermemory-quickstart-2.md`_
+_Fonte: `supermemory-quickstart.md`_
 
 # SuperMemory - AI Memory Infrastructure
 
@@ -28472,35 +26617,12 @@ _Fonte: `supermemory-quickstart-2.md`_
 **Last Updated**: 2026-04-09  
 **API Key**: Configured (sm_BzH3Cugxk1hMDm5V1EHC2N_...)  
 
-### `wiki/topics/support-to.md` — Topic support-to
-
-
-# Topic support-to
-
-Sintesi automatica di 3 documenti (chiave `support-to`).
-
-## da Support a Actions — Filosofia
-
-_Fonte: `support-to-actions-philosophy.md`_
-
-# da Support a Actions — Filosofia
-
-> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](wiki/concepts/no-app-support-queueable-actions.md).
-
-## Principio (post-migrazione)
-
-Tutta la logica di dominio vive in **`app/Actions/`** (Spatie `QueueableAction` + `execute()`).
-
-| Tipo | Path canonico |
-|------|----------------|
-| Unità di business (sync/queue) | `app/Actions/*Action.php` |
-
 ### `wiki/topics/sync-remote.md` — Topic sync-remote
 
 
 # Topic sync-remote
 
-Sintesi automatica di 7 documenti (chiave `sync-remote`).
+Sintesi automatica di 3 documenti (chiave `sync-remote`).
 
 ## Sync Remote Repo Documentation - Creation Summary
 
@@ -28517,29 +26639,6 @@ _Fonte: `github/sync-remote-repo-docs-summary.md`_
 ## 📦 Files Created
 
 ### Core Documentation (bashscripts/docs/git/)
-
-### `wiki/topics/tailwind-conversion.md` — Topic tailwind-conversion
-
-
-# Topic tailwind-conversion
-
-Sintesi automatica di 4 documenti (chiave `tailwind-conversion`).
-
-## 🎨 TAILWIND CONVERSION COMPLETE - Design Comuni
-
-_Fonte: `tailwind-conversion-complete.md`_
-
-# 🎨 TAILWIND CONVERSION COMPLETE - Design Comuni
-
-**Data**: 2025-10-02 21:12  
-**Obiettivo**: Replicare Design Comuni usando Tailwind CSS  
-**Status**: ✅ HOMEPAGE COMPLETA  
-
----
-
-## 🎯 OBIETTIVO RAGGIUNTO
-
-Convertito il design Bootstrap Italia dei Comuni in **Tailwind CSS puro**!
 
 ### `wiki/topics/tailwind-css.md` — Topic tailwind-css
 
@@ -28564,61 +26663,39 @@ _Fonte: `tailwind-css-migration-complete.md`_
 Replicare il design di **Bootstrap Italia / Design Comuni** usando **SOLO Tailwind CSS**, senza dipendenze esterne.
 
 
-### `wiki/topics/telegram-provider.md` — Topic telegram-provider
+### `wiki/topics/telegram.md` — Topic telegram
 
 
-# Topic telegram-provider
+# Topic telegram
 
-Sintesi automatica di 3 documenti (chiave `telegram-provider`).
+Sintesi automatica di 3 documenti (chiave `telegram`).
 
-## Architettura Telegram Provider per <nome progetto>
+## Telegram Bot Integration
 
-_Fonte: `telegram-provider-architecture-1.md`_
+_Fonte: `messaging/telegram.md`_
 
-# Architettura Telegram Provider per <nome progetto>
+# Telegram Bot Integration
 
-Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di <nome progetto>, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+## Resources
+- [Laravel Package to Integrate Telegram Bot API](https://dev.to/millykhamroev/laravel-package-to-integrate-telegram-bot-api-3l6e)
+- [Send Telegram Notifications with Laravel 9](https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406)
 
-## Principi Architetturali Fondamentali
+## Configuration
 
-L'architettura dei provider Telegram segue gli stessi principi dei provider SMS, email e WhatsApp, rispettando i seguenti punti:
+Add telegram service into config/service.php file.
 
-1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implementazione
-2. **Implementazioni in Directory Ded
-
-### `wiki/topics/template-content.md` — Topic template-content
-
-
-# Topic template-content
-
-Sintesi automatica di 3 documenti (chiave `template-content`).
-
-## Esempi Aggiuntivi di Contenuto per Template Email
-
-_Fonte: `mail-templates/archive/template-content-more-examples.md`_
-
-# Esempi Aggiuntivi di Contenuto per Template Email
-
-Questo documento contiene esempi aggiuntivi di contenuto HTML per template email da memorizzare nel database, seguendo l'architettura corretta di `spatie/laravel-database-mail-templates`.
-
-## Indice
-
-- [Template di Reset Password](#template-di-reset-password)
-- [Template di Appuntamento](#template-di-appuntamento)
-- [Template di Notifica](#template-di-notifica)
-- [Template di Newsletter](#template-di-newsletter)
-- [Integrazione nel Database](#integrazione-nel-database)
+```php
 
 ### `wiki/topics/test-smtp.md` — Topic test-smtp
 
 
 # Topic test-smtp
 
-Sintesi automatica di 7 documenti (chiave `test-smtp`).
+Sintesi automatica di 6 documenti (chiave `test-smtp`).
 
 ## test_smtp
 
-_Fonte: `_integration/test-smtp-1.md`_
+_Fonte: `-integration/test-smtp.md`_
 
 # test_smtp
 
@@ -28655,58 +26732,12 @@ _Fonte: `ai-agents/testing.md`_
 ./vendor/bin/pest --filter="test_name"
 
 
-### `wiki/topics/theme-architecture.md` — Topic theme-architecture
-
-
-# Topic theme-architecture
-
-Sintesi automatica di 5 documenti (chiave `theme-architecture`).
-
-## 🎨 Theme Architecture - "Il Tema è un Vestito"
-
-_Fonte: `theme-architecture.md`_
-
-# 🎨 Theme Architecture - "Il Tema è un Vestito"
-
-**Data**: 2026-03-30  
-**Stato**: ✅ **ARCHITETTURA CORRETTA**
-
-## 🎯 Concetto Fondamentale
-
-**"Il tema è un vestito configurabile!"**
-
-Il tema **NON** deve essere registrato hardcoded in `AppServiceProvider.php`.
-
-
-### `wiki/topics/theme-detection.md` — Topic theme-detection
-
-
-# Topic theme-detection
-
-Sintesi automatica di 3 documenti (chiave `theme-detection`).
-
-## Theme Detection System - Notify Fila5
-
-_Fonte: `project/theme-detection-system-2.md`_
-
-# Theme Detection System - Notify Fila5
-
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
-
-**Project:** Notify Fila5
-**Date:** 2026-04-01
-**Status:** ✅ **Documented**
-
 ### `wiki/topics/theme-system.md` — Topic theme-system
 
 
 # Topic theme-system
 
-Sintesi automatica di 5 documenti (chiave `theme-system`).
+Sintesi automatica di 4 documenti (chiave `theme-system`).
 
 ## 🎨 Theme System - Dynamic Theme Registration
 
@@ -28729,7 +26760,7 @@ tags: [documentation]
 
 # Topic themes-documentation
 
-Sintesi automatica di 6 documenti (chiave `themes-documentation`).
+Sintesi automatica di 5 documenti (chiave `themes-documentation`).
 
 ## Theme Documentation Master Index
 
@@ -28775,11 +26806,11 @@ Il pacchetto [filament-title-with-slug](https://github.com/camya/filament-title-
 
 # Topic todo
 
-Sintesi automatica di 3 documenti (chiave `todo`).
+Sintesi automatica di 5 documenti (chiave `todo`).
 
 ## _todo
 
-_Fonte: `_integration/todo.md`_
+_Fonte: `-integration/todo.md`_
 
 # _todo
 
@@ -28798,7 +26829,7 @@ http://laradevsbd.com/story/laravel-notifications-with-database
 
 # Topic token-efficiency
 
-Sintesi automatica di 4 documenti (chiave `token-efficiency`).
+Sintesi automatica di 3 documenti (chiave `token-efficiency`).
 
 ## Token Efficiency
 
@@ -28821,7 +26852,7 @@ _Fonte: `ai-agents/token-efficiency.md`_
 
 # Topic token-optimization
 
-Sintesi automatica di 4 documenti (chiave `token-optimization`).
+Sintesi automatica di 3 documenti (chiave `token-optimization`).
 
 ## Token Optimization Strategy (2026)
 
@@ -28836,35 +26867,12 @@ This document outlines the mandatory rules for token efficiency in this workspac
 - **Selective Reading**: Use `start_line` and `end_line` parameters in `read_file` to capture only the necessary blocks.
 - **Session Phasing**: When transitioning from a **Research/Analysis** phase to an **Implementation** phase, sum
 
-### `wiki/topics/trans-choice.md` — Topic trans-choice
-
-
-# Topic trans-choice
-
-Sintesi automatica di 3 documenti (chiave `trans-choice`).
-
-## TransChoice DRY — La Religione dell'Unica Fonte di Verita
-
-_Fonte: `trans-choice-dry-religion.md`_
-
-# TransChoice DRY — La Religione dell'Unica Fonte di Verita
-
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Religion / i18n / DRY  
-**Audience**: All developers + AI agents
-
----
-
-title: "trans choice dry religion"
-
 ### `wiki/topics/translation-conventions.md` — Topic translation-conventions
 
 
 # Topic translation-conventions
 
-Sintesi automatica di 6 documenti (chiave `translation-conventions`).
+Sintesi automatica di 3 documenti (chiave `translation-conventions`).
 
 ## Chiarimento sulle Convenzioni di Traduzione nel Modulo Notify
 
@@ -28910,7 +26918,7 @@ declare(strict_types=1);
 
 # Topic translation-keys
 
-Sintesi automatica di 4 documenti (chiave `translation-keys`).
+Sintesi automatica di 3 documenti (chiave `translation-keys`).
 
 ## Best Practices per le Chiavi di Traduzione
 
@@ -28932,7 +26940,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 
 # Topic translation-standards
 
-Sintesi automatica di 5 documenti (chiave `translation-standards`).
+Sintesi automatica di 4 documenti (chiave `translation-standards`).
 
 ## Standard per le Traduzioni
 
@@ -28955,17 +26963,17 @@ Le traduzioni devono essere organizzate nelle seguenti cartelle:
 
 # Topic translations-implementation
 
-Sintesi automatica di 4 documenti (chiave `translations-implementation`).
+Sintesi automatica di 3 documenti (chiave `translations-implementation`).
 
 ## Stato dell'Implementazione delle Traduzioni nel Modulo Notify
 
-_Fonte: `translations-implementation-status-1.md`_
+_Fonte: `translations-implementation-status-2.md`_
 
 # Stato dell'Implementazione delle Traduzioni nel Modulo Notify
 
 ## Panoramica
 
-Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di <nome progetto> e le azioni necessarie per garantire la coerenza.
+Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di SaluteOra e le azioni necessarie per garantire la coerenza.
 
 ## Convenzioni Attuali nel Modulo Notify
 
@@ -28978,7 +26986,7 @@ Il modulo Notify utilizza attualmente due pattern principali per i file di tradu
 
 # Topic ui-ux
 
-Sintesi automatica di 6 documenti (chiave `ui-ux`).
+Sintesi automatica di 5 documenti (chiave `ui-ux`).
 
 ## UI/UX Enhancements per i Campi `name` e `slug` in MailTemplateResource
 
@@ -29019,7 +27027,7 @@ https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 
 # Topic vhost-configuration
 
-Sintesi automatica di 5 documenti (chiave `vhost-configuration`).
+Sintesi automatica di 4 documenti (chiave `vhost-configuration`).
 
 ## 🌐 VHost Configuration Summary
 
@@ -29060,61 +27068,36 @@ This document describes the `WhatsAppChannel`, a custom Laravel Notification Cha
 
 To establish a dedicated, extensible mechanism for dispatching WhatsApp notifications through Laravel's Notification system. It separates WhatsApp communication logic from notification content generation and ensures flexibility for integrating with various 
 
-### `wiki/topics/whatsapp-integration.md` — Topic whatsapp-integration
+### `wiki/topics/whatsapp.md` — Topic whatsapp
 
 
-# Topic whatsapp-integration
+# Topic whatsapp
 
-Sintesi automatica di 3 documenti (chiave `whatsapp-integration`).
+Sintesi automatica di 3 documenti (chiave `whatsapp`).
 
-## Integrazione WhatsApp
+## whatsapp
 
-_Fonte: `whatsapp-integration-1.md`_
+_Fonte: `-integration/whatsapp.md`_
 
-# Integrazione WhatsApp
+# whatsapp
 
-## Panoramica
+<!-- Contenuto migrato da _docs/whatsapp.txt -->
 
-Questo documento descrive l'architettura e l'implementazione dell'integrazione WhatsApp nel modulo Notify di <nome progetto>, seguendo gli stessi standard e pattern utilizzati per l'invio di email e SMS.
+https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96
 
-## Architettura
-
-L'integrazione WhatsApp segue la stessa architettura modulare utilizzata per SMS ed email, basata su:
-
-1. **Interfaccia comune** (`WhatsAppProviderActionInterface`)
-
-### `wiki/topics/whatsapp-provider.md` — Topic whatsapp-provider
-
-
-# Topic whatsapp-provider
-
-Sintesi automatica di 3 documenti (chiave `whatsapp-provider`).
-
-## Architettura WhatsApp Provider per <nome progetto>
-
-_Fonte: `whatsapp-provider-architecture-1.md`_
-
-# Architettura WhatsApp Provider per <nome progetto>
-
-Questo documento definisce l'architettura e gli standard per l'implementazione dei provider WhatsApp nel modulo Notify di <nome progetto>, mantenendo coerenza con le architetture esistenti per SMS ed email.
-
-## Principi Architetturali Fondamentali
-
-L'architettura dei provider WhatsApp segue gli stessi principi dei provider SMS ed email, rispettando i seguenti punti:
-
-1. **Separazione delle Interfacce**: Le interfacce sono definite in `app/Contracts/`, mai nelle directory di implementazione
-2. **Implementazioni in Directory Dedicate**: Tutte le 
+tutorial
+https://medium.com/@snomanali1996/whatsapp-integration-with-laravel-using-twilio-api-9bd8ecd06dbf#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzYjc2MmY4NzFjZGIzYmFlMDA0NGM2NDk2MjJmYzEzOTZlZGEzZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTU5MDIwMjQzMjQ3MDkwMzIyMDki
 
 ### `wiki/topics/wiki-schema.md` — Topic wiki-schema
 
 
 # Topic wiki-schema
 
-Sintesi automatica di 5 documenti (chiave `wiki-schema`).
+Sintesi automatica di 4 documenti (chiave `wiki-schema`).
 
 ## LLM Wiki Schema
 
-_Fonte: `.schema/wiki-schema-2.md`_
+_Fonte: `.schema/wiki-schema-3.md`_
 
 # LLM Wiki Schema
 
@@ -29128,58 +27111,12 @@ Il sistema wiki si articola in tre layer:
 - **Posizione**: `docs/raw/` nella root e `docs/raw/` in ogni modulo/tema
 - **Contenuto**: Documenti sorgente grezzi (articoli, paper, RFC, documentazione, note)
 
-### `wiki/topics/work-completed.md` — Topic work-completed
-
-
-# Topic work-completed
-
-Sintesi automatica di 4 documenti (chiave `work-completed`).
-
-## ✅ LAVORO COMPLETATO - 2025-10-01
-
-_Fonte: `work-completed-01.md`_
-
-# ✅ LAVORO COMPLETATO - 2025-10-01
-
-**Data**: 2025-10-01  
-**Tipo**: Aggiornamento Roadmap e Documentazione  
-**Status**: ✅ COMPLETATO  
-
----
-
-title: "work completed 2025 10 01"
-type: note
-tags: [documentation]
-
-### `wiki/topics/xot-base.md` — Topic xot-base
-
-
-# Topic xot-base
-
-Sintesi automatica di 3 documenti (chiave `xot-base`).
-
-## Analisi: Utilizzo delle Classi Base Xot
-
-_Fonte: `xot-base-classes-analysis.md`_
-
-# Analisi: Utilizzo delle Classi Base Xot
-
-## Contesto
-Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
-
-## Perché Non Estendere Direttamente Filament
-
-### 1. Problemi con l'Estensione Diretta
-```php
-// ❌ Non fare questo
-use Filament\Pages\Page;
-
 ### `wiki/topics/zen-of.md` — Topic zen-of
 
 
 # Topic zen-of
 
-Sintesi automatica di 15 documenti (chiave `zen-of`).
+Sintesi automatica di 11 documenti (chiave `zen-of`).
 
 ## 🧘 The Zen of Reuse (Filament Components)
 
@@ -29196,28 +27133,51 @@ When a form field is used in multiple places (or even just once but has complex 
 ### 📿 Component: MailTemplateSelect
 Encapsulates the logic for select
 
-### `wiki/troubleshooting/git-lfs-push-missing-objects.md` — Git LFS Push Missing Objects (Notify)
+### `work-completed-01.md` — ✅ LAVORO COMPLETATO - 2025-10-01
 
 
-# Git LFS Push Missing Objects (Notify)
+# ✅ LAVORO COMPLETATO - 2025-10-01
 
-## Symptom
+**Data**: 2025-10-01  
+**Tipo**: Aggiornamento Roadmap e Documentazione  
+**Status**: ✅ COMPLETATO  
 
-`git push laraxot dev` (29 commits ahead, `laraxot/dev` confirmed as a real
-ancestor via `git merge-base --is-ancestor`) would have failed with:
+---
 
-```
-remote: error: GH008: Your push referenced at least N unknown Git LFS objects
-```
+title: "work completed 2025 10 01"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "work completed 2025 10 01"
+issues: []
+discussions: []
+## 🎯 OBIETTIVO
 
-13 SVG files under `resources/svg/` (`icon.svg`, `logo.svg`,
-`*-animated.svg`, `notify-icon.svg`, etc.) are stored as Git LFS pointers in
-this module's history.
+Aggiornare e sincronizzare tutte le roadmap e la documentazione dei moduli e temi del progetto FixCity,
 
-## Root Cause Check (before assuming corruption)
+### `work-completed.md` — ✅ LAVORO COMPLETATO - 2025-10-01
 
-Unlike the `Modules/User` case (see
-[../../../User/docs/wiki/troubleshooting/git-lfs-orphan-pointer-svg-fix.md](../../../User/docs/wiki/troubleshooting/git-lfs-orphan-pointer-svg-fix.md)),
+
+# ✅ LAVORO COMPLETATO - 2025-10-01
+
+**Data**: 2025-10-01  
+**Tipo**: Aggiornamento Roadmap e Documentazione  
+**Status**: ✅ COMPLETATO  
+
+## 🎯 OBIETTIVO
+
+## ✅ LAVORO SVOLTO
+
+### 1. 📊 Analisi Stato Attuale
+- ✅ Analizzate tutte le roadmap esistenti
+- ✅ Verificato stato documentazione di 18 moduli
+- ✅ Verificato stato documentazione di 2 temi
+- ✅ Identificate aree da aggiornare
+
+### 2. 📝 Aggiornamento Roadmap Principali
+
+#### roadmap-status-summary-2.md
 
 ### `xotbasepivot-executive-summary.md` — XotBasePivot - Executive Summary
 
@@ -29241,30 +27201,3 @@ updated: 2026-09-26
 qmd: "xotbasepivot executive summary"
 issues: []
 discussions: []
-
-### `zen.md` — 🧘 Zen of Documentation - Complete Philosophy
-
-
-# 🧘 Zen of Documentation - Complete Philosophy
-
-**Version**: 2.0  
-**Created**: 2026-03-30  
-**Status**: ✅ Active  
-**Owner**: Multi-Agent Team
-
----
-
-## 🎯 The Five Pillars
-
-### 1. **Git Forward-Only** 🚀
-
-> **Non si torna mai indietro. Si studia il passato per migliorare.**
-
-**Principi**:
-- ✅ `git rebase` invece di `git reset`
-- ✅ `git revert` invece di `git checkout <old-commit>`
-- ✅ Studiare commit history per capire decisioni
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev

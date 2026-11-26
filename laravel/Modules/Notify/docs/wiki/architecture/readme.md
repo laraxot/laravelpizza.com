@@ -41,22 +41,10 @@ Questa cartella contiene la documentazione architetturale principale del progett
 1. **[Analisi Completa](./xotbasepivot-analysis.md)** ⭐⭐⭐⭐⭐
    - Analisi DRY e KISS approfondita
    - Vantaggi e svantaggi dettagliati
-   - Pattern e filosofia architettural
-e
+   - Pattern e filosofia architetturale
    - Alternative considerate e scartate
    - Raccomandazione finale: ✅ IMPLEMENTARE
 
-<<<<<<< .merge_file_8xiPbW
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](./xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
-=======
->>>>>>> .merge_file_OdR5cF
-2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
 2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
    - Piano step-by-step (3-4 ore)
    - Moduli impattati (13 moduli, 26 file)
@@ -70,7 +58,6 @@ e
      - 45 minuti effort
      - Permission system, Teams, Devices
    
-   - **[Blog Module](../../Modules/Blog/docs/models/xotbasepivot-migration.md)** 🟡 Priorità MEDIA
    - **[Blog Module](../../../../Blog/docs/models/xotbasepivot-migration.md)** 🟡 Priorità MEDIA
      - 3 Pivot concreti
      - ⚠️ Caso speciale: SoftDeletes
@@ -127,8 +114,6 @@ Leggere in ordine:
 1. [xotbasepivot-analysis.md](./xotbasepivot-analysis.md) - Capire il WHY
 2. [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) - Capire il HOW
 3. User/xotbasepivot-migration.md - Vedere esempio pratico
-2. [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) - Capire il HOW
-3. User/xotbasepivot-migration.md - Vedere esempio pratico
 
 ### 2. Team Alignment (30 min)
 
@@ -139,18 +124,6 @@ Leggere in ordine:
 
 ### 3. Implementation (3-4 ore)
 
-<<<<<<< .merge_file_8xiPbW
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](./xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
-=======
->>>>>>> .merge_file_OdR5cF
-Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
 Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
 
 1. ✅ Creare XotBasePivot (30 min)

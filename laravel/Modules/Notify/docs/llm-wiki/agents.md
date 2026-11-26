@@ -142,5 +142,4 @@ Related:
 ## Contenuto fuso da `agents.md`
 
   - concepts/related.md
-=======
 - [Project Wiki Agent Instructions](../wiki/agents.md)

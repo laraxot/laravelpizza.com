@@ -1,0 +1,130 @@
+{
+  "shots": [
+    {
+      "name": "login",
+      "path": "/xot/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:21.176Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "modules",
+      "path": "/xot/admin/modules",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:54.537Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/modules",
+        "bytes": 33110,
+        "sha256": "5ece4c094820173bc43c438997fe7b098d3790b81274d2cd4d78a1f3de2eec45"
+      }
+    },
+    {
+      "name": "logs",
+      "path": "/xot/admin/logs",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:12:02.686Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/logs",
+        "bytes": 27394,
+        "sha256": "1d807ec63fc9b3a4d452875589f5b406a5034815a1ef3f4ca02c2b535d7f9613"
+      }
+    },
+    {
+      "name": "caches",
+      "path": "/xot/admin/caches",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:12:10.181Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/caches",
+        "bytes": 27412,
+        "sha256": "a66e3fd25d6e5104cf933a4cfbbec4b593297896bdb583b31dfee90ee0788ef0"
+      }
+    },
+    {
+      "name": "cache-locks",
+      "path": "/xot/admin/cache-locks",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:15:09.535Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/cache-locks",
+        "bytes": 23948,
+        "sha256": "0cbc9ecef91c48c07e909b060def320a194217e3204d3918922304fc248451b1"
+      }
+    },
+    {
+      "name": "sessions",
+      "path": "/xot/admin/sessions",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:15:14.748Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/sessions",
+        "bytes": 23410,
+        "sha256": "e0ddc305272481da687ce66904c9a89b63c4d536168028ba9357e664f90cb206"
+      }
+    },
+    {
+      "name": "health-page",
+      "path": "/xot/admin/health-page",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 2000,
+      "captured": {
+        "at": "2026-11-25T22:15:21.293Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/health-page",
+        "bytes": 22316,
+        "sha256": "f760281437777c0ed8b7f1788eb1541abdb134d741b4b21e1a53ad73f2fa0673"
+      }
+    },
+    {
+      "name": "setting",
+      "path": "/xot/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:15:27.215Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/setting",
+        "bytes": 35584,
+        "sha256": "abc47c464d42245bd793675003165a9753d4a1e1de110a833d245f00e4bdb50b"
+      }
+    },
+    {
+      "name": "artisan-commands-manager",
+      "path": "/xot/admin/artisan-commands-manager",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:13:07.903Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/xot/admin/artisan-commands-manager",
+        "bytes": 33468,
+        "sha256": "68bbbd8ebb49319f2cbf26ee0a50e43a0d60bd16dd7d2e6199fe158b329222ed"
+      }
+    }
+  ]
+}

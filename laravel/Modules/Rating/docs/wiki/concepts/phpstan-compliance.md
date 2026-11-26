@@ -14,9 +14,7 @@ related:
 
 ## Status
 
-`analyse Modules/Rating` (story 4.26, 2026-08-24): **[OK] No errors**. Famiglia E
-chiusa con guardie/`Assert::` sugli host stub, non con cast. `HasLikes` tipizza
-`Like` perché la classe esiste nel tree (fixture FQCN). `phpstan.neon` intoccato.
+`analyse Modules` (2026-11-25, cache pulita): **[OK] No errors**. Àncore in `app/`: `final` per `HasRating`/`HasLikes`/`DecoratesRatingFormFields` (`AbstractHasRatingHost`, `AbstractLikeableHost`, `AbstractRatingsFormCaller`); `AbstractRatingsHost` resta `abstract` (con `final` PHPStan segnala return.type su `static`). Senza àncora in `app/` → `trait.unused` (i `tests/` sono esclusi). Se l’errore riappare: `phpstan clear-result-cache`. `phpstan.neon` intoccato.
 
 `analyse Modules` resta il gate canonico: sul sottoalbero `typeCoverage` può spegnersi.
 
@@ -146,3 +144,18 @@ use HasRatingsTrait;
 ```
 
 SSoT: `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`. Consumer attuali: modelli IndennitaResponsabilita (`IndennitaResponsabilita`, `LettF`, `LettI`).
+
+## Trait anchors (2026-11-25)
+
+I trait pubblici usati solo da host esterni o da fixture di test devono avere
+una classe astratta in `app/` (come `AbstractRatingsHost`), altrimenti
+`analyse Modules` segnala `trait.unused` perché `excludePaths` ignora `tests/`.
+
+| Trait | Anchor |
+|---|---|
+| `HasRatingsTrait` | `AbstractRatingsHost` |
+| `HasRating` | `AbstractHasRatingHost` |
+| `HasLikes` | `AbstractLikeableHost` |
+| `DecoratesRatingFormFields` | `AbstractRatingsFormCaller` |
+
+Vietato `@phpstan-ignore trait.unused`.

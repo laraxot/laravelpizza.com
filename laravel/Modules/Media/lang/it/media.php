@@ -139,11 +139,42 @@ return [
         'delete' => [
             'tooltip' => '',
             'icon' => 'delete',
+            'label' => 'delete',
+        ],
+        'convert' => [
+            'label' => 'Converti',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'view_attachment' => [
+            'label' => 'Apri il file',
+        ],
+        'download_attachment' => [
+            'label' => 'Scarica',
         ],
     ],
     'model' => [
         'label' => 'media.model',
     ],
     'label' => 'Media',
-    'plural_label' => 'Media (Plurale)',
+    'plural_label' => 'Media',
 ];

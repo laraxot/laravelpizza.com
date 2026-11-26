@@ -104,6 +104,12 @@ return [
         'delete' => [
             'label' => 'Elimina Sections',
         ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
     ],
     'preview' => [
         'empty' => 'Nessun contenuto disponibile per questa sezione',

@@ -28,7 +28,7 @@ class GetViewByModelClassAction
      * piattaforma (Ptv\Models\BaseScheda => `ptv::scheda.index.pdf`) finche' non le
      * personalizza. Prima: eccezione, e ogni modulo doveva copiare il template.
      *
-     * @see Modules/Xot/docs/stories/view-by-model-platform-fallback.story.md
+     * @see Modules/Xot/docs/actions-and-contracts.md
      */
     public function execute(string $model_class, string $suffix): string
     {

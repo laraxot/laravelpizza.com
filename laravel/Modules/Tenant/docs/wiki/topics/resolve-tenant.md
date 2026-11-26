@@ -15,29 +15,30 @@ _Fonte: `contracts/resolve-tenant-config-value-action.md`_
 
 # ResolveTenantConfigValueAction
 
-Risolve un valore di configurazione sovrapponendo la config del tenant a quella di base. Codice: `app/Actions/Config/ResolveTenantConfigValueAction.php:13-63`.
+Alias di `GetTenantConfigValueAction`: `execute()` delega all'unica implementazione
+(`ResolveTenantConfigValueAction` → `GetTenantConfigValueAction`).
+Motivo: evitare due corpi identici; il nome `Resolve*` resta per docs/BC.
 
 ## Input
 
-- `string $key`: chiave con notazione a punti. Il primo segmento è il gruppo (riga 33).
-- `string|int|array|null $_default`: valore passato a `config()` se la chiave manca (riga 56).
+- `string $key`: chiave con notazione a punti. Il primo segmento è il gruppo.
+- `string|int|array|null $_default`: valore passato a `config()` se la chiave manca.
 
 ## Output
 
-- `float|int|string|array|null`: valore risolto (riga 58-60).
+- `float|int|string|array|null`: valore risolto (stesse regole di `GetTenantConfigValueAction`).
 
 ## Invarianti
 
 | ID | Regola | Prova nel codice | Test esistente |
 |---|---|---|---|
-| `TENANT-RESOLVE-INV-1` | Chiave vuota o gruppo vuoto lancia `Exception`. | righe 33-36 | `tests/Unit/Actions/Config/ResolveTenantConfigValueActionTest.php` |
-| `TENANT-RESOLVE-INV-2` | Il gruppo è fuso con `<tenant>.<gruppo>` e i valori del tenant prevalgono (`array_replace_recursive`). | righe 38-52 | `tests/Unit/Actions/Config/ResolveTenantConfigValueActionTest.php` |
-| `TENANT-RESOLVE-INV-3` | Un valore non scalare né array (ad esempio bool o oggetto) lancia `Exception`. | righe 58-62 | nessuno |
+| `TENANT-RESOLVE-INV-1` | Chiave vuota o gruppo vuoto lancia `Exception`. | `GetTenantConfigValueAction` | `tests/Unit/Actions/Config/GetTenantConfigValueActionTest.php` |
+| `TENANT-RESOLVE-INV-2` | Il gruppo è fuso con `<tenant>.<gruppo>` e i valori del tenant prevalgono (`array_replace_recursive`). | `GetTenantConfigValueAction` | `tests/Unit/Actions/Config/GetTenantConfigValueActionTest.php` |
+| `TENANT-RESOLVE-INV-3` | Un valore non scalare né array (ad esempio bool o oggetto) lancia `Exception`. | `GetTenantConfigValueAction` | `tests/Unit/TenantStatementCoverageTest.php` |
 
 ## Effetti collaterali
 
-- `Config::set($group, $mergeConf)` (riga 54) modifica la configurazione in memoria dell'intero gruppo per il resto del processo. Non scrive su disco.
-- Legge la config di base e quella del tenant, e il nome tenant da `GetTenantNameAction`.
+- Via `GetTenantConfigValueAction`: `Config::set($group, $mergeConf)` in memoria; legge base + tenant + `GetTenantNameAction`.
 
 ## Errori
 
@@ -107,37 +108,18 @@ Quelli di `ResolveTenantModelClassAction` (possibile scrittura di `morph_map`). 
 
 ## Non fa
 
-## ResolveTenantConfigValueAction - Console Check Debate
+## Topic resolve-tenant
 
-_Fonte: `resolve-tenant-config-console-debate.md`_
+_Fonte: `wiki/topics/resolve-tenant.md`_
 
-# ResolveTenantConfigValueAction - Console Check Debate
+# Topic resolve-tenant
 
-**Status**: 🔥 FURIOUS INTERNAL DEBATE
-**Issue**: `runningInConsole()` check breaks tenant functionality
-**Filosofia**: DRY + KISS + SOLID + Multi-Tenant Zen
+Sintesi automatica di 4 documenti (chiave `resolve-tenant`).
 
----
+## ResolveTenantConfigValueAction
 
-## 🔴 Il Problema Critico
+_Fonte: `contracts/resolve-tenant-config-value-action.md`_
 
-Nel file `ResolveTenantConfigValueAction.php` esisteva questo blocco:
+# ResolveTenantConfigValueAction
 
-```php
-if (app()->runningInConsole()) {
-    $default = $_default;
-    $res = config($key, $default);
-    if (is_numeric($res) || \is_string($res) || \is_array($res) || $res === null) {
-        /** @var float|int|string|array<mixed>|null $res */
-        return $res;
-    }
-
-    throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
-}
-```
-
-**Conseguenza**: Quando l'app gira in console (artisan, queue workers, scheduler), SALTA il merge delle configurazioni tenant e ritorna solo la config globale.
-
----
-
-## ⚔️ IL DIBATTITO FURIOSO
+Alias di `GetTenantConfigValueAction` (delega `execute()`). Vedi sezione sopra.

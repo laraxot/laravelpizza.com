@@ -147,6 +147,12 @@ return [
         'save' => [
             'icon' => 'save',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'title' => 'Ambiente',
     'sections' => [

@@ -23,4 +23,18 @@ return [
             'label' => 'created_at',
         ],
     ],
+    'actions' => [
+        'prune_batches' => [
+            'label' => 'prune_batches',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+    ],
 ];

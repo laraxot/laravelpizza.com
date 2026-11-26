@@ -31,11 +31,27 @@ return [
         'type' => [
             'label' => 'Tipo',
         ],
+        'name' => [
+            'label' => 'name',
+        ],
     ],
     'actions' => [
         'delete' => [
             'tooltip' => '',
             'icon' => 'delete',
+            'label' => 'delete',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
         ],
     ],
 ];

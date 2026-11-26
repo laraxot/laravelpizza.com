@@ -77,15 +77,25 @@ return [
         ],
         'route:list' => [
             'icon' => 'route:list',
+            'label' => 'route:list',
         ],
         'icons:cache' => [
             'icon' => 'icons:cache',
+            'label' => 'icons:cache',
         ],
         'filament:cache-components' => [
             'icon' => 'filament:cache-components',
+            'label' => 'filament:cache-components',
         ],
         'filament:clear-cached-components' => [
             'icon' => 'filament:clear-cached-components',
+            'label' => 'filament:clear-cached-components',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
 ];

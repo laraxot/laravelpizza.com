@@ -39,5 +39,8 @@ return [
         'delete' => [
             'label' => 'Elimina O S M Map',
         ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
 ];

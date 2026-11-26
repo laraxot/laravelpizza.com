@@ -71,6 +71,29 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'treatment_id' => [
+            'label' => 'treatment_id',
+        ],
+        'consent' => [
+            'id' => [
+                'label' => 'consent.id',
+            ],
+        ],
+        'subject_id' => [
+            'label' => 'subject_id',
+        ],
+        'ip' => [
+            'label' => 'ip',
+        ],
+        'action' => [
+            'label' => 'action',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
     ],
     'event_types' => [
         'consent_granted' => 'Consenso Concesso',
@@ -79,17 +102,23 @@ return [
         'data_modified' => 'Dati Modificati',
         'data_deleted' => 'Dati Eliminati',
     ],
-    'label' => 'Event',
-    'plural_label' => 'Event (Plurale)',
+    'label' => 'Evento',
+    'plural_label' => 'Eventi',
     'actions' => [
         'create' => [
-            'label' => 'Crea Event',
+            'label' => 'Crea evento',
         ],
         'edit' => [
-            'label' => 'Modifica Event',
+            'label' => 'Modifica evento',
         ],
         'delete' => [
-            'label' => 'Elimina Event',
+            'label' => 'Elimina evento',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
 ];

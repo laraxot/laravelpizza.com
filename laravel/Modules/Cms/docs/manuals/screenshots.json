@@ -1,0 +1,144 @@
+{
+  "shots": [
+    {
+      "name": "cms-admin-login",
+      "path": "/cms/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:42.577Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "cms-admin-dashboard",
+      "path": "/cms/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:51.534Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin",
+        "bytes": 16408,
+        "sha256": "aee371502d1c7c83a28c270b2aa8090a086ffc6c151514912f9610f2db4b37b7"
+      }
+    },
+    {
+      "name": "cms-admin-pages",
+      "path": "/cms/admin/pages",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:57.508Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/pages",
+        "bytes": 47862,
+        "sha256": "0ac9ea270ee86b2002aa13b11d3171f831974f3a727b22e64af917d2bb8e522e"
+      }
+    },
+    {
+      "name": "cms-admin-pages-create",
+      "path": "/cms/admin/pages/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:03.711Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/pages/create",
+        "bytes": 26420,
+        "sha256": "a0b8d39430f0164da4f6101465fa77a017751a884c76a8bce3359af52d45b051"
+      }
+    },
+    {
+      "name": "cms-admin-page-contents",
+      "path": "/cms/admin/page-contents",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:08.671Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/page-contents",
+        "bytes": 36918,
+        "sha256": "2397a54586bb8891a0660332853e7e3bc2ef68f1da792847ea11c2a4786399a0"
+      }
+    },
+    {
+      "name": "cms-admin-sections",
+      "path": "/cms/admin/sections",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:13.760Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/sections",
+        "bytes": 24654,
+        "sha256": "33f0697754b184b87f7de98478c9108796b5bf4d9b1fec57c75735e06b130e84"
+      }
+    },
+    {
+      "name": "cms-admin-menus",
+      "path": "/cms/admin/menus",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:18.805Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/menus",
+        "bytes": 21290,
+        "sha256": "9e41003de2983b283b39e0bd0d1428e2db777eb3c7294164090c0e099c072d5f"
+      }
+    },
+    {
+      "name": "cms-admin-attachments",
+      "path": "/cms/admin/attachments",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:23.699Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/attachments",
+        "bytes": 23038,
+        "sha256": "5030ab138bec5d357f399adad789944d076985c7d51e1d86a72308f4e238f075"
+      }
+    },
+    {
+      "name": "cms-admin-setting",
+      "path": "/cms/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:28.594Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/setting",
+        "bytes": 28596,
+        "sha256": "ebc9c00e22b5465d6ef560d267d40d86313cbd907472cb63ef5ae0f4694b53b3"
+      }
+    },
+    {
+      "name": "cms-admin-themes",
+      "path": "/cms/admin/themes",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:33.126Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/cms/admin/themes",
+        "bytes": 18672,
+        "sha256": "1291425bf19b3e87cd908e78079952cbab53b37dd8ee219fcc799d9f4ddee419"
+      }
+    }
+  ]
+}

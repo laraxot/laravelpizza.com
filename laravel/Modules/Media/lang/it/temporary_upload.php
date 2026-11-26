@@ -3,9 +3,14 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => ['label' => 'Caricamento temporaneo', 'group' => 'Caricamento temporaneo', 'icon' => 'Caricamento temporaneo', 'sort' => 96],
-    'label' => 'Temporary Upload',
-    'plural_label' => 'Temporary Upload (Plurale)',
+    'navigation' => [
+        'label' => 'Caricamento temporaneo',
+        'group' => 'Caricamento temporaneo',
+        'icon' => 'media-temp-upload-animated',
+        'sort' => 96,
+    ],
+    'label' => 'Caricamento temporaneo',
+    'plural_label' => 'Caricamenti temporanei',
     'fields' => [
         'id' => [
             'label' => 'Identificativo',
@@ -25,16 +30,46 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'value' => [
+            'label' => 'value',
+        ],
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Temporary Upload',
+            'label' => 'Crea caricamento temporaneo',
         ],
         'edit' => [
-            'label' => 'Modifica Temporary Upload',
+            'label' => 'Modifica caricamento temporaneo',
         ],
         'delete' => [
-            'label' => 'Elimina Temporary Upload',
+            'label' => 'Elimina caricamento temporaneo',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
         ],
     ],
 ];

@@ -118,6 +118,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'value' => [
+            'label' => 'value',
+        ],
     ],
     'actions' => [
         'preview' => [
@@ -155,6 +158,7 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'createAnother' => [
             'icon' => 'createAnother',
@@ -167,6 +171,27 @@ return [
         ],
         'edit' => [
             'icon' => 'edit',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
     'messages' => [

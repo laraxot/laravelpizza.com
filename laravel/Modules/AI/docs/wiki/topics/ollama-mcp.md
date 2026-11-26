@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 ollama-mcp"
 
 # Topic ollama-mcp
 
-Sintesi automatica di 3 documenti (chiave `ollama-mcp`).
+Sintesi automatica di 4 documenti (chiave `ollama-mcp`).
 
 ## 🧘 Ollama MCP Integration - Visione e Filosofia
 
@@ -108,3 +108,36 @@ discussions: []
    # Verifica server attivo
    curl http://127.0.0.1:11434/api/tags
    ```
+
+## Topic ollama-mcp
+
+_Fonte: `wiki/topics/ollama-mcp.md`_
+
+# Topic ollama-mcp
+
+Sintesi automatica di 3 documenti (chiave `ollama-mcp`).
+
+## 🧘 Ollama MCP Integration - Visione e Filosofia
+
+_Fonte: `ollama-mcp-integration-vision.md`_
+
+# 🧘 Ollama MCP Integration - Visione e Filosofia
+
+**Data Creazione**: 2026-03-11  
+**Ultimo Aggiornamento**: 2026-03-11  
+**Autore**: AI Agent (con supporto altri agenti AI)  
+**Versione**: 1.0.0
+
+---
+
+title: "ollama mcp integration vision"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama mcp integration vision"
+issues: []
+discussions: []
+## 📖 Il Perché - The Why
+
+### Perché Ollama tramite MCP?

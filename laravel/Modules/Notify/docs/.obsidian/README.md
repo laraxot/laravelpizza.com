@@ -5,10 +5,6 @@ tags: [notify, docs]
 module: Notify
 created: 2026-07-20
 updated: 2026-11-23
-<<<<<<< .merge_file_EeFAvA
-=======
-updated: 2026-11-23
->>>>>>> .merge_file_qkHJnB
 qmd: "notify documentazione .obsidian readme obsidian setup guide index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -194,13 +190,5 @@ LIMIT 10
 ## Related Documentation
 
 - [LLM Wiki Integration Guide](../wiki/README.md)
-<<<<<<< .merge_file_EeFAvA
-- [Agent Instructions](../wiki/agents.md)
-- [Agent Instructions](../wiki/agents-2.md)
-- [Agent Instructions](../wiki/agents.md)
-- [Agent Instructions](../wiki/agents-2.md)
-=======
-- [Agent Instructions](../wiki/agents.md)
->>>>>>> .merge_file_qkHJnB
 - [Agent Instructions](../wiki/agents.md)
 - [Wiki Overview](../wiki/overview.md)

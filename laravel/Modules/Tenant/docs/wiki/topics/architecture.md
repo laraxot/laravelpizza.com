@@ -55,8 +55,6 @@ _Fonte: `bmad/architecture.md`_
 1. Verificare conformità con XotBase
 2. Aggiornare `docs/bmad/stories/continuazione-domani.md` se chiuso
 3. Indicare stato concluso in `docs/sprint-status.yaml`
-Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
-=======
 Multi-tenant: più enti da una sola installazione. Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
 
 ## Flusso (verificato sul codice, 2026-11-16)

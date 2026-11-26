@@ -19,5 +19,19 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
+        'status' => [
+            'label' => 'status',
+        ],
+    ],
+    'actions' => [
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
     ],
 ];

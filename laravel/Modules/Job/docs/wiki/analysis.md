@@ -69,9 +69,6 @@ Modules/Job/
 - Integration tests with dependent modules
 - Security testing
 - Performance testing
-### Versione HEAD
-
-### Versione HEAD
 
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../Notify/docs/analysis.md)
@@ -87,11 +84,5 @@ Modules/Job/
 * [analysis.md](../../../Media/docs/analysis.md)
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
-
-### Versione Incoming
-
----
-
-### Versione Incoming
 
 ---

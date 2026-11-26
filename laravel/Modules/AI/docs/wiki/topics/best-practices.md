@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 best-practices"
 
 # Topic best-practices
 
-Sintesi automatica di 3 documenti (chiave `best-practices`).
+Sintesi automatica di 4 documenti (chiave `best-practices`).
 
 ## Best Practices – AI
 
@@ -88,3 +88,36 @@ php artisan db:wipe             # ELIMINA TUTTE LE TABELLE
 ### In Caso di Errore
 
 Se hai eseguito accidentalmente un comando di migrazione pericoloso:
+
+## Topic best-practices
+
+_Fonte: `wiki/topics/best-practices.md`_
+
+# Topic best-practices
+
+Sintesi automatica di 3 documenti (chiave `best-practices`).
+
+## Best Practices – AI
+
+_Fonte: `best-practices-2.md`_
+
+# Best Practices – AI
+
+## Principi DRY/KISS
+- **DRY**: Centralizza logica AI in `AIService`. Usa metodi statici solo per costanti.
+- **KISS**: Mantieni i prompt brevi e parametrizzati; evita prompt concatenati dinamicamente.
+- **Clean Code**: Usa `enum` per i tipi di modello, non stringhe hard‑coded.
+
+## Componenti
+- Usa classi `PromptBuilder` per costruire richieste.
+- Usa `HttpClient` configurato con timeout e retries.
+
+## Test
+- Mocka il client HTTP con `Http::fake()`.
+- Testa la generazione di prompt con unit test.
+
+## Documentazione
+- Aggiorna `docs/index-2.md` quando aggiungi nuove funzioni.
+- Inserisci link a OpenAI/Anthropic SDK docs.
+
+## Best Practices – AI

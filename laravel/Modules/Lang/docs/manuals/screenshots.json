@@ -1,0 +1,86 @@
+{
+  "shots": [
+    {
+      "name": "lang-admin-login",
+      "path": "/lang/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:19.762Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "lang-admin-dashboard",
+      "path": "/lang/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:29.867Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin",
+        "bytes": 12212,
+        "sha256": "628ff84d76d0b56899fa0c58022a8972ff40a71922b0c332a2bc16111662142d"
+      }
+    },
+    {
+      "name": "lang-admin-setting",
+      "path": "/lang/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:34.410Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin/setting",
+        "bytes": 30924,
+        "sha256": "9c7df006874f331158a5bf4380d4dd02fa044f8adec57cc7f4e5c7cf5096d0f3"
+      }
+    },
+    {
+      "name": "lang-admin-translation-files-create",
+      "path": "/lang/admin/translation-files/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:22:40.461Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin/translation-files/create",
+        "bytes": 18270,
+        "sha256": "f9bcf8b348b7c992728ad48bcf5f0b2ce8b2382cc31e97b7179c824a8d558cfc"
+      }
+    },
+    {
+      "name": "lang-admin-translation-files",
+      "path": "/lang/admin/translation-files",
+      "auth": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:23:37.231Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin/translation-files",
+        "bytes": 35640,
+        "sha256": "fd79a04abbdc13107e543042da35adebd56a3b89f2ea0f7f23daf28da9702413"
+      }
+    },
+    {
+      "name": "lang-admin-translation-files-edit",
+      "path": "/lang/admin/translation-files/lang::setting/edit",
+      "auth": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:25:12.475Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/lang/admin/translation-files/lang::setting/edit",
+        "bytes": 25838,
+        "sha256": "d137923f006c80ff7bb5792341a4d0b7be30046f9215c7f9221918fe4eaa78a6"
+      }
+    }
+  ]
+}

@@ -38,4 +38,30 @@ return [
     ],
     'label' => 'Snapshot',
     'plural_label' => 'Snapshot',
+    'actions' => [
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
+        ],
+    ],
 ];

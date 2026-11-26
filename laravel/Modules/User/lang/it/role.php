@@ -231,15 +231,19 @@ return [
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
+            'label' => 'resetFilters',
         ],
         'applyFilters' => [
             'icon' => 'applyFilters',
+            'label' => 'applyFilters',
         ],
         'openFilters' => [
             'icon' => 'openFilters',
@@ -258,9 +262,11 @@ return [
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'layout' => [
             'icon' => 'layout',
@@ -276,6 +282,7 @@ return [
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
     ],
     'sections' => [
@@ -373,7 +380,6 @@ return [
         'editor' => 'Editor',
         'user' => 'Utente',
     ],
-    // Display names of the role codes (spatie role `name`). Il codice resta il valore salvato.
     'labels' => [
         'super-admin' => 'Super amministratore',
         'restaurant__admin' => 'Titolare',

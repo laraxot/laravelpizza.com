@@ -147,18 +147,22 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
@@ -186,6 +190,7 @@ return [
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'delete' => [
             'icon' => 'delete',
@@ -201,6 +206,7 @@ return [
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
     ],
     'plural' => [

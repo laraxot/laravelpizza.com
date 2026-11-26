@@ -19,27 +19,7 @@ related:
 ---
 # BMad Agents Index
 
-<<<<<<< .merge_file_3ywxbW
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
-=======
-**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
-**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
->>>>>>> .merge_file_fq8teV
+**Source**: [`AGENTS.md`](../../../agents.md) (lines 40-904)  
 **Total Agents**: 10  
 **Last Updated**: 2026-04-11  
 
@@ -60,31 +40,22 @@ related:
 | 9 | Architect | architect | [architect.md](architect.md) | 82 | System design, architecture docs |
 | 10 | Business Analyst | analyst | [business-analyst.md](business-analyst.md) | 85 | Market research, competitive analysis |
 
-**Total Lines**: ~865 (split from ../../../../AGENTS.md lines 40-904)
-**Total Lines**: ~865 (split from ../../../../AGENTS.md lines 40-904)
+**Total Lines**: ~865 (split from AGENTS.md lines 40-904)
 
 ---
 
 ## Cross-References
 
 ### Related Documentation
-- ← [BMad Tasks Index](../../tasks/index.md) — 22 reusable task definitions
+- ← [BMad Tasks Index](../tasks/index.md) — 22 reusable task definitions
 - ← [CLAUDE Index](../claude/index.md) — Laravel Boost guidelines
 - ← [GEMINI Index](../gemini/index.md) — Gemini-specific rules
 - ← [Main AI Docs Index](../index.md) — Master index
 
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
-<<<<<<< .merge_file_3ywxbW
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
-=======
-- ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
->>>>>>> .merge_file_fq8teV
-- ← Back to [Project Docs](../../../docs/README.md)
+- ← Back to [AGENTS.md](../../../agents.md) (original source)
+- ← Back to [Project Docs](../../../index.md)
 
 ---
 
@@ -95,33 +66,9 @@ To activate an agent, mention their ID or name in your request:
 - "Use Product Manager to create a PRD..."
 - "As dev, implement the story..."
 
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
-<<<<<<< .merge_file_3ywxbW
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
-=======
->>>>>>> .merge_file_fq8teV
+For full agent definitions, see the original [`AGENTS.md`](../../../agents.md).
 
 ---
 
 **Maintained By**: AI Agents + Development Team  
 **Last Sync**: 2026-04-11
-
-## Contenuto fuso da `index.md`
-
-  - ../../../notifications/README.md
-  - ../../../integrations/README.md
-  - ../../../templates/README.md

@@ -28,8 +28,7 @@ la riparazione non sceglie un lato "a caso": prova che le righe uniche dei due l
 
 | File | A cosa serve | Chi lo usa | Risoluzione |
 |---|---|---|---|
-| `Actions/Geo/Support/GeoMapDatasetAction` | legge il GeoJSON del widget mappa, lo normalizza (solo scalari), conta punti, zone e categorie | `GeoMapWidget`, `Actions/Maps/*` | stile modulo, identico a `6e32612c` |
-| `Support/GeoMapDataset` | stessa logica come value object, antecedente all'Action | nessun chiamante nel codice (rimasto per compatibilità) | stile modulo, identico a `6e32612c` |
+| `Actions/Maps/LoadGeoMapDatasetAction` (+ Categories/Stats) | legge/normalizza il GeoJSON del widget mappa | `GeoMapWidget` | canonico; duplicati `Support/GeoMapDataset` e `Actions/Geo/Support/GeoMapDatasetAction` rimossi (2026-11-25) |
 | `Filament/Forms/Components/CoordinatePickerHelpers` | unica fonte per Nominatim (cerca/inverso) e normalizzazione delle coordinate | `XotBaseCoordinateField`, `HasCoordinatePicker` | docblock con FQCN, tolto il `use` che serviva solo al lato Pint |
 | `Filament/Forms/Components/Traits/HasCoordinatePicker` | comportamento comune dei campi mappa: wrapper `#[Exposed]`/`#[Renderless]` che delegano agli helper | 9 componenti (`MapPicker`, `PlacePicker`, `CoordinatePicker`, ...) | stile modulo, 24 blocchi solo di docblock |
 | `Services/BaseGeoService` | base astratta HTTP per i servizi geo: chiave API da config, rate limit, cache, errori espliciti | `GoogleMapsHttpAction` | docblock di `makeRequest` (i marcatori lo avevano svuotato su un lato) |

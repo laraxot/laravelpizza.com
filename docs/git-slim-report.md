@@ -132,3 +132,8 @@ done
 - Story: [0105-module-theme-git-slim](../laravel/Modules/Xot/docs/bmad/stories/0105-module-theme-git-slim.story.md)
 - How-to: [module-theme-git-slim](../bashscripts/docs/operations/module-theme-git-slim.md)
 - Second brain: [git-objects-under-10k](./wiki/second-brain/second-brain.md#git-objects-under-10k)
+
+## Wave 2026-11-25 notte
+
+- Modules/Rating: 15619→532 oggetti (--apply --shallow).
+- Tutti i path gitmodules.ini <10k (max bashscripts 6203).

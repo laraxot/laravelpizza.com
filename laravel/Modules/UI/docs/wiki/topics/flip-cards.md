@@ -44,11 +44,7 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
 
 ## Flip cards — risorse esterne
 
-<<<<<<< .merge_file_Ple90J
-_Fonte: `flip-cards-2.md`_
-=======
 _Fonte: `flip-cards.md`_
->>>>>>> .merge_file_rWkE3y
 
 # Flip cards — risorse esterne
 

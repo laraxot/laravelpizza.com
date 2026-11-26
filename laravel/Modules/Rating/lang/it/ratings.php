@@ -75,5 +75,8 @@ return [
             'icon' => 'layout',
             'label' => 'layout',
         ],
+        'create' => [
+            'label' => 'create',
+        ],
     ],
 ];

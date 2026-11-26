@@ -491,6 +491,9 @@ return [
             'icon' => 'removeAllFilters',
             'label' => 'removeAllFilters',
         ],
+        'deselectAll' => [
+            'label' => 'deselectAll',
+        ],
     ],
     'messages' => [
         'created' => 'Utente creato con successo',

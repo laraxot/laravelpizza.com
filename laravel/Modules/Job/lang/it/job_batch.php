@@ -180,6 +180,15 @@ return [
             'icon' => 'trash',
             'color' => 'danger',
         ],
+        'prune_batches' => [
+            'label' => 'prune_batches',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'no_failed_jobs' => 'Nessun job fallito',

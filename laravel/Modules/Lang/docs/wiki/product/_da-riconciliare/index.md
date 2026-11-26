@@ -3,8 +3,6 @@ qmd: "Index"
 issues: []
 discussions: []
 title: "lang — product"
-
-title: "Index"
 module: lang
 type: product
 tags: [product, modules, lang]

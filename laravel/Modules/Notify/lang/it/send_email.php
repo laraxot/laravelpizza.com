@@ -180,10 +180,10 @@ return [
             'helper_text' => '',
         ],
         'recipient' => [
-            'label' => 'recipient',
-            'placeholder' => 'recipient',
-            'helper_text' => 'recipient',
-            'description' => 'recipient',
+            'label' => 'Destinatario',
+            'placeholder' => 'Inserisci l\'indirizzo email del destinatario',
+            'helper_text' => '',
+            'description' => 'Indirizzo email a cui inviare il messaggio di prova',
         ],
     ],
     'actions' => [

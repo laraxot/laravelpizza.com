@@ -50,11 +50,7 @@ _Fonte: `wiki/concepts/enum-select-best-practices.md`_
 - Assuming `BackedEnum` implements `HasLabel`/`HasIcon`; always check with `instanceof`.
 
 ## References
-<<<<<<< .merge_file_iJEuLx
-- `docs/wiki/concepts/filament5-section-namespace.md`
-=======
 - `bashscripts/ai/wiki/concepts/filament-widgets.md#filament5-section-namespace`
->>>>>>> .merge_file_chhzuA
 - `docs/wiki/concepts/filament5-infolist-wizard-summary.md`
 - `memory/feedback_filament5_section_namespace.md`
 

@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 livewire-widget"
 
 # Topic livewire-widget
 
-Sintesi automatica di 9 documenti (chiave `livewire-widget`).
+Sintesi automatica di 10 documenti (chiave `livewire-widget`).
 
 ## Architecture AI
 
@@ -86,3 +86,37 @@ _Fonte: `bmad/livewire-widget-ux.md`_
 # UX AI
 
 Nessuna superficie chrome da migrare. Non cambiare layout panel. Verdetto: [livewire-inventory.md](./livewire-inventory.md).
+
+## Topic livewire-widget
+
+_Fonte: `wiki/topics/livewire-widget.md`_
+
+# Topic livewire-widget
+
+Sintesi automatica di 9 documenti (chiave `livewire-widget`).
+
+## Architecture AI
+
+_Fonte: `bmad/livewire-widget-architecture.md`_
+
+# Architecture AI
+
+Nessun flusso HTTP → widget: zero classi `Http\Livewire`, zero `Filament/Widgets` nel modulo. Verdetto verificato: [livewire-inventory.md](./livewire-inventory.md).
+
+## Brainstorming AI
+
+_Fonte: `bmad/livewire-widget-brainstorming.md`_
+
+# Brainstorming AI
+
+Scartato: inventare HTTP o widget “per completezza”. Tenuto: inventory come gate. Verdetto zero candidati: [livewire-inventory.md](./livewire-inventory.md).
+
+## Decision log AI
+
+_Fonte: `bmad/livewire-widget-decision-log.md`_
+
+# Decision log AI
+
+## [2026-09-21] Nessun candidato conversione
+
+Docs only. Inventario chiuso. Zero Http/Livewire. MCP/Ollama restano Actions. Nessun widget da HTTP. Canone: [livewire-inventory.md](./livewire-inventory.md).

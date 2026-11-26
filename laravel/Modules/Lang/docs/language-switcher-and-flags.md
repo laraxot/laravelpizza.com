@@ -6,7 +6,6 @@ updated: 2026-11-25
 qmd: "language switcher LanguageSwitcherWidget LanguageSwitcher component ThemeComposer LangData Flag i18n-link NationalFlagSelect rinvex countries bandiere svg LocaleSwitcherRefresh ListLocaleOptionsAction"
 related:
   - ./laravel-localization-mcamara-reference.md
-  - ./contracts/language-switcher-component.md
   - ./adr/0001-cambio-lingua-con-url-localizzato.md
   - ./adr/0006-language-switcher-standalone-view.md
 ---
@@ -33,7 +32,12 @@ Tre superfici distinte, con sorgenti diverse. Non vanno confuse.
 `Modules\Lang\View\Components\LanguageSwitcher` (registrato nel namespace Blade `lang`, quindi `<x-lang::language-switcher />`) incapsula il
 widget per i temi: se `canView()` e' falso rende `lang::components.empty`, altrimenti `lang::components.language-switcher` con
 `current_locale`, `available_locales` (ognuna con `url` gia' risolto) e `widget_id`. La vista e' un `<details>` con link ordinari:
-niente `$this`, niente JavaScript (ADR 0006). Contratto: [contracts/language-switcher-component.md](contracts/language-switcher-component.md).
+niente `$this`, niente JavaScript (ADR 0006). Garanzie del componente (il contratto che le descriveva e' stato assorbito qui):
+
+- la vista non genera URL e non contiene fallback di localizzazione: ogni link usa l'`url` prodotto da `LanguageSwitcherWidget::getLanguageUrl()`, che applica il ripiego per lingua non supportata o URL non stringa;
+- il cambio lingua e' una navigazione HTML ordinaria; nessun effetto collaterale nella vista;
+- non invoca metodi sul contesto Blade, non definisce funzioni globali, non salva preferenze nel browser e non e' un secondo switcher Livewire;
+- verifica: `tests/Unit/Filament/LanguageSwitcherWidgetTest.php` (generazione degli URL).
 
 Il componente anonimo `lang::i18n-link` costruisce un link con `getLocalizedURL($locale, $url, [], $forceLocale)`.
 

@@ -1,0 +1,144 @@
+{
+  "shots": [
+    {
+      "name": "user-admin-login",
+      "path": "/user/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:21:30.114Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "user-admin-dashboard",
+      "path": "/user/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:16.182Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin",
+        "bytes": 29134,
+        "sha256": "8a9ae1af2fe0861ab817bfb1464c33154c74998df767f3b535f30e4e660a4d3f"
+      }
+    },
+    {
+      "name": "user-admin-my-profile",
+      "path": "/user/admin/my-profile-page",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:21:38.695Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/my-profile-page",
+        "bytes": 47090,
+        "sha256": "dccba071a6f3f07f621c14f5db96c9cdecd5d4ce185ff8aff078ca529ec17d17"
+      }
+    },
+    {
+      "name": "user-admin-users",
+      "path": "/user/admin/users",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:23:00.017Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/users",
+        "bytes": 42396,
+        "sha256": "7fb3fae4841b4a80029bd66d303f8589f82bc71fff5ff86acd5ebab82b3d6189"
+      }
+    },
+    {
+      "name": "user-admin-users-create",
+      "path": "/user/admin/users/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:33.099Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/users/create",
+        "bytes": 42924,
+        "sha256": "538462e97a8399304edb0a2a2c9ab2942975dd55c62ce271a05442dcbc468887"
+      }
+    },
+    {
+      "name": "user-admin-roles",
+      "path": "/user/admin/roles",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:37.307Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/roles",
+        "bytes": 31736,
+        "sha256": "e75f1a04cda2ba8e5da23aa55b36837aabd6f7aae4ff51370409f05220d21bd9"
+      }
+    },
+    {
+      "name": "user-admin-permissions",
+      "path": "/user/admin/permissions",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:42.448Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/permissions",
+        "bytes": 26344,
+        "sha256": "a65695c67c71821f9fcb51c1730dfc3933f77bb948112c4f9c5d0f8499fbca48"
+      }
+    },
+    {
+      "name": "user-admin-teams",
+      "path": "/user/admin/teams",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:48.703Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/teams",
+        "bytes": 25034,
+        "sha256": "a52204af3cff9a127d5fc843df5cd61225af48366b8e0d5f4826910e3cd1f07a"
+      }
+    },
+    {
+      "name": "user-admin-tenants",
+      "path": "/user/admin/tenants",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:53.835Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/tenants",
+        "bytes": 25298,
+        "sha256": "a3b2e712297fd364393932a44ab1229ad3bd48b82ab482698fa567487b804f24"
+      }
+    },
+    {
+      "name": "user-admin-setting",
+      "path": "/user/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:19:58.709Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/user/admin/setting",
+        "bytes": 30316,
+        "sha256": "d7daf74ec0ae0d43f2ca0a32e28eeba14850d6cb3c78d180f20c66399b0c6f67"
+      }
+    }
+  ]
+}

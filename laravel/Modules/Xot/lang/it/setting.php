@@ -16,7 +16,7 @@ return [
         'main_module' => [
             'label' => 'Modulo principale',
             'placeholder' => 'Scegli un modulo',
-            'helper_text' => 'Il suo pannello e\' quello predefinito. Solo i moduli abilitati che hanno un pannello.',
+            'helper_text' => 'Il suo pannello è quello predefinito. Solo i moduli abilitati che hanno un pannello.',
             'tooltip' => '',
             'description' => '',
         ],

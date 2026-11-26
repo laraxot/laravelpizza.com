@@ -59,5 +59,38 @@ return [
             'icon' => 'heroicon-o-arrow-left-on-rectangle',
             'tooltip' => 'Esci',
         ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'addBetween' => [
+            'label' => 'addBetween',
+        ],
+        'clone' => [
+            'label' => 'clone',
+        ],
+        'collapse' => [
+            'label' => 'collapse',
+        ],
+        'collapseAll' => [
+            'label' => 'collapseAll',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'expand' => [
+            'label' => 'expand',
+        ],
+        'expandAll' => [
+            'label' => 'expandAll',
+        ],
+        'moveDown' => [
+            'label' => 'moveDown',
+        ],
+        'moveUp' => [
+            'label' => 'moveUp',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
+        ],
     ],
 ];

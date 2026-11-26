@@ -101,11 +101,22 @@ return [
         ],
     ],
     'actions' => [
-        'create' => 'Nuovo allegato',
+        'create' => [
+            'label' => 'Crea',
+        ],
         'edit' => 'Modifica allegato',
         'delete' => 'Elimina allegato',
         'view' => 'Visualizza allegato',
         'download' => 'Scarica file',
+        'activeLocale' => [
+            'label' => 'activeLocale',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'created' => 'Allegato creato con successo',
@@ -178,6 +189,6 @@ return [
     'model' => [
         'label' => 'attachment.model',
     ],
-    'label' => 'Attachment',
-    'plural_label' => 'Attachment (Plurale)',
+    'label' => 'Allegato',
+    'plural_label' => 'Allegati',
 ];

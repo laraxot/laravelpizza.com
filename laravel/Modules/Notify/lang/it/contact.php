@@ -140,6 +140,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'isActive' => [
+            'label' => 'isActive',
+        ],
     ],
     'actions' => [
         'import' => [
@@ -170,9 +173,11 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'createAnother' => [
             'icon' => 'createAnother',
+            'label' => 'createAnother',
         ],
         'save' => [
             'icon' => 'save',
@@ -191,30 +196,41 @@ return [
         ],
         'applyFilters' => [
             'icon' => 'applyFilters',
+            'label' => 'applyFilters',
         ],
         'openFilters' => [
             'icon' => 'openFilters',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
+            'label' => 'resetFilters',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
+            'label' => 'reorderRecords',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
         ],
     ],
     'messages' => [

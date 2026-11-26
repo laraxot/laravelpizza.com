@@ -14,4 +14,27 @@ return [
             'label' => 'updated_at',
         ],
     ],
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'restore' => [
+            'label' => 'restore',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'forceDelete' => [
+            'label' => 'forceDelete',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+    ],
 ];

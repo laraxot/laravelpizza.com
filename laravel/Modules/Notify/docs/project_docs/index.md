@@ -11,7 +11,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
-  - ../README.md
+  - ../index.md
   - ../wiki/index.md
   - ../notifications/README.md
   - ../integrations/README.md
@@ -29,9 +29,8 @@ related:
 
 ### 🏆 Main Documents
 
-1. [**README.md**](../README.md) - Project overview and quick start
+1. [**README.md**](../../README.md) - Project overview and quick start
 2. [**CONTRIBUTING.md**](../contributing.md) - How to contribute
-3. [**architecture.md**](./architecture.md) - System architecture
 3. [**architecture.md**](./architecture.md) - System architecture
 4. [**QUALITY_DASHBOARD.md**](./quality-dashboard.md) - Real-time metrics
 
@@ -69,7 +68,6 @@ related:
 - Commit guidelines
 - PR process
 
-### 3. architecture.md
 ### 3. architecture.md
 **Purpose:** System architecture documentation  
 **Audience:** Developers, architects  
@@ -177,26 +175,12 @@ Each module has a `docs/` directory containing:
 ## 🎨 Theme Documentation
 
 ### Sixteen Theme
-<<<<<<< .merge_file_ic3QMf
-- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-=======
 - [Code Quality Analysis](../Themes/Sixteen/docs/code_quality_analysis.md)
->>>>>>> .merge_file_HdNSJ2
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/roadmap_2025.md)
 
 ### TwentyOne Theme
-<<<<<<< .merge_file_ic3QMf
-- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-- [README](../Themes/Sixteen/docs/README.md)
-- [Roadmap 2025](../Themes/Sixteen/docs/ROADMAP_2025.md)
-
-### TwentyOne Theme
-- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-=======
 - [Code Quality Analysis](../Themes/TwentyOne/docs/code_quality_analysis.md)
->>>>>>> .merge_file_HdNSJ2
 
 ---
 
@@ -242,59 +226,26 @@ Each module has a `docs/` directory containing:
 
 ### For Developers
 - README.md
-<<<<<<< .merge_file_ic3QMf
-- ../contributing-2.md
-- CONTRIBUTING.md
-- architecture.md
-- ../contributing-2.md
-- CONTRIBUTING.md
-- architecture.md
-- ../contributing-2.md
-- CONTRIBUTING.md
-- architecture.md
-=======
 - contributing.md
->>>>>>> .merge_file_HdNSJ2
 - architecture.md
 - Module documentation
 - Refactoring reports
 
 ### For Management
-<<<<<<< .merge_file_ic3QMf
-- mission-accomplished-3.md
-- project-completion-certificate-3.md
-=======
 - mission-accomplished.md
 - project-completion-certificate.md
->>>>>>> .merge_file_HdNSJ2
 - excellence-achievement-caps.md
 - quality-dashboard.md
+
 ### For Quality Team
 - quality-dashboard.md
 - Cyclomatic Complexity Reports
 - final-refactoring-report.md
 - complete-refactoring-analysis.md
-### For New Contributors
-- README.md
-<<<<<<< .merge_file_ic3QMf
-- ../contributing-2.md
-- MISSION_ACCOMPLISHED.md
-- PROJECT_COMPLETION_CERTIFICATE.md
-- excellence-achievement-caps.md
-- QUALITY_DASHBOARD.md
-
-### For Quality Team
-- QUALITY_DASHBOARD.md
-- Cyclomatic Complexity Reports
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
 
 ### For New Contributors
 - README.md
-- CONTRIBUTING.md
-=======
 - contributing.md
->>>>>>> .merge_file_HdNSJ2
 - Module documentation
 - Code examples
 
@@ -325,60 +276,22 @@ Each module has a `docs/` directory containing:
 
 **Architecture & Design:**
 - architecture.md
-<<<<<<< .merge_file_ic3QMf
-- architecture.md
-- architecture.md
-=======
->>>>>>> .merge_file_HdNSJ2
 - Design patterns section
 - Module structure
 
 **Quality & Metrics:**
-<<<<<<< .merge_file_ic3QMf
-- quality-dashboard-3.md
-- QUALITY_DASHBOARD.md
-- quality-dashboard-3.md
-=======
 - quality-dashboard.md
->>>>>>> .merge_file_HdNSJ2
 - Cyclomatic complexity reports
 - Test coverage reports
 
 **Refactoring:**
-<<<<<<< .merge_file_ic3QMf
-- final-refactoring-report-3.md
-- complete-refactoring-analysis-3.md
-- final-refactoring-report-3.md
-- complete-refactoring-analysis-3.md
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
-- final-refactoring-report-3.md
-- complete-refactoring-analysis-3.md
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
-- final-refactoring-report-3.md
-- complete-refactoring-analysis-3.md
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
-=======
 - final-refactoring-report.md
 - complete-refactoring-analysis.md
->>>>>>> .merge_file_HdNSJ2
 - Module-specific refactoring docs
 
 **Getting Started:**
 - README.md
-<<<<<<< .merge_file_ic3QMf
-- CONTRIBUTING.md
-- ../contributing-2.md
-- CONTRIBUTING.md
-- ../contributing-2.md
-- CONTRIBUTING.md
-- ../contributing-2.md
-- CONTRIBUTING.md
-=======
 - contributing.md
->>>>>>> .merge_file_HdNSJ2
 - Quick start guides
 
 **Testing:**
@@ -469,17 +382,7 @@ All documents include:
 - Outdated content
 
 ### Contributing to Docs
-<<<<<<< .merge_file_ic3QMf
-- Follow CONTRIBUTING.md
-- follow ../contributing-2.md
-- Follow CONTRIBUTING.md
-- follow ../contributing-2.md
-- Follow CONTRIBUTING.md
-- follow ../contributing-2.md
-- Follow CONTRIBUTING.md
-=======
-- follow contributing.md
->>>>>>> .merge_file_HdNSJ2
+- Follow contributing.md
 - Use proper format
 - Include examples
 - Update index
@@ -514,22 +417,7 @@ All documents include:
 - ✅ created architecture.md
 - ✅ created quality-dashboard.md
 - ✅ created excellence-achievement-caps.md
-<<<<<<< .merge_file_ic3QMf
-- ✅ Created index.md
-- ✅ Created index.md
-- ✅ Completed MISSION_ACCOMPLISHED.md
-- ✅ Finalized PROJECT_COMPLETION_CERTIFICATE.md
-- ✅ Updated all module reports
-- ✅ Enhanced README.md
 
-### 2025-09-30
-- ✅ Created architecture.md
-- ✅ Created architecture.md
-- ✅ Created QUALITY_DASHBOARD.md
-- ✅ Created excellence-achievement-caps.md
-
-=======
->>>>>>> .merge_file_HdNSJ2
 ---
 
 ## 🔮 Future Documentation

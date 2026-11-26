@@ -1,6 +1,4 @@
 ---
-status: accepted
-module: Activity
 title: "ADR — L'audit delle attività è append-oriented"
 type: decision
 status: accepted
@@ -37,7 +35,6 @@ La cronologia resta affidabile e interrogabile; le viste devono interpretare gli
 ## Conferma
 
 Verificare recorder, policy e test di registrazione prima di cambiare lo schema dell'audit.
-=======
 
 ## Verifica
 

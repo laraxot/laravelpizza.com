@@ -444,6 +444,12 @@ return [
         'activeLocale' => [
             'label' => 'Lingua Attiva',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'created' => 'Sezione creata con successo',

@@ -1,15 +1,17 @@
 ---
-title: "Contratto — ResolveLocalizedBlockDataAction (UI)"
+title: "Contratto — GetLocalizedBlockDataAction (UI)"
 type: contract
-action: "Modules\UI\Actions\Block\ResolveLocalizedBlockDataAction"
+action: "Modules\\UI\\Actions\\Block\\GetLocalizedBlockDataAction"
 tags: [contract, action, blocks, cms, localization]
 created: 2026-11-24
 updated: 2026-11-24
 ---
 
-# ResolveLocalizedBlockDataAction (UI)
+# GetLocalizedBlockDataAction (UI)
 
-Sorgente: `app/Actions/Block/ResolveLocalizedBlockDataAction.php`. Perché è fatta così:
+Sorgente: `app/Actions/Block/GetLocalizedBlockDataAction.php` (il file del contract mantiene il nome storico
+`resolve-localized-…`, perché i `@contract` lo citano). Delega a `Modules\Cms\Actions\ResolveLocalizedBlockDataAction`.
+Perché è fatta così:
 [ADR delega opzionale a Cms](../adr/optional-cms-delegation-for-block-data.md). Chiamante: `View/Components/Render/Block.php::render()`.
 
 ## Input

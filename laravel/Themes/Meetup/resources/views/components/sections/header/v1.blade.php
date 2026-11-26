@@ -32,11 +32,8 @@
                     <x-filament::icon icon="meetup-icon-calendar" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
                     <span>{{ __('pub_theme::navigation.sections.events.label') }}</span>
                 </a>
-                <a href="#" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
-                    <x-filament::icon icon="meetup-icon-chat" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('pub_theme::navigation.sections.community_chat.label') }}</span>
-                </a>
-                
+                {{-- "Chat Community" rimosso: non esiste alcuna pagina /chat (404) — riattivare quando il modulo chat sarà disponibile --}}
+
                 {{-- Language Switcher Component --}}
                 <x-ui.language-switcher />
             </div>
@@ -101,7 +98,7 @@
                             <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.dashboard.label') }}</span>
                         </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                        <a href="{{ LaravelLocalization::localizeUrl('/events/my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_events.label') }}</span>
                         </a>
@@ -109,15 +106,14 @@
                             <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.nearby_events.label') }}</span>
                         </a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                        <a href="{{ LaravelLocalization::localizeUrl('/profile/edit') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
                             <span>{{ __('pub_theme::navigation.user_menu.my_profile.label') }}</span>
                         </a>
                         
                         {{-- In Folio projects, we redirect to localized paths, not named routes --}}
-                        <form method="POST" action="/{{ app()->getLocale() }}" class="pt-4 mt-4 border-t border-slate-700/30">
+                        <form method="POST" action="{{ route('logout') }}" class="pt-4 mt-4 border-t border-slate-700/30">
                             @csrf
-                            <input type="hidden" name="_method" value="POST"> {{-- logout often needs a form --}}
                             <button type="submit" class="flex w-full items-center space-x-3 text-red-400 hover:text-red-300 px-4 py-3 hover:bg-red-500/10 rounded-xl transition-colors font-bold block">
                                 <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5" />
                                 <span>{{ __('pub_theme::navigation.user_menu.logout.label') }}</span>

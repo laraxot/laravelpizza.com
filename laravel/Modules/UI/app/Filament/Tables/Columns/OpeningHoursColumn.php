@@ -28,7 +28,7 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseTextColumn;
  * 'opening_hours' => OpeningHoursColumn::make(),
  * ```
  *
- * @see Modules/Ptv/docs/form-column-parity.md
+ * @see Modules/UI/docs/form-column-parity.md
  */
 class OpeningHoursColumn extends XotBaseTextColumn
 {

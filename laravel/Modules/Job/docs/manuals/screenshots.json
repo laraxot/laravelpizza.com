@@ -1,0 +1,144 @@
+{
+  "shots": [
+    {
+      "name": "job-admin-login",
+      "path": "/job/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:07.956Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "job-admin-dashboard",
+      "path": "/job/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:41:38.770Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin",
+        "bytes": 17858,
+        "sha256": "e0122bc50f26d4eb40a7df309d6a97058878777bf68ead78c84a85515d1f8755"
+      }
+    },
+    {
+      "name": "job-admin-jobs",
+      "path": "/job/admin/jobs",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:24.048Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/jobs",
+        "bytes": 24860,
+        "sha256": "f67e53ee891af586ff926039156a524c2b21f645fcba32ac6f78cad1d6053821"
+      }
+    },
+    {
+      "name": "job-admin-failed-jobs",
+      "path": "/job/admin/failed-jobs",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:29.320Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/failed-jobs",
+        "bytes": 24518,
+        "sha256": "6999803f85ee908d3111c8ebaaf6586a257285eeb466d6be880589b00cfd376d"
+      }
+    },
+    {
+      "name": "job-admin-job-batches",
+      "path": "/job/admin/job-batches",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:33.579Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/job-batches",
+        "bytes": 24560,
+        "sha256": "e59a66c1a1e2dc5698787a3ae826c3426ef163712d572cef21192c176af8d4ea"
+      }
+    },
+    {
+      "name": "job-admin-job-managers",
+      "path": "/job/admin/job-managers",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:37.608Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/job-managers",
+        "bytes": 24414,
+        "sha256": "813e771bfea15651c13a90eb014d8d0cc287f520ca892dae4b5e95afd9164c8f"
+      }
+    },
+    {
+      "name": "job-admin-schedules",
+      "path": "/job/admin/schedules",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:42.856Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/schedules",
+        "bytes": 25362,
+        "sha256": "0d459e90c4ae83519c2b491bb8e687585f6e8001c8f3fba5e0f808f4eae54810"
+      }
+    },
+    {
+      "name": "job-admin-schedules-create",
+      "path": "/job/admin/schedules/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:27:51.117Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/schedules/create",
+        "bytes": 35400,
+        "sha256": "e8a135afe2af3cb38907f315008a61cdbf890a3e9ed079f85ef6e8cb28292774"
+      }
+    },
+    {
+      "name": "job-admin-job-monitor",
+      "path": "/job/admin/job-monitor",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:53.563Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/job-monitor",
+        "bytes": 76598,
+        "sha256": "c8cae555959e2174264bb0dbf37547f01f7f1afdae07bbb0bb8e6a825206b720"
+      }
+    },
+    {
+      "name": "job-admin-setting",
+      "path": "/job/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:58.219Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/job/admin/setting",
+        "bytes": 38774,
+        "sha256": "dd0f92d1b8f0c6ce80b612439e43dd86b23ce64a148ac6d513890a3aca40b798"
+      }
+    }
+  ]
+}

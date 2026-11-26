@@ -26,4 +26,28 @@ return [
         'required' => 'L\'indirizzo è obbligatorio.',
         'max' => 'L\'indirizzo non può superare :max caratteri.',
     ],
+    'navigation' => [
+        'sort' => 17,
+        'label' => 'address.navigation',
+        'group' => 'address.navigation',
+        'icon' => 'address.navigation',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+    ],
+    'label' => 'address',
 ];

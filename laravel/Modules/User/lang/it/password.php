@@ -81,7 +81,7 @@ return [
             'help' => 'Il numero di volte che una password può comparire in data leak prima di essere considerata compromessa',
         ],
         'new_password' => [
-            'label' => 'new_password',
+            'label' => 'Nuova password',
         ],
     ],
     'actions' => [

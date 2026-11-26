@@ -72,5 +72,20 @@ return [
         'save' => [
             'icon' => 'save',
         ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
 ];

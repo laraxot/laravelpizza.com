@@ -18,6 +18,11 @@ use Webmozart\Assert\Assert;
 
 use function Safe\file_get_contents;
 
+/**
+ * Pagina di pannello per avviare il fine-tuning del modello (inoltra la richiesta al backend configurato).
+ *
+ * @see Modules/AI/docs/manuals/manuale-utente.md
+ */
 class FineTuning extends XotBasePage
 {
     public string $learningRate = '0.001';
@@ -36,6 +41,8 @@ class FineTuning extends XotBasePage
 
     /**
      * Avvia il processo di fine-tuning.
+     *
+     * @see Modules/AI/docs/manuals/manuale-utente.md
      */
     public function startFineTuning(): void
     {
@@ -56,8 +63,8 @@ class FineTuning extends XotBasePage
 
         if (! $response->successful()) {
             Notification::make()
-                ->title('Error')
-                ->body('Fine-tuning failed to start')
+                ->title(__('ai::fine_tuning.error_title'))
+                ->body(__('ai::fine_tuning.error_body'))
                 ->danger()
                 ->send();
 
@@ -65,8 +72,8 @@ class FineTuning extends XotBasePage
         }
 
         Notification::make()
-            ->title('Success')
-            ->body('Fine-tuning started successfully')
+            ->title(__('ai::fine_tuning.success_title'))
+            ->body(__('ai::fine_tuning.success_body'))
             ->success()
             ->send();
     }
@@ -74,43 +81,45 @@ class FineTuning extends XotBasePage
     // Metodo rimosso: safeTranslate() non utilizzato
 
     /**
-     * Schema del form.
+     * Schema del form: etichette e aiuti dalle chiavi `ai::fine_tuning.*`.
+     *
+     * @see Modules/AI/docs/manuals/manuale-utente.md
      */
     protected function getFormSchema(): array
     {
         return [
             TextInput::make('learningRate')
-                ->label('Learning Rate')
+                ->label(__('ai::fine_tuning.learning_rate'))
                 ->required()
                 ->numeric()
                 ->minValue(0)
-                ->helperText('Set the learning rate for fine-tuning'),
+                ->helperText(__('ai::fine_tuning.learning_rate_hint')),
 
             TextInput::make('batchSize')
-                ->label('Batch Size')
+                ->label(__('ai::fine_tuning.batch_size'))
                 ->required()
                 ->numeric()
                 ->minValue(1)
-                ->helperText('Number of samples per batch'),
+                ->helperText(__('ai::fine_tuning.batch_size_hint')),
 
             TextInput::make('epochs')
-                ->label('Epochs')
+                ->label(__('ai::fine_tuning.epochs'))
                 ->required()
                 ->numeric()
                 ->minValue(1)
-                ->helperText('Number of training epochs'),
+                ->helperText(__('ai::fine_tuning.epochs_hint')),
 
             Select::make('dataset')
-                ->label('Dataset')
+                ->label(__('ai::fine_tuning.dataset'))
                 ->options([
-                    'dataset1' => 'Dataset 1',
-                    'dataset2' => 'Dataset 2',
+                    'dataset1' => __('ai::fine_tuning.dataset1'),
+                    'dataset2' => __('ai::fine_tuning.dataset2'),
                 ])
                 ->required(),
             FileUpload::make('datasetFile')
-                ->label('Dataset File')
+                ->label(__('ai::fine_tuning.dataset_file'))
                 ->required()
-                ->helperText('Upload the dataset file for training'),
+                ->helperText(__('ai::fine_tuning.dataset_file_hint')),
         ];
     }
 

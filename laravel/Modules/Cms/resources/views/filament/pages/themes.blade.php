@@ -43,7 +43,7 @@ declare(strict_types=1);
     @else
         <div>
             <div class="flex justify-center">
-                <x-heroicon-o-x-circle class="w-16 h-16 text-danger-500 text-center"/>
+                <x-filament::icon icon="heroicon-o-x-circle" class="h-16 w-16 text-danger-500" />
             </div>
             <p class="text-gray-500 text-center">
                 {{ __('cms::themes_page.empty.no_themes.message') }}

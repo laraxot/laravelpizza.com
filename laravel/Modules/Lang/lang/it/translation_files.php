@@ -38,9 +38,14 @@ return [
         ],
         'lang' => [
             'icon' => 'lang',
+            'label' => 'lang',
         ],
         'layout' => [
             'icon' => 'layout',
+            'label' => 'layout',
+        ],
+        'create' => [
+            'label' => 'create',
         ],
     ],
 ];

@@ -78,5 +78,11 @@ return [
         'delete' => [
             'label' => 'Elimina Activities',
         ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
     ],
 ];

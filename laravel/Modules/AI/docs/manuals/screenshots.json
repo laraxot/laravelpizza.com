@@ -1,0 +1,130 @@
+{
+  "shots": [
+    {
+      "name": "ai-login",
+      "path": "/ai/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:02.860Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "ai-dashboard",
+      "path": "/ai/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:43.370Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin",
+        "bytes": 14900,
+        "sha256": "07519fd4e6a0f132e0bf62cfc50b5ac30cdd8e2ce5e5ca9bfdf5f1c251b1e190"
+      }
+    },
+    {
+      "name": "ai-knowledge-list",
+      "path": "/ai/admin/ai-knowledge-entries",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:10.548Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/ai-knowledge-entries",
+        "bytes": 24998,
+        "sha256": "b3b5c23019ba2b5fe90fada104d9042fa1b6da2f94cadc1ea719e65b8795d641"
+      }
+    },
+    {
+      "name": "ai-knowledge-create",
+      "path": "/ai/admin/ai-knowledge-entries/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:13.425Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/ai-knowledge-entries/create",
+        "bytes": 26070,
+        "sha256": "ff73c4574bd9f96359793df5c539ee585f5c15d316b6d3b5473749d242d1c9b7"
+      }
+    },
+    {
+      "name": "ai-proposals-list",
+      "path": "/ai/admin/ai-action-proposals",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:16.378Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/ai-action-proposals",
+        "bytes": 24356,
+        "sha256": "516eb563797611ea6fedbfafc067f6486ff1c1405fa34faa03f3e7e8c0a9a263"
+      }
+    },
+    {
+      "name": "ai-proposals-create",
+      "path": "/ai/admin/ai-action-proposals/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:19.427Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/ai-action-proposals/create",
+        "bytes": 23014,
+        "sha256": "561b1fc96327cf89e896bcdbd4172905c843bcb6f06dd3e189d77e52e90737a4"
+      }
+    },
+    {
+      "name": "ai-setting",
+      "path": "/ai/admin/setting",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:22.958Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/setting",
+        "bytes": 101078,
+        "sha256": "171133084519ab0f1118f38cf1e15b3bd48f3682989e8bc60aecc897b07a63bb"
+      }
+    },
+    {
+      "name": "ai-completion",
+      "path": "/ai/admin/completion",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:25.752Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/completion",
+        "bytes": 17070,
+        "sha256": "dcef0ff4a43789bca5e68c36c2dd93269005b33b9b5ee717549fd9fa489e6cea"
+      }
+    },
+    {
+      "name": "ai-fine-tuning",
+      "path": "/ai/admin/fine-tuning",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:35:28.628Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ai/admin/fine-tuning",
+        "bytes": 30424,
+        "sha256": "f3d824ffd0e66f096055edea79dd062a1a4548e665b9b9410f906e400223d08a"
+      }
+    }
+  ]
+}

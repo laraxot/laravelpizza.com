@@ -42,3 +42,19 @@ it('sotto test non scrive nemmeno senza configurazione esplicita', function (): 
 
     expect(is_file($target) ? file_get_contents($target) : null)->toBe($before);
 })->group('LANG-SAVETRANS-INV-1');
+
+it('rifiuta una chiave senza nome file invece di creare lang/it/.php', function (): void {
+    // Caso reale: le azioni del menu utente risalivano alla pagina Dashboard e la chiave
+    // diventava `modulo::`; `persist()` scriveva un file chiamato `.php` in 14 moduli.
+    $target = base_path('Modules/Lang/lang/'.app()->getLocale().'/.php');
+    $existedBefore = is_file($target);
+
+    app(SaveTransAction::class)->persist('lang::.actions.profile.label', 'profile');
+
+    $created = ! $existedBefore && is_file($target);
+    if ($created) {
+        unlink($target);
+    }
+
+    expect($created)->toBeFalse();
+})->group('LANG-SAVETRANS-INV-6');

@@ -6,18 +6,23 @@ return [
     'fields' => [
         'version' => [
             'tooltip' => '',
+            'label' => 'version',
         ],
         'subtitle' => [
             'tooltip' => '',
+            'label' => 'subtitle',
         ],
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'image' => [
             'tooltip' => '',
+            'label' => 'image',
         ],
         'gallery' => [
             'tooltip' => '',
+            'label' => 'gallery',
         ],
     ],
     'label' => 'Images Gallery',

@@ -607,8 +607,6 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 
 ## Contenuto fuso da `agents.md`
 
-=======
-=======
 User: "How does LMSR work with forecast markets?"
 1. Search wiki/index.md for "LMSR", "forecast markets"
    - wiki/concepts/forecast-market-design.md
@@ -620,6 +618,4 @@ User: "ingest docs/raw/articles/laraxot-ticket-patterns.md into App wiki"
 npm install -g qmd
 - [ ] Index.md is updated (if new page)
 - [ ] Index.md updated
-=======
 ### Example: Index.md Entry
-=======

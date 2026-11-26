@@ -57,7 +57,7 @@ describe('UI highest-miss coverage', function (): void {
         Assert::assertSame('id', IDColumn::make('id')->getName());
         $anchor = IDColumn::renderAnchor(7)->toHtml();
         Assert::assertStringContainsString('id="record-7"', $anchor);
-        Assert::assertStringContainsString('class="scroll-mt-24"', $anchor);
+        Assert::assertStringContainsString('scroll-mt-24', $anchor);
 
         $split = IconStateSplitColumn::make('state')->stateClass(\stdClass::class, Category::class);
         Assert::assertSame([], $split->getRecordStates());

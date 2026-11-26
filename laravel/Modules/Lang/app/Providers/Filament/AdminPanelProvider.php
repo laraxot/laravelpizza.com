@@ -12,23 +12,16 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Lang';
 
+    /**
+     * Aggiunge SpatieTranslatable al pannello admin Lang.
+     *
+     * @see Modules/Lang/docs/filament-auto-labels.md
+     */
     #[\Override]
     public function panel(Panel $panel): Panel
     {
-        $panel = parent::panel($panel);
-        // FilamentAsset::register(
-        //     [
-        //         Css::make('filament-navigation-styles', __DIR__.'/../../resources/dist/plugin.css'),
-        //         Js::make('filament-navigation-scripts', __DIR__.'/../../resources/dist/plugin.js'),
-        //     ],
-        //     'filament-navigation'
-        // );
-
-        $spatieLaravelTranslatablePlugin = SpatieTranslatablePlugin::make()->defaultLocales(['en', 'it']);
-        $panel->plugins([
-            $spatieLaravelTranslatablePlugin,
+        return parent::panel($panel)->plugins([
+            SpatieTranslatablePlugin::make()->defaultLocales(['en', 'it']),
         ]);
-
-        return $panel;
     }
 }

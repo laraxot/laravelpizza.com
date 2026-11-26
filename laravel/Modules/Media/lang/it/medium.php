@@ -10,6 +10,28 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
         ],
     ],
     'fields' => [
@@ -75,6 +97,9 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+        ],
+        'value' => [
+            'label' => 'value',
         ],
     ],
     'label' => 'Medium',

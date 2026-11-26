@@ -77,19 +77,10 @@ related:
 - Verificare la compatibilità
 - Testare le modifiche
 - Documentare i cambiamenti
-### Versione HEAD
-
-### Versione HEAD
 
 ## Collegamenti tra versioni di integration.md
 * [integration.md](../../../gdpr/docs/integration.md)
 * [integration.md](../../../xot/docs/integration.md)
 * [integration.md](../../../job/docs/integration.md)
-
-### Versione Incoming
-
----
-
-### Versione Incoming
 
 ---

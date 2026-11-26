@@ -19,6 +19,7 @@ return [
         ],
         'view' => [
             'tooltip' => '',
+            'label' => 'view',
         ],
     ],
     'label' => 'Paragraph',

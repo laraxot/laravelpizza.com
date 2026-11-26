@@ -6,15 +6,19 @@ return [
     'fields' => [
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'description' => [
             'tooltip' => '',
+            'label' => 'description',
         ],
         'button_text' => [
             'tooltip' => '',
+            'label' => 'button_text',
         ],
         'button_link' => [
             'tooltip' => '',
+            'label' => 'button_link',
         ],
     ],
     'navigation' => [

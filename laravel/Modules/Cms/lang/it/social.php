@@ -6,15 +6,19 @@ return [
     'fields' => [
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'social_links' => [
             'tooltip' => '',
+            'label' => 'social_links',
         ],
         'platform' => [
             'tooltip' => '',
+            'label' => 'platform',
         ],
         'url' => [
             'tooltip' => '',
+            'label' => 'url',
         ],
     ],
     'label' => 'Social',

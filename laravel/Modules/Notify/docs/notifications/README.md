@@ -4,20 +4,17 @@ type: index
 tags: [notify, docs, notifications]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_9zXccD
 updated: 2026-11-23
-=======
-updated: 2026-07-20
->>>>>>> .merge_file_p5zzrJ
 qmd: "notify documentazione notifications readme notifiche index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
-  - ../README.md
+  - ../index.md
   - ../wiki/index.md
   - README.md
+  - index.md
   - ../integrations/README.md
   - ../templates/README.md
 ---
@@ -186,28 +183,4 @@ class SmsChannel
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../../docs/readme_links.md). 
----
-
-<!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
-
----
-title: "Readme"
-type: concept
-tags: [readme]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "readme readme"
-issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
-discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
-related:
-  - "./errori-comuni-da-evitare-1.md"
-  - "./errori-comuni-da-evitare.md"
-  - "./index.md"
-  - "./multi-channel-notifications.md"
-  - "./multi-channel-notifications-2.md"
-  - "./multi-channel-notifications.md"
-  - "./netfun-sms-implementation-1.md"
-  - "./netfun-sms-implementation.md"
----
-
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../../docs/readme_links.md).

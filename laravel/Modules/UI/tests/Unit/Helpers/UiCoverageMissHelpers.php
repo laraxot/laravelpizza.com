@@ -6,7 +6,8 @@ namespace Modules\UI\Tests\Unit\Helpers;
 
 /**
  * Helper condivisi per sweep coverage UI (evita redeclare tra file Pest).
- * Cms opzionale in PTVX: stub via FQCN stringa in ensureCmsStub(), mai import Cms.
+ * Non finge classi Cms: una finta con il nome sbagliato nasconde il rename (vedi
+ * Modules/UI/docs/adr/0004-optional-cms-delegation-for-block-data.md).
  */
 final class UiCoverageMissHelpers
 {
@@ -42,30 +43,5 @@ final class UiCoverageMissHelpers
             }
             $ref = $ref->getParentClass();
         }
-    }
-
-    public static function ensureCmsStub(): void
-    {
-        $fqcn = 'Modules\\Cms\\Actions\\GetLocalizedBlockDataAction';
-        if (class_exists($fqcn, false)) {
-            return;
-        }
-
-        eval(<<<'PHP'
-namespace Modules\Cms\Actions;
-class GetLocalizedBlockDataAction
-{
-    /** @var callable|null */
-    public static $handler = null;
-    public function execute(array $viewParams): array|string
-    {
-        if (is_callable(self::$handler)) {
-            return (self::$handler)($viewParams);
-        }
-        // Default: pass-through (non rompere altri test ResolveLocalized)
-        return $viewParams;
-    }
-}
-PHP);
     }
 }

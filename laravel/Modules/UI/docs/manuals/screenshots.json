@@ -1,0 +1,74 @@
+{
+  "shots": [
+    {
+      "name": "login",
+      "path": "/ui/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:10:50.668Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ui/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "password-reset-request",
+      "path": "/ui/admin/password-reset/request",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:10:58.265Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ui/admin/password-reset/request",
+        "bytes": 8840,
+        "sha256": "9d63083c5acbe4f95694839937fbf6ab8a6025b1b010b8ace01ff2a1464ebf5b"
+      }
+    },
+    {
+      "name": "dashboard",
+      "path": "/ui/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:15:41.664Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ui/admin",
+        "bytes": 33526,
+        "sha256": "10c66281e1febc30bd32700efe9596d413d94e63bdeeb4eae37ba242d0b2a93e"
+      }
+    },
+    {
+      "name": "setting",
+      "path": "/ui/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:31.246Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ui/admin/setting",
+        "bytes": 16736,
+        "sha256": "e2b110ba18e63f7d73e1156664ba5f67dba3eecf38a41fe1864aef8a4cee827d"
+      }
+    },
+    {
+      "name": "test-cluster",
+      "path": "/ui/admin/test",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:38.332Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/ui/admin/test",
+        "bytes": 9434,
+        "sha256": "06fe2e0219eca021302c714c7f0cbf0494fbd48ccadbfaddd4eda44c872836bd"
+      }
+    }
+  ]
+}

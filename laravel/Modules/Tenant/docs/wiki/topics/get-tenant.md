@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 get-tenant"
 
 # Topic get-tenant
 
-Sintesi automatica di 9 documenti (chiave `get-tenant`).
+Sintesi automatica di 7 documenti (chiave `get-tenant`).
 
 ## GetTenantConfigArrayAction
 
@@ -108,40 +108,6 @@ Nessuno: legge solo il nome tenant da `GetTenantNameAction`, che a sua volta leg
 
 ## Non fa
 
-## GetTenantConfigValueAction
-
-_Fonte: `contracts/get-tenant-config-value-action.md`_
-
-# GetTenantConfigValueAction
-
-Risolve un valore di configurazione sovrapponendo la config del tenant a quella di base. Codice: `app/Actions/Config/GetTenantConfigValueAction.php:13-63`.
-
-## Input
-
-- `string $key`: chiave con notazione a punti. Il primo segmento è il gruppo (riga 33).
-- `string|int|array|null $_default`: valore passato a `config()` se la chiave manca (riga 56).
-
-## Output
-
-- `float|int|string|array|null`: valore risolto (riga 58-60).
-
-## Invarianti
-
-| ID | Regola | Prova nel codice | Test esistente |
-|---|---|---|---|
-| `TENANT-RESOLVE-INV-1` | Chiave vuota o gruppo vuoto lancia `Exception`. | righe 33-36 | `tests/Unit/Actions/Config/GetTenantConfigValueActionTest.php` |
-| `TENANT-RESOLVE-INV-2` | Il gruppo è fuso con `<tenant>.<gruppo>` e i valori del tenant prevalgono (`array_replace_recursive`). | righe 38-52 | `tests/Unit/Actions/Config/GetTenantConfigValueActionTest.php` |
-| `TENANT-RESOLVE-INV-3` | Un valore non scalare né array (ad esempio bool o oggetto) lancia `Exception`. | righe 58-62 | nessuno |
-
-## Effetti collaterali
-
-- `Config::set($group, $mergeConf)` (riga 54) modifica la configurazione in memoria dell'intero gruppo per il resto del processo. Non scrive su disco.
-- Legge la config di base e quella del tenant, e il nome tenant da `GetTenantNameAction`.
-
-## Errori
-
-- `Exception` generica con messaggio `[riga][classe]` in entrambi i casi di errore.
-
 ## GetTenantFilePathAction
 
 _Fonte: `contracts/get-tenant-file-path-action.md`_
@@ -169,70 +135,6 @@ Calcola il percorso di un file di configurazione o contenuto del tenant corrente
 ## Effetti collaterali
 
 Normalmente nessuno (calcolo di stringa). Solo con `runningUnitTests()` e prefisso `database/content/`: la prima volta per processo `prepareTestingContent` cancella e ricrea la copia di test (righe 55-68) e copia il file o 
-
-## GetTenantModelClassAction
-
-_Fonte: `contracts/get-tenant-model-class-action.md`_
-
-# GetTenantModelClassAction
-
-Risolve il FQCN del model da un nome, usando la `morph_map` del tenant e, se manca, la scansione dei moduli abilitati. Codice: `app/Actions/Models/GetTenantModelClassAction.php:16-103`.
-
-## Input
-
-- `string $name`: nome del model, al singolare o al plurale. Viene normalizzato con `Str::snake(Str::singular(...))` (riga 22).
-
-## Output
-
-- `class-string` (`string`): FQCN del model.
-
-## Invarianti
-
-| ID | Regola | Prova nel codice | Test esistente |
-|---|---|---|---|
-| `RES-MODEL-CLASS-INV-1` | Il nome è normalizzato al singolare snake_case prima della ricerca. | riga 22 | `tests/Unit/Actions/Models/GetTenantModelClassActionTest.php` |
-| `RES-MODEL-CLASS-INV-2` | Se `morph_map.<name>` è in config, viene restituito senza scansionare i moduli. | righe 24-27 | `tests/Unit/Actions/Models/GetTenantModelClassActionTest.php` |
-| `RES-MODEL-CLASS-INV-3` | Se il nome non è in `morph_map`, la scansione dei moduli abilitati trova la classe e la coppia viene persistita nella `morph_map` del tenant. | righe 37-47 | `tests/Unit/Actions/Models/GetTenantModelClassActionTest.php` |
-| `RES-MODEL-CLASS-INV-4` | Un nome sconosciuto lancia `Exception` e non scrive nulla. | righe 40-42 | `tests/Unit/Actions/Models/GetTenantModelClassActionTest.php` |
-| `RES-MODEL-CLASS-INV-5` | Un valore in `morph_map` non stringa lancia `Exception`. | righe 30-32 | nessuno |
-
-## Effetti collaterali
-
-Ordine: lettura config (`GetTenantConfigValueAction`), scansione moduli (`Module::allEnabl
-
-## GetTenantModelInstanceAction
-
-_Fonte: `contracts/get-tenant-model-instance-action.md`_
-
-# GetTenantModelInstanceAction
-
-Restituisce una istanza nuova del model risolto per nome. Codice: `app/Actions/Models/GetTenantModelInstanceAction.php:11-24`.
-
-## Input
-
-- `string $name`: come per `GetTenantModelClassAction`.
-
-## Output
-
-- `Model`: istanza nuova della classe risolta, creata con `app()` (righe 17-22).
-
-## Invarianti
-
-| ID | Regola | Prova nel codice | Test esistente |
-|---|---|---|---|
-| `RES-MODEL-INST-INV-1` | La classe è quella di `GetTenantModelClassAction`, istanziata dal container. | righe 17-19 | `tests/Unit/Actions/Models/GetTenantModelInstanceActionTest.php` |
-| `RES-MODEL-INST-INV-2` | Il risultato è un `Model`, altrimenti `Assert` lancia. | riga 20 | `tests/Unit/Actions/Models/GetTenantModelInstanceActionTest.php` |
-
-## Effetti collaterali
-
-Quelli di `GetTenantModelClassAction` (possibile scrittura di `morph_map`). Nessuna scrittura diretta, nessuna query.
-
-## Errori
-
-- Le eccezioni di `GetTenantModelClassAction` si propagano.
-- `Assert::isInstanceOf` lancia se la classe non è un `Model`.
-
-## Non fa
 
 ## GetTenantModulesAction
 
@@ -293,3 +195,37 @@ Risolve il nome del tenant corrente dall'host. Tutto l'isolamento dei file tenan
 | `TENANT-NAME-INV-3` | Si prova il percorso completo; con più di due parti si prova anche quello senza l'ultima parte; poi l'host di `app.url`. | righe 44-45, 52-83 | `tests/Unit/Actions/GetTenantNameActionTest.php` |
 | `TENANT-NAME-INV-4` | Se l'host è un symlink verso un'altra config, il nome è il percorso reale sotto `config_path()`, non l'alias. | righe 90-104 | nessuno individuato |
 | `TENANT-NAME-INV-5` | `SERVER_NAME` vuoto o loopback (`127.0.0.1`, `::1`, `localhost`) è ignorato a favore dell'header `Host` (fuori dalla console), poi di `app.url`. | righe 114-134 | `tests/Feature/TenantConf
+
+## Topic get-tenant
+
+_Fonte: `wiki/topics/get-tenant.md`_
+
+# Topic get-tenant
+
+Sintesi automatica di 9 documenti (chiave `get-tenant`).
+
+## GetTenantConfigArrayAction
+
+_Fonte: `contracts/get-tenant-config-array-action.md`_
+
+# GetTenantConfigArrayAction
+
+Legge il file `config/<tenant>/<name>.php` e restituisce il suo array. Codice: `app/Actions/Config/GetTenantConfigArrayAction.php:11-40`.
+
+## Input
+
+- `string $name`: nome del file senza estensione (riga 18). Il percorso passa da `GetTenantFilePathAction`.
+
+## Output
+
+- `array<string, mixed>`: contenuto del file, con chiavi intere convertite in stringa (righe 32-38).
+
+## Invarianti
+
+| ID | Regola | Prova nel codice | Test esistente |
+|---|---|---|---|
+| `TENANT-CFG-ARR-INV-1` | File mancante, errore di esecuzione o valore non array producono `[]` senza errore. | righe 22-30 (`catch Throwable`) | `tests/Unit/Actions/Config/GetTenantConfigArrayActionTest.php` |
+| `TENANT-CFG-ARR-INV-2` | Le chiavi intere diventano stringhe. | righe 34-36 | `tests/Unit/Actions/Config/GetTenantConfigArrayActionTest.php` |
+| `TENANT-CFG-ARR-INV-3` | Un nome con traversal o assoluto lancia `InvalidArgumentException` e non viene inghiottito, perché la chiamata a `GetTenantFilePathAction` è fuori dal `try`. | riga 20 | `tests/Unit/Actions/Config/GetTenantFilePathActionTest.php` (copertura via dipendenza) |
+
+## Effetti collaterali

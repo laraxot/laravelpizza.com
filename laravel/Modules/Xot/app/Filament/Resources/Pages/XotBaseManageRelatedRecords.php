@@ -124,9 +124,7 @@ use Webmozart\Assert\Assert;
  *
  * @template TModel of Model = Model
  *
- * @see Modules/Xot/docs/app/Filament/Resources/Pages/XotBaseManageRelatedRecords.php.md
- * @see Modules/Xot/docs/stories/xotbasemanagerelatedrecords-convention-over-configuration.story.md
- * @see Modules/Xot/docs/stories/18.27.hasxottable-fuori-dai-componenti-filament.story.md
+ * @see Modules/Xot/docs/xotbase-extension-rules.md
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {

@@ -51,6 +51,9 @@ return [
         'description' => [
             'label' => 'Descrizione',
         ],
+        'users_count' => [
+            'label' => 'users_count',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -73,6 +76,7 @@ return [
         ],
         'layout' => [
             'icon' => 'layout',
+            'label' => 'layout',
         ],
     ],
     'messages' => [

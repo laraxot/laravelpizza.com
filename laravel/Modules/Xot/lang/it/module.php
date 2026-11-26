@@ -166,6 +166,19 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
 ];

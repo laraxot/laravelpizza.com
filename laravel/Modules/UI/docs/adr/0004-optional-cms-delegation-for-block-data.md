@@ -17,7 +17,7 @@ qmd: "optional cms delegation for block data"
 
 `app/View/Components/Render/Block.php` (componente Blade `x-ui::render.block`) disegna un blocco di contenuto con
 la vista indicata in `data.view`. Le URL e i testi dei blocchi vanno localizzati, e chi sa farlo è
-`Modules\Cms\Actions\GetLocalizedBlockDataAction` (usa `mcamara/laravel-localization`). Ma `module.json` di UI
+`Modules\Cms\Actions\ResolveLocalizedBlockDataAction` (usa `mcamara/laravel-localization`). Ma `module.json` di UI
 richiede solo `Xot` e `User`: UI è un modulo di base che gira anche dove Cms non c'è, e Cms dipende da UI
 (`Cms/app/Filament/Fields/PageContent.php` usa `GetAllBlocksAction` di UI). Un `use Modules\Cms\...` in UI creerebbe
 una dipendenza circolare e romperebbe le installazioni senza Cms. Come localizza UI i dati dei blocchi senza
@@ -26,7 +26,7 @@ dipendere da Cms?
 ## Decisione
 
 - `app/Actions/Block/GetLocalizedBlockDataAction.php` nomina il resolver di Cms **come stringa**
-  (`'Modules\Cms\Actions\GetLocalizedBlockDataAction'`), controlla `class_exists`, lo risolve dal container e
+  (`'Modules\Cms\Actions\ResolveLocalizedBlockDataAction'`), controlla `class_exists`, lo risolve dal container e
   chiama `execute()` se esiste; altrimenti ritorna i dati invariati.
 - Il risultato di Cms passa per `normalizeViewData()`: le chiavi devono essere stringhe (diventano variabili della vista).
 - Nessun file in `Modules/UI/app` importa (`use`) una classe di `Modules\Cms`.
@@ -43,7 +43,10 @@ dipendere da Cms?
 
 - Buono: UI funziona da solo; con Cms installato i blocchi escono localizzati senza configurazione.
 - Cattivo: il nome della classe è una stringa, PHPStan e il rename dell'IDE non la vedono: chi rinomina l'Action di
-  Cms deve aggiornare la stringa (il test del group `UI-BLOCKDATA-INV-1` non lo rileva perché sostituisce il resolver).
+  Cms deve aggiornare la stringa. Il rischio si è avverato: Cms ha rinominato la classe in `ResolveLocalizedBlockDataAction`
+  e la stringa è rimasta `GetLocalizedBlockDataAction`, quindi `class_exists` era false e i link dei blocchi uscivano senza
+  prefisso lingua, senza errori (corretto il 2026-11-25). Lo rileva ora il test «names a Cms resolver class that really
+  exists» (group `UI-BLOCKDATA-INV-1`).
 - Il pattern vale per ogni nuova delega da UI verso un modulo che dipende da UI.
 
 ## Verifica

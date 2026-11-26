@@ -159,6 +159,7 @@ return [
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
@@ -171,6 +172,9 @@ return [
         ],
         'submit' => [
             'icon' => 'submit',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
     'messages' => [

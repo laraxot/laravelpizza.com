@@ -247,6 +247,15 @@ return [
             'icon' => 'trash',
             'color' => 'danger',
         ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'no_jobs' => 'Nessun Job Manager presente',

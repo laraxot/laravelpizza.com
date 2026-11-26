@@ -28,6 +28,12 @@ return [
         'refresh' => [
             'label' => 'Aggiorna',
         ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
     ],
     'messages' => [
         'no_files' => 'Nessun file di log trovato in storage/logs.',

@@ -11,7 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
- * @see docs/contracts/get-trans-key-action.md
+ * @see Modules/Xot/docs/contracts/get-trans-key-action.md
  *
  * @contract docs/contracts/get-trans-key-action.md
  */
@@ -78,8 +78,13 @@ class GetTransKeyAction
         $arr = explode('_', $class_snake);
         $first = $arr[0];
         $last = $arr[count($arr) - 1];
+        // Prefissi CRUD/list: `ListRatings` → `ratings`. Non svuotare se la classe È `Dashboard`
+        // (prima: `ai::` + file lang `it/.php` con group=".navigation").
         if (in_array($first, ['dashboard', 'list', 'get', 'manage', 'edit', 'view', 'create'], strict: true)) {
-            $class_snake = implode('_', array_slice($arr, 1));
+            $rest = implode('_', array_slice($arr, 1));
+            if ($rest !== '') {
+                $class_snake = $rest;
+            }
         }
         if (in_array($last, ['action'], strict: true)) {
             $class_snake = Str::beforeLast($class_snake, '_'.$last);

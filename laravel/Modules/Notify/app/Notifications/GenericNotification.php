@@ -20,9 +20,7 @@ use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
  * Rate-limit e tracking HTML restano disponibili alle sottoclassi
  * (config `notify.rate_limiting` / `notify.tracking`).
  *
- * @see Modules/Notify/docs/contracts/generic-notification-traits.md
- * @see Modules/Notify/docs/contracts/has-notification-rate-limiting.md
- * @see Modules/Notify/docs/contracts/has-notification-tracking.md
+ * @see Modules/Notify/docs/contracts/index.md
  */
 class GenericNotification extends Notification implements ShouldQueue
 {

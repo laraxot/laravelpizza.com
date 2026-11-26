@@ -153,7 +153,9 @@ return [
         ],
     ],
     'actions' => [
-        'create' => 'Crea Menu',
+        'create' => [
+            'label' => 'create',
+        ],
         'edit' => 'Modifica Menu',
         'delete' => 'Elimina Menu',
         'sort' => 'Ordina Voci',
@@ -161,6 +163,10 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
     'messages' => [

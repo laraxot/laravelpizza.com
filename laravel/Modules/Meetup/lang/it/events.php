@@ -23,7 +23,7 @@ return [
             'label' => 'Fine',
         ],
         'location' => [
-            'label' => 'Città',
+            'label' => 'Città o luogo',
         ],
         'venue' => [
             'name' => [

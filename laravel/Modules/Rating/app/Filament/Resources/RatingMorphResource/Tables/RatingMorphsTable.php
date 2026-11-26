@@ -17,14 +17,14 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
  * esistono (celle sempre vuote, e `rating` ricercabile metteva `WHERE rating LIKE ...` in SQL:
  * colonna inesistente). Il criterio si mostra dalla relazione `rating()`.
  *
- * @see Modules/Rating/docs/filament-table-architecture.md
+ * @see Modules/Rating/docs/wiki/concepts/xotbase-table-columns-enforcement.md
  */
 class RatingMorphsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
      *
-     * @see Modules/Rating/docs/filament-table-architecture.md
+     * @see Modules/Rating/docs/wiki/concepts/xotbase-table-columns-enforcement.md
      */
     public function getTableColumns(): array
     {

@@ -6,21 +6,27 @@ return [
     'fields' => [
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'description' => [
             'tooltip' => '',
+            'label' => 'description',
         ],
         'button_text' => [
             'tooltip' => '',
+            'label' => 'button_text',
         ],
         'placeholder' => [
             'tooltip' => '',
+            'label' => 'placeholder',
         ],
         'success_message' => [
             'tooltip' => '',
+            'label' => 'success_message',
         ],
         'error_message' => [
             'tooltip' => '',
+            'label' => 'error_message',
         ],
     ],
     'label' => 'Newsletter',

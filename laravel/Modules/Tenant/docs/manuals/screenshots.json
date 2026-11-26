@@ -1,0 +1,74 @@
+{
+  "shots": [
+    {
+      "name": "login",
+      "path": "/tenant/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:38.644Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/tenant/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "dashboard",
+      "path": "/tenant/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:45.316Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/tenant/admin",
+        "bytes": 11730,
+        "sha256": "783a657709ea44ebff2fffcae6382aa349907671bfe5edb82b8537d92c403676"
+      }
+    },
+    {
+      "name": "domini-crea",
+      "path": "/tenant/admin/domains/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:49.202Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/tenant/admin/domains/create",
+        "bytes": 17560,
+        "sha256": "eb01908807e7b2c97e5392f0b32ec61c300a9b6fb697200a4fb80223315e43f4"
+      }
+    },
+    {
+      "name": "domini-modifica",
+      "path": "/tenant/admin/domains/localhost/edit",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:53.260Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/tenant/admin/domains/localhost/edit",
+        "bytes": 18902,
+        "sha256": "5edcf7d553eb69bd6c7cc4e32d59974d07312ac6d4b60af9ad746b3543136420"
+      }
+    },
+    {
+      "name": "impostazioni",
+      "path": "/tenant/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:57.206Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/tenant/admin/setting",
+        "bytes": 23614,
+        "sha256": "f2573de5e5a7a7b56c78c42867256d8fe910aa451d510ee53751a3779006a4a8"
+      }
+    }
+  ]
+}

@@ -13,7 +13,7 @@ use function Safe\preg_match;
 /**
  * Ancora HTML di una riga di elenco.
  *
- * @see Modules/Xot/docs/filament/record-anchor-return-to.md
+ * @see Modules/Xot/docs/xotbase-extension-rules.md
  */
 final class RecordAnchor
 {
@@ -72,7 +72,7 @@ final class RecordAnchor
      * dettaglio). Chi apre "Nuovo" da un altro pannello o dalla dashboard, dopo il salvataggio deve
      * arrivare alla resource, non tornare alla dashboard con un'ancora che li' non esiste.
      *
-     * @see Modules/Xot/docs/filament/record-anchor-return-to.md
+     * @see Modules/Xot/docs/xotbase-extension-rules.md
      */
     public static function previousWithinResource(?string $previousUrl, mixed $resourceIndexUrl): ?string
     {

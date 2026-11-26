@@ -128,6 +128,10 @@ return [
         ],
         'applyTableColumnManager' => [
             'tooltip' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
         ],
     ],
     'create_title' => 'Nuova sede',

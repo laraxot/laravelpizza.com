@@ -69,27 +69,70 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'type' => [
+            'label' => 'type',
+        ],
+        'first_name' => [
+            'label' => 'first_name',
+        ],
+        'last_name' => [
+            'label' => 'last_name',
+        ],
+        'full_name' => [
+            'label' => 'full_name',
+        ],
+        'email' => [
+            'label' => 'email',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
+        'user_id' => [
+            'label' => 'user_id',
+        ],
+        'updated_by' => [
+            'label' => 'updated_by',
+        ],
+        'created_by' => [
+            'label' => 'created_by',
+        ],
+        'deleted_at' => [
+            'label' => 'deleted_at',
+        ],
+        'deleted_by' => [
+            'label' => 'deleted_by',
+        ],
+        'is_active' => [
+            'label' => 'is_active',
+        ],
     ],
     'preferences' => [
         'communication' => 'Preferenze Comunicazione',
         'data_retention' => 'Conservazione Dati',
         'data_sharing' => 'Condivisione Dati',
     ],
-    'label' => 'Profile',
-    'plural_label' => 'Profile (Plurale)',
+    'label' => 'Profilo',
+    'plural_label' => 'Profili',
     'actions' => [
         'create' => [
-            'label' => 'Crea Profile',
+            'label' => 'Crea profilo',
         ],
         'edit' => [
-            'label' => 'Modifica Profile',
+            'label' => 'Modifica profilo',
         ],
         'delete' => [
-            'label' => 'Elimina Profile',
+            'label' => 'Elimina profilo',
         ],
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
 ];

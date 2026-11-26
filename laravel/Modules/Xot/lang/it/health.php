@@ -25,6 +25,9 @@ return [
             ],
         ],
     ],
+    'title' => 'Salute applicazione',
+    'heading' => 'Salute applicazione',
+    'sub_heading' => 'Controlli di stato dell\'applicazione, dell\'ambiente e dei servizi.',
     'actions' => [
         'refresh' => [
             'label' => 'Aggiorna',
@@ -34,11 +37,15 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'save' => [
             'label' => 'Salva',
             'icon' => 'save',
             'tooltip' => '',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
     'label' => 'Health',

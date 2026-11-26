@@ -37,6 +37,24 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'route' => [
+            'label' => 'route',
+        ],
+        'locality' => [
+            'label' => 'locality',
+        ],
+        'administrative_area_level_3' => [
+            'label' => 'administrative_area_level_3',
+        ],
+        'administrative_area_level_2' => [
+            'label' => 'administrative_area_level_2',
+        ],
+        'postal_code' => [
+            'label' => 'postal_code',
+        ],
+        'type' => [
+            'label' => 'type',
+        ],
     ],
     'messages' => [
         'validation' => [
@@ -78,6 +96,12 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Addresses',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
         ],
     ],
 ];

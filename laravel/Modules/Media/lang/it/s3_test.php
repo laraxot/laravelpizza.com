@@ -53,6 +53,12 @@ return [
         'test01' => [
             'label' => 'Test 01',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'label' => 'S3 Test',
     'plural_label' => 'S3 Test (Plurale)',

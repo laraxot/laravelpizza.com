@@ -84,15 +84,19 @@ return [
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'composer_dump_autoload' => [
             'icon' => 'composer_dump_autoload',
+            'label' => 'composer_dump_autoload',
         ],
         'notify_migrate_themes_to_mail_templates' => [
             'icon' => 'notify_migrate_themes_to_mail_templates',
+            'label' => 'notify_migrate_themes_to_mail_templates',
         ],
         'submit' => [
             'icon' => 'submit',

@@ -23,4 +23,24 @@ return [
             'label' => 'Codec audio',
         ],
     ],
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'convert' => [
+            'label' => 'Converti',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+    ],
 ];

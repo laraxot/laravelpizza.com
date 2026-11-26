@@ -6,12 +6,15 @@ return [
     'fields' => [
         'caption' => [
             'tooltip' => '',
+            'label' => 'caption',
         ],
         'image' => [
             'tooltip' => '',
+            'label' => 'image',
         ],
         'img_uuid' => [
             'tooltip' => '',
+            'label' => 'img_uuid',
         ],
     ],
     'label' => 'Image Spatie',

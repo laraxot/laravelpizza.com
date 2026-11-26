@@ -358,18 +358,11 @@ final class Media extends Model
         );
     }
 }
-### Versione HEAD
-
 ```
+
 ## Collegamenti tra versioni di bottlenecks_detailed.md
 * [bottlenecks_detailed.md](../../../xot/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../job/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../media/docs/bottlenecks_detailed.md)
 
-### Versione Incoming
-
-```
-
 ---
-
-```

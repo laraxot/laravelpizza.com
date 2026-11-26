@@ -25,5 +25,27 @@ return [
         'treatment_id' => [
             'label' => 'Trattamento',
         ],
+        'consent' => [
+            'id' => [
+                'label' => 'consent.id',
+            ],
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
     ],
 ];

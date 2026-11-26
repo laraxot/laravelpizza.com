@@ -3,8 +3,6 @@ qmd: "Index"
 issues: []
 discussions: []
 title: "lang — integrations"
-
-title: "Index"
 module: lang
 type: integration
 tags: [integrations, modules, lang]

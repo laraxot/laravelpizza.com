@@ -3,11 +3,7 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
-<<<<<<< .merge_file_l5cy2g
 updated: 2026-11-23
-=======
-updated: 2026-08-02
->>>>>>> .merge_file_4iTy7U
 status: draft
 qmd: "documentation notify"
 ---

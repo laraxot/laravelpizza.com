@@ -6,27 +6,35 @@ return [
     'fields' => [
         'items' => [
             'tooltip' => '',
+            'label' => 'items',
         ],
         'label' => [
             'tooltip' => '',
+            'label' => 'label',
         ],
         'url' => [
             'tooltip' => '',
+            'label' => 'url',
         ],
         'type' => [
             'tooltip' => '',
+            'label' => 'type',
         ],
         'style' => [
             'tooltip' => '',
+            'label' => 'style',
         ],
         'children' => [
             'tooltip' => '',
+            'label' => 'children',
         ],
         'alignment' => [
             'tooltip' => '',
+            'label' => 'alignment',
         ],
         'orientation' => [
             'tooltip' => '',
+            'label' => 'orientation',
         ],
     ],
     'label' => 'Navigation',

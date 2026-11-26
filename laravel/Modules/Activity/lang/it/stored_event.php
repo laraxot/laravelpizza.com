@@ -236,6 +236,30 @@ return [
             'confirmation' => 'ATTENZIONE: Vuoi eseguire il replay di tutti gli eventi selezionati? Questa è un\'operazione critica.',
             'requires_permission' => 'events.bulk_replay',
         ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
+        ],
     ],
     'messages' => [
         'no_events' => 'Nessun evento trovato',
@@ -320,19 +344,19 @@ return [
     'pagination' => [
         'per_page' => 50,
         'options' => [
-            25,
-            50,
-            100,
-            200,
+            0 => 25,
+            1 => 50,
+            2 => 100,
+            3 => 200,
         ],
         'simple' => false,
     ],
     'cache' => [
         'ttl' => 600,
         'tags' => [
-            'stored_events',
-            'event_sourcing',
-            'monitoring',
+            0 => 'stored_events',
+            1 => 'event_sourcing',
+            2 => 'monitoring',
         ],
     ],
     'event_sourcing' => [

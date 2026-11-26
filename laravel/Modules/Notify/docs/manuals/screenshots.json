@@ -1,0 +1,125 @@
+{
+  "shots": [
+    {
+      "name": "notify-admin-login",
+      "path": "/notify/admin/login",
+      "auth": false,
+      "captured": {
+        "at": "2026-11-25T22:19:22.703Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "notify-admin-dashboard",
+      "path": "/notify/admin",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:34.055Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin",
+        "bytes": 17626,
+        "sha256": "ce5032ec92c6aa5aa1c1bd35a0b1183683328c1b67ce9eebd671f768fa36d1f0"
+      }
+    },
+    {
+      "name": "notify-admin-mail-templates",
+      "path": "/notify/admin/mail-templates",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:38.226Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/mail-templates",
+        "bytes": 27540,
+        "sha256": "a3e56a418088bf66e9cab6805b82260f69ccc9a9cb5496affb5fedc2ed7589b8"
+      }
+    },
+    {
+      "name": "notify-admin-mail-templates-create",
+      "path": "/notify/admin/mail-templates/create",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:43.188Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/mail-templates/create",
+        "bytes": 28678,
+        "sha256": "f4121f306c95fa1dbaaa41ba34c0dd39d77a41ea6632cab2eed0cd0441026a26"
+      }
+    },
+    {
+      "name": "notify-admin-notification-templates",
+      "path": "/notify/admin/notification-templates",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:48.710Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/notification-templates",
+        "bytes": 28026,
+        "sha256": "b463153c328564978edbf6001d5ee768af8c283633e914be6c8f810b7581952c"
+      }
+    },
+    {
+      "name": "notify-admin-notifications",
+      "path": "/notify/admin/notifications",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:53.641Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/notifications",
+        "bytes": 29350,
+        "sha256": "caab84ec8e065b3eb0d3f185f748ad60530e46e475c5dbcbb3f0353c440ab991"
+      }
+    },
+    {
+      "name": "notify-admin-notification-logs",
+      "path": "/notify/admin/notification-logs",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:19:58.808Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/notification-logs",
+        "bytes": 27026,
+        "sha256": "9970d952abcae1b4475e1fd28a0d84b5eb5497461aa1dfcfab3dce0f11373620"
+      }
+    },
+    {
+      "name": "notify-admin-contacts",
+      "path": "/notify/admin/contacts",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:20:04.901Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/contacts",
+        "bytes": 28644,
+        "sha256": "aad3a5b0c2c5734ebf0368ae203a54764b9c79a900bdce80c11c1aa5695d5f62"
+      }
+    },
+    {
+      "name": "notify-admin-test-send-email-page",
+      "path": "/notify/admin/test/send-email-page",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:22:59.110Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/test/send-email-page",
+        "bytes": 47316,
+        "sha256": "adc0d42cbaf953cb8727a34d8053e92dab792e60704191e72790687160a61291"
+      }
+    },
+    {
+      "name": "notify-admin-setting",
+      "path": "/notify/admin/setting",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:22:42.434Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/notify/admin/setting",
+        "bytes": 93972,
+        "sha256": "aae0505d108ea37ea9ac78cafa34bc1652b303906b6692cd1cc1e8d8456309b6"
+      },
+      "fullPage": true
+    }
+  ]
+}

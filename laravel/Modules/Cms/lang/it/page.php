@@ -205,6 +205,7 @@ return [
         'profile' => [
             'tooltip' => 'profile',
             'icon' => 'profile',
+            'label' => 'profile',
         ],
     ],
     'messages' => [
@@ -238,6 +239,6 @@ return [
             'heading' => 'Footer',
         ],
     ],
-    'label' => 'Page',
-    'plural_label' => 'Page (Plurale)',
+    'label' => 'Pagina',
+    'plural_label' => 'Pagine',
 ];

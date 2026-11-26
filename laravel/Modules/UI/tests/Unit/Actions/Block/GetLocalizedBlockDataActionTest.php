@@ -16,7 +16,8 @@ uses(TestCase::class);
  * Il resolver di Cms viene sostituito nel container: il test prova la delega, non la localizzazione di Cms.
  */
 
-const UI_CMS_BLOCK_RESOLVER = 'Modules\Cms\Actions\GetLocalizedBlockDataAction';
+// Stessa stringa dell'Action: la classe reale di Cms (non esiste piu' `GetLocalizedBlockDataAction`).
+const UI_CMS_BLOCK_RESOLVER = 'Modules\Cms\Actions\ResolveLocalizedBlockDataAction';
 
 afterEach(function (): void {
     app()->forgetInstance(UI_CMS_BLOCK_RESOLVER);
@@ -39,6 +40,13 @@ it('hands the block data to the Cms resolver and returns what it resolves', func
 
     expect($resolved)->toBe(['title' => 'Ciao', 'url' => '/it/resolved']);
 })->group('UI-BLOCKDATA-INV-1');
+
+// La stringa non e' vista da PHPStan ne' dal rename dell'IDE (ADR 0004): senza questo test una
+// rinomina in Cms lascia la delega spenta in silenzio, perche' `class_exists` ritorna false.
+it('names a Cms resolver class that really exists when Cms is installed', function (): void {
+    expect(class_exists(UI_CMS_BLOCK_RESOLVER))->toBeTrue();
+})->skip(fn (): bool => ! is_dir(base_path('Modules/Cms')), 'Cms non installato')
+    ->group('UI-BLOCKDATA-INV-1');
 
 it('returns the input untouched when the resolver has no execute or returns a non array', function (object $resolver): void {
     app()->instance(UI_CMS_BLOCK_RESOLVER, $resolver);

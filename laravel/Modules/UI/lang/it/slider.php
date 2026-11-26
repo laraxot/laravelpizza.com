@@ -6,6 +6,7 @@ return [
     'fields' => [
         'method' => [
             'tooltip' => '',
+            'label' => 'method',
         ],
         '_tpl' => [
             'tooltip' => '',
@@ -16,6 +17,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'view',
         ],
     ],
     'label' => 'Slider',

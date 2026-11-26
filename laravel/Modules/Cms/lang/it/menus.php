@@ -15,6 +15,19 @@ return [
         'delete' => [
             'tooltip' => '',
             'icon' => 'delete',
+            'label' => 'delete',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
         ],
     ],
 ];

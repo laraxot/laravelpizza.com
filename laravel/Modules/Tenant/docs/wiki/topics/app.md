@@ -35,12 +35,9 @@ return [
     'datetime_format' => 'd/m/Y H:i',
 ];
 ~~~
-### Versione HEAD
 
 ## Collegamenti tra versioni di app.md
 * [app.md](../../../xot/docs/install/app.md)
 * [app.md](../../../tenant/docs/it/config/app.md)
-
-### Versione Incoming
 
 ---

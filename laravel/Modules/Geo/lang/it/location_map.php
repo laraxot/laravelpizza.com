@@ -39,5 +39,8 @@ return [
         'delete' => [
             'label' => 'Elimina Location Map',
         ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
 ];

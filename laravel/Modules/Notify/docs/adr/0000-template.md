@@ -2,13 +2,9 @@
 status: proposed            # proposed | accepted | rejected | deprecated | superseded by NNNN
 date: YYYY-MM-DD
 decision-makers:
-<<<<<<< .merge_file_TyZl4L
 created: 2026-11-23
 updated: 2026-11-23
-qmd: "0000 template"
-=======
 qmd: "0000 template adr MADR harness NNNN-slug"
->>>>>>> .merge_file_bJa1xa
 ---
 
 <!-- File: docs/adr/NNNN-titolo-con-trattini.md · formato MADR breve (harness).

@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-Overflow force-cap: 38 file oltre target 100.
+Overflow force-cap: 41 file oltre target 100.
 
 ### `contracts/attach-media-action.md` — AttachMediaAction
 
@@ -144,6 +144,29 @@ Converte un file SRT in WebVTT: aggiunge l'intestazione `WEBVTT` e cambia la vir
   Test: `tests/Unit/Actions/Subtitle/ConvertSrtToVttActionTest.php:29`.
 - **CONVERT-SRT-TO-VTT-INV-2** — La virgola è sostituita con il punto solo nella riga dei timestamp: la riga a indice 1 e ogni riga che segue una riga vuota più un'altra riga.
   Test: `tests/Unit/Actions/Subtitle/ConvertSrtToVttActionTest.php:19` («timing 
+
+### `contracts/convert-video-action.md` — ConvertVideoAction
+
+
+# ConvertVideoAction
+
+Converte un video su un disco in X264 a 1000 kbps e restituisce l'URL del file prodotto. Codice: `app/Actions/Video/ConvertVideoAction.php:17-42`.
+
+## Input
+
+- `string $disk_mp4`: disco di lettura e scrittura.
+- `string $file_mp4`: video sorgente.
+- `string $file_new`: percorso di destinazione sul disco.
+
+## Output
+
+- `string`: URL del file (`FilesystemAdapter::url()`).
+
+## Invarianti
+
+- **CONVERT-VIDEO-INV-1** — Il formato è `X264` con bitrate fisso di 1000 kbps.
+  Test: `tests/Unit/Actions/MediaActionsCoverageTest.php:66-74` (solo classe e metodo).
+- **CONVERT-VIDEO-INV-2** — L'URL restituito appartiene allo stesso disco di scrittura.
 
 ### `contracts/create-filesystem-s3-client-action.md` — CreateFilesystemS3ClientAction
 
@@ -853,3 +876,40 @@ Carica un file locale su S3 con `ObjectUploader` (multipart automatico per i fil
 ## Invarianti
 
 - **UPLOAD-FILE-INV-1** — Un file inesistente o non leggibile non produce eccezione: restituisce `success=false` e registra un errore
+
+### `wiki/troubleshooting/filament-hasmediaform-redeclare.md` — Errore: Cannot redeclare `HasMediaForm`
+
+
+# Errore: Cannot redeclare `HasMediaForm`
+
+## Sintomo
+
+```
+Cannot redeclare class Modules\Media\app\Filament\Resources\HasMediaResource\Schemas\HasMediaForm
+(previously declared in /var/www/_bases/base_ptvx_fila5/laravel/Modules/Media/...)
+```
+
+Spesso durante `composer run go` o `php artisan optimize`.
+
+## Causa
+
+1. **Due progetti Laraxot nella stessa sessione PHP** — autoload del progetto corrente e di un altro progetto Laraxot nella stessa sessione (terminali/IDE multi-root, script che includono entrambi i `vendor/autoload.php`).
+2. **Namespace errato** (storico): `namespace Modules\Media\app\Filament\...` nel file PHP. Il namespace corretto è `Modules\Media\Filament\...` (la cartella fisica è `app/`, il segmento `app` non va nel namespace).
+3. **Filament discover sbagliato**: `discover
+
+### `wiki/troubleshooting/git-merge-conflict-inventory.md` — Git Conflict Inventory
+
+# Git Conflict Inventory
+
+- Date: 2026-04-28
+- Owner: Modules/Media
+- Files with conflict markers: 1
+
+## Files
+
+- docs/wiki/README.md
+
+## Notes
+
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+- Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.

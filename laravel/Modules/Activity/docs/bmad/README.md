@@ -1,5 +1,4 @@
 ---
-<<<<<<< .merge_file_G6PHJu
 title: "Activity — BMAD Method Integration"
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
@@ -18,38 +17,21 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
----
-
-# Activity — BMAD Method Integration
-updated: 2026-10-07
-tags: [docs, activity, bmad]
-qmd: "activity   bmad method integration activity"
----
-
-# Activity — BMAD Method Integration
-updated: 2026-10-07
-tags: [docs, activity, bmad]
-qmd: "activity   bmad method integration activity"
 type: index
 updated: 2026-10-07
 tags: [docs, activity, bmad]
-qmd: "activity   bmad method integration activity"
-=======
-qmd: "activity bmad readme md"
-title: Readme
-module: Activity
+qmd: "activity bmad method integration activity"
 ---
 
-# Activity
+# Activity — BMAD Method Integration
 
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()
-[![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
-[![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)
-[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://php.net/)
-[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://phpstan.org/)
-[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue?style=for-the-badge)](https://www.php-fig.org/psr/psr-12/)](https://www.php-fig.org/psr/psr-12/)
-[![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)]()
-]()
+[![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)
+[![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)
+[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)
+[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue?style=for-the-badge)](https://www.php-fig.org/psr/psr-12/)
+[![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)
 
 > **Core module for the FixCity Platform.**
 
@@ -67,11 +49,9 @@ Core module for the FixCity Platform.
 
 | Lingua | Link |
 |--------|------|
-| 🇮🇹 Presentazione | Questo file (`README.md`) |
-| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
-| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+| 🇮🇹 Presentazione | [../README.md](../README.md) |
+| 📚 Wiki tecnica | [../wiki/index.md](../wiki/index.md) |
 
->>>>>>> .merge_file_bmp3yL
 ---
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
@@ -85,15 +65,13 @@ Core module for the FixCity Platform.
 [![Audit Trail](https://img.shields.io/badge/Audit-Trail%20Ready-yellow.svg)](https://en.wikipedia.org/wiki/Audit_trail)
 [![Quality Score](https://img.shields.io/badge/Quality%20Score-85%25-brightgreen.svg)](https://github.com/laraxot/activity-module)
 
-<<<<<<< .merge_file_G6PHJu
-- [BMAD Planning](../bmad-planning.md)
-- [BMAD Brainstorming](../bmad-brainstorming.md)
-- [Filament blueprint](./filament-blueprint.md)
-- [Project context](./project-context.md)
-- [Decision log](./decision-log.md)
-=======
+## Riferimenti BMAD
+
+- [Indice BMAD](./index.md)
+- [Stories](./stories/)
+- [Registro decisioni (ADR)](../adr/README.md)
+
 ## Stato del Modulo
->>>>>>> .merge_file_bmp3yL
 
 > **🚀 Modulo Activity**: Sistema completo per audit trail, event sourcing e logging avanzato con dashboard Filament e analytics in tempo reale.
 

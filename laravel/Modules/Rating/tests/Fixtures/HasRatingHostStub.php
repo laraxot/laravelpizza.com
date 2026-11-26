@@ -8,9 +8,14 @@ use Modules\Rating\Models\BaseModel;
 use Modules\Rating\Models\Traits\HasRating;
 
 /**
- * Host concreto del trait {@see HasRating}: senza un consumer reale PHPStan non
- * analizza il corpo del trait (errori di tipo nascosti). Vive nei fixture di test,
- * non in `app/Models`, per non comparire nel discovery dei model applicativi.
+ * Host concreto del trait {@see HasRating} per i test.
+ *
+ * Non conta come consumer per PHPStan: `phpstan.neon` esclude `./*\/tests/*`, quindi un
+ * `use HasRating` qui non evita `trait.unused`. L'àncora per l'analisi statica e'
+ * `Modules\Rating\Models\AbstractHasRatingHost` in `app/`. Oggi nessun test usa questo
+ * stub (verificato in tutti i cloni): candidato alla rimozione.
+ *
+ * @see Modules/Rating/docs/wiki/concepts/phpstan-compliance.md
  */
 final class HasRatingHostStub extends BaseModel
 {

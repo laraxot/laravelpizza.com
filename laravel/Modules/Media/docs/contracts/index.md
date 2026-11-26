@@ -92,8 +92,6 @@ Elenco operativo dei contract comportamentali del modulo Media.
 |---|---|---|---|
 | Generazione percorso file | [path-generator](path-generator.md) | `PathGenerator` | MEDIA-INV-1, MEDIA-INV-2, MEDIA-INV-3 |
 
-(End of file - total 16 lines)
-
 ## Contenuto fuso da `index.md`
 
 <!-- File: docs/contracts/INDEX.md · formato MADR breve. -->

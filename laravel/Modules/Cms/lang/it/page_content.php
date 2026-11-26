@@ -110,6 +110,18 @@ return [
         'view' => 'Visualizza Contenuto',
         'edit' => 'Modifica Contenuto',
         'delete' => 'Elimina Contenuto',
+        'create' => [
+            'label' => 'create',
+        ],
+        'activeLocale' => [
+            'label' => 'activeLocale',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'created' => 'Contenuto creato con successo',

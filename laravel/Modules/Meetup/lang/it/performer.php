@@ -117,6 +117,15 @@ return [
         'reorderRecords' => [
             'tooltip' => 'reorderRecords',
         ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
     ],
     'create_title' => 'Nuovo relatore',
     'edit_title' => 'Modifica relatore',

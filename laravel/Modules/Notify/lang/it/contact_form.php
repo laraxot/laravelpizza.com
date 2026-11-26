@@ -2,4 +2,16 @@
 
 declare(strict_types=1);
 
-return [];
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'name',
+        ],
+        'email' => [
+            'label' => 'email',
+        ],
+        'phone' => [
+            'label' => 'phone',
+        ],
+    ],
+];

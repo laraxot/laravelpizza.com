@@ -1,0 +1,158 @@
+{
+  "shots": [
+    {
+      "name": "login",
+      "path": "/meetup/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:25:52.748Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "dashboard",
+      "path": "/meetup/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 2000,
+      "captured": {
+        "at": "2026-11-25T22:26:03.972Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin",
+        "bytes": 26218,
+        "sha256": "120970c57f4ca1feccd918323dda6dfbc8ed4970f7973f2787dd6e405bf3521e"
+      }
+    },
+    {
+      "name": "events-list",
+      "path": "/meetup/admin/events",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:29:16.159Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/events",
+        "bytes": 36586,
+        "sha256": "ae5735e7b83d17e6e9d4ded7da40097912fb3c81ee76790e2aa249d50381438f"
+      }
+    },
+    {
+      "name": "events-create",
+      "path": "/meetup/admin/events/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:15.436Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/events/create",
+        "bytes": 49420,
+        "sha256": "768af422019179f0879ec3ae04ddeff59c89b5d3a465204ec1bcce0ad0908f21"
+      }
+    },
+    {
+      "name": "events-edit",
+      "path": "/meetup/admin/events/evento-sintetico-di-prova/edit",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 6000,
+      "captured": {
+        "at": "2026-11-25T22:27:58.652Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/events/evento-sintetico-di-prova/edit",
+        "bytes": 54532,
+        "sha256": "4cd06b18dfaa17b9ba6131204b2ac6033a6a8f8d39061e95c4673d17114eb40e"
+      }
+    },
+    {
+      "name": "performers-list",
+      "path": "/meetup/admin/performers",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:24.011Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/performers",
+        "bytes": 22128,
+        "sha256": "97c63a7bcc6300db9059734c0ee9ea2356c5a055a5fb2ee84dae8659e5150313"
+      }
+    },
+    {
+      "name": "performers-create",
+      "path": "/meetup/admin/performers/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:30.322Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/performers/create",
+        "bytes": 25300,
+        "sha256": "a5e6abb5f4fb743756d4f300ca999a162f57599979bac0fc18fee4b2c8f107f0"
+      }
+    },
+    {
+      "name": "sponsors-list",
+      "path": "/meetup/admin/sponsors",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:35.254Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/sponsors",
+        "bytes": 21128,
+        "sha256": "0b4cbbae07983638f7bde97cfc91d3b6710ed0c165a625ce2942b4870d28e21f"
+      }
+    },
+    {
+      "name": "sponsors-create",
+      "path": "/meetup/admin/sponsors/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:40.132Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/sponsors/create",
+        "bytes": 24096,
+        "sha256": "ec82e9b674a9a9e63fdb18355699c1da6dc6fc6c779c6fc9bb9057ed3a69dd6d"
+      }
+    },
+    {
+      "name": "venues-list",
+      "path": "/meetup/admin/venues",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:44.332Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/venues",
+        "bytes": 20068,
+        "sha256": "0d0183815fcdf1b5a9273c5cb6dd67b72409ae8cd2af41bd4314acbcb0f6244e"
+      }
+    },
+    {
+      "name": "venues-create",
+      "path": "/meetup/admin/venues/create",
+      "auth": true,
+      "fullPage": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:26:48.103Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/meetup/admin/venues/create",
+        "bytes": 30014,
+        "sha256": "8cc315b8a6a3eb4a481c62387581046b4b2c6ded514622fc2d9195709095dd19"
+      }
+    }
+  ]
+}

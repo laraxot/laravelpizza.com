@@ -1,0 +1,143 @@
+{
+  "shots": [
+    {
+      "name": "geo-admin-login",
+      "path": "/geo/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:10:54.447Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "geo-admin-dashboard",
+      "path": "/geo/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:20.384Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin",
+        "bytes": 27168,
+        "sha256": "b07e86786082388b83d9138c461fc7d5bcea90cb1bc79662457877dcf5c01fd1"
+      }
+    },
+    {
+      "name": "geo-admin-addresses",
+      "path": "/geo/admin/addresses",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:29.043Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/addresses",
+        "bytes": 30826,
+        "sha256": "7826ceec44304b8abb367d66a1be27187a19b57f6929c16cf30d0a521b546d3f"
+      }
+    },
+    {
+      "name": "geo-admin-address-create",
+      "path": "/geo/admin/addresses/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:36.014Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/addresses/create",
+        "bytes": 27762,
+        "sha256": "2a724503855b759f2f3ffc23d007963323b9fce3b699d3dc8e54f4666e134aba"
+      }
+    },
+    {
+      "name": "geo-admin-locations",
+      "path": "/geo/admin/locations",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:43.702Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/locations",
+        "bytes": 24050,
+        "sha256": "e7c7c611a30b636f38e9c9f25ce51a3828710ef4375af2154703635413daa573"
+      }
+    },
+    {
+      "name": "geo-admin-location-create",
+      "path": "/geo/admin/locations/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 2000,
+      "captured": {
+        "at": "2026-11-25T22:11:55.178Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/locations/create",
+        "bytes": 21550,
+        "sha256": "2322e07aea419a6acc30bc818d43e553b1afcc9c35ca6c48d4385e9aac79809e"
+      }
+    },
+    {
+      "name": "geo-admin-location-map",
+      "path": "/geo/admin/location-map",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 3000,
+      "captured": {
+        "at": "2026-11-25T22:12:04.121Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/location-map",
+        "bytes": 18168,
+        "sha256": "8f6f45b5e0e8c2f8a460652b70dcda54b1911981e97cefbda22c56871faae4bb"
+      }
+    },
+    {
+      "name": "geo-admin-osm-map",
+      "path": "/geo/admin/o-s-m-map",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 3000,
+      "captured": {
+        "at": "2026-11-25T22:12:14.229Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/o-s-m-map",
+        "bytes": 17886,
+        "sha256": "c16a4223b089522e7f1e039701c8613f98131b8518ee1db713ab798704e081eb"
+      }
+    },
+    {
+      "name": "geo-admin-lat-lng",
+      "path": "/geo/admin/lat-lng",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 2000,
+      "captured": {
+        "at": "2026-11-25T22:12:26.187Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/lat-lng",
+        "bytes": 22438,
+        "sha256": "5017762a74ad302cd3b0971690ef43179874b1ec36f2e9002f68c4cd01b4acd9"
+      }
+    },
+    {
+      "name": "geo-admin-setting",
+      "path": "/geo/admin/setting",
+      "auth": true,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:21:01.435Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/geo/admin/setting",
+        "bytes": 27218,
+        "sha256": "4c4a3e4ecc7bb8fe5f05c8c18ebfbafa0a42a26bcd8317d67e9a8815be997df6"
+      }
+    }
+  ]
+}

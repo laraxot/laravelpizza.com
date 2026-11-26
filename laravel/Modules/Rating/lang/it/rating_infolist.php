@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-        'id' => ['label' => 'id'],
-        'title' => ['label' => 'title'],
-        'color' => ['label' => 'color'],
-        'txt' => ['label' => 'txt'],
-        'rule' => ['label' => 'rule'],
-        'is_disabled' => ['label' => 'is_disabled'],
-        'is_readonly' => ['label' => 'is_readonly'],
-        'order_column' => ['label' => 'order_column'],
-        'slug' => ['label' => 'slug'],
+        'id' => ['label' => 'ID'],
+        'title' => ['label' => 'Titolo'],
+        'color' => ['label' => 'Colore'],
+        'txt' => ['label' => 'Testo'],
+        'rule' => ['label' => 'Regola'],
+        'is_disabled' => ['label' => 'Disattivato'],
+        'is_readonly' => ['label' => 'Sola lettura'],
+        'order_column' => ['label' => 'Ordine'],
+        'slug' => ['label' => 'Indirizzo (slug)'],
     ],
 ];

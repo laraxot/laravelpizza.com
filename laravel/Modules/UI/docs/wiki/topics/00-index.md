@@ -21,17 +21,10 @@ _Fonte: `00-index.md`_
 ## 🪮 Ponytail audit
 
 - [ponytail-audit-over-engineering.md](./ponytail-audit-over-engineering.md)
-<<<<<<< .merge_file_GBW8zr
 - [wiki/concepts/ponytail-audit.md](./wiki/concepts/ponytail-audit.md)
 
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./README.md) - Design System e overview componenti.
-=======
-- [wiki/concepts/quality-testing-verification.md#ponytail-audit](./wiki/concepts/ponytail-audit.md)
-
-## 🎯 **Lettura Essenziale**
-1. [README.md](./readme.md) - Design System e overview componenti.
->>>>>>> .merge_file_MeglbN
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Tailwind v4 e Flux UI integration.
 3. [philosophy.md](./philosophy.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
 
@@ -56,22 +49,14 @@ _Fonte: `bmad/00-index.md`_
 
 # Indice BMAD — UI
 
-<<<<<<< .merge_file_GBW8zr
 - [Purpose](./purpose.md)
-=======
-- [Purpose](../wiki/purpose.md)
->>>>>>> .merge_file_MeglbN
 - [Audit](./audit.md)
 - [Audit dettagliato](./audits/ui-audit.md)
 - [Piano di miglioramento](./piano-miglioramento.md)
 - [Epic e story](./epics.md)
 - [Decision log](./decision-log.md)
 - [Brainstorming](./brainstorming.md)
-<<<<<<< .merge_file_GBW8zr
-- [Story audit modulo](./stories/module-bmad-audit.story.md)
-=======
 - [Story audit modulo](stories/0015-module-bmad-audit-3.story.md)
->>>>>>> .merge_file_MeglbN
 - [ECC](../ecc/00-index.md)
 - [Purpose root](../purpose.md)
 - Qualità PHPStan (SSoT root docs): [phpstan-corrections.md](../phpstan-corrections.md), [phpstan-fixes.md](../phpstan-fixes.md) — snapshot month = stub/`*-historical`
@@ -115,19 +100,11 @@ _Fonte: `wiki/00-index.md`_
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./README.md) - Design System e overview componenti.
 2. [roadmap.md](../roadmap.md) - Evoluzione 2026: Tailwind v4 e Flux UI integration.
-<<<<<<< .merge_file_GBW8zr
-3. [../philosophy-2.md](../philosophy-2.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
-
-## 🏗️ **Core Design System**
-- 🎨 **[Layouts & Themes](./layouts-and-themes.md)** - Gestione dei temi per tenant e dark mode.
-- 📐 **[Architecture Rules](../architecture-2.md)** - Regole per la creazione di nuovi componenti UI.
-=======
 3. [philosophy.md](./philosophy.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
 
 ## 🏗️ **Core Design System**
 - 🎨 **[Layouts & Themes](./layouts-and-themes.md)** - Gestione dei temi per tenant e dark mode.
 - 📐 **[Architecture Rules](./architecture.md)** - Regole per la creazione di nuovi componenti UI.
->>>>>>> .merge_file_MeglbN
 - 🖋️ **[Icon System](../icons/icon-system.md)** - Integrazione di Blade Icons e set personalizzati.
 
 ## 🧱 **Componenti & Widget**
@@ -138,10 +115,4 @@ _Fonte: `wiki/00-index.md`_
 ## 🛠️ **Integrazioni Tecniche**
 - 🏗️ **[Tailwind v4 Upgrade](./filament-v4-theme-upgrade.md)** - Guida alla migrazione verso l'ultima versione di Tailwind.
 - 🛣️ **[Folio & Volt Themes](../archive/struttura-themes-folio.md)** - Gestione dei temi nelle pagine Folio.
-<<<<<<< .merge_file_GBW8zr
-- 🧪 **[Table Layout Enum](./table-layout-enum-complete-guide.md)** - Standardizzazione dei layout tabel
-=======
 - 🧪 **[Table Layout Enum](./table-layout-enum-complete-guide.md)** - Standardizzazione dei layout tabelle.
-
-## 🧪 *
->>>>>>> .merge_file_MeglbN

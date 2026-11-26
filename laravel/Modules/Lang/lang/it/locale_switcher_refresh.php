@@ -6,6 +6,7 @@ return [
     'fields' => [
         'locale' => [
             'tooltip' => '',
+            'label' => 'locale',
         ],
     ],
     'label' => 'Locale Switcher Refresh',

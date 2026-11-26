@@ -6,15 +6,19 @@ return [
     'fields' => [
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'description' => [
             'tooltip' => '',
+            'label' => 'description',
         ],
         'logo' => [
             'tooltip' => '',
+            'label' => 'logo',
         ],
         'copyright' => [
             'tooltip' => '',
+            'label' => 'copyright',
         ],
     ],
     'label' => 'Info',

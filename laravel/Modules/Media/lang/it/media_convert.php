@@ -6,7 +6,7 @@ return [
     'navigation' => [
         'label' => 'Conversione media',
         'group' => 'Conversione media',
-        'icon' => 'Conversione media',
+        'icon' => 'media-convert-animated',
         'sort' => 20,
     ],
     'fields' => [
@@ -85,22 +85,25 @@ return [
             'description' => '',
             'tooltip' => '',
         ],
+        'value' => [
+            'label' => 'value',
+        ],
     ],
-    'label' => 'Media Convert',
-    'plural_label' => 'Media Convert (Plurale)',
+    'label' => 'Conversione media',
+    'plural_label' => 'Conversioni media',
     'actions' => [
         'create' => [
-            'label' => 'Crea Media Convert',
+            'label' => 'Crea conversione media',
             'icon' => 'create',
             'tooltip' => '',
         ],
         'edit' => [
-            'label' => 'Modifica Media Convert',
+            'label' => 'Modifica conversione media',
             'icon' => 'edit',
             'tooltip' => '',
         ],
         'delete' => [
-            'label' => 'Elimina Media Convert',
+            'label' => 'Elimina conversione media',
             'icon' => 'delete',
             'tooltip' => '',
         ],
@@ -108,6 +111,24 @@ return [
             'label' => 'Converti',
             'icon' => 'convert',
             'tooltip' => '',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
         ],
     ],
 ];

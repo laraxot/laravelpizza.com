@@ -5,36 +5,21 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [commands, index, on-demand]
 related:
-  - ../rules/00-TRIGGER_MAP.md
-  - ../rules/on-demand-pattern.md
-<<<<<<< .merge_file_yBgXEF
-<<<<<<< .merge_file_Jyry9k
-<<<<<<< .merge_file_OUMPUr
-<<<<<<< .merge_file_FSWb7q
+  - ../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md
+  - ../../../../../../docs/wiki/rules/00-ON_DEMAND_PATTERN.md
 qmd: "commands"
-=======
->>>>>>> .merge_file_eVwrOI
-=======
-qmd: "commands"
->>>>>>> .merge_file_HEqHDF
-=======
-qmd: "commands"
->>>>>>> .merge_file_2c8UaB
-=======
-qmd: "commands"
->>>>>>> .merge_file_1LjXQP
 ---
 
 # Commands Index
 
 Le Commands progettuali vivono qui, nel wiki del Module **User**, e vengono caricate **on-demand**.
 
-> Vedi anche → [Trigger Map](../rules/00-TRIGGER_MAP.md)
+> Vedi anche → [Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 
 ## Regola
 
 1. individua il trigger del task
-2. consulta `../rules/00-TRIGGER_MAP.md`
+2. consulta `docs/wiki/rules/00-TRIGGER_MAP.md` (root del progetto)
 3. se serve, esegui `qmd search "<topic>"`
 4. leggi solo la Commands wiki pertinente
 
@@ -44,24 +29,21 @@ Le Commands progettuali vivono qui, nel wiki del Module **User**, e vengono cari
 |---------|---------|
 | Carica Commands specifica | `Read ../commands/<name>.md` |
 | Ricerca semantica | `qmd search "<topic>"` |
-| Via trigger map | Consulta `../rules/00-TRIGGER_MAP.md` |
+| Via trigger map | Consulta `docs/wiki/rules/00-TRIGGER_MAP.md` |
 
 ## Note
 
 - La sorgente di verita' per le Commands e' sempre il wiki locale
 - Non embeddare Commands nei prompt di avvio
-- Per Commands globali, consulta il [wiki root](../../docs/wiki/commands/index.md)
-
-- Per Commands globali, consulta il [wiki root](../../docs/wiki/commands/INDEX.md)
+- Per Commands globali, consulta il [wiki root](../../../../../../docs/wiki/commands/INDEX.md)
 
 ## Aggiungere una Nuova COMMANDS
 
 1. Crea `../commands/<nome>.md` con contenuto completo
-2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
+2. Aggiungi la voce in `docs/wiki/rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Commands e' ricorrente
 4. Committa: `docs: add commands <nome>`
 
-
 ## Console User (2026-06-10)
 
-- [user-super-admin.md](user-super-admin.md) — `--email`, argomento, interattivo; no Prompts WSL
+- `user-super-admin.md` — `--email`, argomento, interattivo; no Prompts WSL

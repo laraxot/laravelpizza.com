@@ -9,15 +9,21 @@ return [
         ],
         'content_blocks' => [
             'tooltip' => '',
+            'label' => 'content_blocks',
         ],
         'sidebar_blocks' => [
             'tooltip' => '',
+            'label' => 'sidebar_blocks',
         ],
         'footer_blocks' => [
             'tooltip' => '',
+            'label' => 'footer_blocks',
         ],
         'content' => [
             'tooltip' => '',
+        ],
+        'view' => [
+            'label' => 'view',
         ],
     ],
     'label' => 'Page Content Builder',

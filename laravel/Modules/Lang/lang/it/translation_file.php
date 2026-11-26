@@ -68,9 +68,17 @@ return [
         'cancel' => [
             'tooltip' => '',
             'icon' => 'cancel',
+            'label' => 'cancel',
         ],
         'save' => [
             'icon' => 'save',
+            'label' => 'save',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'delete' => [
+            'label' => 'delete',
         ],
     ],
     'fields' => [
@@ -165,6 +173,6 @@ return [
         'placeholder' => 'Seleziona file traduzione',
         'helper_text' => 'File di traduzione per la gestione delle lingue',
     ],
-    'label' => 'Translation File',
-    'plural_label' => 'Translation File (Plurale)',
+    'label' => 'File di traduzione',
+    'plural_label' => 'File di traduzione',
 ];

@@ -6,6 +6,7 @@ return [
     'fields' => [
         'content' => [
             'tooltip' => '',
+            'label' => 'content',
         ],
     ],
     'label' => 'Paragraph',

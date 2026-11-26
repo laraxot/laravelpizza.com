@@ -19,7 +19,7 @@ Verifica: `rg -n "group\('UI-" laravel/Modules/UI/tests` (2026-11-24): nessun ri
 Action da rivalutare per prime se cambiano comportamento (nessuna oggi è ad alto rischio in scrittura; `laravel/Modules/UI/app/Actions/`):
 
 - `GetUserDataAction.php`: espone ruolo e permessi dell'utente corrente (dati personali) all'interfaccia; contract `presentation` o `Action` se la superficie cresce.
-- `Block/GetLocalizedBlockDataAction.php`: delega a `Modules\Cms\Actions\GetLocalizedBlockDataAction` se esiste (confine tra moduli).
+- `Block/GetLocalizedBlockDataAction.php`: delega a `Modules\Cms\Actions\ResolveLocalizedBlockDataAction` se esiste (confine tra moduli).
 - `Panel/ApplyCalendarToPanelAction.php`: docblock "temporaneamente disabilitato" per la migrazione Filament; da non documentare finché il comportamento non è stabile.
 
 Totale Action in `app/Actions`: 6 file `.php` (`Block/GetAllBlocksAction`, `Block/GetLocalizedBlockDataAction`, `Datetime/GetDaysMappingAction`, `GetUserDataAction`, `Icon/GetAllIconsAction`, `Panel/ApplyCalendarToPanelAction`). Contract formali: 0.

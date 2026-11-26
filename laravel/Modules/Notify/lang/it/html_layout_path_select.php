@@ -6,6 +6,7 @@ return [
     'fields' => [
         'html_layout_path' => [
             'tooltip' => '',
+            'label' => 'html_layout_path',
         ],
     ],
     'label' => 'Html Layout Path Select',

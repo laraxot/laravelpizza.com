@@ -135,6 +135,36 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'contact_type' => [
+            'label' => 'contact_type',
+        ],
+        'value' => [
+            'label' => 'value',
+        ],
+        'first_name' => [
+            'label' => 'first_name',
+        ],
+        'last_name' => [
+            'label' => 'last_name',
+        ],
+        'user_id' => [
+            'label' => 'user_id',
+        ],
+        'verified_at' => [
+            'label' => 'verified_at',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
+        'active' => [
+            'label' => 'active',
+        ],
+        'inactive' => [
+            'label' => 'inactive',
+        ],
     ],
     'actions' => [
         'test_notification' => [
@@ -169,12 +199,21 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'layout' => [
             'icon' => 'layout',
+            'label' => 'layout',
         ],
         'delete' => [
             'icon' => 'delete',
+            'label' => 'delete',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
         ],
     ],
     'messages' => [

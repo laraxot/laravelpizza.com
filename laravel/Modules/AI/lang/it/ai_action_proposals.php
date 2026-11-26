@@ -3,14 +3,53 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'group' => 'Assistente AI',
+        'label' => 'Proposte di azione AI',
+    ],
     'fields' => [
-        'id' => ['label' => 'id'],
-        'thread' => [
-            'public_id' => ['label' => 'thread.public_id'],
+        'id' => [
+            'label' => 'ID',
         ],
-        'type' => ['label' => 'type'],
-        'status' => ['label' => 'status'],
-        'preview' => ['label' => 'preview'],
-        'created_at' => ['label' => 'created_at'],
+        'thread' => [
+            'public_id' => [
+                'label' => 'Conversazione',
+            ],
+        ],
+        'type' => [
+            'label' => 'Tipo',
+        ],
+        'status' => [
+            'label' => 'Stato',
+        ],
+        'preview' => [
+            'label' => 'Anteprima',
+        ],
+        'created_at' => [
+            'label' => 'Creata il',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Nuovo',
+        ],
+        'layout' => [
+            'label' => 'Layout',
+        ],
+        'view' => [
+            'label' => 'Visualizza',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+        ],
+        'confirm' => [
+            'label' => 'Conferma',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+        ],
     ],
 ];

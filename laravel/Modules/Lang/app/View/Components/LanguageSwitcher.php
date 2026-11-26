@@ -13,7 +13,7 @@ use Modules\Lang\Filament\Widgets\LanguageSwitcherWidget;
  *
  * Wrappa il LanguageSwitcherWidget per l'uso nei temi tramite sintassi Blade.
  *
- * @see Modules/Lang/docs/contracts/language-switcher-component.md
+ * @see Modules/Lang/docs/language-switcher-and-flags.md
  */
 class LanguageSwitcher extends Component
 {
@@ -33,7 +33,7 @@ class LanguageSwitcher extends Component
     /**
      * Renderizza il componente con URL già risolti dal widget.
      *
-     * @see Modules/Lang/docs/contracts/language-switcher-component.md
+     * @see Modules/Lang/docs/language-switcher-and-flags.md
      */
     public function render(): View
     {

@@ -74,9 +74,11 @@ return [
         'preview' => 'Anteprima',
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'createAnother' => [
             'icon' => 'createAnother',
+            'label' => 'createAnother',
         ],
         'delete' => [
             'icon' => 'delete',
@@ -89,6 +91,24 @@ return [
         ],
         'edit' => [
             'icon' => 'edit',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
         ],
     ],
     'enums' => [

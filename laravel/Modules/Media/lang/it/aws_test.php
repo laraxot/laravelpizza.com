@@ -38,5 +38,11 @@ return [
         'delete' => [
             'label' => 'Elimina Aws Test',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
 ];

@@ -84,14 +84,14 @@ return [
         'temperature' => [
             'label' => 'Temperatura delle previsioni',
             'placeholder' => '0.7',
-            'helper_text' => 'Casualita\' delle previsioni: da 0 (deterministico) a 2.',
+            'helper_text' => 'Casualità delle previsioni: da 0 (deterministico) a 2.',
             'tooltip' => '',
             'description' => '',
         ],
         'chat_temperature' => [
             'label' => 'Temperatura delle bozze',
             'placeholder' => '0.6',
-            'helper_text' => 'Casualita\' delle bozze di previsione: da 0 (deterministico) a 2.',
+            'helper_text' => 'Casualità delle bozze di previsione: da 0 (deterministico) a 2.',
             'tooltip' => '',
             'description' => '',
         ],
@@ -139,6 +139,15 @@ return [
             'label' => 'Esci',
             'icon' => 'heroicon-o-arrow-left-on-rectangle',
             'tooltip' => 'Esci',
+        ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
         ],
     ],
 ];

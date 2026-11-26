@@ -5,7 +5,6 @@ module: Lang
 updated: 2026-11-25
 qmd: "LangServiceProvider AutoLabelAction configureUsing label placeholder helper_text heading tooltip icon chiave traduzione GetTransKeyAction FIX label mai ->label() filament"
 related:
-  - ./contracts/auto-label-action.md
   - ./translation-keys.md
   - ./adr/0003-filament-labels-are-autoconfigured-by-lang-provider.md
   - ./adr/0004-filament-labels-from-module-translation-files.md
@@ -34,6 +33,9 @@ lingue. Decisioni: [ADR 0003](adr/0003-filament-labels-are-autoconfigured-by-lan
 
 `registerTranslator()` (sostituzione del `translator` con `TranslatorAdapter`) esiste ma la chiamata in `boot()` e' commentata: di default Laravel usa il suo
 translator e le chiavi mancanti non finiscono nel database (vedi [translation-files.md](translation-files.md)).
+
+Il pannello admin del modulo (`Providers/Filament/AdminPanelProvider`) aggiunge solo
+`SpatieTranslatablePlugin` con default locales `en`/`it` — niente asset CSS/JS dedicati.
 
 ## Come si ricava la chiave
 
@@ -74,6 +76,29 @@ File: `Modules/<Modulo>/lang/<locale>/<classe_snake>.php`; formato completo dell
 La chiave dipende dallo stack delle chiamate: cambiare la classe chiamante o la finestra di `array_slice(..., 2)` in `findCallerFrame()` riscrive le chiavi e
 quindi i file di lingua su disco. Qualunque modifica va fatta sapendo che si rinominano chiavi; il comportamento e' bloccato da
 `tests/Feature/AutoLabelActionContractTest.php` (gruppi `LANG-AUTOLABEL-INV-1..3`) e dalle fixture `tests/Fixtures/AutoLabel*`.
+
+Limiti di `AutoLabelAction` da tenere presenti:
+
+- `debug_backtrace()` a ogni componente creato: costo misurabile nelle pagine con molte colonne.
+- Un `Step` senza etichetta stringa o un componente con nome non stringa fa fallire `Webmozart\Assert`.
+- Il `configureUsing()` gira alla creazione del componente: una `->label('...')` successiva vince sempre (per questo non si scrivono etichette a mano).
+- Non e' la classe omonima `Modules\Xot\Actions\Filament\AutoLabelAction`: quella non e' registrata in `configureUsing()`.
+
+## Pulizia dei segnaposto: `CleanPlaceholderTranslationsAction`
+
+Per anni `AutoLabelAction` ha scritto nei file di lingua, in locale, anche `helper_text`, `placeholder`, `description`... con il nome del campo come valore;
+una volta committati comparivano in produzione sotto e dentro i campi (`route`, `postal_code`). Oggi non li scrive piu' (vedi sopra), ma quelli gia' nei file si tolgono con
+`php artisan lang:clean-placeholders {moduli?*} {--dry-run}` (comando `CleanPlaceholderTranslationsCommand`), che chiama `CleanPlaceholderTranslationsAction::execute($directory, $dryRun)`:
+
+- **Cosa toglie**: una voce di tipo `helper_text`, `placeholder`, `description`, `tooltip`, `label`, `heading`, `hint` il cui valore e' uguale alla chiave del gruppo che la contiene
+  (`'route' => ['label' => 'route']`); le traduzioni vere restano; un gruppo rimasto vuoto si toglie anch'esso. I file chiamati solo `.php` (senza nome) si cancellano.
+- **Cosa non tocca**: un file che non e' «solo dati» (variabili, funzioni, `new`, `::`, `use`, include, operatori: `isPureData()`) non si riscrive, perche' resterebbe
+  «congelato» al valore calcolato; va pulito a mano. Con `--dry-run` nessun file viene scritto o cancellato e il risultato e' lo stesso.
+- **Ritorno**: `array{files: list<string>, removed: int}` (cartella inesistente = `['files' => [], 'removed' => 0]`). Lavora sulla cartella ricevuta, ricorsivamente: non conosce
+  moduli o lingue (li sceglie il comando).
+- **Effetti collaterali**: riscrive i file di soli dati con `<?php declare(strict_types=1); return [...]` (commenti e allineamenti originali si perdono); fa `include` di ogni
+  `.php` che passa il controllo «solo dati». **Nessun backup**: usarla su un albero sotto git e controllare il diff. Gli errori di lettura/scrittura (funzioni `Safe\`) escono come eccezioni.
+- **Non impedisce il ritorno dei segnaposto**: lo garantisce `AutoLabelAction` (solo `label` si salva se manca). Test: `tests/Feature/CleanPlaceholderTranslationsActionTest.php`.
 
 ## Anti-pattern
 

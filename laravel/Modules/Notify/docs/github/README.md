@@ -11,7 +11,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
-  - ../README.md
+  - ../index.md
   - ../wiki/index.md
   - ../notifications/README.md
   - ../integrations/README.md
@@ -77,31 +77,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 
 #### References
 - [Database Naming Convention](../conventions/database-naming.md)
-<<<<<<< .merge_file_K5syhW
-- [AGENTS.md](../../agents.md)
-- [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-- [AGENTS.md](../../agents.md)
-- [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../agents.md)
-- [AGENTS.md](../../AGENTS.md)
-- [AGENTS.md](../../AGENTS.md)
-- [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../agents.md)
-- [AGENTS.md](../agents.md)
-- [AGENTS.md](../../agents.md)
-- [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../agents.md)
-- [AGENTS.md](../../AGENTS.md)
-- [AGENTS.md](../../AGENTS.md)
-- [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../agents.md)
-- [AGENTS.md](../agents.md)
-=======
-- [AGENTS.md](../../agents.md)
-- [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../agents.md)
->>>>>>> .merge_file_E0hLAL
 
 ---
 

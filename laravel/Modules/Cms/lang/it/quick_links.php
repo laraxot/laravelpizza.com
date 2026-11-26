@@ -6,18 +6,23 @@ return [
     'fields' => [
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'links' => [
             'tooltip' => '',
+            'label' => 'links',
         ],
         'label' => [
             'tooltip' => '',
+            'label' => 'label',
         ],
         'url' => [
             'tooltip' => '',
+            'label' => 'url',
         ],
         'target' => [
             'tooltip' => '',
+            'label' => 'target',
         ],
     ],
     'label' => 'Quick Links',

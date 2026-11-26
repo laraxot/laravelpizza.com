@@ -7,17 +7,6 @@ status: active
 created: 2026-11-18
 updated: 2026-11-24
 qmd: "media contracts readme azioni invarianti pest group upload percorsi"
-title: "Contratti"
-type: index
-tags: [contracts, actions, interfaces]
-created: 2026-11-18
-updated: 2026-11-18
----
-
-# Contratti
-
-Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
-effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
 ---
 
 # Contratti del modulo Media
@@ -39,28 +28,9 @@ Pest corrispondente usa lo stesso ID come group. Contratto, codice e test cambia
 Standard: [contract-authoring-standard](../../../Xot/docs/contracts/contract-authoring-standard.md); governance:
 [ADR 0012](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
 
-## Formato di un contratto di Action
-
-Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`), frontmatter `type: contract` e
-`action: <FQCN>`, e queste sei sezioni nell'ordine (scheletro: [_template.md](template.md)):
-## Metodo Harness
-
-Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
-
-Ogni invariante ha un ID stabile, nel formato `MEDIA-INV-N` o, per operazione, `MEDIA-<OPERAZIONE>-INV-<N>`; il test Pest
-corrispondente usa lo stesso ID come group. La classe implementatrice deve contenere `@contract docs/contracts/<file>.md`;
-contratto, codice e test cambiano nello stesso commit.
-
-Cosa promettono le Action di Media che riscrivono file o salvano allegati, e le interfacce di `app/Contracts`. Le Action
-`Diagnostic/*` (prove di connessione AWS) e i resolver di percorso non hanno contratto.
-
-Leggili prima di chiamare o imitare il salvataggio degli allegati o il trattamento delle foto: «Non fa» dice cosa
-l'Action lascia ad altri (validazione, conversioni, transazioni).
+## Contratto di comportamento di un'Action
 
 Formato (6 sezioni, invarianti con ID e group Pest): [regola canonica](../../../Xot/docs/rules/action-behavioral-contract.md).
-Lanciare le invarianti coperte: `vendor/bin/pest Modules/Media/tests --group=<ID>`.
-
-## Contratto di comportamento di un'Action
 
 Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`), frontmatter `type: contract` e
 `action: <FQCN>`, e queste sei sezioni nell'ordine:
@@ -81,21 +51,11 @@ contratto nello stesso commit.
 Lanciare le invarianti coperte: `vendor/bin/pest Modules/Media/tests --group=<ID>` (oggi hanno un group solo gli ID
 `MEDIA-STRIP-INV-1`..`5`).
 
-## Contratti principali
-
-- [StripImageMetadataAction](strip-image-metadata-action.md) — riscrive JPEG/PNG senza metadati, aggiorna `size`; 5 invarianti coperte.
-- [SaveAttachmentsAction](save-attachments-action.md) — copia gli allegati del form nelle collezioni del record e ne salva i percorsi.
-- [GenerateTemporaryUploadPathAction](generate-temporary-upload-path-action.md) — percorso `tmp/` di un upload temporaneo.
-Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
-Chi cambia il comportamento aggiorna il contratto nello stesso commit.
-
-## Contratti
-
-
 ## Contratti delle Action
 
 - [StripImageMetadataAction](strip-image-metadata-action.md) — riscrive JPEG/PNG senza metadati, aggiorna `size`; 5 invarianti coperte.
 - [SaveAttachmentsAction](save-attachments-action.md) — copia gli allegati del form nelle collezioni del record e ne salva i percorsi.
+- [GenerateTemporaryUploadPathAction](generate-temporary-upload-path-action.md) — percorso `tmp/` di un upload temporaneo.
 
 ## Interfacce
 

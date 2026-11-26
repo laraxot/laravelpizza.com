@@ -4,8 +4,6 @@ type: decision
 status: accepted
 module: User
 updated: 2026-11-24
-status: accepted
-module: User
 qmd: "user owns identity and roles possiede"
 ---
 

@@ -61,6 +61,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'value' => [
+            'label' => 'value',
+        ],
     ],
     'actions' => [
         'import' => [
@@ -77,6 +80,7 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'createAnother' => [
             'icon' => 'createAnother',
@@ -92,6 +96,16 @@ return [
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'profile' => [
+            'label' => 'profile',
         ],
     ],
     'label' => 'Log',

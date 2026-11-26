@@ -105,7 +105,7 @@ use Spatie\Sluggable\SlugOptions;
  *
  * @mixin Model
  *
- * @see Modules/Lang/docs/conflict-resolution.md
+ * @see Modules/Lang/docs/model-translations.md
  */
 class Post extends BaseModel
 {

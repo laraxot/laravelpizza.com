@@ -10,7 +10,13 @@ use UnexpectedValueException;
 /**
  * Risolve dati block localizzati; delega al modulo Cms se presente.
  *
- * @see docs/contracts/resolve-localized-block-data-action.md
+ * Il resolver di Cms e' nominato per stringa (UI non puo' importare Cms, ADR 0004): la
+ * classe che esiste e' `Modules\Cms\Actions\ResolveLocalizedBlockDataAction`. Fino al
+ * 2026-11-25 la stringa diceva `GetLocalizedBlockDataAction`, nome che Cms non ha piu':
+ * `class_exists` era sempre false e i blocchi non venivano mai localizzati, senza errori.
+ * Chi rinomina la classe di Cms deve aggiornare la costante e il test.
+ *
+ * @see Modules/UI/docs/adr/0004-optional-cms-delegation-for-block-data.md
  *
  * @contract docs/contracts/resolve-localized-block-data-action.md
  */
@@ -24,7 +30,7 @@ final class GetLocalizedBlockDataAction
      */
     public function execute(array $viewParams): array
     {
-        $cmsAction = 'Modules\\Cms\\Actions\\GetLocalizedBlockDataAction';
+        $cmsAction = 'Modules\\Cms\\Actions\\ResolveLocalizedBlockDataAction';
 
         if (! class_exists($cmsAction)) {
             return $viewParams;

@@ -6,16 +6,20 @@ return [
     'fields' => [
         'caption' => [
             'tooltip' => '',
+            'label' => 'caption',
         ],
         'alt' => [
             'tooltip' => '',
+            'label' => 'alt',
         ],
         'ratio' => [
             'tooltip' => '',
             'helper_text' => '',
+            'label' => 'ratio',
         ],
         'url' => [
             'tooltip' => '',
+            'label' => 'url',
         ],
         'image' => [
             'label' => 'Immagine',

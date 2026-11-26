@@ -26,6 +26,9 @@ return [
     'actions' => [
         'select_position' => 'Seleziona Posizione',
         'update_coordinates' => 'Aggiorna Coordinate',
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'coordinates_updated' => 'Coordinate aggiornate con successo',

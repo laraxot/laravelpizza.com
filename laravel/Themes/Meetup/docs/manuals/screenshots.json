@@ -1,0 +1,114 @@
+{
+  "shots": [
+    {
+      "name": "fo-home-it",
+      "path": "/it",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:30:51.764Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it",
+        "bytes": 110826,
+        "sha256": "7d12a2bae2fa3d186eb949345a80b0489477087f9c275fa5e8922c70cf44acca"
+      }
+    },
+    {
+      "name": "fo-events-it",
+      "path": "/it/events",
+      "auth": false,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:13:04.015Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/events",
+        "bytes": 44328,
+        "sha256": "c8521be618cb7cb1802e1974403bd92409ce3d0adeffa2d965436bb06e56beb2"
+      }
+    },
+    {
+      "name": "fo-events-past-it",
+      "path": "/it/events/past",
+      "auth": false,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:13:23.334Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/events/past",
+        "bytes": 42450,
+        "sha256": "f48f8b80534afd84388486be92bfd8421bb673dbe1c47aec059f698e86aeb883"
+      }
+    },
+    {
+      "name": "fo-about-it",
+      "path": "/it/about",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:13:37.876Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/about",
+        "bytes": 113586,
+        "sha256": "cf27f614a125e0939bdcd0dd70b4806044d33e188d83d7e70c3ae6a772c46201"
+      }
+    },
+    {
+      "name": "fo-contact-it",
+      "path": "/it/contact",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:13:52.933Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/contact",
+        "bytes": 69978,
+        "sha256": "7a04e485741227ba473cccf10a24d081bf738baf7b98a0dcace3bf38a1754d3a"
+      }
+    },
+    {
+      "name": "fo-privacy-it",
+      "path": "/it/privacy",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:13:57.889Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/privacy",
+        "bytes": 185188,
+        "sha256": "c476c7961de80f04bc240800037b32a3bb7a24c369c2b143ec131d66f363999e"
+      }
+    },
+    {
+      "name": "fo-terms-it",
+      "path": "/it/terms",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:14:04.625Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/terms",
+        "bytes": 120580,
+        "sha256": "0e0807d326edcc71206241d4840418728f6296ade555e381d4b0f1290fb5e556"
+      }
+    },
+    {
+      "name": "fo-cookie-policy-it",
+      "path": "/it/cookie-policy",
+      "auth": false,
+      "fullPage": true,
+      "settleMs": 2500,
+      "captured": {
+        "at": "2026-11-25T22:14:09.394Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/it/cookie-policy",
+        "bytes": 100622,
+        "sha256": "52af6d299ddc15411eedb898fafb21e4ec047f582faf7c49abf2994be2fb3510"
+      }
+    }
+  ]
+}

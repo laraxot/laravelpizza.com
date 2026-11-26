@@ -1,0 +1,144 @@
+{
+  "shots": [
+    {
+      "name": "gdpr-login",
+      "path": "gdpr/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:20.120Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "gdpr-dashboard",
+      "path": "gdpr/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:41:43.784Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin",
+        "bytes": 15452,
+        "sha256": "cba019ddb35361d8b14e74a0efb9fabf8ae03aa161841d5507b281388f18c9e9"
+      }
+    },
+    {
+      "name": "gdpr-consents-list",
+      "path": "gdpr/admin/consents",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:28.173Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/consents",
+        "bytes": 25174,
+        "sha256": "5cab3cbc1cae15a3b462aadd79c73e15fd33a5c9a87902ad6b0d11e5cdbf13b8"
+      }
+    },
+    {
+      "name": "gdpr-consents-create",
+      "path": "gdpr/admin/consents/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:31.188Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/consents/create",
+        "bytes": 21856,
+        "sha256": "7407a780ab7b308c7bbf41feeb1981382b5654cb3728ce3de7538d752aad1ac4"
+      }
+    },
+    {
+      "name": "gdpr-treatments-list",
+      "path": "gdpr/admin/treatments",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:34.142Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/treatments",
+        "bytes": 26028,
+        "sha256": "752d7ce890a449ebf2b94022ba30a231432cc45b6dbf02ce842a44fa4d2bade8"
+      }
+    },
+    {
+      "name": "gdpr-treatments-create",
+      "path": "gdpr/admin/treatments/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:37.113Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/treatments/create",
+        "bytes": 24962,
+        "sha256": "2a06ec769904ead83d2375da1cbf2f7cc87a0c7395439d44b7f91019c36a058c"
+      }
+    },
+    {
+      "name": "gdpr-events-list",
+      "path": "gdpr/admin/events",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:40.232Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/events",
+        "bytes": 24820,
+        "sha256": "ff7bbb84529675f5910b016712aaa3ab248fede2362bd4dda79b079ce67e615a"
+      }
+    },
+    {
+      "name": "gdpr-profiles-list",
+      "path": "gdpr/admin/profiles",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:43.328Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/profiles",
+        "bytes": 26982,
+        "sha256": "a7f10947248cd384041c6ab77b3a24d41b3977db3c54d4ec0331639baea9bc98"
+      }
+    },
+    {
+      "name": "gdpr-setting",
+      "path": "gdpr/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:46.397Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/setting",
+        "bytes": 39100,
+        "sha256": "f14369e68d9b489294787bb593b10ab904d553d322be0dbb8250a2441de21dff"
+      }
+    },
+    {
+      "name": "gdpr-profile",
+      "path": "gdpr/admin/profile/profiles",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:30:49.725Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/gdpr/admin/profile/profiles",
+        "bytes": 26060,
+        "sha256": "91e532d00cf4738c677a4d8f14e22129b133a573a75446ad53f267cae1f4c595"
+      }
+    }
+  ]
+}

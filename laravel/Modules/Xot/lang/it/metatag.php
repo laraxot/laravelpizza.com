@@ -229,11 +229,13 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'color',
         ],
         'hex' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'hex',
         ],
         'timezone' => [
             'label' => 'Fuso orario',
@@ -324,6 +326,43 @@ return [
         ],
         'save' => [
             'icon' => 'save',
+            'label' => 'save',
+        ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'addBetween' => [
+            'label' => 'addBetween',
+        ],
+        'clone' => [
+            'label' => 'clone',
+        ],
+        'collapse' => [
+            'label' => 'collapse',
+        ],
+        'collapseAll' => [
+            'label' => 'collapseAll',
+        ],
+        'expand' => [
+            'label' => 'expand',
+        ],
+        'expandAll' => [
+            'label' => 'expandAll',
+        ],
+        'moveDown' => [
+            'label' => 'moveDown',
+        ],
+        'moveUp' => [
+            'label' => 'moveUp',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
     'label' => 'Metatag',

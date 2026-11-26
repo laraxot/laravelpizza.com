@@ -6,15 +6,19 @@ return [
     'fields' => [
         'link' => [
             'tooltip' => '',
+            'label' => 'link',
         ],
         'class' => [
             'tooltip' => '',
+            'label' => 'class',
         ],
         'label' => [
             'tooltip' => '',
+            'label' => 'label',
         ],
         'buttons' => [
             'tooltip' => '',
+            'label' => 'buttons',
         ],
         '_tpl' => [
             'tooltip' => '',
@@ -23,12 +27,15 @@ return [
         ],
         'background' => [
             'tooltip' => '',
+            'label' => 'background',
         ],
         'text' => [
             'tooltip' => '',
+            'label' => 'text',
         ],
         'title' => [
             'tooltip' => '',
+            'label' => 'title',
         ],
         'view' => [
             'tooltip' => '',

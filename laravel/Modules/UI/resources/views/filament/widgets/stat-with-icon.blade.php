@@ -9,7 +9,6 @@ declare(strict_types=1);
                 <span class="overflow-hidden" >
                 <x-filament::icon
                                 icon="fas-futbol"
-                                size="24"
                                 class="w-auto h-12"
                             />
                 </span>

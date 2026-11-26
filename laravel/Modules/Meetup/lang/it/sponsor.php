@@ -109,6 +109,15 @@ return [
             'icon' => 'profile',
             'tooltip' => 'profile',
         ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
     ],
     'create_title' => 'Nuovo sponsor',
     'edit_title' => 'Modifica sponsor',

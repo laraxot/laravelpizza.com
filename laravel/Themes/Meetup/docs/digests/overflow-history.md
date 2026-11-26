@@ -7,230 +7,277 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-Overflow force-cap: 12 file oltre target 100.
+Overflow force-cap: 17 file oltre target 100.
 
-### `console-errors-fix.md` — Fix: Console Errors - Event Detail Page
+### `blocks-and-components.md` — Blocchi e componenti del tema
 
-# Fix: Console Errors - Event Detail Page
 
-## Errori Risolti
+# Blocchi e componenti del tema
 
-### 1. cookie-consent.js: $dispatch is not defined ✅
+## Perche' esiste
 
-**Causa:** Alpine.js non era caricato nel layout principale.
+I blocchi sono i mattoni con cui i JSON del CMS compongono le pagine: `Themes/Meetup/resources/views/components/blocks/`.
+Un blocco e' una vista Blade che riceve i dati del JSON e li rende. Qui stanno il contratto di un blocco (che variabili
+riceve, come si include, cosa non puo' fare), l'inventario di quelli reali con i loro parametri e come se ne crea uno
+nuovo. Come i JSON referenziano i blocchi e' in [cms-json-pages](cms-json-pages.md).
 
-**Fix:** Aggiunto `@livewireStyles` e `@livewireScripts` in `Themes/Meetup/resources/views/components/layouts/main.blade.php`.
+## Contratto di un blocco
+
+- Nome: `pub_theme::components.blocks.<gruppo>.<nome>` corrisponde al file
+  `Themes/Meetup/resources/views/components/blocks/<gruppo>/<nome>.blade.php`. Il namespace `pub_theme` punta al tema in
+  `xot.pub_theme`/`xra.pub_theme` (`Meetup`) ed e' registrato da `CmsServicePr
+
+### `dashboard-and-profile.md` — Dashboard, area personale e profili
+
+
+# Dashboard, area personale e profili
+
+Dove vive cosa per un utente autenticato e per i profili pubblici: nessun controller, nessuna Blade per pagina, solo JSON del CMS, un'unica pagina Folio dedicata e blocchi "presenter" del tema.
+
+## Front office e back office
+
+- Front office (tema): pagine Folio + JSON. "Area personale" dopo il login = `xra.post_login_path` = `/events/my` (`config/local/laravelpizza/xra.php`), cioe' la pagina "I miei eventi" ([events-pages](events-pages.md)).
+- Back office (Filament, `/admin`): la dashboard di gestione e' `Modules\Meetup\Filament\Pages\MeetupDashboard` con i widget del modulo (`MeetupStatsOverviewWidget`, `RecentEventsWidget`, `EventCalendarWidget`, ...), tutti derivati da `XotBaseWidget`. Non ha nulla nel tema: il tema non deve ricostruire una dashbo
+
+### `header-footer-logo.md` — Header, footer e logo
+
+
+# Header, footer e logo
+
+## Perche' esiste
+
+Header e footer sono la parte del sito che ogni pagina mostra: devono avere lo stesso logo, link sempre localizzati, testi tradotti e nessuna icona incollata come SVG nel Blade. Qui sta come sono fatti oggi, le regole che li governano e i difetti noti. Il selettore lingua ha una pagina propria: [language-switcher.md](language-switcher.md).
+
+## Dove sono
+
+| Pezzo | File |
+|---|---|
+| Header (nav sticky) | `resources/views/components/sections/header/v1.blade.php` |
+| Footer | `resources/views/components/sections/footer/v1.blade.php` |
+| Logo come componente | `resources/views/components/ui/logo.blade.php` |
+| CTA di accesso condivise | `resources/views/components/ui/auth-buttons.blade.php` |
+| Icone | `Modules/Meetup/resources/svg/*.svg` |
+
+Header
+
+### `language-switcher.md` — Selettore lingua
+
+
+# Selettore lingua
+
+## Perche' esiste
+
+Chi legge il sito in una lingua deve poterla cambiare restando sulla stessa pagina, con un controllo comprensibile, accessibile da tastiera e che non rompa SEO e sessione. Il tema lo fa con un componente piccolo, tutto lato server: ogni voce e' un normale link all'URL della stessa pagina nell'altra lingua. Le regole generali su URL e traduzioni sono in [localization-standard.md](localization-standard.md).
+
+## Come e' fatto
+
+Componente: `resources/views/components/ui/language-switcher.blade.php`, usato nell'header due volte (`<x-ui.language-switcher />` nel nav desktop, `<x-ui.language-switcher mobile />` nel menu mobile). Vedi [header-footer-logo.md](header-footer-logo.md).
+
+- **Lingue**: `LaravelLocalization::getSupportedLocales()` (oggi `it`, `en`,
+
+### `manuals/manuale-utente.md` — Tema Meetup — front office pubblico
+
+
+> Screenshot reale della home pubblica (`/it`), verificato il 25 novembre 2026 con `tools/visual/shot.mjs` su `http://127.0.0.1:8000`.
+
+![Home pubblica del tema Meetup in italiano](assets/home-it.png)
+
+# Tema Meetup — front office pubblico
+
+Questo manuale copre il **tema pubblico** `laravel/Themes/Meetup` (namespace `pub_theme::`):
+le pagine che vede chiunque visita il sito — home, eventi, contatti, chi siamo, accesso e
+registrazione, profilo pubblico — e il comportamento trasversale (header, footer,
+localizzazione, viewport mobile). Non copre i pannelli Filament dei moduli: per quello
+esistono i manuali in `laravel/Modules/<Modulo>/docs/manuals/`.
+
+Per la guida utente completa per ruolo (visitatore, partecipante, organizzatore,
+amministratore) con oltre cento screenshot annotati e PDF st
+
+### `mcp-configuration.md` — MCP Server Configuration - Meetup Theme
+
+# MCP Server Configuration - Meetup Theme
+
+**Status**: ✅ Configured
+**MCP Servers**: Asana, ClickUp, Filesystem, Database, **cursor-browser-extension**, Redmine (Planned)
+
+---
+
+## 📋 Overview
+
+The Meetup theme's MCP configuration enables AI assistants to interact with:
+- **Asana Work Graph** - Frontend development task tracking
+- **ClickUp Workspace** - Advanced task workflows and time tracking
+- **Redmine** - Project management (planned, requires self-hosted instance)
+- **Filesystem** - Theme assets, components, and page access
+- **Database** - Theme configuration and settings inspection
+- **cursor-browser-extension** - Navigazione e screenshot per confronto grafico con laravelpizza.com
+
+---
+
+## 🔧 Configuration
+
+### `on-demand-pattern.md` — On-Demand Pattern — stub
+
+
+# On-Demand Pattern — stub
+
+Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
+
+**[on-demand-pattern.md](../../docs/on-demand-pattern.md)**
+
+### `pixel-parity-home.md` — Pixel parity homepage (`/it`) vs `laravelpizza.com`
+
+
+# Pixel parity homepage (`/it`) vs `laravelpizza.com`
+
+## Obiettivo
+Rendere la homepage locale `http://127.0.0.1:8002/it` visivamente equivalente a `https://laravelpizza.com/`.
+
+## Source-of-truth (architettura)
+- **Folio page**: `Themes/Meetup/resources/views/pages/index.blade.php`
+- **Layout**: `<x-layouts.app>` (delegation → `<x-layouts.public>` per guest)
+- **Renderer contenuti**: `<x-page side="content" slug="home" />`
+- **Contenuti**: JSON in `config/local/laravelpizza/database/content/pages/home.json`
+
+## Metodo di lavoro (evidenze)
+- Confronto “above the fold” tramite screenshot (locale vs online)
+- Verifica asset effettivamente caricati (CSS/JS/manifest)
+- Fix incrementali in:
+  - `Themes/Meetup/resources/views/components/blocks/*` (Blade)
+  - `Themes/Meetup/resources/css|js/*` (
+
+### `project-structure.md` — Project Structure — stub
+
+
+# Project Structure — stub
+
+Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
+
+**[project-structure.md](../../docs/project-structure.md)**
+
+### `roadmap/03-later.md` — Later (Theme Meetup)
+
+# Later (Theme Meetup)
+
+## Longer-term ideas
+
+### `roadmap/04-risks.md` — Risks and dependencies (Theme Meetup)
+
+# Risks and dependencies (Theme Meetup)
+
+## Risks
+
+## Dependencies
+
+### `roadmap/05-risks.md` — Risks - Meetup
+
+# Risks - Meetup
+
+## Top Risks
+
+1. Drift tra documentazione e comportamento runtime.
+2. Regressioni introdotte da fix rapidi non verificati.
+3. Dipendenze incrociate non documentate.
+
+## Mitigations
+
+1. Aggiornare docs insieme ai fix di codice.
+2. Usare checklist pre-merge e post-fix.
+3. Mantenere un set di file canonici per diagnosi rapida.
+
+### `root-cause-found.md` — Root Cause Analysis - Homepage Layout Issue
+
+# Root Cause Analysis - Homepage Layout Issue
+
+## Problem Identified
+
+The homepage at `/it` is rendering with the **WRONG LAYOUT**.
+
+## Current (WRONG) Setup
+
+### File: `Themes/Meetup/resources/views/pages/index.blade.php`
 
 ```blade
-{{-- Nel <head> --}}
-@livewireStyles
-
-{{-- Prima di </body> --}}
-@livewireScripts
+<x-layouts.app>
+    @volt('home')
+        <div>
+            <x-page side="content" slug="home" :type="auth()->user()?->type?->value" />
+        </div>
+    @endvolt
+</x-layouts.app>
 ```
 
-### 2. Particle canvas not found ✅
+
+### `seo-structured-data.md` — SEO, meta tag e dati strutturati
 
 
-### `front-office-audit.md` — Audit del front office
+# SEO, meta tag e dati strutturati
 
-# Audit del front office
+Il SEO del sito e' fatto dal modulo Cms (`<head>`, schema delle pagine), dal modulo Seo (sitemap, robots, alias) e dal modulo Meetup (JSON-LD `Event`). Il tema fornisce layout e immagine di condivisione e non reinventa nulla. Le regole sotto evitano la regressione tipica: ogni pagina con lo stesso titolo e markup strutturato incompleto o contraddittorio.
 
-Controllo completo delle pagine pubbliche, da ospite e da utente loggato, su desktop e su telefono.
-Da eseguire prima di ogni rilascio che tocca il tema, insieme a `npm run a11y` e ai test.
+## Il `<head>` lo scrive il CMS
 
-```bash
-cd laravel/Themes/Meetup
-npm run audit:fo                      # sito locale con i dati demo
-BASE_URL=https://staging.example npm run audit:fo
-# id dei profili demo da aprire (facoltativi)
-USER_ID=<uuid partecipante> ORGANIZER_ID=<uuid organizzatrice> npm run audit:fo
-# se il nome host non risolve (container, CI): MAP_HOST=127.0.0.1
+`resources/views/components/layouts/main.blade.php` non contiene un `<head>` a mano: chiama `<x-cms::head :title :description :stylesheet>` (`Modules/Cms/app/View/Components/Head.php`, view `Modules/Cms/resources/views/components/head.blade.php`). La view emette `@head` e gli stack `head`/`styles`; i tag li compone `Head.php` con `HeadManager`: `title`, description, `ca
+
+### `tenant-theme-resolution.md` — Tenant, configurazione e risoluzione del tema pubblico
+
+
+# Tenant, configurazione e risoluzione del tema pubblico
+
+## Perche' esiste
+
+Il tema pubblico non e' scritto nel codice: si ricava dal **tenant**, cioe' dal dominio. Chi non conosce la catena cerca i JSON
+nella cartella sbagliata, modifica il tema sbagliato o non capisce perche' `pub_theme::...` non si risolve. Questa pagina
+tiene insieme dominio -> cartella di config -> `pub_theme` -> cartella del tema -> namespace delle view.
+
+## La catena
+
+1. **Dominio**: `.env` ha `APP_URL=http://laravelpizza.local`. Su web conta l'host della richiesta; in console, code e scheduler
+   conta `APP_URL` (cosi' un job lavora con la stessa configurazione della richiesta che lo ha creato).
+2. **Cartella tenant**: il modulo Tenant (`GetTenantNameAction`) inverte le parti del dominio: `laravelpizza.local` ->
+
+
+### `translation-rules.md` — Regole per le Traduzioni — Meetup Theme (pub_theme)
+
+# Regole per le Traduzioni — Meetup Theme (pub_theme)
+
+## Struttura obbligatoria
+
+Le traduzioni del tema pubblico usano il namespace `pub_theme::` che mappa a `Themes/Meetup/lang/{locale}/`.
+
+**MAI chiavi flat. SEMPRE struttura espansa con sotto-chiavi.**
+
+## Gerarchia dei file
+
+```
+Themes/Meetup/lang/{locale}/
+├── event.php       # Evento singolo (detail page)
+├── events.php      # Lista eventi
+├── home.php        # Home page
+└── navigation.php  # Navigazione
 ```
 
-Lo script (`scripts/front-office-audit.cjs`) apre ogni pagina con Playwright e segnala:
+## Struttura standard per `event.php`
 
-- stato HTTP (le tre pagine inesistenti dell'elenco devono dare 404);
-- errori JavaScript e in console, risorse con errore;
-- **richieste a siti t
 
-### `implementation-log.md` — Implementation Log: Logo Updates and Documentation
+### `workflow-summary.md` — Workflow Summary - Sessione
 
-# Implementation Log: Logo Updates and Documentation
 
-## Date: [DATE]
+# Workflow Summary - Sessione
 
-## Overview
-This document captures the implementation of logo updates across all HTML pages to ensure consistency with the official laravelpizza.com logo.
+> Data di sessione ricavata dal vecchio nome file (`workflow-summary-jan-22.md`): il nome non porta piu' date.
 
-## Files Updated
+**Status**: ✅ Completato
+**Scopo**: Riepilogo completo del lavoro svolto seguendo le raccomandazioni degli altri agenti AI
 
-### HTML Files with Logo Updates
-All HTML files in `/Themes/Meetup/resources/html/` were updated to use the correct pizza slice logo in the footer:
+---
 
-1. **login.html** - Updated footer logo to use the stroke-based pizza slice SVG
-2. **register.html** - Already had correct logo in footer
-3. **about.html** - Updated footer logo to use the stroke-based pizza slice SVG
-4. **contact.html** - Updated footer logo to use the stroke-based pizza slice SVG
-5. **menu.html** - Updated footer logo to use the stroke-based pizza slice SVG
-6. **cart.html** - Updated 
+## 🎯 Obiettivo Principale
 
-### `localization-guide.md` — Localization — Theme Integration
+Seguire le raccomandazioni degli altri agenti AI leggendo le cartelle `docs/` dei temi, fare la scelta più intelligente, e aggiornare la documentazione.
 
-# Localization — Theme Integration
+---
 
-## Overview
+## 📚 Fase 1: Studio Documentazione
 
-The project uses [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization) for URL-based locale detection. Folio pages are localized via a custom `SetFolioLocale` middleware.
-
-## Supported Locales
-
-| Code | Language | Native | URL Example |
-|---|---|---|---|
-| `it` | Italian | italiano | `/it/events` |
-| `en` | English | English | `/en/events` |
-| `de` | German | Deutsch | `/de/events` |
-| `fr` | French | français | `/fr/events` |
-| `es` | Spanish | español | `/es/events` |
-| `ru` | Russian | Pусский | `/ru/events` |
-
-## How It Works
-
-1. User visits `/de/events`
-
-### `manuale-utente/01-visitatore.md` — 1. Visitatore: guardare gli eventi senza account
-
-# 1. Visitatore: guardare gli eventi senza account
-
-[← Torna all'indice](readme.md)
-
-Sei un **visitatore** quando apri il sito senza aver fatto l'accesso. Puoi guardare tutto, cercare gli eventi e scrivere agli organizzatori. Per prenotare un posto serve un account, ma puoi crearlo **nello stesso momento in cui ti iscrivi**, direttamente dalla pagina dell'evento (punto 1.5 e [capitolo 2](02-partecipante.md#21-iscriversi-a-un-evento-in-un-solo-passo)).
-
-## 1.1 La pagina iniziale
-
-Apri il browser (Chrome, Firefox, Safari o Edge) e vai all'indirizzo del sito. Vedi la pagina iniziale.
-
-![Pagina iniziale con i quattro pulsanti principali evidenziati](img/v01-home.jpg)
-
-In alto, nella barra scura, ci sono quattro cose importanti:
-
-1. **Eventi**: apre l'elenco di tutti i meetup.
-2. **Lingua** (il
-
-### `manuale-utente/02-partecipante.md` — 2. Partecipante: iscriversi agli eventi
-
-# 2. Partecipante: iscriversi agli eventi
-
-[← Torna all'indice](readme.md)
-
-Sei un **partecipante** quando hai un account e hai fatto l'accesso. Puoi fare tutto quello che fa il [visitatore](01-visitatore.md) e in più prenotare il tuo posto agli eventi.
-
-Ci sono due strade per iniziare:
-
-- **la più veloce**: ti iscrivi a un evento e intanto crei l'account, scrivendo solo email e password (punto 2.1);
-- **quella classica**: prima crei l'account con nome e cognome (punto 2.2), poi ti iscrivi agli eventi (punto 2.4).
-
-## 2.1 Iscriversi a un evento in un solo passo
-
-Apri l'evento che ti interessa dall'elenco **Eventi**. A destra c'è il riquadro **Partecipa ora**.
-
-![Il modulo per iscriversi con email e password](img/p18-iscrizione-rapida.jpg)
-
-1. Scrivi la tua **email**.
-2. Scegli una **passwo
-
-### `manuale-utente/03-organizzatore.md` — 3. Organizzatore: creare e gestire gli eventi
-
-# 3. Organizzatore: creare e gestire gli eventi
-
-[← Torna all'indice](readme.md)
-
-Sei un **organizzatore** quando un amministratore ha dato al tuo account il permesso di gestire gli eventi. Gli eventi non si creano dal sito pubblico ma dal **pannello di amministrazione**, una zona riservata con un indirizzo diverso: aggiungi `/meetup/admin` all'indirizzo del sito (per esempio `https://laravelpizza.com/meetup/admin`).
-
-> Il pannello usa la tua **lingua preferita** (Modifica il profilo → Lingua preferita, [capitolo 2.7](02-partecipante.md#27-modificare-il-profilo)). Solo la pagina di accesso è sempre in italiano, perché il sito non sa ancora chi sei.
-
-> Non vedi il pannello, o ricevi "Accesso negato"? Il tuo account non ha ancora il permesso: chiedilo all'amministratore del sito (come lo con
-
-### `manuale-utente/04-amministratore.md` — 4. Amministratore: utenti e permessi
-
-# 4. Amministratore: utenti e permessi
-
-[← Torna all'indice](readme.md)
-
-Sei un **amministratore** quando il tuo account ha il ruolo **super-admin**. È il ruolo di chi gestisce il sito, non i singoli eventi: decide chi può organizzare, controlla gli account e le impostazioni. Di solito gli amministratori sono una o due persone.
-
-> Il pannello di amministrazione dà accesso a dati personali di tutti gli iscritti. Usalo solo per quello che serve, da un computer sicuro, ed esci sempre alla fine.
-
-## 4.1 Entrare e trovare gli utenti
-
-1. Accedi dal sito con **Accedi** (in alto a destra), con la tua email e la tua password, come un partecipante ([capitolo 2.3](02-partecipante.md#23-accedere-le-volte-successive)).
-2. Poi apri l'indirizzo del sito seguito da `/user/admin/users` (per esempio `https:
-
-### `manuale-utente/en/01-visitor.md` — 1. Visitor: browsing events without an account
-
-# 1. Visitor: browsing events without an account
-
-[← Back to the contents](readme.md)
-
-You are a **visitor** when you open the site without signing in. You can look at everything, search events and write to the organisers. To book a seat you need an account, but you can create it **at the same moment you register**, straight from the event page (section 1.5 and [chapter 2](02-participant.md#21-register-for-an-event-in-one-step)).
-
-## 1.1 The home page
-
-Open your browser (Chrome, Firefox, Safari or Edge) and go to the site's address. You see the home page.
-
-![Home page with the four main buttons highlighted](img/v01-home.jpg)
-
-At the top, in the dark bar, there are four important things:
-
-1. **Events**: opens the list of all meetups.
-2. **Language** (the globe with the language name): chang
-
-### `manuale-utente/en/02-participant.md` — 2. Participant: registering for events
-
-# 2. Participant: registering for events
-
-[← Back to the contents](readme.md)
-
-You are a **participant** when you have an account and you have signed in. You can do everything a [visitor](01-visitor.md) does and, in addition, book your seat at events.
-
-There are two ways to start:
-
-- **the quickest**: you register for an event and create your account at the same time, typing just email and password (section 2.1);
-- **the classic one**: first you create the account with first and last name (section 2.2), then you register for events (section 2.4).
-
-## 2.1 Register for an event in one step
-
-Open the event you are interested in from the **Events** list. On the right there is the **Join now** box.
-
-![The form to register with email and password](img/p18-iscrizione-rapida.jpg)
-
-1. Type your **e
-
-### `manuale-utente/en/03-organiser.md` — 3. Organiser: creating and managing events
-
-# 3. Organiser: creating and managing events
-
-[← Back to the contents](readme.md)
-
-You are an **organiser** when an administrator has given your account permission to manage events. Events are not created from the public site but from the **admin panel**, a reserved area at a different address: add `/meetup/admin` to the site's address (for example `https://laravelpizza.com/meetup/admin`).
-
-> The panel speaks your **preferred language** (Edit profile → Preferred language, [chapter 2.7](02-participant.md#27-edit-your-profile)). Only the sign-in page is always in Italian, because the site doesn't know who you are yet.
-
-> You don't see the panel, or you get "Access denied"? Your account doesn't have the permission yet: ask the site administrator (how they grant it is explained in [chapter 4](
-
-### `manuale-utente/en/04-administrator.md` — 4. Administrator: users and permissions
-
-# 4. Administrator: users and permissions
-
-[← Back to the contents](readme.md)
-
-You are an **administrator** when your account has the **super-admin** role. It's the role of whoever runs the site, not the single events: they decide who can organise, and check accounts and settings. Usually there are one or two administrators.
-
-> The panels speak your **preferred language** (Edit profile → Preferred language).
-
-> The admin panel gives access to the personal data of all attendees. Use it only for what you need, from a secure computer, and always sign out at the end.
-
-## 4.1 Sign in and find users
-
-1. Sign in on the site with **Log in** (top right), with your email and password, like a participant ([chapter 2.3](02-participant.md#23-sign-in-the-following-times)).
-2. Then open the site's addre
+### Documenti Analizzati

@@ -492,7 +492,7 @@ class MetatagData extends Data implements Wireable
      *
      * @return array<string, array<int, string>|string>
      *
-     * @see Modules/Xot/docs/datas/metatagdata.md
+     * @see Modules/Xot/docs/actions-and-contracts.md
      */
     public function getFilamentColors(): array
     {

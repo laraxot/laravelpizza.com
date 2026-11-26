@@ -11,7 +11,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
-  - README.md
+  - ../README.md
   - wiki/index.md
   - notifications/README.md
   - integrations/README.md
@@ -70,6 +70,7 @@ This document serves as the central index for the Notify module, providing guida
 - [Email Templates](./email-templates.md)
 - [SMS Implementation](./sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
+
 # Indice della Documentazione - Modulo Notify
 
 ## Panoramica
@@ -86,38 +87,17 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - **Configurazione**: Offre opzioni di configurazione flessibili per diversi provider di notifica
 
 ## Collegamenti Correlati
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-- [Documentazione Generale PTV](../../../../docs/README.md)
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-<<<<<<< .merge_file_1O1Lay
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../User/docs/documentation-standards-2.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
-=======
+- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
->>>>>>> .merge_file_PvETkn
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
-<<<<<<< .merge_file_1O1Lay
-
-=======
->>>>>>> .merge_file_PvETkn
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./README.md) - Panoramica generale del modulo
+- [README](../README.md) - Panoramica generale del modulo
 - [Architettura](./architecture.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./models.md) - Documentazione dei modelli Eloquent
@@ -157,25 +137,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard Traduzioni](./translation-standards-2.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-<<<<<<< .merge_file_1O1Lay
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-=======
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-
-### Configurazione
-
-### Pattern e Architettura
-
-### Standard e Traduzioni
-
-### Testing e Qualità
->>>>>>> .merge_file_PvETkn
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -209,30 +171,12 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-## Documentazione e Aggiornamenti
-- Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
-- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-## Documentazione e Aggiornamenti
-- Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
-- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-## Documentazione e Aggiornamenti
-- Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
-- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-## Documentazione e Aggiornamenti
-- Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
-- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
 
 ## Sottocartelle
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-<<<<<<< .merge_file_1O1Lay
 - [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
-- [Implementazione Slug](mail-template-slug-implementation-2.md) - Implementazione del campo slug
-- [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
->>>>>>> .merge_file_PvETkn
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
@@ -249,65 +193,15 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 
 Ultimo aggiornamento: 14 Maggio 2025
 
-## Risoluzione conflitti e standard
-- Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
-- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
-
 ## Risoluzione Conflitti e Standard
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione:
   - `index.md` - Unificato contenuto italiano e inglese mantenendo struttura completa
-- Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
-- **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-Ultimo aggiornamento: 14 Maggio 2025
-
-## Risoluzione conflitti e standard
-- Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< .merge_file_1O1Lay
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
->>>>>>> .merge_file_PvETkn
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni"
-
-*Ultimo aggiornamento: Gennaio 2025*
-- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< .merge_file_1O1Lay
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
->>>>>>> .merge_file_PvETkn
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< .merge_file_1O1Lay
-*Ultimo aggiornamento: Gennaio 2025*
-- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-=======
-
-## Contenuto fuso da `index.md`
-
   - `database-mail-queue.md` - Rimossi marcatori conflitto, aggiornati path di sistema
   - `database-mail-system.md` - Puliti conflitti nelle sezioni bash e riferimenti
   - `database-mail.md` - Risolti conflitti nei template e riferimenti esterni
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify
->>>>>>> .merge_file_PvETkn
+- Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
+- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
+- **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
+- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".

@@ -7,20 +7,7 @@ qmd: "digest ceiling 100 aliases-removed"
 
 # Alias/superseded rimossi
 
-<<<<<<< .merge_file_JVLwOI
-Rimossi 31 stub alias/superseded:
-
-- `api.md`
-- `bmad/citizen-auth-flow-contract.md`
-- `bmad-session.md`
-- `bugfix-phpmd-cleanup-historical.md`
-- `code-quality-analysis.md`
-- `console_commands/archive/console-commands-philosophy.md`
-- `lfs-resolution-corruption.md`
-- `login-widget-translation-audit-historical.md`
-- `model-inheritance-analysis.md`
-=======
-Rimossi 66 stub alias/superseded:
+Rimossi 76 stub alias/superseded:
 
 - `api.md`
 - `bmad/citizen-auth-flow-contract.md`
@@ -47,7 +34,8 @@ Rimossi 66 stub alias/superseded:
 - `git-conflicts-resolution-summary.md`
 - `git-conflicts-resolution.deprecated.md`
 - `lfs-resolution-corruption.md`
->>>>>>> .merge_file_DVlgqp
+- `login-widget-translation-audit-historical.md`
+- `model-inheritance-analysis.md`
 - `navigation-translations-fixes-january-historical.md`
 - `on-demand-pattern.md`
 - `password-translation-completion-historical-1.md`
@@ -55,26 +43,16 @@ Rimossi 66 stub alias/superseded:
 - `password-translation-completion-snake-historical.md`
 - `patterns.md`
 - `performance-optimization.md`
-<<<<<<< .merge_file_JVLwOI
 - `phpstan-fixes-gennaio-2025-complete.md`
 - `phpstan-fixes-historical-1.md`
 - `phpstan-fixes-historical-alias.md`
-=======
->>>>>>> .merge_file_DVlgqp
 - `phpstan-fixes-historical.md`
 - `project-structure.md`
 - `qmd-setup.md`
 - `quality-gates-analysis-user-module.md`
 - `quality-status-historical.md`
 - `redundancy-fixes-january-historical.md`
-<<<<<<< .merge_file_JVLwOI
 - `spatie-permissions-methods.md`
-- `stories/11.1.team-change-widget.story.md`
-- `stories/12.3.remove-dddx-debug.story.md`
-- `stories/phpstan-user-fix.md`
-- `updates-historical.md`
-- `wiki/troubleshooting/git-merge-conflict-inventory-2.md`
-=======
 - `stories/0001-user-phpstan-fix.story.md`
 - `stories/0004-scritture-dentro-accessor-nei-moduli-condivisi.story.md`
 - `stories/0010-team-change-widget-2.story.md`
@@ -102,5 +80,8 @@ Rimossi 66 stub alias/superseded:
 - `stories/0142-superadmin-widget-icons.story.md`
 - `stories/0145-superadmin-widget-negate-icon-fix.story.md`
 - `stories/0152-user-module-closure.story.md`
+- `stories/11.1.team-change-widget.story.md`
+- `stories/12.3.remove-dddx-debug.story.md`
 - `stories/phpstan-user-fix.md`
->>>>>>> .merge_file_DVlgqp
+- `updates-historical.md`
+- `wiki/troubleshooting/git-merge-conflict-inventory-2.md`

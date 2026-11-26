@@ -100,6 +100,12 @@ return [
             'icon' => 'stop',
             'color' => 'danger',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
     'messages' => [
         'no_jobs' => 'Nessun job monitorato al momento',

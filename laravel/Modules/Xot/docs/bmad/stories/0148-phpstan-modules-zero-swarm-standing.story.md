@@ -135,6 +135,33 @@ Causa: `bashscripts/git/subtrees/merge_remote_repo_2.sh` (deprecato, 3 istanze v
 - **Il kit non basta da solo**: `classify_conflict_hunks.py` in dry-run su 162 file di test lascia 161 file a giudizio (142 hunk divergenti, 6 meccanici; i 115 file di Cms/Notify con marker annidati vengono saltati). Serve `resolve_by_common_blob.py` (tre vie, `SYNC_BASE=dd46996a4`, 0 marker verificati sotto `laravel/`).
 - **Ordine dopo l'uscita dello script**: backup di `laravel/Modules` e `laravel/Themes`; dry-run e poi `--apply` di `resolve_by_common_blob.py` per pacchetto; `classify_conflict_hunks.py --apply`; `find_sync_regressions.py` e `find_remote_only_losses.py` (con `--before` l'ultimo commit remoto vero prima del 24/11); resto a mano; `phpstan clear-result-cache`, PHPStan completo, `pest --testsuite=Project`. Comandi esatti: `bashscripts/docs/operations/sync-repair-tools.md`.
 
+## Esito 2026-11-25 (fase BMAD: Build + Verify)
+
+- **Gate:** `analyse Modules` (flock, `APP_ENV=testing`, nice 10) = `[OK] No errors`, exit 0. Alle 18:xx erano 3 `trait.unused` in Rating
+  (`HasRating`, `HasLikes`, `DecoratesRatingFormFields`). Causa: `phpstan.neon` esclude `./*/tests/*`, quindi lo stub in
+  `tests/Fixtures` non e' un consumer, e gli host veri stanno nei cloni gemelli. Alle 22:02 sono comparse tre classi-àncora
+  astratte in `Rating/app` (autore non identificato, non tracciate): chiudono il gate ma sono al confine con «no probe».
+  Decisione aperta per l'umano; regola nel prompt `quality-gates.md`, riga `trait.unused`.
+- **UI/Cms (bug reale):** `UI\Actions\Block\GetLocalizedBlockDataAction` delegava a `Modules\Cms\Actions\GetLocalizedBlockDataAction`,
+  classe che Cms ha rinominato in `ResolveLocalizedBlockDataAction`: `class_exists` falso, link dei blocchi senza prefisso lingua,
+  nessun errore (l'ADR UI 0004 aveva previsto il rischio). Corretta la stringa; nuovo test «names a Cms resolver class that really
+  exists» (group `UI-BLOCKDATA-INV-1`); verificato `/events` -> `/it/events`.
+- **Rating:** etichette di lista, form, infolist e creazione in italiano; `percentage` tolto dal form (colonna calcolata, non
+  assegnabile: il valore digitato veniva scartato); guardia «ogni campo del form e' in `$fillable`».
+- **Contract:** `ActionContractsAreCompleteTest` era rosso (2 problemi), ora verde. 517 dei 525 tag `@contract` puntano a file
+  assenti in questo checkout perche' il cap a 100 `.md` ha tolto `docs/contracts/` (83 contract User vivono ancora in
+  `base_ptvx_fila5` e nel backup del cap): da decidere se il cap prevede un'eccezione per i contract.
+- **Docs:** marker di conflitto nei `.md`: 0 su tutti i moduli e temi; restavano `=======` isolati, frontmatter con chiavi duplicate
+  e etichette `### Versione HEAD/Incoming` (tutti residui del sync, in pulizia). `@see` verso docs: 0 pendenti su 194.
+- **File di lingua `lang/it/.php` (14 moduli):** le azioni del menu utente non sono classi `Modules\...`, quindi `GetTransKeyAction`
+  risaliva al primo oggetto `Modules\...` del backtrace, la pagina `Dashboard`, e il vecchio ramo le toglieva il prefisso
+  `dashboard` lasciando la chiave `modulo::`. Corretto in Xot da un altro attore (test `keeps dashboard as file key...`, sonda su
+  448 classi: 0 chiavi con coda vuota). Aggiunta la guardia a monte in `Lang SaveTransAction::persist()` (group
+  `LANG-SAVETRANS-INV-6`) e il contratto `get-trans-key-action.md` riscritto nelle sei sezioni (`XOT-TRANSKEY-INV-1`): era rosso
+  `ActionContractsAreCompleteTest`. Il segnaposto `actions.profile.label='profile'` finisce ora in `<modulo>/lang/it/dashboard.php`.
+- **Test stantii:** `UiHighestMissCoverageTest` asseriva `class="scroll-mt-24"` esatto contro il markup attuale dell'ancora ID;
+  tolto l'helper morto `ensureCmsStub` (finta classe Cms con il nome vecchio, nessun chiamante).
+
 ## Verify
 
 ```bash

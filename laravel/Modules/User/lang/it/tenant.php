@@ -210,12 +210,21 @@ return [
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
     'messages' => [

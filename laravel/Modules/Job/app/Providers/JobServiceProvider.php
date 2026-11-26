@@ -42,29 +42,14 @@ class JobServiceProvider extends XotBaseServiceProvider
         // });
         Import::polymorphicUserRelationship();
         Export::polymorphicUserRelationship();
-        $this->registerQueue();
     }
 
-    public function registerQueue(): void
-    {
-        /*
-         * Queue::before(static function (JobProcessing $event) {
-         * self::jobStarted($event->job);
-         * });
-         *
-         * Queue::after(static function (JobProcessed $event) {
-         * self::jobFinished($event->job);
-         * });
-         *
-         * Queue::failing(static function (JobFailed $event) {
-         * self::jobFinished($event->job, true, $event->exception);
-         * });
-         *
-         * Queue::exceptionOccurred(static function (JobExceptionOccurred $event) {
-         * self::jobFinished($event->job, true, $event->exception);
-         * });
-         */
-    }
+    /**
+     * Hook metriche queue (disabilitato): tenuto per contratto di coverage/reflection.
+     *
+     * @see Modules/Job/docs/wiki/topics/dry-kiss.md
+     */
+    public function registerQueue(): void {}
 
     /*
      * public function registerSchedule(Schedule $schedule): void {

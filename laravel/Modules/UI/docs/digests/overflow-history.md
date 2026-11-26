@@ -7,11 +7,7 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-<<<<<<< .merge_file_TQChq5
-Overflow force-cap: 388 file oltre target 100.
-=======
-Overflow force-cap: 372 file oltre target 100.
->>>>>>> .merge_file_Vu35gO
+Overflow force-cap: 403 file oltre target 100.
 
 ### `actions/generic-ui-building-blocks.md` — Generic UI Building Blocks: Category, Collection, FieldOption
 
@@ -32,8 +28,6 @@ contesto — annotato nei PHPDoc dei tre modelli).
 - Nessuna risorsa Filament esiste ancora per questi modelli (`app/Filament/Resources/` è vuota,
   solo `.gitkeep`). Sono solo modelli + migrazioni, pronti per essere esposti in
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `advanced-form-components.md` — Componenti Form Avanzati
 
 
@@ -57,7 +51,6 @@ contesto — annotato nei PHPDoc dei tre modelli).
   <label for="email">Email</label>
   <input
 
->>>>>>> .merge_file_Vu35gO
 ### `algolia-docsearch-1.md` — Algolia DocSearch {#algolia-docsearch}
 
 
@@ -79,7 +72,6 @@ Once the `docsearchApiKey` and `docsearchIndexName` values are set in `config.ph
 
 <img class="block m-auto" src="/assets/img/doc
 
-<<<<<<< .merge_file_TQChq5
 ### `architecture-2.md` — $MOD Architecture
 
 
@@ -126,8 +118,6 @@ tags: [documentation]
 
 ### Primary Purpose
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `architecture-archive-1.md` — UI Module - Architecture Guide (2025)
 
 
@@ -264,32 +254,6 @@ Regole:
 - se un asset manca, recuperare il binario originale e committarlo direttamente;
 - prima del push verificare che immagini, font, archivi e PDF siano contenuti reali.
 
-<<<<<<< .merge_file_TQChq5
-### `blade-data-handling-1-2.md` — Data Handling in Blade Components
-
-
-# Data Handling in Blade Components
-
-This document outlines best practices for data handling in Blade components, particularly in theme blocks used for content sections.
-
-## Core Principles
-
-### 1. Explicit Props Definition
-
-All Blade components should explicitly define their expected properties using the `@props` directive:
-
-```blade
-@props([
-    'title' => null,
-    'description' => null,
-    'url' => null,
-    'items' => [],
-    // Additional props with sensible defaults
-])
-```
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `blade-data-handling-1.md` — Data Handling in Blade Components
 
 
@@ -336,8 +300,6 @@ laravel/Modules/Cms/
 └── docs/
     └── blocks/              # Documentazione dei blocchi
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `bmad/advanced-form-components.md` — Componenti Form Avanzati
 
 
@@ -361,7 +323,6 @@ laravel/Modules/Cms/
   <label for="email">Email</label>
   <input
 
->>>>>>> .merge_file_Vu35gO
 ### `bmad/architecture/module-boundary.md` — UI — architettura
 
 # UI — architettura
@@ -409,11 +370,7 @@ Componenti UI / Tema.
 
 # Audit BMAD — UI
 
-<<<<<<< .merge_file_TQChq5
-SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [purpose.md](./purpose.md)
-=======
 SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [../wiki/purpose.md](../wiki/purpose.md)
->>>>>>> .merge_file_Vu35gO
 
 **In una frase:** UI è il vocabolario visivo condiviso (componenti, widget, colonne, layout tabella): fa sì che la stessa cosa abbia lo stesso aspetto e lo stesso comportamento in tutti i moduli che lo consumano.
 
@@ -501,11 +458,7 @@ related:
   - ./architecture.md
   - ./architecture/module-boundary.md
   - ./epics/epic-1-design-system-components.md
-<<<<<<< .merge_file_TQChq5
-  - ./stories/STORY-UI-TABLE-LAYOUT-ENUM-TRANSLATIONS.md
-=======
   - ./stories/story-ui-table-layout-enum-translations.md
->>>>>>> .merge_file_Vu35gO
 ---
 
 # UI — Brainstorming
@@ -584,11 +537,7 @@ Collegare ogni decisione a story BMAD, mantenere il second brain e chiudere i du
 
 # Epic e story — UI
 
-<<<<<<< .merge_file_TQChq5
-Scopo del modulo: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli ([purpose.md](./purpose.md)).
-=======
 Scopo del modulo: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli ([../wiki/purpose.md](../wiki/purpose.md)).
->>>>>>> .merge_file_Vu35gO
 
 ## Epic da audit 2026-11-16
 
@@ -600,11 +549,7 @@ lock (`bashscripts/lock/lock.sh`), Pest rosso, PHPStan max, poi `unlock.sh`. Nes
 | Story (da creare) | Cosa | Criterio di accettazione |
 |---|---|---|
 | `ui-dashboard-real-widgets` | Dashboard con soli widget reali o vuota | nessun valore letterale in `Dashboard.php`; `TestWidget` solo in tests |
-<<<<<<< .merge_file_TQChq5
 | `ui-remove-phantom-model-tests` | Eliminare Asset/Component/ThemeModelTest | 0 `@phpstan-ignore` in `tests/Uni
-=======
-| `ui-remove-phantom-model-tests` | Eliminare Asset/Component/ThemeModelTest | 0 `@phpstan-ignore`
->>>>>>> .merge_file_Vu35gO
 
 ### `bmad/livewire-inventory.md` — Inventario UI: Livewire HTTP → Filament widget
 
@@ -720,252 +665,6 @@ BMAD STATUS — UI
 - PHPStan: 0 errori (OK)
 - Wiki aggiornata: docs/wiki/scope.md (scopo: componenti visivi riusabili, contratti blocchi/temi)
 
-<<<<<<< .merge_file_TQChq5
-### `bmad/stories/1.4-phpstan-ui-fixes.story.md` — Story: Fix PHPStan Level 10 Errors in UI Module
-
-
-# Story: Fix PHPStan Level 10 Errors in UI Module
-
-## Context
-UI module has test file errors referencing non-existent Ptv module.
-
-## Errors to Fix
-
-### 1. UI/tests/Feature/GroupColumnTest.php
-- Line 336: Access to constant `Dip` on unknown class `Modules\Ptv\Enums\WorkerType`
-- Line 343: Class `Modules\Ptv\Enums\WorkerType` not found
-- Line 344: Call to method `getLabel()` on unknown class `Modules\Ptv\Enums\WorkerType`
-
-## Acceptance Criteria
-- [ ] All PHPStan errors in UI module resolved
-- [ ] `phpstan analyse Modules/UI --memory-limit=-1` passes with 0 errors
-- [ ] Tests pass: `pest --test-directory=Modules/UI/tests Modules/UI/tests`
-- [ ] Code style: `pint --test --dirty Modules/UI`
-- [ ] Docs updated in `Modules/UI/docs/`
-
-
-### `bmad/stories/cluster3-phpstan-swarm.story.md` — UI — swarm cluster3 PHPStan 2026-10-06
-
-
-# UI — swarm cluster3 PHPStan 2026-10-06
-
-## Scopo modulo
-
-UI = componenti Blade, View Component, Action di rendering, layout e asset
-condivisi dei pannelli Filament. Nessuna logica di dominio: solo presentazione.
-
-## Errori rilevati
-
-0 errori introdotti da questo agente. Nessun fix applicato (vedi skip).
-
-## Verifiche eseguite
-
-- `php -l` su tutti i file PHP del modulo: verde.
-- Story `1.4-phpstan-ui-fixes` (kilo, 2026-10-01): premessa superata.
-  `Modules\Ptv\Enums\WorkerType` esiste, ma il modulo UI non lo referenzia
-  piu: 0 occorrenze di `Modules\Ptv` in `app/` e `tests/`, sostituito dalla
-  fixture locale `tests/Fixtures/UiGroupColumnTypeEnum.php`.
-- `UiPhpstanTraitProbes.php` cancellato da peer (cleanup probe, unstaged):
-
-### `bmad/stories/continuazione-domani.md` — UI — Continuazione Domani
-
-
-# UI — Continuazione Domani
-
-## Stato verificato ora (sessione 2026-09-22, post cleanup marker root)
-
-- Commit recenti reali: `fdda5618` (rimossi `ARCHITECTURE.md`/`philosophy-3.md`/`TESTING.md` root con marker irrisolti) e `e6bb00a1` (risolti marker in `.github/contributing.md` e `README.md` root, corretto `.gitignore` graphify-out) — verificato: `README.md` root ora **0 marker**.
-- Story `docs/bmad/stories/root-hygiene-conflict-markers.story.md` (status `review`) copre esattamente questi due commit — lavoro fatto, manca solo il flip a `done`.
-- **Il modulo e' scritto in questo momento da un daemon auto-commit concorrente** (commit `.`, autore `marco76tv`/`Marco Xot`): durante *questa stessa sessione* e' arrivato un nuovo commit `c6a14359` (`.`) che ha committato i due file BMAD boilerpl
-
-### `bmad/stories/continuazione-domani.story.md` — Continuazione domani
-
-
-# Continuazione domani
-
-TODO: story description
-
-### `bmad/stories/ensures-ui-database-schema-trait-unused.story.md` — ensures-ui-database-schema-trait-unused
-
-
-# ensures-ui-database-schema-trait-unused
-
-## Obiettivo
-
-Azzerare l'errore PHPStan `trait.unused` su
-`Modules/UI/tests/Support/EnsuresUiDatabaseSchema.php`.
-
-## Decisione: **delete** (già applicata in history)
-
-Non **wire**. Motivazioni:
-
-1. Il file **non esiste** nel working tree né in `HEAD` (`tests/Support/` assente).
-2. `rg EnsuresUiDatabaseSchema Modules/UI` → zero match di codice.
-3. `git log -S EnsuresUiDatabaseSchema`: trait creato e usato da `TestCase`
-   (`use EnsuresUiDatabaseSchema` + `ensureUiSchema()`), poi rimosso in
-   `e4d16be2d` (2026-08-19) insieme all'uso in `TestCase`.
-4. Pattern attuale: skip offline via `TestCase::uiDbUnavailable()` /
-   gruppi Pest `ui-db` / `no-ui-db` — **non** bootstrap DDL in-test
-   (allineato a dati sacri / sqlite condiviso).
-
-### `bmad/stories/filament-layout-directives.story.md` — Direttive Filament nel layout UI
-
-
-# Direttive Filament nel layout UI
-
-## Contesto
-
-In alcuni progetti del portfolio (es. PTVX, solo pannello) il modulo `Cms` **non** è
-presente e non va introdotto: i percorsi `Modules/Cms/resources/views/components/head.blade.php`
-e `foot.blade.php` lì non esistono. Il contratto Filament 5 si impara dai progetti front office
-che hanno `Cms` (`head`/`foot`) e si applica ai layout **reali** del progetto: `UI` e `User`.
-
-Fonte: [Configuring your layout](https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout).
-
-## Regola funzionale
-
-Nei layout Blade che ospitano componenti Filament/Livewire (stessi obblighi di
-`cms::head` / `cms::foot` altrove):
-
-1. `@filamentStyles` in `<head>` (prima del CSS Vite del tema/app).
-2. `@livewire('notifications')` a fine body **senza*
-
-### `bmad/stories/git-status-fleet-merge-markers-ui.story.md` — git-status-fleet-merge-markers-ui
-
-
-# git-status-fleet-merge-markers-ui
-
-Bonifica dei marker di merge conflict committati da "laraxot" nel modulo `laravel/Modules/UI`
-(`<<<<<<<`, `=======`, `>>>>>>>`, varianti diff3 `||||||||`), secondo la strategia canonica
-della story Xot/merge-marker-fleet-residue:
-
-- HEAD pulito → `git checkout HEAD -- file`
-- HEAD sporco → restore blob dell'ultimo commit pulito in history
-- nessuna versione pulita → MANUAL
-
-Tool: `bashscripts/tools/resolve-merge-markers.sh` (detection: marker fuori dai code fence ```` ``` ````).
-
-## Stato iniziale
-
-- Branch: `dev`, up to date con `laraxot/dev`, worktree pulito (0 dirty, 0 unmerged).
-- `.gitattributes`: già pulito, nessun marker (nessuna copia template necessaria).
-- Lock: `bashscripts/lock/git-status-fleet-UI.lock` (preso dal fleet orchestrator).
-
-## R
-
-### `bmad/stories/module-bmad-audit-2.story.md` — Story — UI: baseline BMAD
-
-# Story — UI: baseline BMAD
-
-Come manutentore del modulo UI, voglio una baseline BMAD verificabile, così da poter pianificare lavoro senza confondere ipotesi, WIP e comportamento osservato.
-
-## Acceptance criteria
-
-- [ ] Confermare API pubblica e confini con riferimenti a codice reale.
-- [ ] Inventariare i flussi critici e collegarli a test Pest.
-- [ ] Misurare PHPStan/Pest nel contesto stabile del modulo.
-- [ ] Registrare dipendenze, rischi e decisioni nel modulo.
-- [ ] Aggiornare lo stato reale in `docs/sprint-status.yaml`.
-
-## Task
-
-- [ ] Revisione architettura.
-- [ ] Brainstorming con stakeholder.
-- [ ] Decomposizione epic in story più piccole.
-- [ ] Quality gate e second-brain write-back.
-
-
-### `bmad/stories/phpstan-modules-zero.story.md` — Story: PHPStan Modules/UI → 0
-
-
-# Story: PHPStan Modules/UI → 0
-
-## Scopo / perché
-
-`Modules/UI` è il design system Filament (form/table components, blocchi, theme
-helpers). PHPStan a zero serve a:
-
-1. Non far passare di nuovo dipendenze verso un dominio assente (`Modules\Geo`).
-2. Non tenere stub di coverage morti che sporcano il gate.
-3. Tipizzare i DTO tema e i test Feature senza `mixed` / ignore.
-
-Inventario di partenza: `/tmp/phpstan_ptvx_fila5/modules/UI.json` → **112**
-`file_errors` (77 file).
-
-## Inventario iniziale (112)
-
-| Famiglia | N | Root cause |
-|---|---:|---|
-| `staticMethod.notFound` | 74 | `tests/AuditCoverage/*` chiama `assertTrue` senza `TestCase` |
-
-### `bmad/stories/schema-org-reusable-components.story.md` — Story: componenti riutilizzabili schema.org
-
-
-# Story: componenti riutilizzabili schema.org
-
-## Obiettivo
-
-Fornire componenti Filament riutilizzabili per dati strutturati comuni,
-senza legare il modulo UI a un dominio specifico.
-
-## Criteri di accettazione
-
-- `PersonSection`, `AddressField` e `OrganizationSection` coprono i dati già presenti.
-- `EventSection` espone i principali campi di `schema.org/Event`.
-- `PersonColumn`, `AddressColumn`, `OrganizationColumn` ed `EventColumn` sono proiezioni tabellari configurabili.
-- Le basi applicative Xot restano l'unico punto di estensione Filament.
-- Ogni colonna supporta una lista ridotta di campi tramite `fields()`.
-- PHPStan e Pest del modulo UI passano.
-
-## Decisioni
-
-I valori dello stato e della modalità di partecipazione evento usano i
-
-### `bmad/stories/story-ui-table-layout-enum-translations.md` — Problema
-
-
-# Problema
-
-`EnumTrait::getIcon()` e `getLabel()` leggono `values.{case}.{property}`. Il catalogo
-italiano aveva invece `list` e `grid` al livello radice. La traduzione restituiva la
-chiave `fix:ui::table_layout_enum.values.grid.icon` al posto del nome Heroicon; le
-tabelle Filament fallivano con `SvgNotFound` durante il rendering.
-
-## Criteri di accettazione
-
-- [x] Le opzioni italiane `list` e `grid` sono annidate sotto `values`.
-- [x] Il test enum verifica label e nomi icona per entrambi i casi in italiano.
-- [x] La suite Feature Filament Fixcity passa senza `SvgNotFound` (66 test / 277 asserzioni).
-- [ ] PHPStan, Pint e quality gate wiki sono verdi sullo stato finale.
-
-## Implementazione e prova
-
-Corretto `Modules/UI/lang/it/table_layout_enum.php` secondo il contratto di
-`EnumTrait` e a
-
-### `bmad/stories/ui-guest-header-ux.story.md` — Obiettivo funzionale
-
-
-## Obiettivo funzionale
-
-Le pagine pubbliche devono essere navigabili senza sessione autenticata. Il
-header non deve leggere dati utente o mostrare link protetti ai guest; deve
-offrire CTA chiare per Login e Register.
-
-## Correzioni
-
-- `header.blade.php`: navigazione protetta solo per utenti autenticati;
-  dropdown profilo solo sotto `@auth`; CTA guest Login/Register; attributi
-  ARIA sul menu e sul toggle.
-- Homepage Four: usa il layout guest invece del layout app autenticato.
-
-## Verifica
-
-- `php artisan view:cache`: OK.
-- `GET /it`: HTTP 200 senza `Attempt to read property`.
-- Regola second brain applicata: layout guest per pagine pubbliche, app per
-  pagine autenticate.
-=======
 ### `bmad/stories/0001-phpstan-ui-fixes.story.md` — Story: Fix PHPStan Level 10 Errors in UI Module
 
 # Story: Fix PHPStan Level 10 Errors in UI Module
@@ -1333,8 +1032,6 @@ Le icone sono posizionate in `Modules/UI/resources/svg/brands/`:
 - `whatsapp.svg` → `<x-icon name="ui-brands.whatsapp" />`
 - `rss.svg` → `<x-icon name="ui-brands.rss" />`
 
->>>>>>> .merge_file_Vu35gO
-
 ### `bugfix/groupcolumn-architectural-violations.md` — Bugfix: GroupColumn Architectural Violations
 
 
@@ -1507,11 +1204,7 @@ Il bottone **Cambia layout** (`TableLayoutToggleTableAction`) è un controllo **
 File duplicati rilevati nel modulo `UI`:
 
 - `Modules/UI/.github`: `CONTRIBUTING.md`, `contributing.md`
-<<<<<<< .merge_file_TQChq5
-- `Modules/UI/.github`: `SECURITY.md`, `security-2.md`
-=======
 - `Modules/UI/.github`: `SECURITY.md`, `security.md`
->>>>>>> .merge_file_Vu35gO
 - `Modules/UI/docs`: `README.md`, `readme.md`
 - `Modules/UI/docs/filament`: `ListRecords.md`, `listrecords.md`
 
@@ -1819,53 +1512,6 @@ Le seguenti modifiche sono state apportate per soddisfare PHPStan livello 9:
 4. Correzione dei type hints per le proprietà
 5. Implementazione delle interfacce corrette
 
-<<<<<<< .merge_file_TQChq5
-### `components/filament.md` — Filament Components
-
-
-# Filament Components
-
-## Resources
-
-### Signature Pad
-
-- [filament-signature-pad](https://github.com/savannabits/filament-signature-pad)
-
-### Exception Handling
-
-- [filament-exceptions](https://github.com/bezhanSalleh/filament-exceptions)
-
-### Health Check
-
-- [filament-spatie-laravel-health](https://github.com/shuvroroy/filament-spatie-laravel-health)
-
-### Select Tree Components
-
-- [filament-adjacency-list](https://filamentphp.com/plugins/saade-adjacency-list)
-
-### `components/legacy/full-calendar-2.md` — FullCalendar Component for Filament
-
-
-# FullCalendar Component for Filament
-
-## Introduction
-This document describes the implementation and usage of Saade's FullCalendar component for Filament within the UI modules of Laraxot PTVX. This component offers complete integration of the popular FullCalendar JavaScript plugin with Filament, allowing users to view and manage events in an intuitive calendar interface.
-
-## Installation
-
-To install the component:
-
-```bash
-composer require saade/filament-fullcalendar:^3.0
-```
-
-## Configuration in UI Module
-
-### 1. Plugin Registration
-
-In the UI module service provider (`Modules/UI/Providers/UIServiceProvider.php`), register the FullCalendar plugin:
-
-=======
 ### `components/archive/full-calendar.md` — FullCalendar Component for Filament
 
 
@@ -1911,7 +1557,6 @@ In the UI module service provider (`Modules/UI/Providers/UIServiceProvider.php`)
 ### Select Tree Components
 
 - [filament-adjacency-list](https://filamentphp.com/plugins/saade-adjacency-list)
->>>>>>> .merge_file_Vu35gO
 
 ### `components/legacy/full-calendar.md` — FullCalendar Component for Filament
 
@@ -1976,7 +1621,6 @@ mirror, va creato in Xot prima di usarlo qui, mai come scorciatoia nel modulo.
 
 Non pre-caricare questo file: leggi la fonte canonica solo quando il task lo richiede.
 
-<<<<<<< .merge_file_TQChq5
 ### `confidence-guidelines.md` — Massimizzare il livello di confidenza
 
 
@@ -1990,8 +1634,6 @@ Non pre-caricare questo file: leggi la fonte canonica solo quando il task lo ric
 6. **Documentazione**: mantieni aggiornati doc e changelog.
 7. **Rollback rapido**: feature flags e versioni per tornare indietro.
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `conflict-resolution.md` — Conflict Resolution — Module UI
 
 
@@ -2006,15 +1648,9 @@ Non pre-caricare questo file: leggi la fonte canonica solo quando il task lo ric
 - app/View/Components/Render/Block.php
 
 ## Documentation Files
-<<<<<<< .merge_file_TQChq5
-- docs/algolia-docsearch-2.md
-- docs/architecture.md
-- ../../Activity/docs/best-practices-3.md
-=======
 - docs/algolia_docsearch.md
 - docs/architecture.md
 - docs/best_practices.md
->>>>>>> .merge_file_Vu35gO
 - docs/blade_data_handling.md
 - docs/blocks_system.md
 - docs/bugfix-table-layout-action.md
@@ -2057,11 +1693,7 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 ## File Duplicati da Consolidare
 
 ### 1. Advanced Form Components
-<<<<<<< .merge_file_TQChq5
-- ❌ `advanced_form_components.md` → Eliminare
-=======
 - ❌ `advanced-form-components.md` → Eliminare
->>>>>>> .merge_file_Vu35gO
 - ✅ `advanced-form-components.md` → Mantenere
 
 
@@ -2078,11 +1710,7 @@ Questi file sono vuoti (0 bytes) e possono essere eliminati:
 cd laravel/Modules/UI/docs
 
 # File vuoti con underscore
-<<<<<<< .merge_file_TQChq5
-rm -f advanced_form_components.md
-=======
 rm -f advanced-form-components.md
->>>>>>> .merge_file_Vu35gO
 rm -f blade_data_handling.md
 rm -f naming_conventions.md
 rm -f phpstan_fixes_2025.md
@@ -2121,11 +1749,7 @@ Dovrebbe applicare un calendario al panel Filament; oggi è uno stub che restitu
 # GetAllBlocksAction
 
 Sorgente: `app/Actions/Block/GetAllBlocksAction.php`. Perché è fatta così:
-<<<<<<< .merge_file_TQChq5
-[ADR scoperta dei blocchi per cartella](../adr/block-discovery-by-filament-blocks-folder.md).
-=======
 [ADR scoperta dei blocchi per cartella](../adr/0001-block-discovery-by-filament-blocks-folder.md).
->>>>>>> .merge_file_Vu35gO
 Chiamanti: `Modules/Cms/app/Filament/Fields/PageContent.php`, `PageContentBuilder.php`.
 
 ## Input
@@ -2187,8 +1811,6 @@ Mappa i giorni feriali-lavorativi (lunedì–sabato) da chiave inglese a etichet
 | `UI-DAYS-INV-1` | Il risultato ha sei chiavi, da lunedì a sabato; la domenica è assente. | righe 41-52, 25-31 | `tests/Unit/OpeningHoursRuleTest.php:47` (solo "non vuoto") |
 | `UI-DAYS-INV-2` | La chiave è il nome inglese minuscolo del giorno (`format('l')`). | riga 63 | Test: nessuno 
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `contracts/get-localized-block-data-action.md` — GetLocalizedBlockDataAction (UI)
 
 
@@ -2203,7 +1825,7 @@ Sorgente: `app/Actions/Block/GetLocalizedBlockDataAction.php`. Perché è fatta 
 
 ## Output
 
-- `array<string, mixed>`: i dati risolti da `Modules\Cms\Actions\GetLocalizedBlockDataAction::execute()`, oppure
+- `array<string, mixed>`: i dati risolti da `Modules\Cms\Actions\ResolveLocalizedBlockDataAction::execute()`, oppure
   `$viewParams` invariato se Cms non c'è, se il resolver non ha `execute()` o se non ritorna un array.
 
 ## Invarianti
@@ -2212,7 +1834,6 @@ Sorgente: `app/Actions/Block/GetLocalizedBlockDataAction.php`. Perché è fatta 
 |---|---|---|
 | UI-BLOCKDATA-INV-1 | Con il resolver di Cms disponibile, l'output è il suo risultato (UI non aggiunge né toglie chiavi). | `UI-BLOCKDATA-INV-1` |
 
->>>>>>> .merge_file_Vu35gO
 ### `contracts/get-user-data-action.md` — GetUserDataAction
 
 
@@ -2229,10 +1850,9 @@ produzione, solo test: chi lo collega a una vista o a un'API legge prima «Non f
 ## Output
 
 - `UserData|null`: `null` se nessuno è autenticato o se l'autenticato non implementa `Modules\Xot\Contracts\UserContract`.
-<<<<<<< .merge_file_TQChq5
 - Altrimenti `id`, `name`, `email` (`getAttribute`, `''` se non stringa), `avatar` (URL del profilo caricato, poi
-  `profile_photo_path`, poi `null`), `role` (il **primo** nome di ruolo), `permissions` (nomi di tutti i permessi,
-  anche via ruolo), `settings` (`pr
+  `profile_photo_path`, poi `null`), `role` (il **primo** nome di ruolo, `null` se non ne ha), `permissions` (nomi di
+  tutti i permessi, anche via ruolo), `settings` (`profile.extra` se array, altrimenti `[]`).
 
 ### `contracts/resolve-localized-block-data-action.md` — ResolveLocalizedBlockDataAction (UI)
 
@@ -2264,21 +1884,6 @@ Sorgente: `app/Actions/Block/ResolveLocalizedBlockDataAction.php`. Perché è fa
 
 Classe o superficie: `<FQCN>`  
 Riferimento nel codice: `@contract docs/contracts/<file>.md`
-=======
-- Altrimenti `id`, `name`, `email` (`getAttribute`, `''` se non stringa), `avatar`, `role` (il **primo** nome di
-  ruolo, `null` se non ne ha), `permissions` (nomi di tutti i permessi, anche via ruolo), `settings` (`profile.extra`
-  se array, altrimenti `[]`).
-
-##
-
-### `contracts/template.md` — <operazione> — contratto comportamentale
-
-
-# <operazione> — contratto comportamentale
-
-Classe o superficie: `<FQCN>`  
-Riferimento nel codice: `@contract docs/contracts/<file>.md`
->>>>>>> .merge_file_Vu35gO
 
 ## Input
 
@@ -2324,11 +1929,7 @@ Riferimento nel codice: `@contract docs/contracts/<file>.md`
 # Convenzioni di Naming dei Campi
 
 ## Collegamenti Bidirezionali
-<<<<<<< .merge_file_TQChq5
-- [Best Practices UI](../../Activity/docs/best-practices-3.md)
-=======
 - [Best Practices UI](../best-practices.md)
->>>>>>> .merge_file_Vu35gO
 - [Errori Comuni UI](../filament-components-errors.md)
 - [Implementazione Corretta](../examples/correct-implementation.md)
 
@@ -2577,8 +2178,6 @@ Xot ← UI ← (tutti gli altri moduli: Geo, User, Tenant, Activity, ecc.)
 ---
 
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `design-comuni-faq-components.md` — Design Comuni - Componenti UI per FAQ
 
 
@@ -2625,7 +2224,6 @@ This module implements Design Comuni (Italian Municipalities Design System) comp
 
 ### Layout Components
 
->>>>>>> .merge_file_Vu35gO
 ### `design-system-1.md` — Design System
 
 
@@ -2764,8 +2362,6 @@ abstract class BaseModel extends XotBaseModel
 **Righe:** 4 (solo dichiarazione classe)  
 **DRY Level:** 🥇 **99% - IL MIGLIORE!**  
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `duplicate-methods-analysis.md` — Analisi Metodi Duplicati - Modulo UI
 
 
@@ -2812,7 +2408,6 @@ Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambi
 | `definition` | 4 | candidato a trait/helper |
 | `getColor` | 4 | candidato a trait/helper |
 
->>>>>>> .merge_file_Vu35gO
 ### `eav.md` — eav
 
 
@@ -2911,8 +2506,6 @@ class ListMyRecords extends XotBaseListRecords
 {
     protected static string $resource = MyResource::class;
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `filament-4x-upgrade-report.md` — Rapporto Aggiornamento Filament 4.x - Modulo UI
 
 
@@ -2959,7 +2552,6 @@ Il modulo UI è stato aggiornato con successo a Filament 4.x. Le modifiche princ
 **Soluzione**: Disabilitazione temporanea del widget calendario
 
 
->>>>>>> .merge_file_Vu35gO
 ### `filament-5x-compatibility.md` — Filament 5.x compatibility - modulo UI
 
 
@@ -2983,32 +2575,6 @@ Tutte le classi Filament **devono** estendere le classi `XotBase*` (vedi [regole
 
 ## Inclusione nei Blade View
 
-<<<<<<< .merge_file_TQChq5
-### `filament-blade-components-usage-1-2.md` — Utilizzo dei Componenti Blade di Filament
-
-
-# Utilizzo dei Componenti Blade di Filament 
-
-## Indice
-- [Panoramica](#panoramica)
-- [Componenti Disponibili](#componenti-disponibili)
-- [Utilizzo delle Icone](#utilizzo-delle-icone)
-- [Migrazione da Componenti Personalizzati](#migrazione-da-componenti-personalizzati)
-- [Best Practices](#best-practices)
-
-## Panoramica
-
-Questo documento descrive l'utilizzo corretto dei componenti Blade nativi di Filament , con particolare attenzione alla sostituzione dei componenti personalizzati con quelli forniti da Filament.
-
-## Componenti Disponibili
-
-Filament fornisce una serie di componenti Blade pronti all'uso che dovrebbero essere utilizzati al posto dei componenti personalizzati quando possibile:
-
-### Componenti UI Principali
-
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `filament-blade-components-usage-1.md` — Utilizzo dei Componenti Blade di Filament
 
 
@@ -3055,30 +2621,6 @@ When you use `TextColumn::make('valutatore.nome_diri')` in a standard Filament t
 
 ```php
 
-<<<<<<< .merge_file_TQChq5
-### `filament-dropdown-avatar-usage-1-2.md` — Utilizzo dei Componenti Filament Dropdown e Avatar
-
-
-# Utilizzo dei Componenti Filament Dropdown e Avatar 
-
-## Collegamenti correlati
-- [README modulo UI](/laravel/Modules/UI/docs/README.md)
-- [Utilizzo Componenti Filament](/laravel/Modules/UI/docs/archive/filament-components-usage-2.md)
-- [Architettura Modulare](/docs/architettura-modulare.md)
-- [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-
-## Panoramica
-
-Questo documento descrive l'implementazione e l'utilizzo dei componenti dropdown e avatar di Filament , con particolare attenzione alla gestione degli utenti e alle azioni correlate.
-
-## Componente Avatar
-
-Il componente `x-filament::avatar` è utilizzato per visualizzare l'immagine del profilo dell'utente. Questo componente accetta diverse proprietà per personalizzare l'aspetto dell'avatar.
-
-### Esempio di Utilizzo d
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `filament-dropdown-avatar-usage-1.md` — Utilizzo dei Componenti Filament Dropdown e Avatar
 
 
@@ -3086,11 +2628,7 @@ Il componente `x-filament::avatar` è utilizzato per visualizzare l'immagine del
 
 ## Collegamenti correlati
 - [README modulo UI](/laravel/Modules/UI/docs/README.md)
-<<<<<<< .merge_file_TQChq5
-- [Utilizzo Componenti Filament](/laravel/Modules/UI/docs/archive/filament-components-usage-2.md)
-=======
 - [Utilizzo Componenti Filament](/laravel/Modules/UI/docs/FILAMENT_COMPONENTS_USAGE.md)
->>>>>>> .merge_file_Vu35gO
 - [Architettura Modulare](/docs/architettura-modulare.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
@@ -3102,12 +2640,8 @@ Questo documento descrive l'implementazione e l'utilizzo dei componenti dropdown
 
 Il componente `x-filament::avatar` è utilizzato per visualizzare l'immagine del profilo dell'utente. Questo componente accetta diverse proprietà per personalizzare l'aspetto dell'avatar.
 
-<<<<<<< .merge_file_TQChq5
-### Esempio di Utilizzo de
-=======
 ### Esempio di Utilizzo dell'Avatar
 
->>>>>>> .merge_file_Vu35gO
 
 ### `filament-fileupload-1.md` — FileUpload Component in Filament
 
@@ -3300,11 +2834,7 @@ L'estensione VSCode per Filament fornisce un set completo di strumenti per svilu
 - [README modulo UI](/laravel/modules/ui/docs/readme.md)
 
 - [README modulo UI](/laravel/Modules/UI/docs/README.md)
-<<<<<<< .merge_file_TQChq5
-- [Utilizzo Componenti Filament](/laravel/modules/ui/docs/filament-components-usage-2.md)
-=======
 - [Utilizzo Componenti Filament](/laravel/modules/ui/docs/filament_components_usage.md)
->>>>>>> .merge_file_Vu35gO
 - [Architettura Modulare](/docs/architettura-modulare.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
@@ -3314,11 +2844,7 @@ Questo documento descrive l'implementazione e l'utilizzo dei componenti dropdown
 
 ## Componente Avatar
 
-<<<<<<< .merge_file_TQChq5
-Il componente `x-filament::avatar` è utilizzato per visualizzare l'immagine del profilo dell'utente. Questo componente accetta diverse proprietà per personalizzare 
-=======
 Il componente `x-filament::avatar` è utilizzato per visualizzare l'immagine del profilo dell'utente. Questo componente accetta diverse proprietà per personalizzare l'
->>>>>>> .merge_file_Vu35gO
 
 ### `filosofia-modulo-ui.md` — Analisi Approfondita del Modulo UI
 
@@ -3343,28 +2869,6 @@ app/Filament/
 ├── Forms/Components/      # 15 form fields custom (InlineDatePicker, RadioBadge, LocationSelector)
 ├── Widgets/              # 11 widgets (StatsOverviewWidget, UserCalendarWidget, DarkModeSwitcherWidget)
 
-<<<<<<< .merge_file_TQChq5
-### `flags-components-1-2.md` — Componenti SVG Bandiere nel Modulo UI
-
-
-# Componenti SVG Bandiere nel Modulo UI
-
-## Collegamenti correlati
-- [Documentazione centrale](/docs/README.md)
-- [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Documentazione UI](/laravel/Modules/UI/docs/README.md)
-- [Documentazione sezioni](/docs/sections.md)
-- [Header: Lingua e Utente](/laravel/Modules/Cms/docs/sections/header-language-user-dropdown-3.md)
-- [Implementazione CMS](/laravel/Modules/Cms/docs/sections/header-language-user-dropdown-3.md)
-
-## Panoramica
-
-Il modulo UI di SaluteOra include una vasta collezione di SVG di bandiere nazionali che possono essere utilizzati come componenti Blade. Questi componenti sono autoregistrati e possono essere facilmente integrati in qualsiasi parte dell'applicazione, incluso il selettore di lingue nell'header.
-
-## Stru
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `flags-components-1.md` — Componenti SVG Bandiere nel Modulo UI
 
 
@@ -3375,23 +2879,14 @@ Il modulo UI di SaluteOra include una vasta collezione di SVG di bandiere nazion
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Documentazione UI](/laravel/Modules/UI/docs/README.md)
 - [Documentazione sezioni](/docs/sections.md)
-<<<<<<< .merge_file_TQChq5
-- [Header: Lingua e Utente](/laravel/Modules/Cms/docs/sections/header-language-user-dropdown-3.md)
-- [Implementazione CMS](/laravel/Modules/Cms/docs/sections/header-language-user-dropdown-3.md)
-=======
 - [Header: Lingua e Utente](/laravel/Themes/One/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
 - [Implementazione CMS](/laravel/Modules/Cms/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
->>>>>>> .merge_file_Vu35gO
 
 ## Panoramica
 
 Il modulo UI di <nome progetto> include una vasta collezione di SVG di bandiere nazionali che possono essere utilizzati come componenti Blade. Questi componenti sono autoregistrati e possono essere facilmente integrati in qualsiasi parte dell'applicazione, incluso il selettore di lingue nell'header.
 
-<<<<<<< .merge_file_TQChq5
-#
-=======
 ## Str
->>>>>>> .merge_file_Vu35gO
 
 ### `folio-volt-best-practices.md` — Laravel Folio + Volt - Best Practices and Patterns Analysis
 
@@ -3537,11 +3032,7 @@ Il modulo `UI` non deve dipendere dal modulo `Geo`.
 - Nessun file nel monorepo referenzia `InteractiveMap` (né tag Livewire, né route/page, né altro componente): `grep -rln "InteractiveMap" Modules` non trova nulla fuori dal componente stesso.
 - Le 5 Action Geo richieste (`GetMapMarkersAction`, `GetMapStatsAction`, `ExportMapDataAction`, `GeocodeAddressAction`, `GetGeocodingSuggestionsAction`) non esistono in `Modu
 
-<<<<<<< .merge_file_TQChq5
 ### `getting-started-1.md` — Getting Started {#getting-started}
-=======
-### `getting-started.md` — Getting Started {#getting-started}
->>>>>>> .merge_file_Vu35gO
 
 
 # Getting Started {#getting-started}
@@ -3560,7 +3051,6 @@ return [
     'siteName' => 'My Site',
     'siteDescription' => 'Give your 
 
-<<<<<<< .merge_file_TQChq5
 ### `getting-started.md` — Getting Started with $MOD
 
 # Getting Started with $MOD
@@ -3584,8 +3074,6 @@ See README.md for features and examples.
 
 ## Troubleshooting
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `git-conflicts-inventory.md` — Inventario Conflitti Git - UI Module
 
 
@@ -3632,11 +3120,7 @@ Un tree dirty o un remote dietro/avanti **non** è sincronizzato, anche se l’a
 | Hub base discussion | https://github.com/provtv/base_ptv_fila5/discussions/204 |
 | Discussion | https://github.com/provtv/<nome repository>/discussions/204 |
 
-<<<<<<< .merge_file_TQChq5
 ### `global-search-2.md` — Global search — risorse esterne
-=======
-### `global-search.md` — Global search — risorse esterne
->>>>>>> .merge_file_Vu35gO
 
 
 # Global search — risorse esterne
@@ -3648,15 +3132,12 @@ Un tree dirty o un remote dietro/avanti **non** è sincronizzato, anche se l’a
 
 - <https://github.com/spatie/laravel-searchable>
 
-<<<<<<< .merge_file_TQChq5
 ### `global-search.md` — global-search
 
 
 https://github.com/spatie/laravel-searchable
 
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `glossary.md` — Glossario di dominio UI
 
 
@@ -3668,13 +3149,8 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 |---|---|---|
 | Blocco | Componente di contenuto riusabile (hero, heading, immagine, slider, navigazione, ...) scelto nel builder Filament. | `app/Filament/Blocks/` |
 | Elenco blocchi | Scoperta dei blocchi dei moduli: nome snake dalla classe, modulo dal namespace. | `app/Actions/Block/GetAllBlocksAction.php` |
-<<<<<<< .merge_file_TQChq5
-| Blocco localizzato | Dati del blocco risolti dal CMS se il modulo Cms esiste, altrimenti parametri invariati. | `app/Actions/Block/ResolveLocalizedBlockDataAction.php` |
-| Slider | Dati di una slide (miniature desktop e mobile, link, titolo, descrizioni) e relativa collezione. | `app/Datas/SliderData.php`, `app/Datas/SliderD
-=======
 | Blocco localizzato | Dati del blocco risolti dal CMS se il modulo Cms esiste, altrimenti parametri invariati. | `app/Actions/Block/GetLocalizedBlockDataAction.php` |
 | Slider | Dati di una slide (miniature desktop e mobile, link, titolo, descrizioni) e relativa collezione. | `app/Datas/SliderData.php`, `app/Datas/SliderDataC
->>>>>>> .merge_file_Vu35gO
 
 ### `group-column-fix.md` — GroupColumn Fix - Risoluzione Errore "Column not mounted to table"
 
@@ -3791,31 +3267,6 @@ public function registerBladeIcons(): void
 }
 ```
 
-<<<<<<< .merge_file_TQChq5
-### `iconstatesplitcolumn-implementation-1-2.md` — IconStateSplitColumn Implementation
-
-
-# IconStateSplitColumn Implementation
-
-## Overview
-
-The `IconStateSplitColumn` is a custom Filament table column component designed to display state transition icons in a compact, responsive grid layout. It extends Filament's `Column` component to provide an optimized user experience for state management in tables.
-
-## Key Features
-
-### 🎯 **Space Optimization**
-- **Compact Design**: Minimizes table space usage while maintaining full functionality
-- **Responsive Grid**: Adapts column count based on screen size
-- **Efficient Layout**: Icons are arranged in a grid to maximize space utilization
-
-### 📱 **Responsive Design**
-- **Mobile**: 2 columns for touch-friendly interaction
-- **Small screens**: 3 columns for better visibility
-- **Medium screens**: 4 columns for optimal balance
-- **Large sc
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `iconstatesplitcolumn-implementation-1.md` — IconStateSplitColumn Implementation
 
 
@@ -3843,13 +3294,6 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 
 # IDColumn: colonna id e ancora della riga
 
-<<<<<<< .merge_file_TQChq5
-## Cosa fa
-
-`Modules\UI\Filament\Tables\Columns\IDColumn` e' una `TextColumn` preconfigurata per la
-chiave primaria: label `ID`, ordinabile, ricercabile, e cella che emette l'ancora della
-riga.
-=======
 > Fact-gate: aggiorna stesso file; link da ADR [0002-idcolumn-mandatory-on-tables](adr/0002-idcolumn-mandatory-on-tables.md).
 > User: «colonna id di tipo IDColumn … migliorare con anchor link … docs/adr».
 
@@ -3858,26 +3302,18 @@ riga.
 `Modules\UI\Filament\Tables\Columns\IDColumn` e' la colonna **obbligatoria** per la
 chiave primaria: ordinabile, `copyable()` sullo stato grezzo, cella = self-link
 ancora della riga. ADR: [0002-idcolumn-mandatory-on-tables](adr/0002-idcolumn-mandatory-on-tables.md).
->>>>>>> .merge_file_Vu35gO
 
 ```php
 use Modules\UI\Filament\Tables\Columns\IDColumn;
 
-<<<<<<< .merge_file_TQChq5
-'id' => IDColumn::make('id'),
-=======
 'id' => IDColumn::make(),
->>>>>>> .merge_file_Vu35gO
 ```
 
 Rende:
 
-<<<<<<< .merge_file_TQChq5
 ```html
 <span id="record-1875" class="scroll-mt-24">1875</span>
 ```
-=======
->>>>>>> .merge_file_Vu35gO
 
 ### `ignore-suppressions-audit.md` — Audit `@phpstan-ignore` su Modules/UI
 
@@ -4049,17 +3485,10 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
-<<<<<<< .merge_file_TQChq5
-## Collegamenti tra versioni di lang-link-2.md
-* [lang-link-2.md](../../Lang/docs/lang-link-2.md)
-* [lang-link-2.md](../../Lang/docs/lang-link-2.md)
-* 
-=======
 ## Collegamenti tra versioni di lang-link.md
 * [lang-link.md](../../../Chart/docs/lang-link.md)
 * [lang-link.md](../../../Reporting/docs/lang-link.md)
 
->>>>>>> .merge_file_Vu35gO
 
 ### `laravel-13-upgrade.md` — Upgrade Laravel 13 - UI 🐄✨
 
@@ -4078,7 +3507,6 @@ L'upgrade a Laravel 13 per il modulo **UI** non è un mero aggiornamento tecnico
 - [x] **PHP ^8.4**: Allineamento ai requisiti di Laravel 13.
 - [x] **composer.json**: Aggiornato con `laravel/framework: ^13.0` e `nwidart/
 
-<<<<<<< .merge_file_TQChq5
 ### `launch-plan.md` — Product Launch Plan: UI Module v1.0
 
 
@@ -4099,12 +3527,8 @@ L'upgrade a Laravel 13 per il modulo **UI** non è un mero aggiornamento tecnico
 ## 📈 Post-Launch Tracking
 Monitor user satisfaction scores and frontend bundle performance.
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `layouts-and-themes-1.md` — Versione HEAD
 
-
-### Versione HEAD
 
 # Struttura dei Temi
 
@@ -4458,32 +3882,6 @@ Il design system di il progetto definisce...
 ```
 
 
-<<<<<<< .merge_file_TQChq5
-### `navigation-components-1-2.md` — Componenti di Navigazione
-
-
-# Componenti di Navigazione 
-
-## Indice
-- [Panoramica](#panoramica)
-- [Componenti Disponibili](#componenti-disponibili)
-- [Gestione dell'Autenticazione](#gestione-dellautenticazione)
-- [Localizzazione](#localizzazione)
-- [Best Practices](#best-practices)
-
-## Panoramica
-
-Questo documento descrive l'utilizzo corretto dei componenti di navigazione , con particolare attenzione alla gestione condizionale dell'autenticazione e alla localizzazione.
-
-## Componenti Disponibili
-
-### Componenti di Navigazione Principali
-
-- `<x-blocks.navigation.user-dropdown>` - Dropdown utente (visualizzato solo per utenti autenticati)
-- `<x-blocks.navigation.login-buttons>` - Pulsanti di login/registrazione (visualizzati solo per utenti non autenticati)
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `navigation-components-1.md` — Componenti di Navigazione
 
 
@@ -4660,22 +4058,6 @@ Questo module segue il **pattern on-demand** per rules, skills, commands e memor
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](htt
 
-<<<<<<< .merge_file_TQChq5
-### `paths-and-assets-1-2.md` — AVVISO IMPORTANTE (2025-05-13)
-
-
-# AVVISO IMPORTANTE (2025-05-13)
-
-> **ATTENZIONE:** Tutti i componenti UI condivisi (come `logo.blade.php`) devono essere SEMPRE posizionati in `Modules/UI/resources/views/components/ui/` e MAI in `resources/views/components/`. Qualsiasi violazione di questa regola causa errori di rendering, override errati, problemi di modularità e manutenzione.
->
-> **Errore riscontrato:** Il componente `logo.blade.php` era stato posizionato erroneamente in `resources/views/components/ui/` invece che in `Modules/UI/resources/views/components/ui/`.
->
-> **Causa:** Dimenticanza della regola di modularità Laraxot: tutti i componenti Blade UI condivisi devono essere sempre nel modulo UI, mai nella root Laravel.
->
-> **Soluzione:** Seguire SEMPRE la regola documentata qui sotto e aggiornata anche in README.md e
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `paths-and-assets-1.md` — AVVISO IMPORTANTE (2025-05-13)
 
 
@@ -4735,43 +4117,11 @@ Questo module segue il **pattern on-demand** per rules, skills, commands e memor
 - .cache/ (8KB nel repo)
 + ~/.cache/qmd-cache/ (fuori da git)
 
-<<<<<<< .merge_file_TQChq5
-### `philosophy-2.md` — UI Module Philosophy
-=======
 ### `philosophy-dev-rules.md` — UI Module Philosophy
->>>>>>> .merge_file_Vu35gO
 
 
 # UI Module Philosophy
 
-Reusable components, design system, and patterns for Filament, Folio, and Volt across all 47 modules.
-
-## First Principle
-
-> **One component library, infinite uses. Filament for admin, Folio+Volt for public, DRY everywhere.**
-
-UI components are shared, not reinvented per module. Patterns are consistent. Base classes from Xot are extended, not bypassed.
-
-## The Rules
-
-### 1. Xot-First Components, Never Filament Direct
-
-All UI components extend Xot base classes:
-```php
-// Resources
-class MyResource extends XotBaseResource { }
-
-
-<<<<<<< .merge_file_TQChq5
-### `philosophy-dev-rules.md` — UI Module Philosophy
-=======
-### `philosophy.md` — UI Module Philosophy
->>>>>>> .merge_file_Vu35gO
-
-
-# UI Module Philosophy
-
-<<<<<<< .merge_file_TQChq5
 Reusable components, design system, and patterns for Filament, Folio, and Volt across all 47 modules.
 
 ## First Principle
@@ -4806,19 +4156,6 @@ This document captures the philosophical and technical foundations of the UI mod
 ### 1. UI is Vocabulary, Not Clothing
 
 The UI module defines **what exists** in the interface. The theme defines **how it appears**.
-=======
-A design system is not a collection of components. It is a covenant about how an interface thinks.
-
-This document captures the philosophical and technical foundations of the UI module. It is not a tutorial; it is the reasoning behind the constraints.
-
----
-
-## Religione: The Non-Negotiable Dogmas
-
-### 1. UI is Vocabulary, Not Clothing
-
-The UI module defines **what exists** in the interface. The theme defines **how it appears**.
->>>>>>> .merge_file_Vu35gO
 
 **The distinction is not academic.**
 
@@ -4958,32 +4295,6 @@ Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome
 
 ### 🟢 **Media Module** - S3 Actions
 
-<<<<<<< .merge_file_TQChq5
-### `phpstan-namespace-correction-2.md` — Correzione Namespace nel Modulo UI
-
-
-# Correzione Namespace nel Modulo UI
-
-## Problema Identificato
-L'analisi PHPStan ha rilevato un errore nel namespace del modulo UI. Il namespace attuale è:
-```php
-namespace Modules\UI\app\Actions;
-```
-
-Mentre dovrebbe essere:
-```php
-namespace Modules\UI\Actions;
-```
-
-## Analisi dell'Errore
-
-### Struttura Corretta dei Namespace
-In un'applicazione Laravel modulare, la struttura dei namespace dovrebbe seguire questa convenzione:
-```
-Modules\{NomeModulo}\{TipoComponente}
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `phpstan-namespace-correction.md` — Correzione Namespace nel Modulo UI
 
 
@@ -5053,8 +4364,6 @@ if (property_exists($model, 'attribute')) {
 // CORRETTO - Rispetta __isset() magic method
 if (isset($model->attribute)) {
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `phpstan-radio-badge-fix-1.md` — Correzione Errori PHPStan - RadioBadge.php
 
 
@@ -5101,7 +4410,6 @@ if (isset($model->attribute)) {
 - **Causa**: Metodo `getEnumValue()` mancava del tipo di ritorno
 - **Soluzione**: Aggiunto tipo di ritorno `?BackedEnum`
 
->>>>>>> .merge_file_Vu35gO
 ### `phpstan-roadmap.md` — PHPStan Roadmap - UI Module
 
 
@@ -5133,11 +4441,7 @@ The **UI** module is fully compliant with PHPStan Level 10. No errors were repor
 - **Level**: max (root `laravel/phpstan.neon`)
 - **Errors**: **0**
 - **Last Checked**: 2026-11-16
-<<<<<<< .merge_file_TQChq5
-- **Story**: [bmad/stories/phpstan-modules-zero.story.md](bmad/stories/phpstan-modules-zero.story.md)
-=======
 - **Story**: [bmad/stories/phpstan-modules-zero.story.md](bmad/stories/0017-phpstan-modules-zero.story.md)
->>>>>>> .merge_file_Vu35gO
 
 ## Measure
 
@@ -5190,7 +4494,6 @@ Inconsistent UI across 30+ modules leads to poor user experience, high maintenan
 - As a **Developer**, I want a library of pre-built Blade components so I can build pages faster.
 
 
-<<<<<<< .merge_file_TQChq5
 ### `product-launch-plan-2.md` — UI Module - Product Launch Plan
 
 
@@ -5237,8 +4540,6 @@ Rilasciare **UI** in modo controllato, misurabile e coerente con il suo ruolo: d
 - PRD e roadmap aggiornati
 - test critici verdi
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `product-requirements.md` — Product Requirements Document (PRD)
 
 
@@ -5262,7 +4563,6 @@ Rilasciare **UI** in modo controllato, misurabile e coerente con il suo ruolo: d
 ### Descrizione Breve
 Il modulo UI fornisce **componenti UI condivisi e layout** per l'ecosistema Laraxot. Include componenti Blade riutilizzabili, layout comuni e integrazione Filament.
 
-<<<<<<< .merge_file_TQChq5
 ### `product-roadmap-2.md` — UI Module - Product Roadmap
 
 
@@ -5355,8 +4655,6 @@ Portare **UI** a uno stato in cui il progetto ottiene un vantaggio netto e misur
 - DRY: riuso prima di duplicare
 - KISS: superfici semplici e veritiere
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `project-structure.md` — Project Structure — Module **UI**
 
 
@@ -5376,11 +4674,7 @@ Portare **UI** a uno stato in cui il progetto ottiene un vantaggio netto e misur
 │   │   ├── 00-TRIGGER_MAP.md    # Trigger map (link a globale)
 │   │   └── *.md                 # Regole specifiche modulo
 │   ├── skills/                   # Skill progettuali
-<<<<<<< .merge_file_TQChq5
-│   │   ├── index-2.md
-=======
 │   │   ├── index.md
->>>>>>> .merge_file_Vu35gO
 │   │   └── *.md
 │   ├── commands/                 # Comandi progettuali
 
@@ -5390,11 +4684,6 @@ Portare **UI** a uno stato in cui il progetto ottiene un vantaggio netto e misur
 # Regole per i Prompt
 
 Per le regole sui prompt, fare riferimento a [Regole Prompt nel modulo Xot](../../Xot/docs/PROMPT_RULES.md)
-### Versione HEAD
-
-
-### Versione Incoming
-
 
 ## Collegamenti tra versioni di PROMPT_RULES_LINK.md
 * [PROMPT_RULES_LINK.md](../../../UI/docs/PROMPT_RULES_LINK.md)
@@ -5510,17 +4799,10 @@ Class Modules\Notify\Filament\Forms\Components\ParentSelect
   (rule: Modules\UI\ => ./Modules/UI/app). Skipping.
 ```
 
-<<<<<<< .merge_file_TQChq5
-### `public-resources-management-1-2.md` — Gestione delle Risorse Pubbliche
-
-
-# Gestione delle Risorse Pubbliche 
-=======
 ### `public-resources-management-1.md` — Gestione delle Risorse Pubbliche
 
 
 # Gestione delle Risorse Pubbliche
->>>>>>> .merge_file_Vu35gO
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -5538,32 +4820,8 @@ Questo documento descrive la corretta gestione delle risorse pubbliche (immagini
 La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
-<<<<<<< .merge_file_TQChq5
 /var/www/html/saluteora/
-
-### `public-resources-management-1.md` — Gestione delle Risorse Pubbliche
-
-
-# Gestione delle Risorse Pubbliche
-
-## Indice
-- [Panoramica](#panoramica)
-- [Struttura delle Cartelle](#struttura-delle-cartelle)
-- [Tipi di Risorse](#tipi-di-risorse)
-- [Best Practices](#best-practices)
-- [Esempi di Utilizzo](#esempi-di-utilizzo)
-
-## Panoramica
-
-Questo documento descrive la corretta gestione delle risorse pubbliche (immagini, CSS, JavaScript, ecc.) , con particolare attenzione alla struttura delle cartelle e alle best practices da seguire.
-
-## Struttura delle Cartelle
-
-La struttura corretta per le risorse pubbliche  è la seguente:
-
 ```
-
-=======
 
 
 ### `purpose.md` — UI: scopo del modulo
@@ -5583,7 +4841,6 @@ Verificare sul codice: dipendenze verso Xot/User/Ptv/Sigma secondo la regola
 - [Audit BMAD](./bmad/audit.md)
 - [Piano di miglioramento](./bmad/piano-miglioramento.md)
 - [ECC](./ecc/ui-ecc-audit.md)
->>>>>>> .merge_file_Vu35gO
 
 ### `qmd-setup.md` — QMD Setup per Module **UI**
 
@@ -5631,7 +4888,6 @@ rifare e contestare.
 | PHPInsights — Code | 92.9 % |
 | PHPInsights — Complexity | 100.0 % |
 
-<<<<<<< .merge_file_TQChq5
 ### `quality-report-2.md` — Quality Report — UI
 
 
@@ -5655,8 +4911,6 @@ cd laravel
 XDEBUG_MODE=coverage php -d memory_limit=2G ./vendor/bin/pest Modules/UI/tests \
   --coverage-text --colors=never
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `quality-report.md` — UI Module - Quality Report
 
 
@@ -5704,21 +4958,11 @@ High-risk findings:
 - Config files exist in both `Config/` and `config/`, including `config.php`, `laravel-localization.php`, and `laravellocalization.php`.
 - Many UI components are byte-identical with `Modules/User`, including `button`, `modal`, `input`, `checkbox`, `badge`, `link`, `nav-link`, `text-link`, `placeholder`, and marketing/layout components.
 - Block stats are duplicated under both `archived/` and `superseded/`.
-<<<<<<< .merge_file_TQChq5
-- Docs have case-only duplicates such as `architecture-2.md` and `architecture.md`, plus duplicate index variants.
-=======
 - Docs have case-only duplicates such as `ARCHITECTURE.md` and `architecture.md`, plus duplicate index variants.
->>>>>>> .merge_file_Vu35gO
-
-- Docs have case-only duplicates such as `architecture.md` and `architecture.md`, plus duplicate index variants.
 
 Risk:
 - UI should be the shared owner. Duplicating primitives in User makes fixes diverge.
-<<<<<<< .merge_file_TQChq5
-- `Config/` vs 
-=======
 - `Config/` vs `c
->>>>>>> .merge_file_Vu35gO
 
 ### `redundancy-report.md` — Redundancy Report — Modulo UI
 
@@ -5843,8 +5087,6 @@ Il secondo era la versione legacy per i componenti Livewire (aveva anche `refres
 2. Usare checklist pre-merge e post-fix.
 3. Mantenere un set di file canonici per diagnosi rapida.
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `roadmap/archive/component-system.md` — Sistema Componenti UI
 
 
@@ -5914,7 +5156,6 @@ Completamento: 40%
 
 ### 2. Runtime Theming
 
->>>>>>> .merge_file_Vu35gO
 ### `roadmap/current-state.md` — Current State - UI
 
 
@@ -6051,11 +5292,7 @@ Completamento: 40%
 ## Milestones
 - [ ] Audit Filament v4 changes in components/pages
 - [ ] Replace labels with translations (expanded structure)
-<<<<<<< .merge_file_TQChq5
-- [ ] Optimize icons/assets; document in `docs/paths-and-assets-2.md`
-=======
 - [ ] Optimize icons/assets; document in `docs/paths_and_assets.md`
->>>>>>> .merge_file_Vu35gO
 - [ ] Strengthen tests for critical widgets
 
 ## Acceptance Criteria
@@ -6096,11 +5333,7 @@ Completamento: 40%
 ## Milestones
 - [ ] Audit Filament v4 changes in components/pages
 - [ ] Replace labels with translations (expanded structure)
-<<<<<<< .merge_file_TQChq5
-- [ ] Optimize icons/assets; document in `docs/paths-and-assets-2.md`
-=======
 - [ ] Optimize icons/assets; document in `docs/paths_and_assets.md`
->>>>>>> .merge_file_Vu35gO
 - [ ] Strengthen tests for critical widgets
 
 ## Acceptance Criteria
@@ -6342,31 +5575,6 @@ Questo documento descrive l'implementazione di una modale di conferma con textar
 3. L'utente può inserire un messaggio opzionale
 4. Alla conferma, viene eseguita la transizione con il mes
 
-<<<<<<< .merge_file_TQChq5
-### `spatie-media-library-migration-1-2.md` — Migrazione da FileUpload a Spatie Media Library
-=======
-### `spatie-media-library-migration-1.md` — Migrazione da FileUpload a Spatie Media Library
->>>>>>> .merge_file_Vu35gO
-
-
-# Migrazione da FileUpload a Spatie Media Library
-
-## 🌍 Analisi Multidimensionale della Migrazione
-
-### **Filosofia & Spiritualità**
-- **Evoluzione Paradigmatica**: Passaggio da gestione **atomistica** (FileUpload singoli) a gestione **sistemica** (Media Library ecosystem)
-- **Humilitas Technologica**: Riconoscere la superiorità di soluzioni specializzate mature
-- **Zen del Non-Agire**: Wu wei - non combattere contro l'ecosistema, fluire con esso
-
-### **Economia & Sostenibilità**
-- **ROI Esponenziale**: Riduzione drammatica dei costi di manutenzione
-- **Debito Tecnico**: Eliminazione di custom implementations fragili
-- **Economia Circolare**: Riuso di componenti testati e ottimizzati
-- **Efficienza Energetica**: Codice più performante = minor consumo server
-
-### **Biologia & Chimica del C
-
-<<<<<<< .merge_file_TQChq5
 ### `spatie-media-library-migration-1.md` — Migrazione da FileUpload a Spatie Media Library
 
 
@@ -6387,452 +5595,6 @@ Questo documento descrive l'implementazione di una modale di conferma con textar
 
 ### **Biologia & Chimica del C
 
-### `stories/01.ui-phpstan-fix.story.md` — Story: UI PHPStan fix
-
-
-# Story: UI PHPStan fix
-
-## Story
-
-Come owner UI, voglio che `Modules/UI` sia PHPStan-green (0 errori reali) seguendo il
-workflow "PHPStan zero" (`bashscripts/docs/prompts/03-quality-gates.md`), senza ignore,
-baseline, o modifiche a `phpstan.neon`.
-
-## Baseline (2026-09-07, sessione corrente)
-
-All'avvio sessione il modulo aveva gia' un working tree condiviso con WIP non mio: 7 file
-in `app/Filament/Blocks/` (`Category.php`, `Contact.php`, `Image.php`, `Navigation.php`,
-`Page.php`, `Post.php`, `Slider.php`) con `getFormSchema()` convertito da
-`public static function` a `public function`, allineandosi alla convenzione repo-wide
-(`$this->getFormSchema()`, usata in `XotBaseResource`, `XotBasePage`, `XotBaseWidget`,
-`XotBaseRelationManager`). Nessun claim attivo trovato in `docs/chat/INDEX.md`
-
-### `stories/12.1.retire-ui-http-livewire.story.md` — 12.1 Ritiro HTTP UI
-
-
-# 12.1 Ritiro HTTP UI
-
-## GitHub (tracciamento)
-
-| Risorsa | Ruolo |
-|---------|-------|
-| [#35](https://github.com/laraxot/module_ui_fila5/issues/35) | issue |
-| [#36](https://github.com/laraxot/module_ui_fila5/discussions/36) | discussion |
-
-La descrizione originale di issue e discussion citava anche `Toast` nello scope. Questa revisione della storia lo esclude (vedi sotto); chi ha accesso al repo GitHub dovrebbe aggiornare titolo/corpo di #35 e #36 di conseguenza, o commentare il perché dell'esclusione — azione non eseguita da questa sessione, che non pubblica commenti o modifiche su GitHub per conto dell'utente senza conferma esplicita in chat.
-
-## Story
-
-Come maintainer del modulo UI voglio un solo `DarkModeSwitcher` (il widget Filament già esistente), così il tema non porta con sé u
-
-### `stories/18-1-drift-sync-tier1.story.md` — Drift Sync Tier 1 — laraxot/dev fetch e merge moduli critica
-
-
-# Drift Sync Tier 1 — laraxot/dev fetch e merge moduli critica
-
-**Epic:** 18 - Sincronizzazione Drift + Dedup Docs  
-**Story:** 18-1  
-**Status:** todo
-
-Sincronizzazione repo remoti Tier 1 (UI, Job, AI, Geo, Tenant) con `laraxot/dev`, risolvendo divergenza massima (0-1485 commit dietro) e certificando verde PHPStan/PHPMD post-merge.
-
-## Contesto
-
-Scoperto durante sprint PHPStan L10 (2026-09-06):
-- **UI** 1485 commit dietro `laraxot/dev`
-- **Job** 1258 commit dietro
-- **AI** 961 commit dietro
-- **Geo** 854 commit dietro
-- **Tenant** 824 commit dietro
-
-Timestamp divergenza: HEAD locale ~14:59, laraxot/dev ~19:37 (altre sessioni pushano costantemente). Lavoro precedente in sospeso: 13 commit dedup docs non pushati da sessione 2026-09-04 (da riapplicare post-merge).
-
-
-### `stories/19.ui-merge-conflict-resolution.story.md` — 19.UI: risoluzione dei marker del merge HEAD vs laraxot/dev
-
-
-# 19.UI: risoluzione dei marker del merge HEAD vs laraxot/dev
-
-**Fase BMAD:** Docs/Review (chiusura del merge, verifica, tracciamento followups)
-**Story ID:** 19.UI-merge-conflict-resolution
-**Stato:** done (risoluzione); followups aperti elencati sotto
-**Precedenti dello stesso problema:** [5.8](./5.8.merge-conflict-markers-cleanup.story.md), [5.12](./5.12.merge-markers-regressione-c89696dc.story.md)
-
-## Problema
-
-Il commit `e7e667b11` (7 ottobre 2026) ha portato nel repository un merge `HEAD` contro `laraxot/dev` con marker di conflitto non risolti. Nel modulo UI i file con marker erano **507 file PHP** (codice, lang, view Blade, test) e **7 file `.md`**. PHPStan non poteva analizzare i file con marker (`phpstan.parse`) e le regole di agnosticismo e le traduzioni erano a rischio.
-
-## Re
-
-### `stories/20.ui-sync-marker-repair.story.md` — 20.UI: marker del sync `laraxot/dev` nei nove file PHP di `app/`
-
-
-# 20.UI: marker del sync `laraxot/dev` nei nove file PHP di `app/`
-
-**Fase BMAD:** Dev/Review (risoluzione e verifica; nessun codice nuovo)
-**Stato:** done per i file PHP; restano aperti i punti sotto "Fuori scope"
-**Precedenti:** [19](./19.ui-merge-conflict-resolution.story.md), [5.12](./5.12.merge-markers-regressione-c89696dc.story.md)
-
-## Obiettivo
-
-`cd laravel && ./vendor/bin/phpstan analyse Modules` non partiva: `phpstan.parse` su ogni file con
-`<<<<<<<`/`>>>>>>>`. Il sync `bashscripts/git/subtrees/merge_remote_repo_2.sh` (merge di `laraxot/dev` nel
-modulo, poi `commit -am .`) li aveva committati, spesso annidati. In `UI` erano nove file in `app/`.
-Obiettivo: ogni file torna a fare quello per cui esiste, senza scegliere un lato per abitudine.
-
-## Risoluzione per file
-
-| File | Scopo 
-
-### `stories/5.12.merge-markers-regressione-c89696dc.story.md` — 5.12: Regressione dei marker di conflitto nel modulo UI
-
-
-# 5.12: Regressione dei marker di conflitto nel modulo UI
-
-**Story ID:** 5.12
-**Epic:** 5 — Code Quality & Infrastructure
-**Status:** done
-**Created:** 2026-08-27
-**Precedente:** [5.8 merge-conflict-markers-cleanup](5.8.merge-conflict-markers-cleanup.story.md) — stessa causa, chiusa il 18 agosto 2026 e **rientrata**
-
-## Story
-
-Come **agente che deve verificare il proprio lavoro con PHPStan**,
-voglio **che nessun file del modulo `UI` contenga marker di conflitto git**,
-così **`analyse Modules` misura il codice invece di fermarsi sui `phpstan.parse`, e
-`git status` torna a funzionare nel repo del modulo**.
-
-La 5.8 aveva chiuso lo stesso problema il 18 agosto limitandosi a `Modules/**/*.php`.
-Il 27 agosto alle 09:12:51 i marker sono rientrati su **316 file**, di cui 292 `.md`,
-20 `.php`, 2 `
-
-### `stories/5.8.merge-conflict-markers-cleanup.story.md` — 5.8: Rimuovere i marker di conflitto git committati nel modulo UI
-
-
-# 5.8: Rimuovere i marker di conflitto git committati nel modulo UI
-
-**Story ID:** 5.8
-**Epic:** 5 — Code Quality & Infrastructure
-**Slug:** merge-conflict-markers-cleanup
-**Status:** done
-**Created:** 2026-08-18
-**Updated:** 2026-08-18
-
-## Story
-
-Come **agente che deve verificare il proprio lavoro con PHPStan**,
-voglio **che nessun file del modulo `UI` contenga marker di conflitto git**,
-così **`analyse Modules` produce un elenco di errori invece di fermarsi su 6 `phpstan.parse`**.
-
-Un errore `phpstan.parse` è marcato `non-ignorable`: finché resta, l'analisi non è
-attendibile per nessun altro file e il lavoro di verifica di tutti gli agenti in
-parallelo è azzerato.
-
-
-### `stories/7.12.phpstan-concurrent-tail-contracts.story.md` — Story UI-7.12: contratti tail dopo remediation concorrente
-
-
-# Story UI-7.12: contratti tail dopo remediation concorrente
-
-## Story
-
-Come owner UI, voglio chiudere i cinque finding emersi dopo la remediation concorrente,
-così che il modulo torni a zero senza riaprire sette shard ormai verdi.
-
-## Baseline e cause radice
-
-**5 findings / 4 file** dal cold JSON successivo a UI-7.4:
-
-- `BladeXssMitigationsTest`: `function.notFound` per una chiamata globale `skip()` non Pest.
-- `UiCoverageAuthUser`: Collection permission con key/value generici non conformi al
-  contratto Spatie `Collection<int, Permission>`.
-- `UiHighestMissCoverageTest`: assertion `assertIsArray()` già determinata.
-- `UiRemainingCoverage100Test`: cast stringa impossibile e haystack `mixed` sulla stessa riga.
-
-## Acceptance Criteria
-
-
-### `stories/7.13.mixed-type-reduction.story.md` — Story UI-7.13: riduzione uso di mixed dove il tipo e' noto
-
-
-# Story UI-7.13: riduzione uso di mixed dove il tipo e' noto
-
-## Story
-
-Come owner UI, voglio sostituire `mixed` con un tipo piu' preciso ovunque il valore reale
-sia deducibile con certezza dal codice circostante, cosi' che il modulo resti PHPStan-green
-e i contratti dei componenti siano piu' leggibili, senza inseguire una copertura al 100%
-(convenzione "dove possibile").
-
-## Baseline
-
-`grep -rnE '\bmixed\b' Modules/UI --include="*.php"` (esclusi i test): **36 file, 103
-occorrenze**. La maggioranza sono `mixed` legittimi (contratti Filament/vendor tipizzati
-`mixed` a monte, payload JSON/config genuinamente eterogenei, `LocationSelector.php` e
-`InteractiveMap.php` sotto lock attivo `docs/chat/ui-geo-boundary-lock.md`).
-
-## Acceptance Criteria
-
-<!-- LOCKED. External dev tools must not edit 
-
-### `stories/7.14.phpstan-locationselector-geo-boundary-cleanup.story.md` — Story UI-7.14: fix phpstan report (40 errori, 3 file)
-
-
-# Story UI-7.14: fix phpstan report (40 errori, 3 file)
-
-## Story
-
-Come owner UI, voglio azzerare i 40 errori phpstan del report `phpstan-swarm/UI.txt`
-(36 in `LocationSelector.php`, 2+2 in due test Pest), senza introdurre `mixed` ne'
-toccare `phpstan.neon`.
-
-## Contesto e scoperta chiave
-
-Il report descriveva 36 errori `class.notFound`/`method.nonObject` su
-`Modules\Geo\Models\Comune` (modulo `Geo` assente in questo progetto). Il fix
-ovvio sarebbe stato patchare `LocationSelector.php` con risoluzione dinamica
-della classe (`class_exists()` + `class-string<Model>`) — **primo tentativo
-fatto e verificato phpstan-clean** (vedi diff intermedio nello storico commit,
-poi scartato).
-
-Prima di committare, verifica doverosa (regola second-brain: "il codice batte
-la wiki" ma va SEMPRE controllato 
-
-### `stories/7.15-interactivemap-geo-boundary-violation.story.md` — 7.15 — `InteractiveMap.php`: stessa violazione di confine di `LocationSelector.php`
-
-
-# 7.15 — `InteractiveMap.php`: stessa violazione di confine di `LocationSelector.php`
-
-## Contesto
-
-Trovato durante l'audit fleet-wide `phpstan analyse Modules` (story root
-`docs/stories/5.130-quality-gates-residuals.story.md`, sessione
-claude-16515-fila5, 2026-09-15). Documentato qui perché riguarda UI
-specificamente.
-
-## Precedente diretto: story 7.14 (già chiusa)
-
-`app/Filament/Forms/Components/LocationSelector.php` aveva la stessa firma
-(import `Modules\Geo\...` assente, dominio Geo non presente nel progetto) ed è
-stato **rimosso** per decisione utente esplicita e ripetuta (verificato
-`git log -S`, 4 cancellazioni precedenti reintrodotte da un mass-import — vedi
-story 7.14, `docs/geo-boundary.md`). Il file è stato **ri-risuscitato due
-volte** dopo la cancellazione (untracked su disco,
-
-### `stories/7.3.phpstan-shared-fixture-contracts.story.md` — Story UI-7.3: contratti fixture condivise coverage
-
-
-# Story UI-7.3: contratti fixture condivise coverage
-
-## Story
-
-Come owner UI, voglio tipizzare le fixture condivise prima dei test consumer, così che
-generici Eloquent, stati e firme negative descrivano i boundary reali una sola volta.
-
-## Baseline e cause radice
-
-**22 findings / 9 file**: generici `HasOne`/Model assenti, iterable senza value type,
-parametri non tipizzati, offset non validi e union di ritorno impossibili. Le fixture sono
-importate da più shard: la loro firma è un dependency-cone gate.
-
-## Acceptance Criteria
-
-<!-- LOCKED. External dev tools must not edit Acceptance Criteria. -->
-
-1. Relazioni e model fixture dichiarano generici related/declaring esatti.
-2. Stati, mapping, parametri e array hanno value type coerenti coi consumer reali.
-
-### `stories/audit-qualita.story.md` — Audit qualita' — modulo UI
-
-
-# Audit qualita' — modulo UI
-
-Story BMAD dell'audit di qualita' coordinato nella issue
-[#64](https://github.com/laraxot/base_techplanner_fila5/issues/64).
-Ambito: solo `Modules/UI` (documentazione e `app/`).
-
-## Baseline e risultato
-
-| Verifica | Prima | Dopo |
-|---|---|---|
-| PHPStan max (`Modules/UI`) | 0 errori | 0 errori |
-| Pest (`Modules/UI/tests`) | 11 falliti / 223 passati / 116 skipped | 11 falliti / 223 passati / 116 skipped |
-| Occorrenze `mixed` in `app/` | 103 | 97 |
-
-## Documentazione
-
-- File `.md` con data/timestamp nel nome: 7 rinominati, 15 uniti al file canonico
-  omonimo (contenuto unico conservato sotto "Contenuto unito da ..."), 14 rimossi perche' vuoti
-  o gia' contenuti nel canonico. La data originale e' ora nel frontmatter `created:`.
-
-### `stories/continuation.story.md` — UI Module — Continuation Task
-
-# UI Module — Continuation Task
-
-## Stato
-Modulo con modifiche non ancora sincronizzate nel proprio .git.
-
-## Task
-1. Aggiungere `protected static string $model =` a tutte le table class mancanti
-2. Audit `getTableColumns()` — verificare campi modello
-3. Migliorare UI/UX (badge, toggleable, sortable)
-4. `php -l` su tutti i file toccati
-5. `git commit -m "BMAD: table audit"`
-
-## Modelli attesi (da verificare)
-- Tabella: `Modules\$m\Filament\Resources\*`
-- Modello: `Modules\$m\Models\*`
-
-### `stories/cookiebar-visual-audit.story.md` — Cookiebar Visual Audit
-
-
-# Cookiebar Visual Audit
-
-## Objective
-
-Audit the `ui/cookiebar.blade.php` component for visual quality, accessibility, and compliance with cookie consent regulations (GDPR/LDMA).
-
-## Current State
-
-File: `laravel/Modules/UI/resources/views/components/ui/cookiebar.blade.php`
-
-Issues identified:
-- Inline `<script>` and `<style>` tags violate Livewire/Blade component isolation
-- No `prefers-reduced-motion` media query support
-- Auto-hide on scroll is jarring and may confuse users with motor impairments
-- No focus management for keyboard navigation
-- The `acceptText`, `rejectText`, `customizeText` props use `__()` but the default strings are hardcoded Italian
-- Missing `role="dialog"` and `aria-live` for screen readers
-- Cookie preference state not persisted in a testable way (`$wire.acceptA
-
-### `stories/docs-index-audit.story.md` — Audit indice documentazione modulo UI
-
-
-# Audit indice documentazione modulo UI
-
-Rigenerato `Modules/UI/docs/index.md` come indice unico e organizzato per argomento/cartella dei 1030 file `.md` sotto `docs/`, senza spostare, rinominare o cancellare alcun file esistente.
-Individuati 77 cluster di varianti duplicate in root (collisioni case-insensitive o copie `-1`/`-2`) e le cartelle `archive/`, `legacy/`, `prior_cycles/`, `root-md-files/`, `root-txt-files/` (186 + 181 file totali), raggruppate in "Storico / da consolidare" con nota, non toccate.
-`00-index.md` e `README.md` segnalati come indici/contenuti legacy fusi (merge case-insensitive pregressi) da consolidare in futuro, ma lasciati intatti.
-Verifica: tutti i 1035 link relativi generati puntano a file esistenti (controllo automatico, zero broken link).
-
-### `stories/id-timestamp-columns-extraction.story.md` — Story: SortableIdColumn / TimestampColumn
-
-
-# Story: SortableIdColumn / TimestampColumn
-
-## Story
-
-Come owner UI, voglio estrarre in un componente riutilizzabile il trio di
-colonne `id`/`created_at`/`updated_at` ripetuto identico in decine di
-classi `Tables/*.php`, cosi' che i nuovi `Table` del progetto smettano di
-ricopiare la stessa configurazione e un'eventuale correzione futura
-(es. cambiare il placeholder dei valori nulli) si faccia in un solo posto.
-
-## Baseline
-
-`grep -rl "TextColumn::make('id')->sortable()->copyable()->toggleable" Modules --include="*.php"`
-→ **32 file**. `grep -rl "TextColumn::make('created_at')->dateTime()->sortable()->placeholder" Modules --include="*.php"`
-→ **~30 file**. Concentrati soprattutto in `Modules/User`
-(`RolesTable`, `PermissionsTable`, `TenantsTable`, tutte le `Oauth*Table`,
-`SocialProviders
-
-### `stories/person-column-schema-org-aggregate.story.md` — Story: PersonColumn — aggregato riutilizzabile anagrafica + contatto
-
-
-# Story: PersonColumn — aggregato riutilizzabile anagrafica + contatto
-
-## Contesto (BMAD: dev)
-
-Durante il fix di `Modules/<nome progetto>/app/Filament/Resources/ContactResource/Tables/ContactsTable.php`
-(colonne del model `Contact` recuperate via git archaeology dal commit `ee9731ee1`,
-vedi [[xotbaseresourcetable-orphaned-columns-git-archaeology]]), l'utente ha chiesto
-di non limitarsi a elencare `first_name`, `last_name`, `mobile_phone`, `email`,
-`language` come colonne separate, ma di aggregarle in un componente riutilizzabile
-dentro `Modules/UI`, sul modello di `AddressColumn`, con riferimento al vocabolario
-`https://schema.org/Person`.
-
-## Decisione
-
-Creato `PersonColumn` (`Modules/UI/app/Filament/Tables/Columns/PersonColumn.php`),
-gemello di `PersonSection` (`Modules/UI/app/Filamen
-
-### `stories/person-column-schema-org-identity-group.story.md` — STORY — PersonColumn
-
-
-# STORY — PersonColumn
-
-## Contesto (BMAD — Ricognizione)
-
-Richiesta utente: le colonne `first_name`, `last_name`, `mobile_phone`,
-`email`, `language` su `<nome progetto>\Contact` sono informazioni imparentate
-(identita' di una persona) e andavano aggregate in un componente
-riutilizzabile in `Modules/UI`, sul modello di
-`Modules/UI/app/Filament/Tables/Columns/AddressColumn.php`, usando
-schema.org come riferimento per decidere quali campi appartengono insieme.
-
-`Modules/UI/docs/form-column-parity.md` da' il discriminante gia' in uso nel
-modulo per decidere se un raggruppamento del genere merita un componente
-dedicato: "raccoglie piu' campi del model / e' un fatto di dominio →
-gemello; e' un modo di inserire un valore → nessun gemello". Identita' di
-una persona (nome, cognome, contatti) e' 
-
-### `stories/phpstan-cleanup-ui.story.md` — [STORY] PHPStan cleanup — UI
-
-
-# [STORY] PHPStan cleanup — UI
-
-## User Request
-
-«sistema tutte le segnalazioni di phpstan [...] concentrati sullo scopo/funzionalità, non sull'errore; aumenta la qualità del codice; usa enum al posto delle costanti».
-
-Perimetro: segnalazioni PHPStan (level max) del modulo UI. Errori di partenza: 6 `constantTypeCoverage` (colonne Filament), 1 `assign.redundant` (InlineDatePicker), 1 `variable.unused` (GroupColumnTest).
-
-## Analysis
-
-**Scopo del codice.** UI contiene componenti Filament/Blade di presentazione. Le sei colonne (`AddressColumn`, `EventColumn`, `OpeningHoursColumn`,
-`OrganizationColumn`, `PersonColumn`, `SortableIdColumn`) hanno `DEFAULT_NAME`, il nome di default della colonna quando si usa `::make()` senza argomenti:
-configurazione, non un insieme di valori => `protected cons
-
-### `stories/phpstan-ui-setlocale-duplicate-guard.story.md` — PHPStan UI: guardia duplicata in SetLocale
-
-
-# PHPStan UI: guardia duplicata in SetLocale
-
-Fase BMAD: Dev + Docs.
-
-## Richiesta
-
-Azzerare gli errori PHPStan guardando lo scopo. Perimetro: `function.alreadyNarrowedType` a `SetLocale.php:30`.
-
-## Analisi
-
-**Scopo.** `SetLocale` sceglie la lingua: segmento URL / parametro `lang` se e' `it` o `en`, altrimenti sessione, altrimenti `app.locale`; poi `App::setLocale()` e salva in sessione.
-
-`Session::get()` restituisce `mixed`, quindi la prima guardia `if (! is_string($locale)) { $locale = Config::string('app.locale'); }` difende un caso reale (sessione con valore non stringa; lo copre il test `SetLocale handles non-string session locale`). Il commit 4c45950 (2026-10-08) ha aggiunto la logica da URL e ha lasciato la guardia originale accanto a una nuova identica: dopo la prima `$locale` e'
-
-### `stories/placeholder-translations-cleanup.story.md` — Via le traduzioni segnaposto dai file di lingua
-
-
-# Via le traduzioni segnaposto dai file di lingua
-
-Rimosse le voci `helper_text`, `placeholder`, `description`, `tooltip`, `label`, `heading` e `hint` uguali al nome del
-campo. Le aveva scritte il salvataggio automatico delle chiavi mancanti (`AutoLabelAction`, solo in locale) e
-comparivano in produzione come testo sotto e dentro i campi. Eliminati anche i file `.php` senza nome.
-
-Strumento: `php artisan lang:clean-placeholders {Modulo} [--dry-run]` (modulo Lang). Tocca solo i file di soli
-dati: quelli che chiamano funzioni restano come sono.
-
-### `stories/quality-gate-ui.story.md` — Quality gate closure — Modules/UI
-
-
-# Quality gate closure — Modules/UI
-
-BMAD phases covered by this story: **Build** (5 mechanical phpmd fixes) + **Measure**
-(phpstan/phpmd/pest verification, coverage doc, git sync). Standing order pillar 5
-(quality-gate closure) for `Modules/UI`, run 2026-09-04.
-
-## Context
-=======
 ### `standards/auth-form-standards.md` — Standard Form di Autenticazione
 
 
@@ -7413,155 +6175,11 @@ Scelta: **implementare**, perché i driver sopra.
 # Quality gate closure — Modules/UI
 
 ## Context and Problem Statement
->>>>>>> .merge_file_Vu35gO
 
 PHPStan on `Modules/UI` was already verified at 0 errors earlier the same day (documented
 in `docs/coverage.md`'s "Mixed type reduction" entry). Scope for this pass: phpmd, pest,
 coverage, git — with a phpstan baseline re-check.
 
-<<<<<<< .merge_file_TQChq5
-## Build — what was fixed
-
-`./tools/phpmd.sh Modules/UI/app text ../docs/phpmd.ruleset.xml` reported 64 findings.
-5 were `MissingImport` (FQCN `throw new \X(...)` / `new \X(...)` instead of a `use`
-statement) — mechanical, zero-behavior-change fixes, applied to:
-
-1. `app/Actions/Block/Resolve
-
-### `stories/services-to-actions-ui.story.md` — Services -> Actions nel modulo UI
-
-
-# Services -> Actions nel modulo UI
-
-## Richiesta
-
-Ordine permanente (2026-10-08): nessun `app/Services` ne' classe `*Service` nei moduli; ogni use case diventa una
-Spatie Queueable Action con tutti i chiamanti aggiornati (epic `bmad-output/epic-code-standards-services-mixed-const.md`,
-cluster "Moduli piccoli").
-
-## Analisi (lo scopo, non il messaggio)
-
-La story di settembre [`ui-services-to-actions`](./ui-services-to-actions.story.md) aveva gia' chiuso la questione:
-i cinque file erano gia' stati archiviati e `UIService` era stato cancellato. Nel commit `3bae460` (2026-10-07) sono
-ricomparsi tutti e cinque. Verificato prima di toccare qualunque cosa:
-
-| Classe | Scopo reale | Chiamanti (`rg` su Modules, Themes, app, config, resources, test, anche Blade) |
-|---|---|---|
-| `Services/Compon
-
-### `stories/ui-module-bmad-setup.story.md` — UI Module BMAD Setup
-
-
-# UI Module BMAD Setup
-
-## Overview
-Initial BMAD documentation setup for the UI module.
-
-## Acceptance Criteria
-- [ ] All BMAD docs created in `Modules/UI/docs/`
-- [ ] decision-log.md updated
-- [ ] PHPStan passes on UI module
-- [ ] Pint --dirty passes
-
-## Standing claim (2026-11-24)
-
-- Merge markers cleared in `app/` + `routes/` (8 entrypoints) so PHPStan can parse the module.
-- Routes are empty stubs; no `require` of `Modules/Xot/routes/empty.php`.
-- Kept `@contract` docs and Cms `class_exists` guard in `ResolveLocalizedBlockDataAction`.
-- Inventory: [git-merge-conflict-inventory](../wiki/troubleshooting/git-merge-conflict-inventory.md).
-
-## Notes
-
-### `stories/ui-readme-architecture-conflict-cleanup.story.md` — Risolve conflitti README + consolida docs/architecture case-dupes
-
-
-# Risolve conflitti README + consolida docs/architecture case-dupes
-
-## Contesto
-
-Continuazione di un cleanup igiene-root del modulo (max 1 `.code-workspace`, max 5 `.md`
-in root) che aveva spostato `architecture.md`/`testing.md`/`GETTING_STARTED.md`/`philosophy-3.md`
-dalla root a `docs/root-md-files/`, segnalando ma non risolvendo due problemi fuori scope
-in quel momento: marker di conflitto non risolti in `README.md` di root e una famiglia di
-file case/name-duplicati sotto `docs/architecture*`.
-
-Root cause nota (non ri-derivata, gia' documentata): `docs/sprint-status.yaml` story
-`5.122-gitmodules-sync-2026-09-15-safe-subset` (done-partial) — un daemon locale di
-auto-commit ("Marco Xot", msg ".") a volte fa merge col remote divergente e COMMITTA
-marker di conflitto non risolti; UI era st
-
-### `stories/ui-root-md-file-limit-audit.story.md` — Audit igiene root — limite 6 file .md in Modules/UI
-
-
-# Audit igiene root — limite 6 file .md in Modules/UI
-
-## Contesto
-
-Regola canon (`bashscripts/docs/prompts/03-quality-gates.md`, sezione "Igiene root modulo/tema"): la root di ogni modulo ha al massimo 6 file `.md` (README + poche pagine canoniche). Verifica del 2026-09-07: `laravel/Modules/UI/` aveva 31 file `.md` in root, 25 in eccesso rispetto alla soglia. `.txt` in root = 0 (già conforme).
-
-## Analisi preliminare
-
-Prima di spostare qualunque file è stato letto integralmente il contenuto dei 31 file di root e confrontato con l'albero `docs/` già esistente (che contiene già centinaia di varianti duplicate documentate e volutamente non toccate da `docs-index-audit.story.md`, status done).
-
-Scoperta chiave: **24 dei 25 file da rimuovere erano già byte-identici** a una copia pre-esistente
-
-### `stories/ui-services-to-actions.story.md` — Convert app/Services to QueueableAction (no-services-rule)
-
-
-# Convert app/Services to QueueableAction (no-services-rule)
-
-Enforce the repo-wide "no `app/Services/*Service` classes" rule (`bashscripts/ai/wiki/rules/no-services-rule.md`, status RELIGION) inside `Modules/UI`.
-
-## Census
-
-`find Modules/UI/app/Services -name "*.php"` → exactly one active file: `app/Services/UIService.php`.
-
-Also present but explicitly out of scope (not `.php`, dead archives from an earlier, never-fully-executed 2026-07 migration attempt — see `docs/wiki/concepts/ui-services-support-to-actions.md`): `ComponentService.php.bak`, `ThemeService.php.bak`, `UIService.php.bak`, `Map/NullMapService.php.bak`, `Map/NullGeocodingService.php.bak`. Left untouched — not requested by this task, and renaming/deleting `.bak` files is not a call-site-bearing change.
-
-## Classification ta
-
-### `strategy.md` — Product Strategy: UI Module
-
-
-# Product Strategy: UI Module
-
-## 🌍 Market Context
-PA users require clear, unambiguous interfaces that work well on varying hardware.
-
-## 💎 Unique Value Proposition
-"UI" isn't just a theme; it's a governed design system that ensures every Laraxot module looks and feels like it belongs to the same family.
-
-## 🏛️ Strategic Pillars
-1. **Utility-First:** Leverage Tailwind CSS for rapid, consistent styling.
-2. **Component Governance:** New components must be reviewed for accessibility.
-3. **Seamless Integration:** Native support for Filament's layout system.
-
-## 🗺️ Strategic Roadmap (1-2 Years)
-Development of a standalone UI Component Explorer (similar to Storybook) for the Laraxot ecosystem.
-
-### `studio-card-selector-implementation-1-2.md` — StudioCardSelector Component - Modulo UI
-
-
-# StudioCardSelector Component - Modulo UI
-
-## 🎯 **Panoramica**
-Componente Filament Form altamente riutilizzabile per la selezione di studi medici/odontoiatrici attraverso un'interfaccia card visuale moderna e responsive.
-
-## 🏗️ **Architettura Component**
-
-### Classe PHP
-```php
-// Modules/UI/app/Forms/Components/StudioCardSelector.php
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\UI\Forms\Components;
-
-use Filament\Forms\Components\Field;
-use Illuminate\Database\Eloquent\Collection;
-use Closure;
-=======
 ## Decision Drivers
 
 - Richiesta utente / acceptance criteria della story
@@ -7712,7 +6330,24 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> .merge_file_Vu35gO
+### `strategy.md` — Product Strategy: UI Module
+
+
+# Product Strategy: UI Module
+
+## 🌍 Market Context
+PA users require clear, unambiguous interfaces that work well on varying hardware.
+
+## 💎 Unique Value Proposition
+"UI" isn't just a theme; it's a governed design system that ensures every Laraxot module looks and feels like it belongs to the same family.
+
+## 🏛️ Strategic Pillars
+1. **Utility-First:** Leverage Tailwind CSS for rapid, consistent styling.
+2. **Component Governance:** New components must be reviewed for accessibility.
+3. **Seamless Integration:** Native support for Filament's layout system.
+
+## 🗺️ Strategic Roadmap (1-2 Years)
+Development of a standalone UI Component Explorer (similar to Storybook) for the Laraxot ecosystem.
 
 ### `studio-card-selector-implementation-1.md` — StudioCardSelector Component - Modulo UI
 
@@ -7737,8 +6372,6 @@ use Filament\Forms\Components\Field;
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `svg-icons-automatic-registration.md` — ✅ SVG Icons - Automatic Registration
 
 
@@ -7785,7 +6418,6 @@ Basta:
 | `youtube.svg` | `ui-brands.youtube` | `<x-filament::icon icon="ui-brands.youtube" />` |
 | `telegram.svg` | `ui-brands.telegram` | `<x-filament::icon icon="ui-brands.telegram" />` |
 
->>>>>>> .merge_file_Vu35gO
 ### `table-components-1.md` — Componenti Table
 
 
@@ -8069,7 +6701,6 @@ Aggiornare il pacchetto UI per sfruttare appieno le potenzialità di Filament v5
 ## 🔗 Riferimenti
 - [Roadmap UI](../roadmap.md)
 
-<<<<<<< .merge_file_TQChq5
 ### `tech-spec-2.md` — Technical Specification - UI Module
 
 # Technical Specification - UI Module
@@ -8116,8 +6747,6 @@ Technical implementation details for the UI module.
 - Laravel 13.x
 - Filament 5.x
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `test-conflicts-resolution.md` — Test di Risoluzione Conflitti nel Modulo UI
 
 
@@ -8258,11 +6887,7 @@ bashscripts/
 1. **Standardizzare** l'uso di schemaless attributes nei temi UI
 2. *
 
-<<<<<<< .merge_file_TQChq5
-### `translations-update-january.md` — Aggiornamento Traduzioni Modulo UI - Gennaio 2026
-=======
 ### `translations-update-snapshot-historical.md` — Aggiornamento Traduzioni Modulo UI - Gennaio 2026
->>>>>>> .merge_file_Vu35gO
 
 
 # Aggiornamento Traduzioni Modulo UI - Gennaio 2026
@@ -8354,7 +6979,6 @@ Modules/UI/
 ### Errore: "View [x-ui::ui.component-name] not found"
 
 
-<<<<<<< .merge_file_TQChq5
 ### `user-research-2.md` — UI Module - User Research
 
 
@@ -8394,8 +7018,6 @@ Identify usability issues in complex Filament forms and tables.
 - Enforce the use of `Tabs` and `Sections` in all `XotBaseResource` forms.
 - Optimize table columns for narrow viewports using `WorkerColumn` patterns.
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `vscode-filament-plugin-1.md` — Plugin VSCode per Filament
 
 
@@ -8442,8 +7064,6 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 class StatsOverviewWidget extends BaseWidget
 {
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `wiki/_integration/custom-theme.md` — custom_theme
 
 
@@ -8467,7 +7087,6 @@ https://blog.jpat.dev/build-custom-components-inside-a-filament-v3-panel-with-li
 
 php artisan make:filament-theme admin
 
->>>>>>> .merge_file_Vu35gO
 ### `wiki/_integration/effetcts.md` — effetcts
 
 
@@ -8539,7 +7158,6 @@ composer require mtvs/laravel-reviews
 https://github.com/mtvs/eloquent-aggregate-rating
 -------------------------------------------------------------------------------------------------
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/_integration/ubuntu.md` — ubuntu
 
 
@@ -8555,8 +7173,6 @@ sudo apt-get install gifsicle
 sudo apt-get install webp
 sudo apt-get install libavif-bin # minimum 0.9.3
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/_integration/widgets.md` — widgets
 
 
@@ -8646,11 +7262,7 @@ flowchart LR
   B --> C[ComponentFileData collection]
   D[x-render.blocks v1/v2] --> E[x-render.block]
   E --> F[Render\Block]
-<<<<<<< .merge_file_TQChq5
-  F --> G[ResolveLocalizedBlockDataAction]
-=======
   F --> G[GetLocalizedBlockDataAction]
->>>>>>> .merge_file_Vu35gO
   G --> H{Modulo Cms presente?}
 
 ### `wiki/concepts/claude-audit-static.md` — claude-audit static (UI)
@@ -8749,11 +7361,7 @@ Il modulo **UI** documenta l’uso dei componenti Blade Filament condivisi tra t
 
 ## Regola
 
-<<<<<<< .merge_file_TQChq5
-Leggere prima [filament-first-rule.md](../../../../../../docs/wiki/rules/filament-first-rule.md) (Rule 019). Il file [filament-components-2.md](../../../../Cms/docs/filament-components-2.md) elenca mapping tag → anti-pattern.
-=======
 Leggere prima [filament-first-rule.md](../../../../../../docs/wiki/rules/filament-first-rule.md) (Rule 019). Il file [filament-components.md](../../blade/filament-components.md) elenca mapping tag → anti-pattern.
->>>>>>> .merge_file_Vu35gO
 
 ## Filament 5
 
@@ -8944,11 +7552,7 @@ Documento canonico: [ponytail-audit-over-engineering.md](../../ponytail-audit-ov
 |---------|------|
 | **Canon** | [Xot second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md) |
 | **Harness moduli** | [ai-harness-module-discipline.md](../../../../docs/wiki/concepts/ai-harness-module-discipline.md) |
-<<<<<<< .merge_file_TQChq5
-| **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) |
-=======
 | **Tips 001–022** | [hackernoon map](../../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map) |
->>>>>>> .merge_file_Vu35gO
 | **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) |
 
 Solo decisioni specifiche di **UI** in `docs/wiki/`; contratto generico in Xot.
@@ -9052,7 +7656,6 @@ Classes extending `Modules\Xot\Filament\Forms\Components\XotBaseField` **must no
 ## Affected Files (current violations)
 - `laravel/Modules/UI/app/Filament/Forms/Components/AddressField.php` – line 24 declares `$view = 'filament-schemas::compo
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/context-compression.md` — Context Compression Setup
 
 
@@ -9076,8 +7679,6 @@ Questo sostituisce la precedente nota speculativa con una configurazione effetti
 - installazione package: `bashscripts/mcp/package.json`
 
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/how-to/gitmodules-sync-session.md` — Gitmodules sync session
 
 
@@ -9094,14 +7695,8 @@ Sessione orchestrata dal prompt `bashscripts/tools/prompts/02-gitmodules-sync.md
 ## Canon
 
 - Story: [../../../../../../docs/stories/STORY-003-gitmodules-sync-conflict-sweep.md](../../../../../../docs/stories/STORY-003-gitmodules-sync-conflict-sweep.md)
-<<<<<<< .merge_file_TQChq5
-- Report: [../../../../../../docs/chat/gitmodules-sync.md](../../../../../../docs/chat/gitmodules-sync.md)
-- Issue base: https://github.com/provtv/base_ptv_fila5/issues/201
-- Issue base: http
-=======
 - Report: [../../../../../../bashscripts/ai/wiki/memories/git-sync-fleet-remotes.md#gitmodules-sync](../../../../../../bashscripts/ai/wiki/memories/git-sync-fleet-remotes.md#gitmodules-sync)
 
->>>>>>> .merge_file_Vu35gO
 
 ### `wiki/integrazioni-valutate.md` — Integrazioni valutate per il modulo UI
 
@@ -9156,8 +7751,6 @@ Script: `bashscripts/tools/split-module-lang-monolith-for-audit.php UI it <fileB
 ## Main Risks
 
 
-<<<<<<< .merge_file_TQChq5
-=======
 ### `wiki/standards/auth-form-standards.md` — Standard Form di Autenticazione
 
 # Standard Form di Autenticazione
@@ -9204,7 +7797,6 @@ Script: `bashscripts/tools/split-module-lang-monolith-for-audit.php UI it <fileB
 - Utilizzare il grid system di Tailwind per layout responsivi
 - Su mobile: colonna singola
 
->>>>>>> .merge_file_Vu35gO
 ### `wiki/standards/ui-standards.md` — Standard UI
 
 
@@ -9228,7 +7820,6 @@ $gradient-success: linear-gradient(135deg, $success, darken($success, 10%));
 ```
 
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/topics/advanced-form.md` — Topic advanced-form
 
 
@@ -9275,8 +7866,6 @@ _Fonte: `brands-icons-integration-2.md`_
 1. ✅ **facebook.svg** - Facebook brand icon
 2. ✅ **twitter.svg** - Twitter/X brand icon
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/topics/carousel-slider.md` — Topic carousel-slider
 
 
@@ -9300,7 +7889,6 @@ https://keen-slider.io/examples
 
 https://thefullstack.network/u/MananTank/project/blaze-slider-the-fastest-slider-library
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/topics/custom-theme.md` — Topic custom-theme
 
 
@@ -9370,18 +7958,12 @@ Questo documento identifica i metodi duplicati nel modulo **UI** che potrebbero 
 
 | Tipo Refactoring | Conteggio |
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/topics/filament-components.md` — Topic filament-components
 
 
 # Topic filament-components
 
-<<<<<<< .merge_file_TQChq5
-Sintesi automatica di 6 documenti (chiave `filament-components`).
-=======
 Sintesi automatica di 4 documenti (chiave `filament-components`).
->>>>>>> .merge_file_Vu35gO
 
 ## Componenti Filament UI
 
@@ -9393,11 +7975,7 @@ _Fonte: `filament-components-1.md`_
 
 ### Errori Comuni
 - [Errori nei Componenti Filament](./filament-components-errors.md)
-<<<<<<< .merge_file_TQChq5
-- [Best Practices UI](../../Activity/docs/best-practices-3.md)
-=======
 - [Best Practices UI](../../best-practices.md)
->>>>>>> .merge_file_Vu35gO
 - [Implementazione Corretta](../../examples/correct-implementation.md)
 
 ### Componenti Specifici
@@ -9426,7 +8004,6 @@ Il metodo `buttonLabel()` **NON esiste** sul componente `Filament\Forms\Componen
 ## Soluzione
 - **Non usare mai** `->buttonLabel()` su FileUpload.
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/topics/form-standards.md` — Topic form-standards
 
 
@@ -9450,8 +8027,6 @@ _Fonte: `standards/form-standards.md`_
 ```html
 <div class="container mx-auto max-w-4xl px-4 py-8">
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/topics/legacy-roadmap.md` — Topic legacy-roadmap
 
 
@@ -9498,7 +8073,6 @@ filament/widgets/group|row → già FQCN
 
 ADR: gemello esistente batte classe nuova (stesso di User SocialLogin).
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/topics/page-builder.md` — Topic page-builder
 
 
@@ -9522,8 +8096,6 @@ https://medium.com/landing-page-tips/5-best-drag-drop-tailwind-css-page-builders
 https://medium.com/landing-page-tips/5-best-drag-drop-tailwind-css-page-builders-9c251758d891
 
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/topics/phpstan-compliance.md` — Topic phpstan-compliance
 
 
@@ -9552,25 +8124,6 @@ The UI module is fully compliant with PHPStan Level max. Ultimo round (2026-11-1
 
 # Topic phpstan-corrections
 
-<<<<<<< .merge_file_TQChq5
-Sintesi automatica di 7 documenti (chiave `phpstan-corrections`).
-
-## PHPStan Corrections - Gennaio 2025
-
-_Fonte: `phpstan-corrections-2.md`_
-
-# PHPStan Corrections - Gennaio 2025
-
-## Riepilogo
-
-Correzioni sistematiche degli errori PHPStan livello 10 per migliorare la qualità del codice e la conformità architetturale.
-
-## Correzioni Implementate
-
-### 1. Componenti View - Proprietà Mancanti
-
-#### Problema
-=======
 Sintesi automatica di 6 documenti (chiave `phpstan-corrections`).
 
 ## Correzioni PHPStan Completate - Gennaio 2025
@@ -9588,7 +8141,6 @@ _Fonte: `phpstan-corrections-final.md`_
 ### 1. GetAllIconsAction.php
 
 **Problemi risolti**:
->>>>>>> .merge_file_Vu35gO
 
 ### `wiki/topics/phpstan-errors.md` — Topic phpstan-errors
 
@@ -9618,11 +8170,7 @@ Il componente `LocationSelector` presenta errori PHPStan livello 10:
 
 # Topic phpstan-fixes
 
-<<<<<<< .merge_file_TQChq5
-Sintesi automatica di 8 documenti (chiave `phpstan-fixes`).
-=======
 Sintesi automatica di 7 documenti (chiave `phpstan-fixes`).
->>>>>>> .merge_file_Vu35gO
 
 ## Correzioni PHPStan Livello 7 - Modulo UI
 
@@ -9640,7 +8188,6 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 Metodo toggleLayout() ha il parametro $livewire senza type hint specificato.
 Cannot call method dispatch() on class-string|object.
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/topics/phpstan-radio.md` — Topic phpstan-radio
 
 
@@ -9687,26 +8234,16 @@ _Fonte: `sprint-planning-2.md`_
 
 Implement core design system with essential UI components.
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/topics/table-layout.md` — Topic table-layout
 
 
 # Topic table-layout
 
-<<<<<<< .merge_file_TQChq5
-Sintesi automatica di 4 documenti (chiave `table-layout`).
-
-## TableLayoutToggleTableAction
-
-_Fonte: `actions/table-layout-toggle-2.md`_
-=======
 Sintesi automatica di 3 documenti (chiave `table-layout`).
 
 ## TableLayoutToggleTableAction
 
 _Fonte: `actions/table-layout-toggle.md`_
->>>>>>> .merge_file_Vu35gO
 
 # TableLayoutToggleTableAction
 
@@ -9725,11 +8262,7 @@ Azione Filament per il toggle del layout delle tabelle tra vista griglia e lista
 
 # Topic tailwind-themes
 
-<<<<<<< .merge_file_TQChq5
-Sintesi automatica di 4 documenti (chiave `tailwind-themes`).
-=======
 Sintesi automatica di 3 documenti (chiave `tailwind-themes`).
->>>>>>> .merge_file_Vu35gO
 
 ## tailwind_themes
 
@@ -9747,7 +8280,6 @@ https://merakiui.com/
 <!-- Contenuto migrato da _docs/tailwind_themes.txt -->
 
 
-<<<<<<< .merge_file_TQChq5
 ### `wiki/troubleshooting/git-merge-conflict-inventory-2.md` — Git Conflict Inventory
 
 
@@ -9767,8 +8299,6 @@ https://merakiui.com/
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
 
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/troubleshooting/git-merge-conflict-inventory.md` — Git Conflict Inventory
 
 
@@ -9786,13 +8316,8 @@ https://merakiui.com/
 - `app/Actions/Datetime/GetDaysMappingAction.php` — docblock `@contract`
 - `app/Actions/Panel/ApplyCalendarToPanelAction.php` — docblock `@contract`
 - `app/Actions/Block/GetAllBlocksAction.php` — docblock `@contract`
-<<<<<<< .merge_file_TQChq5
-- `app/Actions/Block/ResolveLocalizedBlockDataAction.php` — `@contract` + guard `class_exists` (Cms opzionale)
-- `app
-=======
 - `app/Actions/Block/GetLocalizedBlockDataAction.php` — `@contract` + guard `class_exists` (Cms opzionale)
 - `app/Ser
->>>>>>> .merge_file_Vu35gO
 
 ### `wiki/troubleshooting/module-theme-root-hygiene.md` — Root modulo/tema — igiene
 
@@ -9844,15 +8369,6 @@ https://github.com/saade/filament-extra
 https://laracasts.com/discuss/channels/livewire/laravel-filament-custom-field-call-function
 
 
-<<<<<<< .merge_file_TQChq5
-### `wiki/ui/ui-global-search-2.md` — ui-global-search-2
-
-
-https://github.com/spatie/laravel-searchable
-
-
-=======
->>>>>>> .merge_file_Vu35gO
 ### `wiki/ui/ui-global-search.md` — ui-global-search
 
 

@@ -173,6 +173,10 @@ return [
         ],
         'values' => [
             'helper_text' => '',
+            'label' => 'values',
+        ],
+        'isActive' => [
+            'label' => 'isActive',
         ],
     ],
     'actions' => [
@@ -222,6 +226,7 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'createAnother' => [
             'icon' => 'createAnother',
@@ -240,30 +245,37 @@ return [
         ],
         'applyFilters' => [
             'icon' => 'applyFilters',
+            'label' => 'applyFilters',
         ],
         'openFilters' => [
             'icon' => 'openFilters',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
+            'label' => 'resetFilters',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
     ],
     'messages' => [

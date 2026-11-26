@@ -17,7 +17,7 @@ use Modules\Xot\Models\BaseModel;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
+ * @see Modules/Notify/docs/contracts/index.md
  *
  * @method static \Modules\Notify\Database\Factories\NotificationFactory factory($count = null, $state = [])
  * @method static Builder<static>|Notification newModelQuery()

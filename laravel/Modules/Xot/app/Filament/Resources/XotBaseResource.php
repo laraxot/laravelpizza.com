@@ -247,7 +247,7 @@ abstract class XotBaseResource extends FilamentResource
      * Prima mancava il passo 2: le varianti finivano al passo 3, che restituiva `SchedaDipResource`
      * anche per `SchedaPoResource`, e la pagina si fermava su un Assert.
      *
-     * @see Modules/Xot/docs/stories/resource-part-class-by-resource-name.story.md
+     * @see Modules/Xot/docs/xotbase-extension-rules.md
      *
      * @template TPart of object
      *

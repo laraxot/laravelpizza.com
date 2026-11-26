@@ -1,0 +1,158 @@
+{
+  "shots": [
+    {
+      "name": "media-admin-login",
+      "path": "/media/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:07.390Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "media-admin-dashboard",
+      "path": "/media/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:12.884Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin",
+        "bytes": 16984,
+        "sha256": "e8ed9580440fe3bbbf064c7be57dafcc716630be1f1ba2108d7881582ce99b4b"
+      }
+    },
+    {
+      "name": "media-admin-media-list",
+      "path": "/media/admin/media",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:16.092Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/media",
+        "bytes": 29350,
+        "sha256": "f55d10cb4397b7412124636efc905fea721d375bc071bf1d7eb04a1c100d46cb"
+      }
+    },
+    {
+      "name": "media-admin-media-create",
+      "path": "/media/admin/media/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:19.189Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/media/create",
+        "bytes": 23306,
+        "sha256": "9694a0d5c0c94838c6caafca207f62f94e8f3246fc29b8d27d40a10c12ce5e37"
+      }
+    },
+    {
+      "name": "media-admin-media-converts-list",
+      "path": "/media/admin/media-converts",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:22.306Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/media-converts",
+        "bytes": 30596,
+        "sha256": "ed2541042890358e351f6066e8bfc59ccc5f062c7dafae54b487a440f7450d00"
+      }
+    },
+    {
+      "name": "media-admin-media-converts-create",
+      "path": "/media/admin/media-converts/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:25.360Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/media-converts/create",
+        "bytes": 27328,
+        "sha256": "23dc8e17bc45c453d662c76e977c49778a9644517da3e9e7ffaa4d2a74a40263"
+      }
+    },
+    {
+      "name": "media-admin-temporary-uploads",
+      "path": "/media/admin/temporary-uploads",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:28.343Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/temporary-uploads",
+        "bytes": 31528,
+        "sha256": "5cac348f98e17b6d45723b11778182b6a3e9ed97d8fcaf1bf229611fc9cbc6a0"
+      }
+    },
+    {
+      "name": "media-admin-temporary-uploads-create",
+      "path": "/media/admin/temporary-uploads/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:31.417Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/temporary-uploads/create",
+        "bytes": 25794,
+        "sha256": "d44244fea4f5f881e1c9349c4f9521cf51720955cc3567717ebc08a4d074f413"
+      }
+    },
+    {
+      "name": "media-admin-setting",
+      "path": "/media/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:34.391Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/setting",
+        "bytes": 31496,
+        "sha256": "ca5e3dd22e2c0582ff3c377d24527f68ce9dbde6f28c8ebe7d5b077367fcbc38"
+      }
+    },
+    {
+      "name": "media-admin-test-aws",
+      "path": "/media/admin/test/aws-test",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:37.504Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/test/aws-test",
+        "bytes": 18208,
+        "sha256": "8081ca7a23bd14d9a5a71e7e025fedfacd8d7150c9833325dabf671065770025"
+      }
+    },
+    {
+      "name": "media-admin-test-s3",
+      "path": "/media/admin/test/s3-test",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:38:40.476Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/media/admin/test/s3-test",
+        "bytes": 25448,
+        "sha256": "99cdfe4114979ffc509d9214be10b75341d712d9cbf387fc0e7a54ddb66494c3"
+      }
+    }
+  ]
+}

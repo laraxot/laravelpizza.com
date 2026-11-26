@@ -48,43 +48,43 @@ return [
             'message' => 'Seleziona tutti gli elementi disponibili',
         ],
         'id' => [
-            'label' => 'id',
+            'label' => 'ID',
         ],
         'rating_id' => [
-            'label' => 'rating_id',
+            'label' => 'ID criterio',
         ],
         'model_type' => [
-            'label' => 'model_type',
+            'label' => 'Tipo elemento valutato',
         ],
         'model_id' => [
-            'label' => 'model_id',
+            'label' => 'ID elemento valutato',
         ],
         'user_id' => [
-            'label' => 'user_id',
+            'label' => 'ID utente',
         ],
         'value' => [
-            'label' => 'value',
+            'label' => 'Voto',
         ],
         'note' => [
-            'label' => 'note',
+            'label' => 'Nota',
         ],
         'is_winner' => [
-            'label' => 'is_winner',
+            'label' => 'Vincente',
         ],
         'reward' => [
-            'label' => 'reward',
+            'label' => 'Premio',
         ],
         'created_at' => [
-            'label' => 'created_at',
+            'label' => 'Creato il',
         ],
         'rating' => [
-            'label' => 'rating',
+            'label' => 'Criterio',
         ],
         'ratingable_type' => [
-            'label' => 'ratingable_type',
+            'label' => 'Tipo elemento valutato',
         ],
         'ratingable_id' => [
-            'label' => 'ratingable_id',
+            'label' => 'ID elemento valutato',
         ],
     ],
     'actions' => [
@@ -141,7 +141,7 @@ return [
             'tooltip' => 'edit',
         ],
         'create' => [
-            'label' => 'Crea',
+            'label' => 'Nuovo voto',
             'description' => 'Aggiungi un nuovo elemento',
             'messages' => [
                 'success' => 'Elemento creato con successo',
@@ -195,5 +195,15 @@ return [
             'icon' => 'resetColumnManager',
             'tooltip' => 'resetColumnManager',
         ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
     ],
+    'label' => 'rating morph',
 ];

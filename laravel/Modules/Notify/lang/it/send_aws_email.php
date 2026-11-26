@@ -56,6 +56,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'recipient' => [
+            'label' => 'recipient',
+        ],
     ],
     'actions' => [
         'send_email' => [
@@ -70,15 +73,18 @@ return [
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'sendEmail' => [
             'icon' => 'sendEmail',
+            'label' => 'sendEmail',
         ],
         'save' => [
             'icon' => 'save',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
     ],
     'messages' => [

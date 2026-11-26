@@ -21,6 +21,11 @@ _Fonte: `dry-kiss-analysis-conflict.md`_
 
 ## ✅ Stato Attuale
 
+### JobServiceProvider::registerQueue
+
+Stub vuoto tenuto per reflection/coverage (`JobProvidersCoverageTest`); non chiamato da `boot()`.
+Metriche queue non attive — YAGNI finché non c’è un design metriche.
+
 ### BaseModel con Feature Specifico
 ```php
 abstract class BaseModel extends XotBaseModel

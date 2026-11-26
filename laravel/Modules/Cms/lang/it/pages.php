@@ -26,6 +26,16 @@ return [
         'edit' => [
             'tooltip' => 'edit',
             'icon' => 'edit',
+            'label' => 'edit',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
         ],
     ],
 ];

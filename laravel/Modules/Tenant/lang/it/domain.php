@@ -84,6 +84,34 @@ return [
         'domain_set_primary' => 'Dominio impostato come principale con successo',
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'save' => [
+            'label' => 'save',
         ],
     ],
     'model' => [

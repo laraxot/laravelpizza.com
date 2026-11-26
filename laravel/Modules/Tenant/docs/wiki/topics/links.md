@@ -30,7 +30,6 @@ _Fonte: `it/links.md`_
 # links links
 
 ...
-### Versione HEAD
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../../Gdpr/docs/links.md)
@@ -42,8 +41,6 @@ _Fonte: `it/links.md`_
 * [links.md](links/links.md)
 * [links.md](../../../Cms/docs/links.md)
 * [links.md](../../../../themes/one/docs/links.md)
-
-### Versione Incoming
 
 ---
 

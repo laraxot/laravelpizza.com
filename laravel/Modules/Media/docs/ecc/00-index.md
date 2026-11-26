@@ -13,13 +13,6 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 
 | Controllo | Stato | Evidenza |
 |---|---|---|
-=======
-| Inventario statico | verificato | ../bmad/audits/media-audit.md |
-| PHPStan | 0 su tree Modules (2026-11-16) | comando in audit |
-| Pest | pending | ambiente testing |
-| Security review | pending | story figlie P0/P1 |
-| Docs pack | aggiornato | questo indice + audit ECC |
-=======
 | Inventario statico | verificato (2026-11-16) | [audit profondo](../bmad/audits/media-audit.md) |
 | PHPStan `Modules/Media` | **0 errori** | comando in audit |
 | Pest | parziale: `tests/Unit/Models` 49 pass / 1 fail | [audit § Gate](../bmad/audits/media-audit.md#gate) |

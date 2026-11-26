@@ -75,6 +75,27 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'active' => [
+            'label' => 'active',
+        ],
+        'required' => [
+            'label' => 'required',
+        ],
+        'documentVersion' => [
+            'label' => 'documentVersion',
+        ],
+        'documentUrl' => [
+            'label' => 'documentUrl',
+        ],
+        'weight' => [
+            'label' => 'weight',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
     ],
     'legal_bases' => [
         'consent' => 'Consenso',
@@ -84,24 +105,41 @@ return [
         'public_interest' => 'Interesse Pubblico',
         'legitimate_interests' => 'Interessi Legittimi',
     ],
-    'label' => 'Treatment',
-    'plural_label' => 'Treatment (Plurale)',
+    'label' => 'Trattamento',
+    'plural_label' => 'Trattamenti',
     'actions' => [
         'create' => [
-            'label' => 'Crea Treatment',
+            'label' => 'Crea trattamento',
         ],
         'edit' => [
-            'label' => 'Modifica Treatment',
+            'label' => 'Modifica trattamento',
         ],
         'delete' => [
-            'label' => 'Elimina Treatment',
+            'label' => 'Elimina trattamento',
         ],
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
         ],
     ],
 ];

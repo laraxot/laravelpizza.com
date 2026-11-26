@@ -84,7 +84,10 @@ test('EditRating espone DeleteAction in header', function (): void {
  * la costruisce la Resource via `getTableClass()`, come fa Filament in `makeTable()`.
  * Le colonne sono quelle di `rating_morph`: `ratingable_*` non esistono nello schema.
  *
- * @see Modules/Rating/docs/filament-table-architecture.md
+ * Il pulsante di creazione e' quello di `XotBaseListRecords::getHeaderActions()`: `getActions()` e'
+ * l'alias deprecato di Filament, che la base non richiama.
+ *
+ * @see Modules/Rating/docs/wiki/concepts/xotbase-table-columns-enforcement.md
  */
 test('ListRatingMorphs dichiara colonne e create action', function (): void {
     $page = new ListRatingMorphs;
@@ -95,12 +98,12 @@ test('ListRatingMorphs dichiara colonne e create action', function (): void {
         array_keys($table->getColumns()),
     );
 
-    $actionsMethod = new \ReflectionMethod($page, 'getActions');
+    $actionsMethod = new \ReflectionMethod($page, 'getHeaderActions');
     $actionsMethod->setAccessible(true);
 
     $actions = $actionsMethod->invoke($page);
     Assert::assertIsArray($actions);
-    Assert::assertCount(1, $actions);
+    Assert::assertSame(['create'], array_keys($actions));
 });
 
 test('EditRatingMorph eredita resource RatingMorph', function (): void {

@@ -69,6 +69,23 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'id' => [
+            'label' => 'id',
+        ],
+        'treatment' => [
+            'name' => [
+                'label' => 'treatment.name',
+            ],
+        ],
+        'subject_id' => [
+            'label' => 'subject_id',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
     ],
     'statuses' => [
         'granted' => 'Concesso',
@@ -77,6 +94,9 @@ return [
         'expired' => 'Scaduto',
     ],
     'actions' => [
+        'create' => [
+            'label' => 'Crea consenso',
+        ],
         'grant' => 'Concedi',
         'deny' => 'Nega',
         'withdraw' => 'Revoca',
@@ -84,8 +104,18 @@ return [
         'logout' => [
             'tooltip' => '',
             'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'Profilo',
+        ],
+        'createAnother' => [
+            'label' => 'Salva e nuovo',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
         ],
     ],
-    'label' => 'Consent',
-    'plural_label' => 'Consent (Plurale)',
+    'label' => 'Consenso',
+    'plural_label' => 'Consensi',
 ];

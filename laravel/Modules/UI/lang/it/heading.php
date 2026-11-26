@@ -6,9 +6,11 @@ return [
     'fields' => [
         'level' => [
             'tooltip' => '',
+            'label' => 'level',
         ],
         'content' => [
             'tooltip' => '',
+            'label' => 'content',
         ],
     ],
     'label' => 'Heading',

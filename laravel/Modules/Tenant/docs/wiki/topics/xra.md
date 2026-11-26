@@ -30,17 +30,12 @@ return [
     'register_adm_theme' => false,
     'register_pub_theme' => false,
     'forcessl' => false,
-### Versione HEAD
-
 ];
+
 ## Collegamenti tra versioni di xra.md
 * [xra.md](../../../xot/docs/install/xra.md)
 * [xra.md](../../../tenant/docs/it/xra.md)
 * [xra.md](../../../tenant/docs/it/config/xra.md)
-
-### Versione Incoming
-
-];
 
 ---
 

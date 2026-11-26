@@ -1,0 +1,144 @@
+{
+  "shots": [
+    {
+      "name": "activity-admin-login",
+      "path": "/activity/admin/login",
+      "auth": false,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:10:48.945Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "activity-admin-dashboard",
+      "path": "/activity/admin",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:02.078Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin",
+        "bytes": 14482,
+        "sha256": "8c7f4f8bb1e392cd7ab1413472e219da994179f87cecedb82180e051cc8330fd"
+      }
+    },
+    {
+      "name": "activity-admin-activities",
+      "path": "/activity/admin/activities",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:10.930Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/activities",
+        "bytes": 22414,
+        "sha256": "bb5691c8607756cb84fd1864c0557e42d350b5dcebb7d7b63b1b5db5f576c0c2"
+      }
+    },
+    {
+      "name": "activity-admin-activities-create",
+      "path": "/activity/admin/activities/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:13:48.694Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/activities/create",
+        "bytes": 21754,
+        "sha256": "0684852f26eee745a5178a67e05ea78394ead06fbe5809e70a1efd3bceb4ea93"
+      }
+    },
+    {
+      "name": "activity-admin-snapshots",
+      "path": "/activity/admin/snapshots",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:31.936Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/snapshots",
+        "bytes": 24906,
+        "sha256": "ddfca78e210c3a89fad7f073c568551c42cacb9ee3f849a174346a270d00fd3a"
+      }
+    },
+    {
+      "name": "activity-admin-snapshots-create",
+      "path": "/activity/admin/snapshots/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:40.363Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/snapshots/create",
+        "bytes": 21992,
+        "sha256": "4de80b180ee5a16208fe56cd222e6678115a2f81fecd44ddfb2bb438b362e345"
+      }
+    },
+    {
+      "name": "activity-admin-stored-events",
+      "path": "/activity/admin/stored-events",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:11:54.315Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/stored-events",
+        "bytes": 25746,
+        "sha256": "1254c1f60c6de5056831084b973a4c86313ff402fcea251056f795ab803b30bc"
+      }
+    },
+    {
+      "name": "activity-admin-stored-events-create",
+      "path": "/activity/admin/stored-events/create",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:12:03.186Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/stored-events/create",
+        "bytes": 26270,
+        "sha256": "0471cf8212f66182dda8c27c80bf8366ec6b4dfac7b316d6b27d0fb712d5cf07"
+      }
+    },
+    {
+      "name": "activity-admin-log-viewer",
+      "path": "/activity/admin/log-viewer",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:12:13.150Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/log-viewer",
+        "bytes": 99996,
+        "sha256": "7dd924b0a717d530b541f763f5212b3196d6f6209e4f34294ce9d4b39a06e3fa"
+      }
+    },
+    {
+      "name": "activity-admin-setting",
+      "path": "/activity/admin/setting",
+      "auth": true,
+      "fullPage": false,
+      "settleMs": 1500,
+      "captured": {
+        "at": "2026-11-25T22:12:24.129Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/activity/admin/setting",
+        "bytes": 39716,
+        "sha256": "1727734083bf7fdb8d76032b3caec61aeaba004d1590bdb0dd1ba84ef108fe61"
+      }
+    }
+  ]
+}

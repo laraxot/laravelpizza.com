@@ -86,6 +86,21 @@ return [
         'view_map' => 'Visualizza Mappa',
         'get_directions' => 'Ottieni Indicazioni',
         'copy_coordinates' => 'Copia Coordinate',
+        'logout' => [
+            'label' => 'logout',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
     ],
     'label' => 'Location',
     'plural_label' => 'Location (Plurale)',

@@ -16,8 +16,8 @@ namespace Modules\Xot\Models\Policies\Concerns;
  * Usato da `OperationalXotBasePolicy` (base per le policy dei moduli operativi, es. Roosko).
  * Roosko lo usa in 33 policy: non va parcheggiato ne' cancellato.
  *
- * @see Modules/Xot/docs/wiki/decisions/module-admin-role-policy-bypass.md perche' esiste (bypass `{modulo}::admin` in `XotBasePolicy::before()`)
- * @see Modules/Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md perche' non e' parcheggiato (censimento `trait.unused`)
+ * @see Modules/Xot/docs/xotbase-extension-rules.md perche' esiste (bypass `{modulo}::admin` in `XotBasePolicy::before()`)
+ * @see Modules/Xot/docs/bmad/stories/0148-phpstan-modules-zero-swarm-standing.story.md perche' non e' parcheggiato (censimento `trait.unused`)
  */
 trait RequiresOperationalPermissions
 {

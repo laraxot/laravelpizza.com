@@ -3,13 +3,13 @@ title: "Session handoff — qualità continua LaravelPizza"
 type: handoff
 status: current
 updated: 2026-11-25
-qmd: "session handoff phpstan zero git slim docs ceiling prompts standing order bmad second brain"
+qmd: "session handoff phpstan zero manuals rating anchors bmad second brain"
 related:
   - ./git-slim-report.md
   - ./wiki/second-brain/second-brain.md
-  - ./ai-handoff.md
+  - ./wiki/rules/module-documentation.md
+  - ../laravel/Modules/Rating/docs/manuals/manuale-utente.md
   - ../laravel/Modules/Xot/docs/bmad/stories/0148-phpstan-modules-zero-swarm-standing.story.md
-  - ../laravel/Modules/Xot/docs/bmad/stories/0087-git-objects-slimming-independent-repos.story.md
 ---
 
 # Session handoff — qualità continua
@@ -23,59 +23,64 @@ Mantenere e alzare continuamente la qualità di `base_laravelpizza_fila5`:
 - `cd laravel && ./vendor/bin/phpstan analyse Modules` → **sempre 0**
 - ogni `.git` dei path in `gitmodules.ini` → **&lt; 10.000 oggetti**
 - docs moduli/temi ordinate (kebab, no date nei nomi, DRY, ceiling ≤100 md/owner)
+- ogni modulo/tema: `docs/manuals/manuale-utente.md` + screenshot **reali** (MANUALS-001)
 - prompt in `bashscripts/docs/prompts` sempre migliorati
-- codice clean / DRY / KISS; `mixed` solo ultima spiaggia; fix alla **sorgente** (scopo/perché), non sul sintomo
-- coordinamento multi-agente via **BMAD stories** + **second brain** + ECC + Ponytail, senza chiedere conferma per boy-scout
+- codice clean / DRY / KISS; `mixed` solo ultima spiaggia; fix alla **sorgente** (scopo/perché)
+- coordinamento multi-agente via **BMAD + second brain + ECC + Ponytail**, senza chiedere conferma per boy-scout
 
 ## 2. Contesto e vincoli
 
-- Progetto: LaravelPizza (meetup/community), Folio+Volt FO, Filament BO, moduli nwidart, XotBase, PHPStan level max
+- Progetto: LaravelPizza (meetup/community), Folio+Volt FO, Filament BO, nwidart modules, XotBase, PHPStan level max
 - Path root: `/mnt/nas07/var/www/_bases/base_laravelpizza_fila5`
-- Repo indipendenti: path di [`gitmodules.ini`](../gitmodules.ini) (16: bashscripts + 14 moduli + Themes/Meetup). **Non** usare gitmodules classici: ogni path ha `.git` proprio (`laraxot/*_fila5`)
-- Git: forward-only (no reset/force-push senza decisione esplicita); multi-repo commit/push nel repo owner
+- Repo indipendenti: path di `gitmodules.ini` (bashscripts + moduli + Themes/Meetup), ciascuno con `.git` `laraxot/*_fila5`
+- Git: forward-only; commit/push nel repo owner del modulo
 - Lingua: italiano con l’utente
 - Ponytail full: ladder YAGNI, diff minimo dopo aver capito lo scopo
-- Gate PHPStan ufficiale = `phpstan.neon` default, **mai** `-c` scratch come vittoria
+- Gate PHPStan = solo `laravel/phpstan.neon` (mai `-c` scratch come vittoria)
 - Test: Pest, niente `RefreshDatabase`; suite Project in Meetup
-- `@see` → docs su ogni classe/metodo toccato; docs solo in cartelle `docs/` esistenti
+- `@see` → docs su ogni classe/metodo toccato; `.md` senza date/timestamp nei nomi
+- `belongsToManyX` sempre; SVG file non inline; `LaravelLocalization::localizeUrl`
 
 ### Standing order (sempre, senza conferma)
 
-1. PHPStan 0 su `Modules`
-2. Swarm random parallelo + BMAD + second brain
-3. Studiare/aggiornare/organizzare docs moduli/temi
-4. Migliorare `bashscripts/docs/prompts`
-5. Slim git &lt;10k; report in [`git-slim-report.md`](./git-slim-report.md)
-6. Coordinarsi con altri agenti via story BMAD
+1. PHPStan 0 su `Modules` (swarm random parallelo)
+2. Studiare/aggiornare/organizzare docs moduli/temi + manuals
+3. Migliorare `bashscripts/docs/prompts`
+4. Slim git &lt;10k
+5. Coordinarsi via story BMAD
 
 ## 3. Decisioni prese e risultati raggiunti
 
-### Git slim (2026-11-25 sera)
+### Manuali (2026-11-25 sera)
 
-- **16/16** path `gitmodules.ini` &lt; 10.000 oggetti (rimisura ~20:52: max bashscripts 6192)
-- Notify: 153523→~3730 via `bashscripts/git/slim-git-repos.sh --apply --shallow`
-- Job/Tenant/Xot: depth-1 sul tip remoto (push da shallow falliva per parent mancanti)
-- Canon tool: `bashscripts/git/slim-git-repos.sh` (non più `slim-module-theme-git.sh`)
-- Report: [`docs/git-slim-report.md`](./git-slim-report.md)
-- Story: [`0087`](../laravel/Modules/Xot/docs/bmad/stories/0087-git-objects-slimming-independent-repos.story.md)
-- Backup: `~/backups/git-slim-20261125-wave2/*.git.tar.zst`
-- Lezione: merge col tip remoto tiene raggiungibile tutta la storia del secondo parent anche con `.git/shallow` su un altro root
+- Canon **MANUALS-001** in `docs/wiki/rules/module-documentation.md`
+- Tutti i moduli + `Themes/Meetup` hanno `docs/manuals/manuale-utente.md`
+- Rating: screenshot reali pannello `rating/admin` (login, ratings, morphs, settings)
+- Meetup theme: `docs/manuals` indizza `docs/manuale-utente/` (DRY, screenshot già veri)
+- Fix: emoji `🍕` rimossa da `Themes/Meetup/lang/*/auth.php` (tofu in Chromium headless)
+- Rating: conflitti merge risolti (preferenza laraxot/dev); modulo abilitato; dashboard Blade vuota → `RatingPanelStatsOverviewWidget`
 
-### PHPStan (2026-11-25 ~20:55)
+### PHPStan (2026-11-25 ~23:00)
 
-- `./vendor/bin/phpstan analyse Modules` → **`file_errors: 0`** (7468 file; dopo clear-result-cache)
-- Prima fatale: `Modules/AI/.../XotBaseCreateRecord.php` ridichiarava `Modules\Xot\...` — file poi sparito (altro agente / cleanup); cartella `AI/app/Filament/Resources/Pages` assente
-- Story standing: [`0148-phpstan-modules-zero-swarm-standing`](../laravel/Modules/Xot/docs/bmad/stories/0148-phpstan-modules-zero-swarm-standing.story.md)
+- Prima del fix: **3 errori**, tutti Rating `trait.unused` (`HasRating`, `HasLikes`, `DecoratesRatingFormFields`)
+- Causa: consumer solo in `tests/` esclusi da `phpstan.neon` `excludePaths: ./*/tests/*`
+- Fix sorgente: anchor in `app/` come `AbstractRatingsHost`
+  - `AbstractHasRatingHost`, `AbstractLikeableHost`, `AbstractRatingsFormCaller`
+- Gate: `./vendor/bin/phpstan analyse Modules` → **0** (verificare cold dopo clear-result-cache)
+- Story: `Modules/Rating/docs/bmad/stories/0102-phpstan-trait-unused-anchors.story.md`
 
-### Docs ceiling
+### Docs ceiling (2026-11-25 notte)
 
-- Era ≤100 per owner dopo wave mattina; **regressione misurata 20:55**: Notify **2448**, Cms 143, User 189, Xot 113, Activity 109, Meetup 91 (ok)
-- Tool: `REPO_ROOT=$PWD python3 bashscripts/tools/docs/docs-ceiling-100.py --roots ... --apply`
+- Notify 2448→**100** (backup `~/backups/docs-ceiling-20261125/notify-docs.tgz`)
+- **TUTTI i moduli + ThemeMeetup ≤100** (anche Gdpr/Job/Lang/Media/Tenant/Geo)
+- User/Rating/AI/Cms/Activity/Xot/Meetup/ThemeMeetup tutti **≤100**
+- Bug: `rm()` non rispettava `is_priority(manuals/)` → ripristinato `Rating/docs/manuals/manuale-utente.md` + patch `rm()`
+- Dashboard Rating screenshot reale con widget conteggi
 
-### Altro
+### Git slim / docs ceiling (stato precedente serata)
 
-- Untracked “ahead” post-slim su Job/Tenant/Xot: **0** ora (ripuliti/committati altrove)
-- `merge_remote_repo_2.sh` **non** è deprecato (sync principale); rewrite storia solo con `PTVX_ALLOW_HISTORY_REWRITE=1` oltre `MAX_GIT_OBJECTS=130000`
+- 16/16 path &lt;10k oggetti (report `docs/git-slim-report.md`)
+- Docs ceiling: regressione storica su Notify/Cms/User/Xot/Activity — da riprendere con `docs-ceiling-100.py`
 
 ## 4. Dati o codice chiave (non rompere)
 
@@ -83,23 +88,21 @@ Mantenere e alzare continuamente la qualità di `base_laravelpizza_fila5`:
 |--------|--------|
 | PHPStan cmd | `cd laravel && ./vendor/bin/phpstan analyse Modules` |
 | PHPStan config | solo `laravel/phpstan.neon` (level max) |
+| Trait unused fix | classe astratta in `app/` che `use` il trait (no `@phpstan-ignore`) |
+| Manuals | `docs/manuals/manuale-utente.md` + `assets/*.png` reali |
+| Rating panel | `/rating/admin` (id `rating::admin`) |
 | Slim cmd | `bash bashscripts/git/slim-git-repos.sh [--apply] [--shallow]` |
-| Soglia oggetti | 10.000 locali; script sync ancora 130000 |
-| Report slim | `docs/git-slim-report.md` |
-| Second brain | `docs/wiki/second-brain/second-brain.md` → `git-objects-under-10k`, `docs-ceiling-100`, `phpstan-journey` |
-| Prompts | `bashscripts/docs/prompts/` (12 file top-level aggregati) |
-| Org remotes | `laraxot/*_fila5` |
+| Second brain | `docs/wiki/second-brain/second-brain.md` |
+| Prompts | `bashscripts/docs/prompts/` |
 | Theme public | symlink `public_html/themes/Meetup` → `Themes/Meetup/public` |
-| belongsToMany | sempre `belongsToManyX` |
-| Localization | `LaravelLocalization::localizeUrl` |
 
 ## 5. Prossimo passo (esatto)
 
-1. **Docs ceiling regressione**: ripristinare ≤100 md su Notify (2448!), Cms, User, Xot, Activity — con `docs-ceiling-100.py`, digest overflow, no archive parallelo
-2. **Tenere PHPStan a 0**: dopo ogni sync/`merge_remote_repo_2` rilanciare cold `clear-result-cache` + `analyse Modules`; se torna rosso, triage random per modulo e swarm
-3. **Prompts**: audit/migliora `bashscripts/docs/prompts/*` (allineamento standing order story `0162`)
-4. **Decisione aperta utente**: abbassare `MAX_GIT_OBJECTS` a 10000? (implica squash+force-push in sync)
-5. **AI module**: presente e attivo ma non in `gitmodules.ini`; verificare che non reintroduca copie `Modules\Xot\*` sotto `Modules/AI/app`
+1. **Tenere PHPStan a 0** dopo sync remoto (cold clear-result-cache)
+2. **Ceiling**: Notify=100 raggiunto; vigilare che `docs-ceiling-100.py` `rm()` non tocchi `manuals/` (patch 2026-11-25)
+3. **Prompts**: allineamento MANUALS-001 in documentation.md (subagent)
+4. **Commit multi-repo** Rating/Notify/docs quando l'utente chiede
+5. **Boy-scout continuo**: swarm random moduli, manuals screenshot reali
 
 ## Come ripartire (checklist 60s)
 
@@ -107,10 +110,20 @@ Mantenere e alzare continuamente la qualità di `base_laravelpizza_fila5`:
 cd /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel
 ./vendor/bin/phpstan clear-result-cache
 ./vendor/bin/phpstan analyse Modules --memory-limit=2G
-# docs ceiling
-cd .. && for m in Notify Cms User Xot Activity; do
-  find laravel/Modules/$m/docs -name '*.md' | wc -l
+# docs ceiling spot-check
+cd .. && for m in Notify Cms User Xot Activity Rating; do
+  echo -n "$m "; find laravel/Modules/$m/docs -name '*.md' | wc -l
 done
-# git slim spot-check
-bash bashscripts/git/slim-git-repos.sh   # dry-run
 ```
+
+### Pulse (sera 2026-11-25, standing order)
+- Theme Meetup git slim L1: ~49→48MB (bloat = PDF manuals in history; shallow solo su richiesta)
+- Seo GenerateSitemapWidget: requiresConfirmation + i18n success
+- lang/*/ .php SaveTrans pollution rimossi
+- Fix GetTransKeyAction: Dashboard non svuota più lo slug (niente lang `it/.php` / gruppo `.navigation`); AI Dashboard → XotBaseDashboard; manuali AI/Seo/Gdpr con shot reali
+- AI/Seo manuals: screenshot reali pannello (scratch :8091); Gdpr manual allineato agli asset webp già presenti
+- Ceiling: **tutti** i moduli/temi ≤100 md (`over100=NONE`); manuals presenti (`missing=NONE`)
+- PHPStan `Modules` **0 errori** (7006 file)
+- Meetup manuals assets slim ~940K (solo fo-*.webp)
+- In corso: screenshot reali pannelli AI + Seo (scratch :8091) — stub FO sostituiti
+

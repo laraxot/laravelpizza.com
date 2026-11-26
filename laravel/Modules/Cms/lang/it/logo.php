@@ -6,24 +6,31 @@ return [
     'fields' => [
         'image' => [
             'tooltip' => '',
+            'label' => 'image',
         ],
         'alt' => [
             'tooltip' => '',
+            'label' => 'alt',
         ],
         'text' => [
             'tooltip' => '',
+            'label' => 'text',
         ],
         'type' => [
             'tooltip' => '',
+            'label' => 'type',
         ],
         'width' => [
             'tooltip' => '',
+            'label' => 'width',
         ],
         'height' => [
             'tooltip' => '',
+            'label' => 'height',
         ],
         'url' => [
             'tooltip' => '',
+            'label' => 'url',
         ],
     ],
     'label' => 'Logo',

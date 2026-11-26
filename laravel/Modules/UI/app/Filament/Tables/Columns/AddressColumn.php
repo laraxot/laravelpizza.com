@@ -22,7 +22,7 @@ use Modules\UI\Filament\Forms\Components\AddressField;
  * 'address' => AddressColumn::make()->fields(['city', 'zip']),
  * ```
  *
- * @see Modules/Ptv/docs/form-column-parity.md
+ * @see Modules/UI/docs/form-column-parity.md
  */
 class AddressColumn extends GroupColumn
 {

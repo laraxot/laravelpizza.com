@@ -14,6 +14,7 @@ use Modules\Rating\Filament\Resources\RatingResource\Schemas\RatingForm;
 use Modules\Rating\Filament\Resources\RatingResource\Schemas\RatingInfolist;
 use Modules\Rating\Filament\Resources\RatingResource\Tables\RatingsTable;
 use Modules\Rating\Filament\Resources\RatingResource\Tables\RatingTable;
+use Modules\Rating\Models\RatingMorph;
 use Modules\Rating\Tests\TestCase;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use PHPUnit\Framework\Assert;
@@ -83,7 +84,7 @@ test('RatingsTable copre i campi anagrafici del rating', function (): void {
 
 test('i form espongono uno schema indicizzato per campo', function (): void {
     // RatingMorphForm non e' piu' uno stub vuoto: BaseRatingMorphForm dichiara rating_id,
-    // value, percentage e note, quindi sta nello stesso controllo di RatingForm.
+    // value e note, quindi sta nello stesso controllo di RatingForm.
     foreach ([new RatingForm, new RatingMorphForm] as $form) {
         $schema = $form->getFormSchema();
 
@@ -92,11 +93,22 @@ test('i form espongono uno schema indicizzato per campo', function (): void {
     }
 });
 
+// `percentage` e' una colonna calcolata e non e' in `$fillable`: un input nel form
+// verrebbe scartato in silenzio al salvataggio, quindi non deve comparire.
+// @see Modules/Rating/docs/wiki/concepts/xotbase-table-columns-enforcement.md
 test('il form del rating morph dichiara i campi attesi', function (): void {
     Assert::assertSame(
-        ['rating_id', 'value', 'percentage', 'note'],
+        ['rating_id', 'value', 'note'],
         array_keys((new RatingMorphForm)->getFormSchema()),
     );
+});
+
+test('ogni campo del form del rating morph e assegnabile in massa', function (): void {
+    $model = new RatingMorph;
+
+    foreach (array_keys((new RatingMorphForm)->getFormSchema()) as $campo) {
+        Assert::assertTrue($model->isFillable((string) $campo), $campo.' non e in $fillable: il form lo scarterebbe');
+    }
 });
 
 test('gli infolist espongono uno schema indicizzato per campo', function (): void {

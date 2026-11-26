@@ -7,17 +7,14 @@ qmd: "digest ceiling 100 aliases-removed"
 
 # Alias/superseded rimossi
 
-Rimossi 12 stub alias/superseded:
+Rimossi 9 stub alias/superseded:
 
-- `bmad/stories/0001-cleanup-notify.story.md`
-- `bmad/stories/0002-cleanup-notify-22.story.md`
-- `bmad/stories/0005-consolidation-orphan-docs-06.story.md`
-- `documentation-system-update-complete-2.md`
-- `stories/0003-phpstan-cleanup-notify.story.md`
-- `stories/0004-phpstan-notify-push-delivery.story.md`
-- `stories/0005-services-to-actions-notify.story.md`
-- `stories/0018-phpstan-swarm-15-already-clean.story.md`
-- `stories/0021-continuation.story.md`
-- `stories/0022-continuation-11.story.md`
-- `stories/06-phpstan-cleanup-notify.dev.md`
-- `wiki/integrations/_da-riconciliare/architecture-analysis-4.md`
+- `github-issues-recommendations-3.md`
+- `missing-features-analysis.md`
+- `wiki/integrations/_da-riconciliare/ai-skills-master-index-3.md`
+- `wiki/integrations/_da-riconciliare/documentation-index-3.md`
+- `wiki/integrations/_da-riconciliare/documentation-system-update-complete-4.md`
+- `wiki/integrations/_da-riconciliare/missing-features-analysis.md`
+- `wiki/integrations/_da-riconciliare/openviking-bmad-gsd-ralph-complete-3.md`
+- `wiki/integrations/_da-riconciliare/qwen-2.md`
+- `wiki/integrations/_da-riconciliare/supermemory-quickstart-4.md`

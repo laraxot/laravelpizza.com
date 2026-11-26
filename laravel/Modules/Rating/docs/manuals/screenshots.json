@@ -1,0 +1,88 @@
+{
+  "shots": [
+    {
+      "name": "rating-admin-login",
+      "path": "/rating/admin/login",
+      "auth": false,
+      "captured": {
+        "at": "2026-11-25T22:04:05.968Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/login",
+        "bytes": 9882,
+        "sha256": "6ed4cc1c1dcfed010d2a7b34da72d6e55045bf1671d37a044704ba39ca5080c5"
+      }
+    },
+    {
+      "name": "rating-admin-dashboard",
+      "path": "/rating/admin",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:15:28.591Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin",
+        "bytes": 19372,
+        "sha256": "dcab32f2999618ddb06e2a23d978d568f95ec58c3888a09ddd74b5a6e047de3b"
+      }
+    },
+    {
+      "name": "rating-admin-ratings",
+      "path": "/rating/admin/ratings",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:18:42.803Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/ratings",
+        "bytes": 22182,
+        "sha256": "f5f1e8a549feea37ebb6474128e651f80474d685edae7497fea9897b32ddcc0d"
+      }
+    },
+    {
+      "name": "rating-admin-ratings-create",
+      "path": "/rating/admin/ratings/create",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:18:49.336Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/ratings/create",
+        "bytes": 24892,
+        "sha256": "2c84d7d247759c5288f05a0da50106ca496d4de4c24a01989dc1c525a90fb2c6"
+      }
+    },
+    {
+      "name": "rating-admin-rating-morphs",
+      "path": "/rating/admin/rating-morphs",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:13:24.216Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/rating-morphs",
+        "bytes": 26144,
+        "sha256": "d680ada439208cbaea940de8f6a88748ccc06b0afd389cb7bb00a68cb82d14a6"
+      }
+    },
+    {
+      "name": "rating-admin-rating-morphs-create",
+      "path": "/rating/admin/rating-morphs/create",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:18:55.054Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/rating-morphs/create",
+        "bytes": 23166,
+        "sha256": "80651773774930df069530fa17b75a81e31f7555e7b6b7d840cde5d9e2727694"
+      }
+    },
+    {
+      "name": "rating-admin-setting",
+      "path": "/rating/admin/setting",
+      "auth": true,
+      "captured": {
+        "at": "2026-11-25T22:04:38.407Z",
+        "status": 200,
+        "url": "http://laravelpizza.local/rating/admin/setting",
+        "bytes": 14804,
+        "sha256": "f625e8c0868add1b5720494667dc3f77e877e955ce9db8548f2566ac453ee63b"
+      }
+    }
+  ]
+}

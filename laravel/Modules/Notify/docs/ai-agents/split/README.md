@@ -20,7 +20,6 @@ status: draft
 ---
 # AI Assistant Documentation
 
-**Purpose**: Centralized documentation for all AI assistants used in the FixCity project  
 **Purpose**: Centralized documentation for all AI assistants used in the Notify project  
 **Last Updated**: 2026-04-11  
 
@@ -30,16 +29,6 @@ status: draft
 
 | Assistant | Original File | Split Files | Index |
 |-----------|--------------|----|----|
-| BMad Agents | [AGENTS.md](../../../AGENTS.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
-| Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../laravel/gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
-| BMad Agents | [AGENTS.md](../../../AGENTS.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
-| Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../laravel/gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
-| Qwen | [qwen.md](../../../qwen.md) | 1 file (no split needed) |: |
-| BMad Agents | [AGENTS.md](../../agents.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
-| Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../../../gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
 | BMad Agents | [AGENTS.md](../../agents.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
 | Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
 | Gemini | [gemini.md](../../../../../gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
@@ -69,18 +58,15 @@ status: draft
 │   └── business-analyst.md
 ├── tasks/                      ← 22 BMad task definitions
 │   ├── index.md
-│   ├── index.md
 │   ├── validate-next-story.md
 │   ├── trace-requirements.md
 │   ├── ... (20 more)
 ├── claude/                     ← 20 Laravel Boost sections
 │   ├── index.md
-│   ├── index.md
 │   ├── foundation-rules.md
 │   ├── boost-rules.md
 │   ├── ... (18 more)
 ├── gemini/                     ← 13 Gemini sections
-│   ├── index.md
 │   ├── index.md
 │   ├── boost-integration.md
 │   ├── foundation-rules.md
@@ -111,21 +97,14 @@ Splitting improves:
 ### Bidirectional Links
 Every split file contains links back to:
 - Its section index (e.g., `agents/index.md`)
-<<<<<<< .merge_file_8I0094
-- Its section index (e.g., `agents/index.md`)
-=======
->>>>>>> .merge_file_JEqr6C
 - The master index (`index.md`)
 - The original source file
 
 ### Related Documentation
 - [BMad Method Setup](../../bmad/setup-guide.md)
-- [Project Configuration](../../docs/project/configuration.md)
-- [Module Docs Index](../../docs/modules/index.md)
-- [BMad Method Setup](../../bmad/setup-guide.md)
 - [Project Configuration](../../project/configuration.md)
 - [Module Docs Index](../../modules/index.md)
-- [AI Workflow](../../docs/project/ai-workflow/)
+- [AI Workflow](../../project/ai-workflow/)
 
 ---
 
@@ -145,7 +124,6 @@ Every split file contains links back to:
 ### Changelog
 | Date | Change | Author |
 |------|--------|--------|
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
 | 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
 
 ---

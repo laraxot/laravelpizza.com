@@ -20,7 +20,6 @@ status: draft
 ---
 # AI Agents Documentation Index
 
-**Project**: FixCity Platform  
 **Project**: Notify Platform  
 **Purpose**: Centralized documentation for all AI assistant configurations  
 **Last Updated**: 2026-04-11  
@@ -29,13 +28,12 @@ status: draft
 
 ## Overview
 
-This directory contains split documentation files for AI assistants used in the FixCity project. Each file is focused on a specific area to improve readability and maintainability.
+This directory contains split documentation files for AI assistants used in the Notify project. Each file is focused on a specific area to improve readability and maintainability.
 
 **Original Files** (kept for backward compatibility):
-- [`AGENTS.md`](../../../../AGENTS.md): 5349 lines, comprehensive BMad agents + tasks
-- [`qwen.md`](../../../../qwen.md): 47 lines, Qwen output language rules
-- [`laravel/gemini.md`](../../../../laravel/gemini.md): 581 lines, Gemini-specific rules
-- [`AGENTS.md`](../../../../../AGENTS.md): 5349 lines, comprehensive BMad agents + tasks
+- [`AGENTS.md`](../../agents.md): 5349 lines, comprehensive BMad agents + tasks
+- [`qwen.md`](../../qwen.md): 47 lines, Qwen output language rules
+- [`laravel/gemini.md`](../../../../../gemini.md): 581 lines, Gemini-specific rules
 - [`docs/CLAUDE.md`](../../claude.md): 833 lines, Laravel Boost guidelines
 
 ---
@@ -115,13 +113,12 @@ Split from [`docs/CLAUDE.md`](../../claude.md):
 
 ## Gemini Rules
 
-Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
+Split from [`laravel/gemini.md`](../../../../../gemini.md):
 
 | Section | File | Lines |
 |---------|----|----|
 | Gemini Core Rules | [gemini/core-rules.md](gemini/core-rules.md) | ~200 |
 | Gemini Project Context | [gemini/project-context.md](gemini/project-context.md) | ~200 |
-| Gemini Project Context | [gemini/project-context.md](../project-context.md) | ~200 |
 | Gemini Development Rules | [gemini/development-rules.md](gemini/development-rules.md) | ~180 |
 
 **See Also**: [GEMINI Directory](gemini/)
@@ -132,7 +129,7 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 
 | File | Lines | Notes |
 |----|----|----|
-| [qwen.md](../../../../qwen.md) | 47 | Too small to split: kept as single file |
+| [qwen.md](../../qwen.md) | 47 | Too small to split: kept as single file |
 
 ---
 
@@ -140,33 +137,18 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 
 ### Related Documentation
 - [BMad Method Setup](../../bmad/setup-guide.md)
-- [Project Configuration](../../docs/project/configuration.md)
-- [Module Docs Index](../../docs/modules/index.md)
-- [BMad Method Setup](../../bmad/setup-guide.md)
 - [Project Configuration](../../project/configuration.md)
 - [Module Docs Index](../../modules/index.md)
-- [Theme Docs Index](../../docs/themes/index.md)
-- [AI Workflow](../../docs/project/ai-workflow/)
+- [Theme Docs Index](../../themes/index.md)
+- [AI Workflow](../../project/ai-workflow/)
 
 ### Bidirectional Links
 - ← Back to [Project Root](../../)
-- ← Back to [Docs Index](../../docs/README.md)
-- ← Back to [agents-2.md](../../../../agents-2.md) (original)
-<<<<<<< .merge_file_Xcg3il
-- ← Back to [agents-2.md](../../../../agents-2.md) (original)
-- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
-- ← Back to [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) (original)
-- ← Back to [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) (original)
-- ← Back to [Docs Index](../../README.md)
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
-=======
-- ← Back to [gemini.md](../../../../laravel/gemini.md) (original)
-- ← Back to [Docs Index](../../README.md)
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
->>>>>>> .merge_file_mD1Tvi
+- ← Back to [Docs Index](../../index.md)
+- ← Back to [AGENTS.md](../../agents.md) (original)
 - ← Back to [CLAUDE.md](../../claude.md) (original)
-- ← Back to [qwen.md](../../../../qwen.md) (original)
+- ← Back to [gemini.md](../../../../../gemini.md) (original)
+- ← Back to [qwen.md](../../qwen.md) (original)
 
 ---
 
@@ -176,13 +158,10 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 1. Create file in appropriate subdirectory (`agents/`, `tasks/`, `claude/`, `gemini/`)
 2. Add entry to this index.md table
 3. Add bidirectional link back to this index.md
-2. Add entry to this index.md table
-3. Add bidirectional link back to this index.md
 4. Update original file to reference split version
 
 ### Updating Split Files
 1. Update the split file
-2. Update line count in this index.md
 2. Update line count in this index.md
 3. Add changelog entry below
 
@@ -190,23 +169,3 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 | Date | Change | Author |
 |------|--------|--------|
 | 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
-
-## Contenuto fuso da `index.md`
-
-This directory contains split documentation files for AI assistants used in the Notify project. Each file is focused on a specific area to improve readability and maintainability.
-- [`AGENTS.md`](../../../../agents.md) — 5349 lines, comprehensive BMad agents + tasks
-- [`docs/CLAUDE.md`](../../../../docs/claude.md) — 833 lines, Laravel Boost guidelines
-- [`QWEN.md`](../../../../qwen.md) — 47 lines, Qwen output language rules
-- [`laravel/GEMINI.md`](../../../../laravel/gemini.md) — 581 lines, Gemini-specific rules
-- [`AGENTS.md`](../../../../agents.md) — 5349 lines, comprehensive BMad agents + tasks
-- [`docs/CLAUDE.md`](../../../../docs/claude.md) — 833 lines, Laravel Boost guidelines
-- [`qwen.md`](../../../../qwen.md) — 47 lines, Qwen output language rules
-- [`laravel/gemini.md`](../../../../laravel/gemini.md) — 581 lines, Gemini-specific rules
-Split from [`docs/CLAUDE.md`](../../../../docs/claude.md):
-| [QWEN.md](../../../../qwen.md) | 47 | Too small to split — kept as single file |
-- [BMad Method Setup](../../docs/bmad/setup-guide.md)
-- ← Back to [agents.md](../../../../agents.md) (original)
-- ← Back to [CLAUDE.md](../../../../docs/claude.md) (original)
-- ← Back to [AGENTS.md](../../../../agents.md) (original)
-- ← Back to [CLAUDE.md](../../../../docs/claude.md) (original)

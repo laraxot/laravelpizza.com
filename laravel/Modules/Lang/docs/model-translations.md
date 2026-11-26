@@ -55,3 +55,7 @@ quindi il modello non dichiara il cast (da aggiungere insieme alla migration).
 
 - `posts.user_id` e `translations.user_id` sono UUID (come gli utenti): conversione e regole in [migrations.md](migrations.md).
 - Nessun modello di Lang usa soft delete.
+- `Post::casts()` aggiunge a quelli di `BaseModel` il cast `url_lang => array`: la colonna e' `json` e senza cast `$post->url_lang['it']` leggeva il JSON grezzo come stringa
+  (la `@property` dichiarava `array<string, string>|null`, ma PHPStan legge la promessa, non lo schema). Usa `array_merge(parent::casts(), ...)` perche' il metodo
+  **sostituisce** quello di `BaseModel` (cast di `id`, `uuid`, date): dichiararne uno proprio senza unirli li farebbe sparire. Niente cast per `image_resize_src` (stringa)
+  ne' `deleted_at` (la tabella `posts` non ha quella colonna).

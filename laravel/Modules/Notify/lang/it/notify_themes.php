@@ -159,6 +159,36 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'lang' => [
+            'label' => 'lang',
+        ],
+        'type' => [
+            'label' => 'type',
+        ],
+        'post_type' => [
+            'label' => 'post_type',
+        ],
+        'post_id' => [
+            'label' => 'post_id',
+        ],
+        'logo_src' => [
+            'label' => 'logo_src',
+        ],
+        'subject' => [
+            'label' => 'subject',
+        ],
+        'theme' => [
+            'label' => 'theme',
+        ],
+        'from_email' => [
+            'label' => 'from_email',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
     ],
     'actions' => [
         'preview' => [
@@ -205,18 +235,23 @@ return [
         ],
         'create' => [
             'icon' => 'create',
+            'label' => 'create',
         ],
         'layout' => [
             'icon' => 'layout',
+            'label' => 'layout',
         ],
         'delete' => [
             'icon' => 'delete',
+            'label' => 'delete',
         ],
         'view' => [
             'icon' => 'view',
+            'label' => 'view',
         ],
         'edit' => [
             'icon' => 'edit',
+            'label' => 'edit',
         ],
     ],
     'messages' => [

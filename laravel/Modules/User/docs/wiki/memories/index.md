@@ -5,36 +5,21 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [memories, index, on-demand]
 related:
-  - ../rules/00-TRIGGER_MAP.md
-  - ../rules/on-demand-pattern.md
-<<<<<<< .merge_file_t7yVjA
-<<<<<<< .merge_file_2BlpO8
-<<<<<<< .merge_file_i2i6iz
-<<<<<<< .merge_file_QE5Ps4
+  - ../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md
+  - ../../../../../../docs/wiki/rules/00-ON_DEMAND_PATTERN.md
 qmd: "memories"
-=======
->>>>>>> .merge_file_xLGOcD
-=======
-qmd: "memories"
->>>>>>> .merge_file_ede2Yv
-=======
-qmd: "memories"
->>>>>>> .merge_file_xReeyt
-=======
-qmd: "memories"
->>>>>>> .merge_file_ncLocn
 ---
 
 # Memories Index
 
 Le Memories progettuali vivono qui, nel wiki del Module **User**, e vengono caricate **on-demand**.
 
-> Vedi anche → [Trigger Map](../rules/00-TRIGGER_MAP.md)
+> Vedi anche → [Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 
 ## Regola
 
 1. individua il trigger del task
-2. consulta `../rules/00-TRIGGER_MAP.md`
+2. consulta `docs/wiki/rules/00-TRIGGER_MAP.md` (root del progetto)
 3. se serve, esegui `qmd search "<topic>"`
 4. leggi solo la Memories wiki pertinente
 
@@ -44,18 +29,17 @@ Le Memories progettuali vivono qui, nel wiki del Module **User**, e vengono cari
 |---------|---------|
 | Carica Memories specifica | `Read ../memories/<name>.md` |
 | Ricerca semantica | `qmd search "<topic>"` |
-| Via trigger map | Consulta `../rules/00-TRIGGER_MAP.md` |
+| Via trigger map | Consulta `docs/wiki/rules/00-TRIGGER_MAP.md` |
 
 ## Note
 
 - La sorgente di verita' per le Memories e' sempre il wiki locale
 - Non embeddare Memories nei prompt di avvio
-- Per Memories globali, consulta il [wiki root](../../docs/wiki/memories/index.md)
+- Per Memories globali, consulta il [wiki root](../../../../../../docs/wiki/memories/00-INDEX.md)
 
 ## Aggiungere una Nuova MEMORIES
 
 1. Crea `../memories/<nome>.md` con contenuto completo
-2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
+2. Aggiungi la voce in `docs/wiki/rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Memories e' ricorrente
 4. Committa: `docs: add memories <nome>`
-

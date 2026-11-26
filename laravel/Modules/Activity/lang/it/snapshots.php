@@ -63,6 +63,9 @@ return [
             'label' => 'Visualizza',
             'tooltip' => 'Visualizza i dettagli dello snapshot',
         ],
+        'layout' => [
+            'label' => 'layout',
+        ],
     ],
     'messages' => [
         'success' => [

@@ -24,7 +24,7 @@ use Webmozart\Assert\Assert;
  * (Notify\NotificationTemplate e/o Xot\Module).
  *
  * @see Modules/Meetup/docs/contracts/event-published-scope.md
- * @see Modules/Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md
+ * @see Modules/Xot/docs/bmad/stories/0148-phpstan-modules-zero-swarm-standing.story.md
  */
 abstract class XotBaseModel extends EloquentModel
 {

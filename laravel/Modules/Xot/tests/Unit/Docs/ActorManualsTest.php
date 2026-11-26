@@ -18,7 +18,7 @@ uses(TestCase::class);
  * Il manuale non sostituisce policy e test: impedisce solo che la documentazione
  * owner sparisca o ometta la matrice minima degli attori.
  *
- * @see Modules/Xot/docs/stories/actor-user-manuals.story.md
+ * @see Modules/Xot/docs/stories/0176-manuali-moduli-screenshot-reali.story.md
  */
 test('ogni modulo e tema ha il manuale d uso per gli attori', function (): void {
     $root = dirname(__DIR__, 5);
@@ -49,8 +49,9 @@ test('ogni modulo e tema ha il manuale d uso per gli attori', function (): void 
         if (! is_file($manualsPath.'/manuale-utente.pdf')) {
             $missingArtifacts[] = substr($manualsPath, strlen($root) + 1).'/manuale-utente.pdf';
         }
-        if (glob($manualsPath.'/assets/*.png') === []) {
-            $missingArtifacts[] = substr($manualsPath, strlen($root) + 1).'/assets/*.png';
+        // Gli screenshot reali sono .webp (manual-screenshots.mjs); i .png sono ammessi per i manuali non ancora migrati.
+        if (glob($manualsPath.'/assets/*.{png,webp}', GLOB_BRACE) === []) {
+            $missingArtifacts[] = substr($manualsPath, strlen($root) + 1).'/assets/*.{png,webp}';
         }
 
         $contents = file_get_contents($manual);

@@ -13,4 +13,35 @@ return [
     ],
     'label' => 'Permesso',
     'plural_label' => 'Permessi',
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+    ],
+    'fields' => [
+        'values' => [
+            'label' => 'values',
+        ],
+    ],
 ];

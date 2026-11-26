@@ -88,6 +88,31 @@ return [
         ],
         'logout' => [
             'tooltip' => 'logout',
+            'label' => 'logout',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'resetColumnManager' => [
+            'label' => 'resetColumnManager',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+        ],
+        'add' => [
+            'label' => 'add',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'reorder' => [
+            'label' => 'reorder',
         ],
     ],
     'messages' => [

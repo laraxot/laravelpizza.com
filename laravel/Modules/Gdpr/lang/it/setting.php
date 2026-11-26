@@ -12,7 +12,7 @@ return [
     'title' => 'Impostazioni',
     'fields' => [
         'consent_lifetime' => [
-            'label' => 'Validita della scelta sui cookie (giorni)',
+            'label' => 'Validità della scelta sui cookie (giorni)',
             'placeholder' => '180',
             'helper_text' => 'Prima di questo periodo il banner non viene riproposto. Il Garante non ammette meno di 6 mesi: minimo 180.',
             'tooltip' => '',
@@ -21,7 +21,7 @@ return [
         'info_banner' => [
             'label' => 'Barra informativa sui cookie tecnici',
             'placeholder' => '',
-            'helper_text' => "Con soli cookie tecnici la barra non e' obbligatoria: basta l'informativa nella cookie policy. Se spenta, il sito si apre senza barra. Con cookie di analisi o marketing la barra del consenso compare sempre.",
+            'helper_text' => "Con soli cookie tecnici la barra non è obbligatoria: basta l'informativa nella cookie policy. Se spenta, il sito si apre senza barra. Con cookie di analisi o marketing la barra del consenso compare sempre.",
             'tooltip' => '',
             'description' => '',
         ],

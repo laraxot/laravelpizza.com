@@ -150,13 +150,5 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-<<<<<<< .merge_file_3tf5bL
-- [Project Wiki Agent Instructions](../../../Lang/docs/wiki/agents-3.md)
-- [Project Wiki Agent Instructions](agents.md)
-- [Module Documentation](../README.md)=======
-- [Module Documentation](../README.md)
-- [Module Documentation](../README.md)
-=======
-- [Project Wiki Agent Instructions](agents.md)
->>>>>>> .merge_file_YIqzM1
+- [Project Wiki Agent Instructions](../../../../../AGENTS.md)
 - [Module Documentation](../README.md)

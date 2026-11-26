@@ -25,7 +25,7 @@ use Webmozart\Assert\Assert;
  *
  * @property string|int|null $tenant_id
  *
- * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
+ * @see Modules/Notify/docs/contracts/index.md
  */
 trait HasTenantNotifications
 {

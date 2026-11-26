@@ -24,5 +24,8 @@ return [
         'authenticate' => [
             'label' => 'authenticate',
         ],
+        'login' => [
+            'label' => 'login',
+        ],
     ],
 ];

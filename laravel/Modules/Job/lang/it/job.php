@@ -360,6 +360,7 @@ return [
         ],
         'value' => [
             'helper_text' => '',
+            'label' => 'value',
         ],
     ],
     'actions' => [
@@ -412,6 +413,18 @@ return [
             'label' => 'Riprova Falliti',
             'icon' => 'heroicon-o-arrow-path',
             'tooltip' => 'Riprova tutti i job falliti',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
         ],
     ],
     'messages' => [

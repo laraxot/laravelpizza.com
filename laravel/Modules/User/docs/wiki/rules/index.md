@@ -5,36 +5,21 @@ created: 2026-05-11
 updated: 2026-07-08
 tags: [rules, index, on-demand]
 related:
-  - ../rules/00-TRIGGER_MAP.md
-  - ../rules/on-demand-pattern.md
-<<<<<<< .merge_file_eYjXlo
-<<<<<<< .merge_file_6nUgoc
-<<<<<<< .merge_file_f2pN33
-<<<<<<< .merge_file_S2yF4G
+  - ../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md
+  - ../../../../../../docs/wiki/rules/00-ON_DEMAND_PATTERN.md
 qmd: "rules"
-=======
->>>>>>> .merge_file_6FPNHt
-=======
-qmd: "rules"
->>>>>>> .merge_file_7uRDjr
-=======
-qmd: "rules"
->>>>>>> .merge_file_44FVC6
-=======
-qmd: "rules"
->>>>>>> .merge_file_Io1Ff3
 ---
 
 # Rules Index
 
 Le Rules progettuali vivono qui, nel wiki del Module **User**, e vengono caricate **on-demand**.
 
-> Vedi anche → [Trigger Map](../rules/00-TRIGGER_MAP.md)
+> Vedi anche → [Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 
 ## Regola
 
 1. individua il trigger del task
-2. consulta `../rules/00-TRIGGER_MAP.md`
+2. consulta `docs/wiki/rules/00-TRIGGER_MAP.md` (root del progetto)
 3. se serve, esegui `qmd search "<topic>"`
 4. leggi solo la Rules wiki pertinente
 
@@ -44,24 +29,23 @@ Le Rules progettuali vivono qui, nel wiki del Module **User**, e vengono caricat
 |---------|---------|
 | Carica Rules specifica | `Read ../rules/<name>.md` |
 | Ricerca semantica | `qmd search "<topic>"` |
-| Via trigger map | Consulta `../rules/00-TRIGGER_MAP.md` |
+| Via trigger map | Consulta `docs/wiki/rules/00-TRIGGER_MAP.md` |
 
 ## Note
 
 - La sorgente di verita' per le Rules e' sempre il wiki locale
 - Non embeddare Rules nei prompt di avvio
-- Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/index.md)
+- Per Rules globali, consulta il [wiki root](../../../../../../docs/wiki/rules/00-INDEX.md)
 
 ## Rules ricorrenti
 
 | Rule | Scopo |
 |------|-------|
-| [module-commit-push-after-change](module-commit-push-after-change.md) | Commit e push dal repo modulo dopo ogni modifica |
+| `module-commit-push-after-change` | Commit e push dal repo modulo dopo ogni modifica |
 
 ## Aggiungere una Nuova RULES
 
 1. Crea `../rules/<nome>.md` con contenuto completo
-2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
+2. Aggiungi la voce in `docs/wiki/rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
-

@@ -48,6 +48,9 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'enabled' => [
+            'label' => 'enabled',
+        ],
     ],
     'providers' => [
         'google' => 'Google Maps',
@@ -71,5 +74,15 @@ return [
         'delete' => [
             'label' => 'Elimina Setting',
         ],
+        'save' => [
+            'label' => 'save',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
     ],
+    'title' => 'setting',
 ];

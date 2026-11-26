@@ -2,104 +2,181 @@
 title: "Manuale utente — User"
 type: user-manual
 status: active
-screenshot: assets/auth-login.png
+screenshot: assets/user-admin-dashboard.webp
 qmd: "manuale utente user"
 ---
 
-> Screenshot reale della pagina di login, verificato il 23 novembre 2026.
+# Manuale utente — modulo User
 
-![Screenshot reale](assets/auth-login.png)
+Pannello di amministrazione: `/user/admin` (login: `/user/admin/login`).
+Tutte le immagini sono screenshot reali catturati dall'istanza di prova
+isolata con lo strumento `bashscripts/tools/docs/manual-screenshots.mjs`
+(data e sha256 in `screenshots.json`). Il pannello è in italiano; alcune
+etichette sono ancora in inglese, vedi «Difetti noti».
 
-# Manuale d'uso per attori — User
+## Dati di esempio
 
-## Scopo e perimetro
+Le immagini mostrano il database di prova: un utente sintetico
+(`giulia.bianchi@example.test`, nome fittizio, ruolo `super-admin`) e i
+ruoli seedati. Le tabelle Permessi, Team e Tenant sono vuote («Nessun
+risultato»). Nessun dato reale compare nelle immagini.
 
-Il modulo User gestisce identità, autenticazione web, profilo, ruoli, permessi,
-team, tenant associati e accesso ai pannelli Filament. Questo manuale descrive
-solo capacità verificabili nel codice installato. Un ruolo, un permesso e
-l'accesso a un pannello sono controlli distinti: avere un nome di ruolo seedato
-non implica automaticamente la possibilità di eseguire ogni operazione.
+## Scopo e accesso
 
-## Attori e capacità effettive
+Il modulo User gestisce utenti, ruoli, permessi, team, tenant e le
+impostazioni del pannello `user/admin`. Per entrare serve un account con
+accesso al pannello; l'accesso è negato agli account non autorizzati.
 
-| Attore | Capacità verificabili |
-|---|---|
-| Ospite | Può raggiungere login, registrazione, recupero password e verifica email, secondo configurazione e stato delle rotte. Può avviare il social login solo quando il provider è configurato. Non dispone di profilo, team o permessi autenticati. |
-| Utente autenticato | Può effettuare logout e, nelle pagine abilitate dal pannello, aggiornare nome, email e password. Può vedere la dashboard User quando il relativo pannello lo ammette. L'accesso ai pannelli dipende dai ruoli presenti. |
-| Utente in gruppo/team o ruolo | Può operare sul team corrente e sulle membership solo se le policy e i permessi applicabili lo consentono. La membership ha un ruolo sul pivot e permessi JSON; non è una concessione globale. |
-| Admin | Il ruolo `admin` consente l'accesso al pannello `admin` insieme a `super-admin` e `restaurant::admin`. Le operazioni su utenti e configurazione restano soggette alle policy e ai permessi effettivi; `admin` non equivale a `super-admin`. |
-| Super-admin | Entra nei pannelli previsti dal controllo User e supera i bypass `before()` delle policy compatibili. Può accedere alle funzioni riservate al super-admin, compreso Pulse e la gestione del ruolo super-admin, nei punti in cui tali funzioni sono esposte. |
-| Operatore | Un ruolo `<modulo>::operator` permette l'ingresso al pannello del modulo corrispondente, con le capacità ridotte definite dalle policy di quel modulo. User non dichiara un CRUD operativo uniforme per tutti gli operatori. |
-| Moderatore | `moderator` è un ruolo presente nei seeder e alcuni permessi di moderazione sono presenti nel catalogo. Non è però una capacità universale: le azioni concrete dipendono dalla policy e dal modulo della risorsa. |
+## Accesso
 
-## Flussi operativi
+![Login del pannello User](assets/user-admin-login.webp)
 
-### Accesso locale
+Pagina: `/user/admin/login`. Campi: **Email** (obbligatorio),
+**Password** (obbligatorio) con pulsante **Mostra password**, checkbox
+**Ricordami**, link **Hai smarrito la password?**, pulsante **Accedi**.
 
-1. L'ospite apre il login localizzato e invia email e password.
-2. Se non ha un account, usa la registrazione; se lo ha perso, avvia il reset.
-3. Quando richiesto dall'applicazione, completa la verifica dell'email.
-4. Dopo l'autenticazione entra solo nei pannelli per i quali possiede un ruolo
-   ammesso. Un account cancellato è escluso dal provider di autenticazione.
+## Dashboard
 
-Le rotte web del modulo espongono anche il logout. La disponibilità concreta è
-vincolata a configurazione, middleware e stato dell'account.
+![Dashboard del pannello User](assets/user-admin-dashboard.webp)
 
-### Social login
+Pagina: `/user/admin`. La barra laterale raggruppa le voci in: Gestione
+account (Password), Impostazioni provider socialite, Authentication
+(Provider SSO, Authentication Logs), Sicurezza (Reset Password, Passport,
+Dispositivi), Aspetto, OAuth, Gestione Utenti (Permessi Team, Team, Ruoli,
+Utenti, Tenant, Profilo, Feature, Client, Provider Social), Gestione accessi
+(Permessi), Teams (Team Invitations, Utenti Team), Autenticazione social,
+Tenants (Utenti Tenant), Autenticazione (Accesso con social) e
+Configurazione (Impostazioni). Accanto alle voci compaiono contatori (es.
+Authentication Logs 20, Dispositivi 1, Utenti 1, Ruoli 1).
 
-Il flusso è disponibile per `google`, `microsoft` e `github`, ma solo se per il
-provider sono configurati `client_id`, `client_secret` e `redirect`.
+Widget visibili: **Nuovi utenti** (grafico a linea per giorno, legenda
+«New users») e **Accessi utenti** con il filtro **Ultime 24 ore**.
 
-1. L'ospite avvia `/{lang}/auth/login/{provider}`.
-2. Il provider restituisce il callback all'applicazione.
-3. Il modulo valida provider e identità, nega gli utenti non ammessi e accede
-   all'utente esistente; può registrare un nuovo utente solo se la registrazione
-   è abilitata.
-4. Eventuali ruoli automatici dipendono dalla configurazione del dominio email;
-   non sono una promessa generale del social login.
+## Il mio profilo
 
-### Area personale e backoffice
+![Il mio profilo](assets/user-admin-my-profile.webp)
 
-Un utente autenticato usa la pagina profilo per modificare nome, email e
-password. Gli utenti autorizzati possono usare le risorse User per consultare o
-gestire utenti, ruoli, permessi, team e associazioni tenant, ma ogni azione è
-mediata dalla relativa policy. I widget di cambio team e social login sono
-funzioni del chrome del pannello, non un'escalation di privilegi.
+Pagina: `/user/admin/my-profile-page`, voce **Profilo**.
 
-## Prerequisiti
+- Sezione *Profile Information*: campi **name** ed **email**, pulsante
+  «Update profile action».
+- Sezione *Update Password*: campi **current_password**, **Nuova password**
+  (obbligatorio), **password_confirmation**, pulsante «Update password action».
+  Sotto il campo nuova password compare la regola: almeno 12 caratteri, una
+  maiuscola, una minuscola, un numero, un simbolo, e non compromessa in data
+  breach.
 
-- account attivo e autenticazione web per le funzioni riservate;
-- ruolo e/o permesso richiesto dalla policy della risorsa o del pannello;
-- membership e team esistenti per i flussi di gruppo;
-- provider social configurato per Google, Microsoft o GitHub;
-- configurazione di registrazione, email e reset funzionante per i relativi
-  flussi.
+Le etichette *Profile Information*, *Update Password* e la regola della
+password sono testo fisso in inglese (`app/Filament/Pages/MyProfilePage.php`,
+righe 59 e 78; `app/Datas/PasswordData.php`, `getHelperText`).
 
-## Limiti
+## Utenti
 
-- I ruoli seedati (`super-admin`, `admin`, `moderator`, `editor`, `user`,
-  `guest`, e gli ulteriori ruoli creati da `UserSeeder`) sono dati iniziali, non
-  una matrice universale di autorizzazioni.
-- `moderator` e `operator` non hanno capacità uniformi attraverso i moduli.
-- Il super-admin non rende valido un account cancellato: il controllo di stato
-  precede l'accesso al pannello.
-- Il social login non funziona senza credenziali/redirect del provider e non
-  assegna automaticamente ruoli in ogni caso.
+Pagina lista: `/user/admin/users`.
+
+![Elenco utenti](assets/user-admin-users.webp)
+
+In alto quattro schede riassuntive: **Utenti totali**, **Utenti attivi**, **Email verificate**
+(percentuale) e **Accessi ultime 24h**. Nella prova l'unico utente è quello sintetico di
+prova; i 37 accessi sono i login fatti dalle catture.
+Colonne visibili nella cattura: **Nome e cognome, Email, Nome, Cognome, Attivo** (icona),
+**Email verificata il, Creato il**. Dal codice
+(`app/Filament/Resources/UserResource/Tables/BaseUsersTable.php`, righe 42–56) la tabella
+ne prevede altre (OTP, Lingua, Team corrente, Tipo, Stato, Scadenza password, Aggiornato
+il), alcune nascoste per default (`isToggledHiddenByDefault`) e attivabili dal selettore
+colonne. Ogni riga ha le icone di visualizzazione e modifica e un'icona a forma di chiave.
+
+Pagina creazione: `/user/admin/users/create`.
+
+![Nuovo utente](assets/user-admin-users-create.webp)
+
+Campi reali del form (`app/Filament/Resources/UserResource/Schemas/UserForm.php`):
+
+- *Dati personali*: **Nome**, **Cognome**, **Display name** (opzionale).
+- *Sign-in*: **Indirizzo email** (obbligatorio, unico), **Password**
+  obbligatoria con pulsante **Mostra password**; la password è temporanea
+  e l'utente deve cambiarla al primo accesso.
+- *Status*: interruttore **Attivo**, acceso per default; con l'utente
+  inattivo il sign-in è negato.
+
+## Ruoli
+
+![Ruoli](assets/user-admin-roles.webp)
+
+Pagina: `/user/admin/roles`, pulsante **Crea Ruolo**. Colonne: Name,
+Display name, Guard name, Team id, Created at. Filtro: **Guard name**. La
+lista mostra il ruolo seedato `super-admin` (guard `web`).
+
+Creazione: `/user/admin/roles/create`; modifica: `/user/admin/roles/{id}/edit`.
+Non sono stati aperti né modificati ruoli per la cattura.
+
+## Permessi
+
+![Permessi](assets/user-admin-permissions.webp)
+
+Pagina: `/user/admin/permissions`. Colonne: Nome, Nome visualizzato, Guard,
+Active, Creato il. Filtro: **Guard**. Nella prova la lista è vuota
+(«Crea un Permesso per iniziare»).
+
+## Team
+
+![Team](assets/user-admin-teams.webp)
+
+Pagina: `/user/admin/teams`, pulsante **Nuovo**. Colonne: Nome, Users count,
+Codice, Team Personale, Utente, Data Creazione. Nella prova la lista è vuota.
+
+## Tenant
+
+![Tenant](assets/user-admin-tenants.webp)
+
+Pagina: `/user/admin/tenants`, pulsante **Crea**. Colonne: Name, Slug, Domain,
+Is active, Trial ends at, Created at. Nella prova la lista è vuota.
+
+## Impostazioni
+
+![Impostazioni](assets/user-admin-setting.webp)
+
+Pagina: `/user/admin/setting`, voce **Impostazioni** (gruppo Configurazione).
+Interruttori e pulsante **Salva**:
+
+- «Crea un team personale per ogni nuovo utente» (nella prova: spento);
+  etichetta da `lang/it/setting.php`, riga 17.
+- «Abilita il password grant di Passport» (nella prova: acceso). Il testo
+  dichiara che la modifica si applica al prossimo avvio dell'applicazione.
+
+## Difetti noti
+
+1. **Etichetta grezza «new_password» (corretta).** La pagina profilo
+   mostrava il nome della chiave invece di un'etichetta. Causa:
+   `lang/it/password.php` riga 84 aveva come valore il nome del campo
+   (placeholder). Corretto in «Nuova password». Prova: screenshot
+   `user-admin-my-profile.webp` catturato prima e dopo la correzione.
+2. **Etichette grezze nel profilo.** Nella cattura delle 22:21
+   `name`, `email`, `current_password` e `password_confirmation` compaiono
+   come chiavi. Nella cattura delle 22:19 risultavano «Name», «Email»,
+   «Current password». Altri file `lang/it` del modulo sono stati modificati
+   da un'altra sessione dopo la prima cattura: la causa non è stata
+   accertata. Non modificato.
+3. **Testi fissi in inglese.** `MyProfilePage.php` righe 59 e 78 (sezioni),
+   la regola password in `PasswordData::getHelperText` e i testi
+   «Temporary password…» (`UserForm.php`, riga 75) e «Inactive users cannot
+   sign in.» (`UserForm.php`, riga 106). Da tradurre in `lang/it`.
+4. **Intestazioni in inglese.** Team («Users count», «Team Personale»),
+   Tenant («Is active», «Trial ends at», «Created at») e Permessi («Active»).
+5. **Pulsanti profilo in inglese.** «Update profile action» e «Update password
+   action» compaiono nella pagina profilo; la fonte non è stata individuata
+   nel modulo User.
+6. **Voci di menu in inglese.** «Socialite Provider Settings Page» e «Provider
+   SSO» nella barra laterale.
+7. **Doppio pulsante «Nuovo»** in cima alle liste: comportamento condiviso di
+   tutte le liste Xot (`HasXotTable::getTableHeaderActions` e
+   `XotBaseListRecords::getHeaderActions`), non specifico di User.
 
 ## Fonti verificabili
 
-- `app/Models/BaseUser.php` — accesso ai pannelli e super-admin/operator.
-- `app/Models/User.php`, `app/Models/Role.php`, `app/Models/Team.php` e
-  `app/Models/Membership.php` — identità, ruoli e membership.
-- `app/Models/Policies/BaseUserPolicy.php` — autorizzazione sulle operazioni
-  utente.
-- `routes/web_tall.php` e `routes/socialite.php` — flussi web e provider.
-- `app/Actions/Socialite/ProcessCallbackAction.php` e
-  `app/Actions/Socialite/IsProviderConfiguredAction.php` — callback e
-  prerequisiti social.
-- `app/Filament/Pages/MyProfilePage.php`, `app/Filament/Pages/Auth/EditProfile.php`
-  e `app/Filament/Resources/UserResource.php` — area personale e backoffice.
-- `database/seeders/RoleSeeder.php`, `database/seeders/UserSeeder.php` e
-  `database/seeders/PermissionSeeder.php` — dati iniziali, non sostitutivi
-  delle policy.
-
+- `screenshots.json` (pagine, data, HTTP, sha256 della cattura).
+- `app/Filament/Pages/MyProfilePage.php`, `app/Datas/PasswordData.php`.
+- `app/Filament/Resources/UserResource/Schemas/UserForm.php`.
+- `app/Filament/Resources/UserResource/Tables/BaseUsersTable.php`.
+- `lang/it/password.php`, `lang/it/setting.php`.
+- Route: `php artisan route:list --path=user/admin`.

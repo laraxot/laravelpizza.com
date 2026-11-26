@@ -16,4 +16,32 @@ return [
     ],
     'label' => 'My Profile',
     'plural_label' => 'My Profile (Plurale)',
+    'fields' => [
+        'name' => [
+            'label' => 'name',
+        ],
+        'email' => [
+            'label' => 'email',
+        ],
+        'current_password' => [
+            'label' => 'current_password',
+        ],
+        'password_confirmation' => [
+            'label' => 'password_confirmation',
+        ],
+    ],
+    'actions' => [
+        'updateProfileAction' => [
+            'label' => 'updateProfileAction',
+        ],
+        'updatePasswordAction' => [
+            'label' => 'updatePasswordAction',
+        ],
+        'profile' => [
+            'label' => 'profile',
+        ],
+        'logout' => [
+            'label' => 'logout',
+        ],
+    ],
 ];

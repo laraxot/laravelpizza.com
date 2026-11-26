@@ -25,7 +25,7 @@ use Webmozart\Assert\Assert;
  * Etichette, intestazioni, segnaposto e testi d'aiuto dei componenti Filament presi dai file di lingua del modulo che
  * li usa; applicata a tutti i componenti con `configureUsing()` in LangServiceProvider.
  *
- * @see Modules/Lang/docs/contracts/auto-label-action.md
+ * @see Modules/Lang/docs/filament-auto-labels.md
  *
  * @contract docs/contracts/auto-label-action.md
  */
@@ -64,7 +64,7 @@ class AutoLabelAction
      * («il primo frame fuori da questa classe») e' una modifica a se', da fare
      * sapendo che si riscrivono delle chiavi.
      *
-     * @see Modules/Lang/docs/contracts/auto-label-action.md
+     * @see Modules/Lang/docs/filament-auto-labels.md
      *
      * @return array<string, mixed> il frame trovato, o `[]` se nessuno corrisponde
      */
@@ -103,7 +103,7 @@ class AutoLabelAction
      * Applica al componente il testo di tipo `$type` preso dal file di lingua del modulo del chiamante;
      * se la traduzione manca, chiede di salvare solo l'etichetta (SaveTransAction, solo in locale).
      *
-     * @see Modules/Lang/docs/contracts/auto-label-action.md
+     * @see Modules/Lang/docs/filament-auto-labels.md
      */
     public function execute(Field|Entry|BaseFilter|Column|Step|Action|Section $component, string $type = 'label'): Field|Entry|BaseFilter|Column|Step|Action|Section
     {

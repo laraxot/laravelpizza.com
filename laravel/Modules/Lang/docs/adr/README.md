@@ -1,12 +1,9 @@
 ---
-title: "Architecture Decision Records"
-type: index
-tags: [adr, decisioni]
-created: 2026-11-18
-updated: 2026-11-18
 title: "ADR — Lang"
 type: index
 owner: Lang
+tags: [adr, decisioni]
+created: 2026-11-18
 updated: 2026-11-24
 qmd: "Lang ADR architecture decision record MADR formato localizzazione etichette traduzioni"
 ---

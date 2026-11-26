@@ -9,7 +9,7 @@ status: accepted
 related:
   - ../../app/Actions/ResolvePageAction.php
   - ../../config/config.php
-  - ../contracts/resolve-page-action.md
+  - ../contracts/page-resolution-action.md
 ---
 
 # ADR: le rotte `/{container0}/{slug0}` caricano un modello solo da un elenco esplicito e con la policy `view`

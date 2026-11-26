@@ -14,7 +14,7 @@ use Webmozart\Assert\Assert;
  * Consumer di dominio: {@see GenericNotification}
  * (sottoclassi / canali che devono rispettare max_attempts prima di spedire).
  *
- * @see Modules/Notify/docs/contracts/has-notification-rate-limiting.md
+ * @see Modules/Notify/docs/contracts/index.md
  */
 trait HasNotificationRateLimiting
 {

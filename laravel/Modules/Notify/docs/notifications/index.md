@@ -11,7 +11,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/module_notify_fila5/discussions/57"
 related:
-  - ../README.md
+  - ../index.md
   - ../wiki/index.md
   - README.md
   - ../integrations/README.md
@@ -22,28 +22,8 @@ status: draft
 
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../index.md)
-<<<<<<< .merge_file_pYw7Yy
-- [README Modulo Notify](../README.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [README Modulo Notify](../../README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-- [README Modulo Notify](../readme.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-- [Documentazione Generale Quaeris](../../../../../../docs/readme.md)
-- [README Modulo Notify](../README.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-- [README Modulo Notify](../readme.md)
-- [Documentazione Generale Quaeris](../../../../../../docs/readme.md)
-- [README Modulo Notify](../README.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-- [README Modulo Notify](../README.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-=======
-- [README Modulo Notify](../README.md)
-- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
->>>>>>> .merge_file_jc4VpQ
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione
