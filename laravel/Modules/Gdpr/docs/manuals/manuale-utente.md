@@ -2,7 +2,7 @@
 title: "Manuale utente — Gdpr"
 type: user-manual
 status: active
-screenshot: assets/gdpr-dashboard.png
+screenshot: assets/gdpr-dashboard.webp
 created: 2026-11-25
 updated: 2026-11-25
 qmd: "manuale utente gdpr"
@@ -10,7 +10,7 @@ qmd: "manuale utente gdpr"
 
 > Screenshot reale del pannello `gdpr/admin`, verificato il 25 novembre 2026.
 
-![Screenshot reale del pannello GDPR](assets/gdpr-dashboard.png)
+![Screenshot reale del pannello GDPR](assets/gdpr-dashboard.webp)
 
 # Manuale d'uso per attori — Gdpr
 
